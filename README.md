@@ -13,6 +13,7 @@ This is to be used with [Pokémon Showdown](https://github.com/Zarel/Pokemon-Sho
 # Credits
 
 - For the CSS generation we used: [Digimon-Showdown-CSS](https://github.com/Dragotic-PS/Digimon-Showdown-CSS)
+- [DieterReinert](https://github.com/DieterReinert) (Alpha Ninja - Repository Owner)
 - [Zarel](https://github.com/Zarel/) (Owner of [Pokemon-Showdown](https://github.com/Zarel/Pokemon-Showdown))
 - [Ashley the Pikachu](https://github.com/AshleyPikachu) (Project Head)
 - [AlfaStorm](https://github.com/AlphaWind) (Developer - Digimon Showdown)
