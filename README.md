@@ -1,6 +1,7 @@
 # Digimon-Showdown
 
 This is the official Digimon Showdown repository.
+
 This is to be used with [Pokémon Showdown](https://github.com/Zarel/Pokemon-Showdown).
 
 # How to implement on your own server
