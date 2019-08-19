@@ -18,4 +18,5 @@ This is to be used with [Pokémon Showdown](https://github.com/Zarel/Pokemon-Sho
 - [Zarel](https://github.com/Zarel/) (Owner of [Pokemon-Showdown](https://github.com/Zarel/Pokemon-Showdown))
 - [Ashley the Pikachu](https://github.com/AshleyPikachu) (Project Head)
 - [AlfaStorm](https://github.com/AlphaWind) (Developer - Digimon Showdown)
+- [Dragotic-PS](https://github.com/dragotic-ps) (Creator of Digimon-Showdown CSS)
 - Digimon-Showdown Contributors
