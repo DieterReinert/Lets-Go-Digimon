@@ -74,7 +74,7 @@ let BattleMovedex = {
 	},
 	"electricshock": {
 		accuracy: 95,
-		basePower: 103,
+		basePower: 100,
 		category: "Special",
 		desc: "20% chance to paralyze the target.",
 		shortDesc: "20% chance to paralyze the target.",
