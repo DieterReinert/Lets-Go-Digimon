@@ -114,6 +114,14 @@ function getAbilityImgSrc(ability) {
 	}
 }
 
+function getBst(target) {
+	const mod = Dex.mod('digimon');
+	let newTargets = mod.dataSearch(target);
+	let digimon = mod.getTemplate(newTargets[0].name);
+	let bstnumber = digimon.baseStats.hp + digimon.baseStats.atk + digimon.baseStats.def + digimon.baseStats.spa + digimon.baseStats.spe + digimon.baseStats.spd;
+	return bstnumber;
+}
+
 exports.commands = {
 	fieldguide: 'digiprofile',
 	digiprofile(target, room, user) {
@@ -135,12 +143,14 @@ exports.commands = {
 		let sigmove = Object.keys(templates.learnset);
 		sigmove = sigmove.map(id => mod.getMove(id).name);
 		sigmove = sigmove[sigmove.length - 2];
+		let bstdigimon = getBst(target);
 		display += `</span></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><p style="text-align: left;"><span style="color: #333333;"><strong><span style="font-size: small;">Signature: </span></strong><span style="font-size: small;">${sigmove}</span></span></p></td><td style="text-align: left; width: 131px;"><p style="text-align: center;"><span style="color: #ff0000;"><strong>`;
 		display += `<span style="font-size: small;">HP</span></strong>:</span><span style="font-size: small;"><span style="font-size: small;"><span style="color: #ff0000;"> ${digimon.baseStats.hp}</span><br><span style="color: #f08030;"><strong><span style="font-size: small;">ATK</span></strong>: ${digimon.baseStats.atk}</span><br><span style="color: #f8d030;"><strong>DEF</strong></span><span style="font-size: small;"><span style="color: #f8d030;">: ${digimon.baseStats.def}</span>`;
 		display += `<br><span style="color: #6890f0;"><strong>SPA</strong></span><span style="font-size: small;"><span style="color: #6890f0;">: ${digimon.baseStats.spa}</span><br><span style="color: #78c850;"><strong>SPD</strong></span><span style="font-size: small;"><span style="color: #78c850;">: ${digimon.baseStats.spd}</span><br><span style="color: #f85888;"><strong>SPE</strong></span><span style="font-size: small;"><span style="color: #f85888;">: ${digimon.baseStats.spe}</span>`;
-		display += `<br><br></span></span></span></span></span></span></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><p><span style="color: #333333;"><strong style="font-size: small;">Height</strong><span style="font-size: small;">: ${digimon.heightm} m</span></span></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><span style="font-size: small; color: #333333;">`;
-		display += `<span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><strong><span style="font-size: small;"><span style="font-size: small;">Weight:</span></span></strong><span style="font-size: small;"> ${digimon.weightkg} kg</span></span></span></span></span></span></span></span>`;
-		display += `<hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><span style="font-size: small; color: #333333;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><strong><span style="font-size: small;">Color:</span></strong><span style="font-size: small;"> ${digimon.color}</span>`;
+		display += `<br /></span></span></span></span></span></span></p><p style="text-align: center;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="color: #f85888;"><strong><font color="Black">BST</strong><font color="black">: ${bstdigimon}</span></span></span></span></span></span></span></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;">`;
+		display += `<p><span style="color: #333333;"><strong style="font-size: small;">Height</strong><span style="font-size: small;">: ${digimon.heightm} m</span></span></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><span style="font-size: small; color: #333333;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;">`;
+		display += `<span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><strong><span style="font-size: small;"><span style="font-size: small;">Weight:</span></span></strong><span style="font-size: small;"> ${digimon.weightkg} kg</span></span></span></span></span></span></span></span><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><span style="font-size: small; color: #333333;">`;
+		display += `<span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><strong><span style="font-size: small;">Color:</span></strong><span style="font-size: small;"> ${digimon.color}</span>`;
 
 		let { weaknesses, immunities, resistances } = getTypeChart(digimon);
 
@@ -292,12 +302,14 @@ exports.commands = {
 			let sigmove = Object.keys(templates.learnset);
 			sigmove = sigmove.map(id => mod.getMove(id).name);
 			sigmove = sigmove[sigmove.length - 2];
+			let bstdigimon = getBst(target);
 			menu += `</span></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><p style="text-align: left;"><span style="color: #333333;"><strong><span style="font-size: small;">Signature: </span></strong><span style="font-size: small;">${sigmove}</span></span></p></td><td style="text-align: left; width: 131px;"><p style="text-align: center;"><span style="color: #ff0000;"><strong>`;
 			menu += `<span style="font-size: small;">HP</span></strong>:</span><span style="font-size: small;"><span style="font-size: small;"><span style="color: #ff0000;"> ${digimon.baseStats.hp}</span><br><span style="color: #f08030;"><strong><span style="font-size: small;">ATK</span></strong>: ${digimon.baseStats.atk}</span><br><span style="color: #f8d030;"><strong>DEF</strong></span><span style="font-size: small;"><span style="color: #f8d030;">: ${digimon.baseStats.def}</span>`;
 			menu += `<br><span style="color: #6890f0;"><strong>SPA</strong></span><span style="font-size: small;"><span style="color: #6890f0;">: ${digimon.baseStats.spa}</span><br><span style="color: #78c850;"><strong>SPD</strong></span><span style="font-size: small;"><span style="color: #78c850;">: ${digimon.baseStats.spd}</span><br><span style="color: #f85888;"><strong>SPE</strong></span><span style="font-size: small;"><span style="color: #f85888;">: ${digimon.baseStats.spe}</span>`;
-			menu += `<br><br></span></span></span></span></span></span></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><p><span style="color: #333333;"><strong style="font-size: small;">Height</strong><span style="font-size: small;">: ${digimon.heightm} m</span></span></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><span style="font-size: small; color: #333333;">`;
-			menu += `<span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><strong><span style="font-size: small;"><span style="font-size: small;">Weight:</span></span></strong><span style="font-size: small;"> ${digimon.weightkg} kg</span></span></span></span></span></span></span></span>`;
-			menu += `<hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><span style="font-size: small; color: #333333;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><strong><span style="font-size: small;">Color:</span></strong><span style="font-size: small;"> ${digimon.color}</span>`;
+			menu += `<br /></span></span></span></span></span></span></p><p style="text-align: center;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="color: #f85888;"><strong><font color="Black">BST</strong><font color="black">: ${bstdigimon}</span></span></span></span></span></span></span></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;">`;
+			menu += `<p><span style="color: #333333;"><strong style="font-size: small;">Height</strong><span style="font-size: small;">: ${digimon.heightm} m</span></span></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><span style="font-size: small; color: #333333;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;">`;
+			menu += `<span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><strong><span style="font-size: small;"><span style="font-size: small;">Weight:</span></span></strong><span style="font-size: small;"> ${digimon.weightkg} kg</span></span></span></span></span></span></span></span><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><span style="font-size: small; color: #333333;">`;
+			menu += `<span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><strong><span style="font-size: small;">Color:</span></strong><span style="font-size: small;"> ${digimon.color}</span>`;
 
 			let { weaknesses, immunities, resistances } = getTypeChart(digimon);
 
@@ -315,6 +327,102 @@ exports.commands = {
 	},
 	digipediahelp: ['/digimonsearch - sends a display to search for a list of digimon.'],
 
+	digimovesearchdisplay: 'movedatabase',
+	dms: 'movedatabase',
+	digimovesearch: 'movedatabase',
+	digimonmovesearch: 'movedatabase',
+	movesearchchange: 'movedatabase',
+	movedatabase(target, room, user, connection, cmd) {
+		let mod = Dex.mod('digimon');
+		/*
+		/digimonsearch Section:value, Section:value
+		/digisearchdisplay digimon
+		*/
+		if (cmd !== 'digimovesearchdisplay') user.lastDigiSearch = target;
+		let change = !!target || cmd === 'movesearchchange';
+		let choices = {
+			alphabetical: 'abcdefghijklmnopqrstuvwxyz'.split(''),
+			type: ['Flame', 'Aqua', 'Air', 'Nature', 'Holy', 'Evil', 'Battle', 'Mech', 'Filth'],
+			category: ['Status', 'Physical', 'Special'],
+			signature: ['Signature', 'Not Signature'],
+		};
+		let menu = `<div class="infobox"><center><strong>Digimon Move Search</strong></center><br/>`;
+		if (cmd !== 'digimovesearchdisplay') {
+			target = target.split(',').map(x => {
+				return x.trim();
+			});
+			for (let type in choices) {
+				menu += `<div><summary>${type.substring(0, 1).toUpperCase() + type.substring(1)}</summary>`;
+				for (let i = 0; i < choices[type].length; i++) {
+					let newTarget = false;
+					if (target.indexOf(type + ':' + choices[type][i]) > -1) {
+						newTarget = target.slice(0);
+						newTarget.splice(newTarget.indexOf(type + ':' + choices[type][i]), 1).join(',');
+					}
+					menu += `<button class="button" name="send" value="${newTarget ? `/movesearchchange ${newTarget}" style="background: #4286f4"` : `/movesearchchange ${target.join(',')}${change ? `,` : ``}${type}:${choices[type][i]}"`}>${choices[type][i]}</button>`;
+				}
+				menu += `</div><br>`;
+			}
+			if (toID(target.join(''))) {
+				// Show found digimon
+				let reqs = { alphabetical: '', type: '', category: '', signature: '' };
+				let invalidSearch = false;
+				target.map(y => {
+					if (invalidSearch) return y;
+					y = y.split(':');
+					if (choices[y[0]] && choices[y[0]].includes(y[1])) {
+						if (reqs[y[0]]) {
+							invalidSearch = true;
+							return y.join(':');
+						}
+						reqs[y[0]] = y[1];
+					}
+					return y.join(':');
+				});
+				if (invalidSearch) {
+					menu += `No digimon moves were found. (Your search was invalid)</div>`;
+					return user.sendTo(room, `${change ? `|uhtmlchange|cs${user.userid}|` : `|uhtml|cs${user.userid}|`}${menu}`);
+				}
+				menu += `<center><div style='max-height: 300px; overflow-y: scroll;'>`;
+				let foundDigimonMove = 0;
+				for (const digimonmove in mod.data.Movedex) {
+					let digimove = mod.getMove(digimonmove);
+					if (digimove.signature === true) digimove.signature = 'Signature';
+					if (digimove.signature === false) digimove.signature = 'Not Signature';
+					if (digimove.num > -100 || digimove.num < -400) continue;
+					if (reqs.alphabetical && !digimove.id.startsWith(reqs.alphabetical)) continue;
+					if (reqs.type && reqs.type !== digimove.type) continue;
+					if (reqs.category && reqs.category !== digimove.category) continue;
+					if (reqs.signature && reqs.signature !== digimove.signature) continue;
+					// Valid
+					foundDigimonMove++;
+					menu += `<button class="button" name="send" value="/digimovesearchdisplay ${digimove.id}">${digimove.name}</button>&nbsp;`;
+				}
+				if (!foundDigimonMove) menu += `No digimon moves were found.`;
+				menu += `</div></div></center>`;
+			}
+		} else {
+			menu += `<button class="button" name="send" value="${user.lastDigiSearch ? `/movedatabase ${user.lastDigiSearch}` : `/movedatabase`}">Back</button><br/>`;
+			let digimonsmove = mod.dataSearch(target);
+			if (!digimonsmove) {
+				menu += `The digimon "${toID(target)}" does not exist.</div>`;
+				return user.sendTo(room, `${change ? `|uhtmlchange|cs${user.userid}|` : `|uhtml|cs${user.userid}|`}${menu}`);
+			}
+			let digimonmove = mod.getMove(target);
+			let digimovetype = digimonmove.type;
+			let typeimage = getTypeImgSrc(digimovetype);
+			let signature = '';
+			if (digimonmove.signature === 'Signature') signature = 'True';
+			if (digimonmove.signature === 'Not Signature') signature = 'False';
+			menu += `<div><center><table style="width: 480px ; background-color: #011f55 ; border-color: #008dc5" border="2"><tbody><tr><td style="width: 159px ; text-align: center"><table style="width: 468px ; background-color: #f2faff ; border-color: #008dc5 ; margin-left: auto ; margin-right: auto" border="3"><tbody><tr><td style="width: 462px"><span style="color: #333333"><strong><img style="float: left" src="${typeimage}" width="21" height="20"><span style="color: black">Digimon Move Database<img style="float: right" src="${typeimage}" width="21" height="20"></span></strong></span>`;
+			menu += `</td></tr></tbody></table><table style="width: 468px ; border-color: #008dc5 ; background-color: #ffffff" border="2"><tbody><tr><td style="width: 463px"><strong><span style="color: black">${digimonmove.name}</span></strong></td></tr></tbody></table><table style="border-color: #008dc5 ; background-color: #ffffff ; width: 468px" border="1"><tbody><tr><td style="width: 457px"><strong><span style="color: #008dc5">Type</span></strong><span style="color: black">: ${digimonmove.type}</span></td><td style="width: 457px"><strong><span style="color: #008dc5">Category</span></strong>`;
+			menu += `<span style="color: black">: ${digimonmove.category}</span></td></tr><tr><td style="width: 457px"><strong><span style="color: #008dc5">Base Power</span></strong><span style="color: black">: ${digimonmove.basePower}</span></td><td style="width: 457px"><strong><span style="color: #008dc5">Accuracy</span></strong><span style="color: black">: ${digimonmove.accuracy}</span></td></tr><tr><td style="width: 457px"><strong><span style="color: #008dc5">Priority</span></strong>`;
+			menu += `<span style="color: black">: ${digimonmove.priority}</span></td><td style="width: 457px"><strong><span style="color: #008dc5">Power Points</span></strong><span style="color: black">: ${digimonmove.pp}</span></td></tr></tbody></table><table style="width: 468px ; background-color: #edf8ff ; border-color: #008dc5" border="3"><tbody><tr><td style="width: 465px"><strong><span style="color: black">${digimonmove.desc}</span></strong></td></tr></tbody></table></td></tr></tbody></table></center></div>`;
+		}
+		return user.sendTo(room, `${change ? `|uhtmlchange|cs${user.userid}|` : `|uhtml|cs${user.userid}|`}${menu}`);
+	},
+	digimovesearchhelp: ['/digimovesearch - sends a display to search for a list of digimon moves.'],
+	
 	digiweak(target, room, user) {
 		if (!this.runBroadcast()) return;
 		target = target.trim();
@@ -462,10 +570,27 @@ exports.commands = {
 	},
 	digicreditshelp: ['/digicredits - Shows a list of all that contributed to the creation of these commands.'],
 
+	playersguide: 'playerguide',
+	digimonguide: 'playerguide',
+	digimonplayerguide: 'playerguide',
+	digiguide: 'playerguide',
+	playerguide(target, room, user) {
+		if (!this.runBroadcast()) return;
+		let display = `|html|<table style="background-color: #011f55 ; width: 337.951px ; border-color: #008dc5 ; margin-left: auto ; margin-right: auto" border="2"><tbody><tr><td style="text-align: center ; width: 282.951px"><table style="width: 333px ; background-color: #ffffff ; border-color: #008dc5 ; float: left" border="4"><tbody><tr><td style="width: 483px"><strong><span style="color: black"><span style="color: #008dc5">Digimon Showdown Player Guides</span></span></strong></td></tr></tbody></table></td></tr><tr>`;
+		display += `<td style="width: 282.951px"><table style="height: 29px ; width: 330px ; border-color: #008dc5 ; background-color: #ffffff ; margin-left: auto ; margin-right: auto" border="2"><tbody><tr><td style="width: 64.7292px ; text-align: center"><a href="https://i.imgur.com/MGQJOUG.png" target="_blank" rel="noopener">DigiDex</a></td><td style="width: 69.2708px ; text-align: center"><a href="https://i.imgur.com/FFvfyrO.png" target="_blank" rel="noopener">Types</a></td>`;
+		display += `<td style="width: 55px ; text-align: center"><a href="https://i.imgur.com/4gFwLWz.png" target="_blank" rel="noopener">Flashcards</a></td><td style="width: 55px ; text-align: center"><a href="https://i.imgur.com/mYRhFgx.png" target="_blank" rel="noopener">Abilities</a></td></tr><tr><td style="width: 64.7292px ; text-align: center"><a href="https://i.imgur.com/ZzcoxtC.png" target="_blank" rel="noopener">Statuses</a></td>`;
+		display += `<td style="width: 69.2708px ; text-align: center"><a href="https://i.imgur.com/wstPNUE.png" target="_blank" rel="noopener">Type Icons</a></td><td style="width: 55px ; text-align: center"><a href="http://azure.psim.us/digimondatabase" target="_blank" rel="noopener">Database</a></td><td style="width: 55px ; text-align: center"><a href="https://discord.gg/xGVJe6y" target="_blank" rel="noopener">Discord</a></td></tr></tbody></table></td></tr></tbody></table>`;
+		this.sendReply(display);
+	},
+	playerguidehelp: ['/playerguide - Shows a guide for the digimon showdown metagame.'],
+
 	digihelp: ['These are the commands for the Digimon Showdown chat-plugin:',
 		'/digiprofile [digimon] - Gives information on the digimon selected.',
 		'/digipedia - Shows a list of all selected digimon.',
+		'/digimovesearch - Shows a list of all selected digimon moves.',
+		'/digiweak [digimon] - Shows the weaknesses, resistances, and immunities of a digimon.',
 		'/digisprite [digimon] - Allows you to view the sprite of a Digimon Showdown digimon.',
 		'/digicredits - Shows a list of all that contributed to the creation of these commands.',
+		'/playerguide - Shows the digimon showdown players guide.',
 		'/digihelp - Shows the digimon help commands.'],
 };
