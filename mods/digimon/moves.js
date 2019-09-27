@@ -5127,8 +5127,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Battle",
 		target: "allAdjacentFoes",
-		desc: "10% chance to raise Attack by 1. Hits all adjacent foes.",
-		shortDesc: "10% chance to raise Attack by 1.",
+		desc: "10% chance to raise Special Attack by 1. Hits all adjacent foes.",
+		shortDesc: "10% chance to raise Special Attack by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "focusblast", target);
@@ -5138,7 +5138,7 @@ let BattleMovedex = {
 		secondary: {
 			chance: 10,
 			self: {
-				boosts: { atk: 1 },
+				boosts: { spa: 1 },
 			},
 		},
 	},
