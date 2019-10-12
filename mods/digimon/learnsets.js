@@ -1648,7 +1648,7 @@ let BattleLearnsets = {
 			shadowfall: ["7M"],
 			evilsquall: ["7M"],
 			blackout: ["7M"],
-			modestlystun: ["7M"],
+			berserkthinking: ["7M"],
 			protect: ["7M"],
 		},
 	},
