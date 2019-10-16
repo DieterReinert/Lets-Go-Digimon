@@ -4179,7 +4179,7 @@ let BattleMovedex = {
 		pp: 20,
 		secondary: null,
 		onAfterMoveSecondarySelf(pokemon, target, move) {
-			this.boost({ spe: 1 }, pokemon, pokemon, move);
+			this.boost({ spe: 2 }, pokemon, pokemon, move);
 		},
 	},
 	"winterblast": {
