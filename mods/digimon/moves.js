@@ -5155,7 +5155,7 @@ let BattleMovedex = {
 		type: "Battle",
 		target: "scripted",
 		desc: "If hit by an attack aim for the attacker and deal 50hp of damage. 20% chance to confuse the target.",
-		shortDesc: "Returns damage dealt. 20% confuse chance.",
+		shortDesc: "Returns 50HP of damage. 20% confuse chance.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "frustration", target);
