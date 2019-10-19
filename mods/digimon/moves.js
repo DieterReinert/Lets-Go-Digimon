@@ -5477,14 +5477,14 @@ let BattleMovedex = {
 			volatileStatus: 'flinch',
 		},
 	},
-	"pooptoss": {
-		accuracy: 95,
-		basePower: 35,
+	"guerrillapoop": {
+		accuracy: 80,
+		basePower: 95,
 		category: "Physical",
 		desc: "Next turn the target can't use status moves.",
 		shortDesc: "Next turn the target can't use status moves.",
 		id: "pooptoss",
-		name: "Poop Toss",
+		name: "Guerrilla Poop",
 		num: -315,
 		signature: false,
 		priority: 0,
@@ -5507,7 +5507,7 @@ let BattleMovedex = {
 		num: -316,
 		signature: false,
 		id: "poopattackfield",
-		basePower: 50,
+		basePower: 80,
 		priority: 0,
 		pp: 20,
 		category: "Special",
@@ -5534,7 +5534,7 @@ let BattleMovedex = {
 		num: -317,
 		signature: false,
 		id: "poopfling",
-		basePower: 15,
+		basePower: 18,
 		priority: 0,
 		pp: 30,
 		category: "Physical",
@@ -5555,11 +5555,11 @@ let BattleMovedex = {
 			if (this.random(100) < 5) target.addVolatile('confusion', source);
 		},
 	},
-	"guerrillapoop": {
-		name: "Guerrilla Poop",
+	"pooptoss": {
+		name: "Poop Toss",
 		num: -318,
 		signature: false,
-		id: "guerrillapoop",
+		id: "bigpooptoss",
 		basePower: 75,
 		priority: 0,
 		pp: 15,
@@ -5591,8 +5591,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Filth",
 		target: "allAdjacentFoes",
-		desc: "20% lower foe(s) Speed by 1. 5% chance of flinch. 10% chance of poison. Hits all adjacent foes.",
-		shortDesc: "20% chance -1 spe. 5% flinch. 10% psn.",
+		desc: "25% lower foe(s) Speed by 1. 5% chance of flinch. 10% chance of poison. Hits all adjacent foes.",
+		shortDesc: "25% chance -1 spe. 5% flinch. 10% psn.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "nastyplot", source);
@@ -5610,7 +5610,7 @@ let BattleMovedex = {
 				volatileStatus: 'flinch',
 			},
 			{
-				chance: 20,
+				chance: 25,
 				boosts: { spe: -1 },
 			},
 		],
