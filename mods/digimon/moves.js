@@ -4962,7 +4962,7 @@ let BattleMovedex = {
 		accuracy: 90,
 		secondary: null,
 		onAfterMoveSecondarySelf(pokemon, target, move) {
-			if (this.random(100) < 70) this.boost({ spe: 1 }, pokemon, pokemon, move);
+			if (this.random(100) < 70) this.boost({ spa: 1 }, pokemon, pokemon, move);
 		},
 	},
 	"saintray": {
