@@ -5559,7 +5559,7 @@ let BattleMovedex = {
 		name: "Poop Toss",
 		num: -318,
 		signature: false,
-		id: "bigpooptoss",
+		id: "pooptoss",
 		basePower: 75,
 		priority: 0,
 		pp: 15,
