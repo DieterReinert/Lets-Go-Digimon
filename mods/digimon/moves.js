@@ -5483,7 +5483,7 @@ let BattleMovedex = {
 		category: "Physical",
 		desc: "Next turn the target can't use status moves.",
 		shortDesc: "Next turn the target can't use status moves.",
-		id: "pooptoss",
+		id: "guerrillapoop",
 		name: "Guerrilla Poop",
 		num: -315,
 		signature: false,
