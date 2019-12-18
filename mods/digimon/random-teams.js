@@ -3,7 +3,7 @@
 
 const DIGIMON_SETS = require("./digimon-sets");
 
-const RandomTeams = require("../../data/random-teams");
+const RandomTeams = require('../../../data/random-teams');
 
 // Digimon X Pokemon
 const DIGI_X_POKE = "[Digimon] Digimon x Pokemon";
@@ -38,7 +38,7 @@ class RandomDigimonTeams extends RandomTeams {
 		//- Inherit how pokemon does it with Kuramon instead of sunkern
 		const mbstmin = 1381;
 
-		const template = this.getTemplate(set.species);
+		const template = this.dex.getTemplate(set.species);
 		const stats = template.baseStats;
 
 		// Modified base stat total assumes 31 IVs, 85 EVs in every stat
@@ -119,7 +119,7 @@ class RandomDigimonTeams extends RandomTeams {
 			DIGIMON_TYPES[~~(Math.random() * DIGIMON_TYPES.length)];
 
 		pool = pool.filter(i => {
-			const template = this.getTemplate(i.species);
+			const template = this.dex.getTemplate(i.species);
 			const types = template.types;
 
 			return types.includes(selectedType);
@@ -141,8 +141,8 @@ class RandomDigimonTeams extends RandomTeams {
 
 		const FORMAT = this.format.id;
 
-		// toId(DIGI_X_POKE)
-		const DigiXPoke = FORMAT.includes(toId(DIGI_X_POKE));
+		// toID(DIGI_X_POKE)
+		const DigiXPoke = FORMAT.includes(toID(DIGI_X_POKE));
 		const Monotype = FORMAT.includes("monotype");
 
 		if (DigiXPoke) return this.randomDigimonXPokemonTeam(pool);
