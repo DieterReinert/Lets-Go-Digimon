@@ -270,7 +270,7 @@ let BattleTypeChart = {
 			"Evil": 0,
 			"Battle": 0,
 			"Mech": 0,
-			"Filth": 0,
+			"Filth": 2,
 			"Bug": 2,
 			"Dark": 0,
 			"Dragon": 0,
