@@ -423,12 +423,14 @@ exports.commands = {
 	},
 	digimovesearchhelp: ['/digimovesearch - sends a display to search for a list of digimon moves.'],
 	
-	digiweak(target, room, user) {
+digiweak(target, room, user) {
+		if (!target) return this.parse('/help weakness');
 		if (!this.runBroadcast()) return;
 		target = target.trim();
 		let mod = Dex.mod('digimon');
-		let targets = target.split(/ ?[,/ ] ?/);
-		let digimon = mod.getTemplate(target);
+		let targets = target.split(/ ?[,/] ?/);
+		/** @type {{types: string[], [k: string]: any}} */
+		let digimon = mod.getTemplate(targets[0]);
 		let type1 = mod.getType(targets[0]);
 		let type2 = mod.getType(targets[1]);
 		let type3 = mod.getType(targets[2]);
@@ -438,17 +440,17 @@ exports.commands = {
 		} else {
 			let types = [];
 			if (type1.exists) {
-				types.push(type1.id);
+				types.push(type1.name);
 				if (type2.exists && type2 !== type1) {
-					types.push(type2.id);
+					types.push(type2.name);
 				}
 				if (type3.exists && type3 !== type1 && type3 !== type2) {
-					types.push(type3.id);
+					types.push(type3.name);
 				}
 			}
 
 			if (types.length === 0) {
-				return this.sendReplyBox(`${Chat.escapeHTML(target)} isn't a recognized type or digimon${Dex.gen > mod.gen ? ` in Gen ${mod.gen}` : ""}.`);
+				return this.sendReplyBox(Chat.html`${target} isn't a recognized type or digimon${Dex.gen > mod.gen ? ` in Gen ${mod.gen}` : ""}.`);
 			}
 			digimon = { types: types };
 			target = types.join("/");
