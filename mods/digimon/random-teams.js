@@ -28,9 +28,13 @@ const DIGIMON_TYPES = [
 class RandomDigimonTeams extends RandomTeams {
 	prepareSet(set) {
 		let randomMoves = [];
+		let move = null;
 
-		for (let i = 0; i < 3; i++) {
-			randomMoves.push(this.sampleNoReplace(set.moves));
+		while (randomMoves.length < 3) {
+			move = this.sample(set.moves);
+
+			if (randomMoves.includes(move)) continue;
+			randomMoves.push(move);
 		}
 
 		// CPed over
@@ -87,7 +91,7 @@ class RandomDigimonTeams extends RandomTeams {
 				set.ability,
 			item: "",
 			gender: "N",
-			moves: ["Protect", set.reservedMove].concat(randomMoves),
+			moves: [set.reservedMove].concat(randomMoves),
 			// natures[~~(Math.random() * natures.length)];
 			nature: natures[~~(Math.random() * natures.length)],
 			evs: { hp: 85, atk: 85, def: 85, spa: 85, spd: 85, spe: 85 },
