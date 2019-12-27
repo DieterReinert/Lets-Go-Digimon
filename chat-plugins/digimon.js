@@ -79,23 +79,23 @@ function getTypeChart(digimon) {
 function getTypeImgSrc(type) {
 	switch (type) {
 		case 'Flame':
-			return 'https://cdn.discordapp.com/attachments/357714356915666954/476516538866860043/Flame_Mini.png';
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/flame-icon.png';
 		case 'Aqua':
-			return 'https://cdn.discordapp.com/attachments/357714356915666954/476516531518570514/Aqua_Mini.png';
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/aqua-icon.png';
 		case 'Air':
-			return 'https://cdn.discordapp.com/attachments/357714356915666954/476516530251890691/Air.png';
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/air-icon.png';
 		case 'Nature':
-			return 'https://cdn.discordapp.com/attachments/357714356915666954/476516544126517268/Nature_Mini.png';
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/nature-icon.png';
 		case 'Holy':
-			return 'https://cdn.discordapp.com/attachments/357714356915666954/476516540829794304/Holy_Mini.png';
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/holy-icon.png';
 		case 'Evil':
-			return 'https://cdn.discordapp.com/attachments/357714356915666954/476516535398039562/Evil_Mini.png';
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/evil-icon.png';
 		case 'Battle':
-			return 'https://cdn.discordapp.com/attachments/357714356915666954/578650139405844512/Battle_Mini_2.png';
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/battle-icon.png';
 		case 'Mech':
-			return 'https://cdn.discordapp.com/attachments/357714356915666954/476516542780145666/Mech_Mini.png';
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/mech-icon.png';
 		case 'Filth':
-			return 'https://cdn.discordapp.com/attachments/357714356915666954/476516536895406100/Filth_Mini.png';
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/filth-icon.png';
 		default:
 			return '';
 	}
