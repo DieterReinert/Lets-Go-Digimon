@@ -793,7 +793,7 @@ let BattleMovedex = {
 		accuracy: 90,
 		basePower: 0,
 		damageCallback(pokemon, target) {
-			return this.clampIntRange(Math.floor(target.hp / 2), 1);
+			return this.dex.clampIntRange(Math.floor(target.hp / 2), 1);
 		},
 		category: "Special",
 		desc: "Does damage equal to 1/2 target’s current HP. 1.3 HP if Big Root is held by the user.",
@@ -2386,7 +2386,7 @@ let BattleMovedex = {
 		priority: 0,
 		basePower: 0,
 		damageCallback(pokemon, target) {
-			return this.clampIntRange(Math.floor(target.hp / 2), 1);
+			return this.dex.clampIntRange(Math.floor(target.hp / 2), 1);
 		},
 		category: "Physical",
 		type: "Filth",
