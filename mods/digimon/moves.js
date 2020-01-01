@@ -3979,8 +3979,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Flame",
 		target: "any",
-		desc: "Priority +1.",
-		shortDesc: "Priority +1",
+		desc: "Priority +1, 10% chance to burn the target.",
+		shortDesc: "Priority +1, 10% chance to burn the target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "heatwave", target);
@@ -3988,7 +3988,10 @@ let BattleMovedex = {
 		flags: { protect: 1, mirror: 1, defrost: 1 },
 		accuracy: 100,
 		pp: 30,
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
 	},
 	"firetower": {
 		name: "Fire Tower",
@@ -4000,8 +4003,8 @@ let BattleMovedex = {
 		priority: 0,
 		type: "Flame",
 		target: "any",
-		desc: "Ignores target's stat changes.",
-		shortDesc: "Ignores target's stat changes.",
+		desc: "Ignores target's stat changes, 10% burn chance.",
+		shortDesc: "Ignores target's stat changes, 10% burn chance.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "flamecharge", target);
@@ -4011,7 +4014,10 @@ let BattleMovedex = {
 		pp: 20,
 		ignoreDefensive: true,
 		ignoreEvasion: true,
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
 	},
 	"firewall": {
 		name: "Firewall",
@@ -4078,8 +4084,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Flame",
 		target: "any",
-		desc: "20% chance to panic the target.",
-		shortDesc: "20% chance to panic the target.",
+		desc: "30% chance to burn the target.",
+		shortDesc: "30% chance to burn the target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "burnup", target);
@@ -4088,8 +4094,8 @@ let BattleMovedex = {
 		accuracy: 95,
 		pp: 20,
 		secondary: {
-			chance: 20,
-			volatileStatus: 'panic',
+			chance: 30,
+			status: 'brn',
 		},
 	},
 	"infinityburn": {
@@ -4102,16 +4108,19 @@ let BattleMovedex = {
 		category: "Physical",
 		type: "Flame",
 		target: "normal",
-		desc: "No additional effect.",
-		shortDesc: "No additional effect.",
+		desc: "10% burn, thaws.",
+		shortDesc: "10% burn, thaws",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "vcreate", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: { protect: 1, mirror: 1, defrost: 1 },
 		pp: 15,
 		accuracy: 95,
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
 	},
 	"prominencebeam": {
 		name: "Prominence Beam",
@@ -4123,8 +4132,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Flame",
 		target: "any",
-		desc: "No additional effect.",
-		shortDesc: "No additional effect.",
+		desc: "10% chance to burn.",
+		shortDesc: "10% chance to burn the target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "solarbeam", target);
@@ -4132,7 +4141,10 @@ let BattleMovedex = {
 		flags: { protect: 1, mirror: 1 },
 		pp: 10,
 		accuracy: 95,
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
 	},
 	"hailspear": {
 		name: "Hail Spear",
@@ -4240,19 +4252,19 @@ let BattleMovedex = {
 		basePower: 80,
 		category: "Special",
 		type: "Aqua",
-		target: "allAdjacent",
-		desc: "25% chance to lower adjacent monsters Speed by 1. Hits all adjacent monsters.",
-		shortDesc: "25% chance to lower adjacent monsters Speed by 1.",
+		target: "allAdjacentFoes",
+		desc: "30% chance to lower the foe(s) accuracy by 1.",
+		shortDesc: "30% chance to lower the foe(s) accuracy by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "surf", target);
 		},
 		flags: { protect: 1, mirror: 1 },
-		accuracy: 95,
+		accuracy: 90,
 		pp: 10,
 		secondary: {
-			chance: 25,
-			boosts: { spe: -1 },
+			chance: 30,
+			boosts: { accuracy: -1 },
 		},
 	},
 	"icestatue": {
@@ -4289,21 +4301,18 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Aqua",
 		target: "allAdjacentFoes",
-		desc: "15% chance to dot the foe(s). Must recharge, hits all adjacent foes.",
-		shortDesc: "15% chance to dot the foe(s). Must recharge.",
+		desc: "Has a 30% chance to paralyze adjacent foes.",
+		shortDesc: "Has a 30% chance to paralyze adjacent foes.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "iceburn", target);
 		},
-		flags: { protect: 1, mirror: 1, recharge: 1 },
+		flags: { protect: 1, mirror: 1 },
 		accuracy: 95,
-		onAfterMoveSecondarySelf(pokemon, target, move) {
-			pokemon.addVolatile('mustrecharge');
-		},
 		pp: 10,
 		secondary: {
-			chance: 15,
-			volatileStatus: 'dot',
+			chance: 30,
+			volatileStatus: 'par',
 		},
 	},
 	"wingshoes": {
@@ -4342,8 +4351,8 @@ let BattleMovedex = {
 		category: "Physical",
 		type: "Air",
 		target: "normal",
-		desc: "Priority +1. 10% chance to flinch the target.",
-		shortDesc: "Priority +1. 10% chance to flinch the target.",
+		desc: "Priority +1. high crit",
+		shortDesc: "Priority +1. high crit",
 		pp: 30,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
@@ -4351,10 +4360,8 @@ let BattleMovedex = {
 		},
 		flags: { protect: 1, mirror: 1 },
 		accuracy: 95,
-		secondary: {
-			chance: 10,
-			volatileStatus: 'flinch',
-		},
+		critRatio: 2,
+		secondary: null,
 	},
 	"windcutter": {
 		name: "Wind Cutter",
@@ -4366,8 +4373,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Air",
 		target: "any",
-		desc: "No additional effect.",
-		shortDesc: "No additional effect.",
+		desc: "10% chance to paralyze the target.",
+		shortDesc: "10% chance to paralyze the target.",
 		pp: 35,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
@@ -4375,7 +4382,10 @@ let BattleMovedex = {
 		},
 		flags: { protect: 1, mirror: 1 },
 		accuracy: 100,
-		secondary: null,
+		secondary: {
+			chance: 10,
+			volatileStatus: 'par',
+		},
 	},
 	"confusedstorm": {
 		name: "Confused Storm",
@@ -4387,8 +4397,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Air",
 		target: "allAdjacent",
-		desc: "10% chance to confuse adjacent monsters.",
-		shortDesc: "10% chance to confuse adjacent monsters.",
+		desc: "30% chance to confuse adjacent monsters.",
+		shortDesc: "30% chance to confuse adjacent monsters.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "featherdance", target);
@@ -4398,7 +4408,7 @@ let BattleMovedex = {
 		accuracy: 90,
 		pp: 20,
 		secondary: {
-			chance: 10,
+			chance: 30,
 			volatileStatus: 'confusion',
 		},
 	},
@@ -4407,13 +4417,12 @@ let BattleMovedex = {
 		num: -275,
 		signature: false,
 		id: "electriccloud",
-		priority: -1,
 		basePower: 80,
 		category: "Special",
 		type: "Air",
 		target: "any",
-		desc: "Priority -1. 25% chance to lower target’s Speed by 1.",
-		shortDesc: "Priority -1, 25% chance to lower target’s Speed by 1.",
+		desc: "20% chance to paralyze the target.",
+		shortDesc: "20% chance to paralyze the target.",
 		pp: 15,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
@@ -4422,8 +4431,8 @@ let BattleMovedex = {
 		flags: { protect: 1, mirror: 1, authentic: 1 },
 		accuracy: 100,
 		secondary: {
-			chance: 25,
-			boosts: { spe: -1 },
+			chance: 20,
+			volatileStatus: 'par',
 		},
 	},
 	"megalospark": {
@@ -4436,8 +4445,8 @@ let BattleMovedex = {
 		category: "Physical",
 		type: "Air",
 		target: "any",
-		desc: "10% chance to flinch the target.",
-		shortDesc: "10% chance to flinch the target.",
+		desc: "10% chance to paralyze the target.",
+		shortDesc: "10% chance to paralyze the target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "boltstrike", target);
@@ -4447,7 +4456,7 @@ let BattleMovedex = {
 		pp: 10,
 		secondary: {
 			chance: 10,
-			volatileStatus: 'flinch',
+			volatileStatus: 'par',
 		},
 	},
 	"thunderjustice": {
@@ -4461,15 +4470,18 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Air",
 		target: "any",
-		desc: "Does not check accuracy.",
-		shortDesc: "Does not check accuracy.",
+		desc: "Does not check accuracy, 10% chance to paralyze.",
+		shortDesc: "Does not check accuracy, 10% chance to paralyze.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "stokedsparksurfer", target);
 		},
 		flags: { protect: 1, mirror: 1 },
 		accuracy: true,
-		secondary: null,
+		secondary: {
+			chance: 10,
+			volatileStatus: 'par',
+		},
 	},
 	"earthcoat": {
 		name: "Earth Coat",
@@ -4666,15 +4678,18 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Evil",
 		target: "any",
-		desc: "Does not check accuracy.",
-		shortDesc: "Does not check accuracy.",
+		desc: "25% chance to paralyze the target.",
+		shortDesc: "25% chance to paralyze the target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "spiritshackle", target);
 		},
 		flags: { protect: 1, mirror: 1 },
 		accuracy: true,
-		secondary: null,
+		secondary: {
+			chance: 25,
+			status: 'par'
+		},
 	},
 	"blackout": {
 		name: "Blackout",
@@ -4686,8 +4701,8 @@ let BattleMovedex = {
 		category: "Physical",
 		type: "Evil",
 		target: "allAdjacent",
-		desc: "25% chance to lower adjacent monsters accuracy by 1. Hits all adjacent monsters.",
-		shortDesc: "25% chance to lower adjacent monsters accuracy by 1.",
+		desc: "15% chance to confuse all adjacent monsters.",
+		shortDesc: "15% chance to confuse all adjacent monsters.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "brutalswing", target);
@@ -4696,8 +4711,8 @@ let BattleMovedex = {
 		accuracy: 100,
 		pp: 10,
 		secondary: {
-			chance: 25,
-			boosts: { accuracy: -1 },
+			chance: 15,
+			volatileStatus: 'confusion',
 		},
 	},
 	"evilfantasy": {
@@ -4710,22 +4725,24 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Evil",
 		target: "any",
-		desc: "25% chance to lower the target’s Defense and Special Defense by 1.",
-		shortDesc: "25% chance to lower the target’s Def and Sp.Def by 1.",
+		desc: "Usually goes first. Fails if target is not attacking.",
+		shortDesc: "Usually goes first. Fails if target is not attacking.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "embargo", target);
 		},
 		flags: { protect: 1, mirror: 1, authentic: 1 },
+		onTry(source, target) {
+			let action = this.willMove(target);
+			if (!action || action.choice !== 'move' || (action.move.category === 'Status' && action.move.id !== 'mefirst') || target.volatiles.mustrecharge) {
+				this.add('-fail', source);
+				this.attrLastMove('[still]');
+				return null;
+			}
+		},
 		pp: 15,
 		accuracy: 95,
-		secondary: {
-			chance: 25,
-			boosts: {
-				def: -1,
-				spd: -1,
-			},
-		},
+		secondary: null,
 	},
 	"chaoscloud": {
 		name: "Chaos Cloud",
@@ -4738,8 +4755,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Evil",
 		target: "allAdjacent",
-		desc: "Priority -1, 10% chance to panic adjacent monsters. Hits all adjacent monsters.",
-		shortDesc: "Priority -1, 10% chance to panic adjacent monsters.",
+		desc: "20% chance to lower that target's sp.def by 1.",
+		shortDesc: "20% chance to lower that target's sp.def by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "trickortreat", target);
@@ -4747,8 +4764,8 @@ let BattleMovedex = {
 		flags: { protect: 1, mirror: 1, authentic: 1 },
 		accuracy: 90,
 		secondary: {
-			chance: 10,
-			volatileStatus: 'panic',
+			chance: 20,
+			boosts: { spd: -1 },
 		},
 	},
 	"shadowfall": {
@@ -4784,8 +4801,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Evil",
 		target: "any",
-		desc: "10% chance to dot the target.",
-		shortDesc: "10% chance to dot the target.",
+		desc: "10% chance to flinch the target.",
+		shortDesc: "10% chance to flinch the target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "darkvoid", target);
@@ -4794,7 +4811,7 @@ let BattleMovedex = {
 		accuracy: 85,
 		secondary: {
 			chance: 10,
-			volatileStatus: 'dot',
+			volatileStatus: 'flinch',
 		},
 	},
 	"evilsquall": {
@@ -4976,15 +4993,17 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Holy",
 		target: "any",
-		desc: "Does not check accuracy.",
-		shortDesc: "Does not check accuracy.",
+		desc: "10% chance to lower the target's sp.def by 1.",
+		shortDesc: "10% chance to lower the target's sp.def by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "naturesmadness", target);
 		},
 		flags: { protect: 1, mirror: 1 },
-		accuracy: true,
-		secondary: null,
+		secondary: {
+			chance: 10,
+			boosts: { spd: -1 },
+		},
 	},
 	"holyjudgment": {
 		name: "Holy Judgment",
@@ -4997,23 +5016,17 @@ let BattleMovedex = {
 		category: "Physical",
 		type: "Holy",
 		target: "any",
-		desc: "User is hurt by 25% of its max HP if it misses.",
-		shortDesc: "User is hurt by 25% of its max HP if it misses.",
+		desc: "10% chance to lower the target's atk by 1.",
+		shortDesc: "10% chance to lower the target's atk by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "supersonicskystrike", target);
 		},
 		flags: { protect: 1, mirror: 1 },
-		accuracy: 85,
-		hasCustomRecoil: true,
-		onMoveFail(target, source, move) {
-			this.damage(source.maxhp / 4, source, source, move);
-		},
+		accuracy: 90,
 		secondary: {
-			chance: 25,
-			self: {
-				boosts: { atk: 1 },
-			},
+			chance: 10,
+			boosts: { atk: -1 },
 		},
 	},
 	"shiningnova": {
@@ -5027,8 +5040,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Holy",
 		target: "allAdjacentFoes",
-		desc: "75% chance to flinch the foe(s). Must recharge. Hits all adjacent foes.",
-		shortDesc: "75% chance to flinch the foe(s). Must recharge.",
+		desc: "30% chance to lower the target's sp.atk by 1.",
+		shortDesc: "30% chance to lower the target's sp.atk by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "happyhour", source);
@@ -5036,10 +5049,9 @@ let BattleMovedex = {
 		},
 		flags: { protect: 1, mirror: 1, authentic: 1, recharge: 1 },
 		accuracy: 100,
-		secondary: null,
-		onAfterMoveSecondarySelf(pokemon, target, move) {
-			this.boost({ def: 1 }, pokemon, pokemon, move);
-			pokemon.addVolatile('mustrecharge');
+		secondary: {
+			chance: 10,
+			boosts: { spa: -1 },
 		},
 	},
 	"musclecharge": {
@@ -5340,19 +5352,17 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Mech",
 		target: "allAdjacentFoes",
-		desc: "Raises allies Defense by 1. Hits all adjacent foes.",
-		shortDesc: "Raises allies Defense by 1.",
+		desc: "Has a 30% chance to flinch the target.",
+		shortDesc: "Has a 30% chance to flinch the target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "storedpower", target);
 		},
 		flags: { protect: 1, mirror: 1 },
 		accuracy: 100,
-		secondary: null,
-		onAfterMoveSecondarySelf(source, target, move) {
-			for (let pokemon of source.side.active) {
-				if (pokemon) this.boost({ def: 1 }, pokemon, source);
-			}
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
 		},
 	},
 	"gigawattlaser": {
@@ -5366,17 +5376,17 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Mech",
 		target: "any",
-		desc: "Priority +1, must recharge.",
-		shortDesc: "priority +1, must recharge.",
+		desc: "10% chance to paralyze the target.",
+		shortDesc: "10% chance to paralyze the target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "mirrorshot", target);
 		},
-		flags: { protect: 1, mirror: 1, recharge: 1 },
-		accuracy: 90,
-		secondary: null,
-		self: {
-			volatileStatus: 'mustrecharge',
+		flags: { protect: 1, mirror: 1 },
+		accuracy: 100,
+		secondary: {
+			chance: 10,
+			status: 'par',
 		},
 	},
 	"deleteprogram": {
@@ -5390,8 +5400,8 @@ let BattleMovedex = {
 		category: "Physical",
 		type: "Mech",
 		target: "any",
-		desc: "15% chance to dot the target.",
-		shortDesc: "15% chance to dot the target.",
+		desc: "30% chance to bug the target.",
+		shortDesc: "30% chance to bug the target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "endeavor", target);
@@ -5399,8 +5409,8 @@ let BattleMovedex = {
 		flags: { protect: 1, mirror: 1 },
 		accuracy: 100,
 		secondary: {
-			chance: 15,
-			volatileStatus: 'dot',
+			chance: 30,
+			volatileStatus: 'bug',
 		},
 	},
 	"dgdimension": {
@@ -5414,8 +5424,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Mech",
 		target: "allAdjacentFoes",
-		desc: "Priority -1. 10% chance to dot the foe(s). Hits all adjacent foes.",
-		shortDesc: "Priority-1. 10% chance to dot.",
+		desc: "Has a 30% chance to lower the target's accuracy by 1 stage.",
+		shortDesc: "30% chance to lower the foe(s) accuracy by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "searingsunrazesmash", target);
@@ -5423,8 +5433,8 @@ let BattleMovedex = {
 		flags: { protect: 1, mirror: 1 },
 		accuracy: 90,
 		secondary: {
-			chance: 10,
-			volatileStatus: 'dot',
+			chance: 30,
+			boosts: { accuracy: -1 },
 		},
 	},
 	"cootieskick": {
@@ -5438,8 +5448,8 @@ let BattleMovedex = {
 		category: "Physical",
 		type: "Filth",
 		target: "normal",
-		desc: "10% chance to poison the target. Hits 2-5 times.",
-		shortDesc: "10% chance to poison the target. Hits 2-5 times.",
+		desc: "20% chance to poison the target. Hits 2-5 times.",
+		shortDesc: "20% chance to poison the target. Hits 2-5 times.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "firstimpression", target);
@@ -5448,7 +5458,7 @@ let BattleMovedex = {
 		accuracy: 100,
 		multihit: [2, 5],
 		secondary: {
-			chance: 10,
+			chance: 20,
 			status: 'psn',
 		},
 	},
@@ -5462,9 +5472,9 @@ let BattleMovedex = {
 		pp: 20,
 		category: "Special",
 		type: "Filth",
-		target: "allAdjacentFoes",
-		desc: "10% chance to flinch the foe(s). Hits all adjacent foes.",
-		shortDesc: "10% chance to flinch the foe(s).",
+		target: "any",
+		desc: "40% chance to poison the target.",
+		shortDesc: "40% chance to poison the target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "acidarmor", source);
@@ -5473,16 +5483,16 @@ let BattleMovedex = {
 		flags: { protect: 1, mirror: 1 },
 		accuracy: 100,
 		secondary: {
-			chance: 10,
-			volatileStatus: 'flinch',
+			chance: 40,
+			status: 'psn',
 		},
 	},
 	"guerrillapoop": {
 		accuracy: 80,
 		basePower: 95,
 		category: "Physical",
-		desc: "Next turn the target can't use status moves.",
-		shortDesc: "Next turn the target can't use status moves.",
+		desc: "Hits twice",
+		shortDesc: "Hits twice",
 		id: "guerrillapoop",
 		name: "Guerrilla Poop",
 		num: -315,
@@ -5495,10 +5505,8 @@ let BattleMovedex = {
 			this.add('-anim', source, "toxic", target);
 		},
 		flags: { protect: 1, mirror: 1 },
-		secondary: {
-			chance: 100,
-			volatileStatus: 'taunt',
-		},
+		multihit: 2,
+		secondary: null,
 		target: "any",
 		type: "Filth",
 	},
@@ -5513,19 +5521,16 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Filth",
 		target: "allAdjacent",
-		desc: "Raises Def by 1. 15% chance of poisoning adjacent monsters. Hits all adjacent monsters.",
-		shortDesc: "Raises Def by 1. 15% chance of poisoning adjacent monsters.",
+		desc: "10% chance of poisoning adjacent monsters.",
+		shortDesc: "10% chance of poisoning adjacent monsters.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "gunkshot", target);
 		},
 		flags: { protect: 1, mirror: 1 },
-		accuracy: 80,
-		onAfterMoveSecondarySelf(pokemon, target, move) {
-			this.boost({ def: 1 }, pokemon, pokemon, move);
-		},
+		accuracy: 90,
 		secondary: {
-			chance: 15,
+			chance: 10,
 			status: 'psn',
 		},
 	},
@@ -5540,8 +5545,8 @@ let BattleMovedex = {
 		category: "Physical",
 		type: "Filth",
 		target: "any",
-		desc: "5% chance to confuse the target. Hits 2-5 times.",
-		shortDesc: "5% chance to confuse the target. Hits 2-5 times.",
+		desc: "5% chance to confuse the target. Hits 3-5 times.",
+		shortDesc: "5% chance to confuse the target. Hits 3-5 times.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "nastyplot", source);
@@ -5549,7 +5554,7 @@ let BattleMovedex = {
 		},
 		flags: { protect: 1, mirror: 1 },
 		accuracy: 100,
-		multihit: [2, 5],
+		multihit: [3, 5],
 		secondary: null,
 		onAfterMoveSecondary(target, source, move) {
 			if (this.random(100) < 5) target.addVolatile('confusion', source);
@@ -5591,8 +5596,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Filth",
 		target: "allAdjacentFoes",
-		desc: "25% lower foe(s) Speed by 1. 5% chance of flinch. 10% chance of poison. Hits all adjacent foes.",
-		shortDesc: "25% chance -1 spe. 5% flinch. 10% psn.",
+		desc: "25% chance of poison. Hits all adjacent foes.",
+		shortDesc: "25% chance of poison. Hits all adjacent foes.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "nastyplot", source);
@@ -5600,20 +5605,10 @@ let BattleMovedex = {
 		},
 		flags: { protect: 1, mirror: 1 },
 		accuracy: 90,
-		secondaries: [
-			{
-				chance: 10,
-				status: 'psn',
-			},
-			{
-				chance: 5,
-				volatileStatus: 'flinch',
-			},
-			{
-				chance: 25,
-				boosts: { spe: -1 },
-			},
-		],
+		secondary: {
+			chance: 25,
+			status: 'psn',
+		},
 	},
 
 	// Status Moves
