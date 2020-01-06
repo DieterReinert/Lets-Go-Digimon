@@ -4684,7 +4684,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "spiritshackle", target);
 		},
 		flags: { protect: 1, mirror: 1 },
-		accuracy: 100%,
+		accuracy: 100,
 		secondary: {
 			chance: 25,
 			status: 'par'
