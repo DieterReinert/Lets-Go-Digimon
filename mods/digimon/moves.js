@@ -4166,7 +4166,6 @@ let BattleMovedex = {
 		accuracy: 100,
 		pp: 30,
 		secondary: null,
-		},
 	},
 	"waterblitz": {
 		name: "Water Blitz",
@@ -4202,7 +4201,7 @@ let BattleMovedex = {
 		category: "Physical",
 		type: "Aqua",
 		target: "allAdjacentFoes",
-		desc: "10% chance to freeze the foe(s)."
+		desc: "10% chance to freeze the foe(s).",
 		shortDesc: "10% chance to frz the foe(s).",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
