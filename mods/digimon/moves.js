@@ -3958,7 +3958,7 @@ let BattleMovedex = {
 		type: "Flame",
 		target: "self",
 		desc: "Raises the user’s attack by 2.",
-		shortDesc: "Raises the user’s attack by 2.",
+		shortDesc: "Raises the user’s atk by 2.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "tailglow", target);
@@ -3980,7 +3980,7 @@ let BattleMovedex = {
 		type: "Flame",
 		target: "normal",
 		desc: "Priority +1, 10% chance to burn the target.",
-		shortDesc: "Priority +1, 10% chance to burn the target.",
+		shortDesc: "Priority +1, 10% chance to brn the target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "heatwave", target);
@@ -4004,7 +4004,7 @@ let BattleMovedex = {
 		type: "Flame",
 		target: "normal",
 		desc: "Ignores target's stat changes, 10% burn chance.",
-		shortDesc: "Ignores target's stat changes, 10% burn chance.",
+		shortDesc: "Ignores target's stat changes, 10% brn chance.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "flamecharge", target);
@@ -4030,7 +4030,7 @@ let BattleMovedex = {
 		type: "Flame",
 		target: "self",
 		desc: "Priority +4. Protects user from moves. Contact: loses 1/8 max hp unless Fire/Flame type.",
-		shortDesc: "Protects user from moves. Contact: loses 1/8 max hp unless Fire/Flame type.",
+		shortDesc: "Protect, 1/8 max hp contact damage unless fire/flame type.",
 		onPrepareHit(pokemon, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "firespin", source);
@@ -4084,8 +4084,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Flame",
 		target: "allAdjacentFoes",
-		desc: "30% chance to burn the foes.",
-		shortDesc: "30% chance to burn the foes.",
+		desc: "30% chance to burn the foe(s).",
+		shortDesc: "30% chance to brn the foe(s).",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "burnup", target);
@@ -4109,7 +4109,7 @@ let BattleMovedex = {
 		type: "Flame",
 		target: "normal",
 		desc: "10% chance to burn the target, thaws.",
-		shortDesc: "10% chance to burn the target, thaws.",
+		shortDesc: "10% chance to brn the target, thaws.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "vcreate", target);
@@ -4133,7 +4133,7 @@ let BattleMovedex = {
 		type: "Flame",
 		target: "normal",
 		desc: "10% chance to burn the target.",
-		shortDesc: "10% chance to burn the target.",
+		shortDesc: "10% chance to brn the target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "solarbeam", target);
@@ -4178,8 +4178,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Aqua",
 		target: "allAdjacentFoes",
-		desc: "100% chance to raise Speed by 2. Hits all adjacent foes.",
-		shortDesc: "Raises Speed by 2.",
+		desc: "Attack foe(s) and raises the users Speed by 2.",
+		shortDesc: "Attack foe(s) and raises the users Spe by 2.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "dive", target);
@@ -4203,7 +4203,7 @@ let BattleMovedex = {
 		type: "Aqua",
 		target: "allAdjacentFoes",
 		desc: "10% chance to freeze the foe(s)."
-		shortDesc: "10% chance to freeze the foe(s).",
+		shortDesc: "10% chance to frz the foe(s).",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "hail", target);
@@ -4229,7 +4229,7 @@ let BattleMovedex = {
 		pp: 10,
 		target: "normal",
 		desc: "10% chance to freeze the target.",
-		shortDesc: "10% chance to freeze the target.",
+		shortDesc: "10% chance to frz the target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "freezedry", target);
@@ -4252,7 +4252,7 @@ let BattleMovedex = {
 		type: "Aqua",
 		target: "allAdjacentFoes",
 		desc: "30% chance to lower the foe(s) accuracy by 1.",
-		shortDesc: "30% chance to lower the foe(s) accuracy by 1.",
+		shortDesc: "30% chance to lower the foe(s) acc by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "surf", target);
@@ -4299,8 +4299,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Aqua",
 		target: "allAdjacentFoes",
-		desc: "Has a 30% chance to paralyze adjacent foes.",
-		shortDesc: "Has a 30% chance to paralyze adjacent foes.",
+		desc: "Has a 30% chance to paralyze the foe(s).",
+		shortDesc: "Has a 30% chance to par the foe(s).",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "iceburn", target);
@@ -4324,7 +4324,7 @@ let BattleMovedex = {
 		type: "Air",
 		target: "allySide",
 		desc: "Raises user's and allies speed by 1.",
-		shortDesc: "Raises user's and allies speed by 1.",
+		shortDesc: "Raises user's and allies spe by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "magnetrise", target);
@@ -4349,8 +4349,8 @@ let BattleMovedex = {
 		category: "Physical",
 		type: "Air",
 		target: "normal",
-		desc: "Priority +1. Has a high critical hit ratio.",
-		shortDesc: "Priority +1. High crit",
+		desc: "Priority +1, has a high critical hit ratio.",
+		shortDesc: "Priority +1, high crit.",
 		pp: 10,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
@@ -4371,8 +4371,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Air",
 		target: "any",
-		desc: "30% chance to paralyze the target.",
-		shortDesc: "30% chance to paralyze the target.",
+		desc: "30% chance to paralyze any target.",
+		shortDesc: "30% chance to par any target.",
 		pp: 15,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
@@ -4395,8 +4395,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Air",
 		target: "allAdjacent",
-		desc: "30% chance to confuse adjacent monsters.",
-		shortDesc: "30% chance to confuse adjacent monsters.",
+		desc: "30% chance to confuse the foe(s).",
+		shortDesc: "30% chance to confuse the foe(s).",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "featherdance", target);
@@ -4421,7 +4421,7 @@ let BattleMovedex = {
 		type: "Air",
 		target: "normal",
 		desc: "20% chance to paralyze the target.",
-		shortDesc: "20% chance to paralyze the target.",
+		shortDesc: "20% chance to par the target.",
 		pp: 15,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
@@ -4445,7 +4445,7 @@ let BattleMovedex = {
 		type: "Air",
 		target: "normal",
 		desc: "10% chance to paralyze the target.",
-		shortDesc: "10% chance to paralyze the target.",
+		shortDesc: "10% chance to par the target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "boltstrike", target);
@@ -4470,7 +4470,7 @@ let BattleMovedex = {
 		type: "Air",
 		target: "normal",
 		desc: "Does not check accuracy, 10% chance to paralyze.",
-		shortDesc: "Does not check accuracy, 10% chance to paralyze.",
+		shortDesc: "Does not check acc, 10% chance to par.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "stokedsparksurfer", target);
@@ -4492,8 +4492,8 @@ let BattleMovedex = {
 		category: "Status",
 		type: "Nature",
 		target: "allySide",
-		desc: "Cures user's side's status and raises Sp. Def by 1.",
-		shortDesc: "Cures user's side's status and raises Sp. Def by 1.",
+		desc: "Cures ally side status and raises Sp.Def by 1.",
+		shortDesc: "Cures ally side status and raises Sp.Def by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "mudsport", target);
@@ -4554,8 +4554,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Nature",
 		target: "allAdjacentFoes",
-		desc: "2x Power if target is poisoned. 30% poison chance. Hits all adjacent foes.",
-		shortDesc: "Power doubles if target is poisoned. 30% poison chance.",
+		desc: "30% chance of poison, and 2x base power if foe(s) are poisoned.",
+		shortDesc: "30% chance of psn, and 2x BP if foe(s) are psn.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "grasswhistle", target);
@@ -4578,7 +4578,7 @@ let BattleMovedex = {
 		type: "Nature",
 		target: "normal",
 		desc: "25% chance to lower target’s Speed. Traps target.",
-		shortDesc: "25% chance to lower target’s Speed. Traps target.",
+		shortDesc: "25% chance to lower target’s Spe. Traps target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "grassknot", target);
@@ -4654,7 +4654,7 @@ let BattleMovedex = {
 		type: "Nature",
 		target: "allAdjacent",
 		desc: "20% chance to poison adjacent monsters.",
-		shortDesc: "20% chance to poison adjacent monsters.",
+		shortDesc: "20% chance to psn adjacent monsters.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "aciddownpour", target);
@@ -4678,7 +4678,7 @@ let BattleMovedex = {
 		type: "Evil",
 		target: "normal",
 		desc: "25% chance to paralyze the target.",
-		shortDesc: "25% chance to paralyze the target.",
+		shortDesc: "25% chance to par the target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "spiritshackle", target);
@@ -4754,7 +4754,7 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Evil",
 		target: "normal",
-		desc: "20% chance to lower that target's sp.def by 1.",
+		desc: "20% chance to lower that target's special defense by 1.",
 		shortDesc: "20% chance to lower that target's sp.def by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
@@ -4824,8 +4824,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Evil",
 		target: "any",
-		desc: "30% chance to confuse the target.",
-		shortDesc: "30% chance to confuse the target.",
+		desc: "30% chance to confuse any target.",
+		shortDesc: "30% chance to confuse any target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "blackholeeclipse", target);
@@ -4848,8 +4848,8 @@ let BattleMovedex = {
 		category: "Status",
 		type: "Holy",
 		target: "any",
-		desc: "Heals the target by 40% of its max HP.",
-		shortDesc: "Heals the target by 40% of its max HP.",
+		desc: "Heals any target by 40% of its max HP.",
+		shortDesc: "Heals any target by 40% of its max HP.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "geomancy", target);
@@ -4874,7 +4874,7 @@ let BattleMovedex = {
 		target: "self",
 		secondary: null,
 		desc: "Raises the user’s Special Defense and Speed by 1.",
-		shortDesc: "Raises the user’s Sp.Def and Speed by 1.",
+		shortDesc: "Raises the user’s Sp.Def and Spe by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "morningsun", target);
@@ -4992,7 +4992,7 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Holy",
 		target: "normal",
-		desc: "10% chance to lower the target's sp.def by 1.",
+		desc: "10% chance to lower the target's special defense by 1.",
 		shortDesc: "10% chance to lower the target's sp.def by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
@@ -5016,7 +5016,7 @@ let BattleMovedex = {
 		category: "Physical",
 		type: "Holy",
 		target: "normal",
-		desc: "10% chance to lower the target's atk by 1.",
+		desc: "10% chance to lower the target's attack by 1.",
 		shortDesc: "10% chance to lower the target's atk by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
@@ -5040,7 +5040,7 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Holy",
 		target: "normal",
-		desc: "30% chance to lower the target's sp.atk by 1.",
+		desc: "30% chance to lower the target's special attack by 1.",
 		shortDesc: "30% chance to lower the target's sp.atk by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
@@ -5064,8 +5064,8 @@ let BattleMovedex = {
 		category: "Status",
 		type: "Battle",
 		target: "self",
-		desc: "Raises the user’s Attack and Speed by 1.",
-		shortDesc: "Raises the user’s Atk and Speed by 1.",
+		desc: "Raises the user’s attack and speed by 1.",
+		shortDesc: "Raises the user’s atk and spe by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "growth", target);
@@ -5090,8 +5090,8 @@ let BattleMovedex = {
 		category: "Status",
 		type: "Battle",
 		target: "self",
-		desc: "Lowers user’s Defense, Special Defense by 2; raises Attack, Special Attack by 2.",
-		shortDesc: "Lowers user’s Def, SpD by 2; raises Atk, SpA by 2.",
+		desc: "Lowers user’s defense, special defense by 2; raises attack, Special attack by 2.",
+		shortDesc: "Lowers user’s def, sp.def by 2; raises atk, sp.atk by 2.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "nobleroar", target);
@@ -5139,8 +5139,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Battle",
 		target: "allAdjacentFoes",
-		desc: "10% chance to raise Special Attack by 1.",
-		shortDesc: "10% chance to raise Special Attack by 1.",
+		desc: "attacks foe(s), 10% chance to raise Special Attack by 1.",
+		shortDesc: "attacks foe(s), 10% chance to raise sp.atk by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "focusblast", target);
@@ -5187,8 +5187,8 @@ let BattleMovedex = {
 		category: "Physical",
 		type: "Battle",
 		target: "normal",
-		desc: "Charges turn 1. Hits turn 2. 75% chance of flinch.",
-		shortDesc: "Charges turn 1. Hits turn 2. 75% chance of flinch.",
+		desc: "Charges turn 1, hits turn 2. 75% chance of flinch.",
+		shortDesc: "Charges turn 1, hits turn 2. 75% chance of flinch.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "happyhour", source);
@@ -5274,8 +5274,8 @@ let BattleMovedex = {
 		category: "Status",
 		type: "Mech",
 		target: "self",
-		desc: "Priority -1. Raises user’s Attack, Defense, Special Attack and Speed by 1.",
-		shortDesc: "Priority -1. Raises user’s Atk, Def, SpA and Spe by 1.",
+		desc: "Priority -1. Raises user’s attack, defense, special attack and speed by 1.",
+		shortDesc: "Priority -1. Raises user’s atk, def, sp.atk and spe by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "gearup", target);
@@ -5302,8 +5302,8 @@ let BattleMovedex = {
 		category: "Status",
 		type: "Mech",
 		target: "allAdjacentFoes",
-		desc: "Causes adjacent foes to be buggy.",
-		shortDesc: "Causes adjacent foes to be buggy.",
+		desc: "Causes adjacent monsters to be buggy.",
+		shortDesc: "Causes adjacent monsters to be buggy.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "gravity", target);
@@ -5324,8 +5324,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Mech",
 		target: "allAdjacentFoes",
-		desc: "Has a 30% chance to flinch the target.",
-		shortDesc: "Has a 30% chance to flinch the target.",
+		desc: "Has a 30% chance to flinch the foe(s).",
+		shortDesc: "Has a 30% chance to flinch the foe(s).",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "storedpower", target);
@@ -5349,7 +5349,7 @@ let BattleMovedex = {
 		type: "Mech",
 		target: "normal",
 		desc: "10% chance to paralyze the target.",
-		shortDesc: "10% chance to paralyze the target.",
+		shortDesc: "10% chance to par the target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "mirrorshot", target);
@@ -5396,8 +5396,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Mech",
 		target: "allAdjacentFoes",
-		desc: "Has a 30% chance to lower the target's accuracy by 1 stage.",
-		shortDesc: "30% chance to lower the foe(s) accuracy by 1.",
+		desc: "30% chance to lower the foe(s) accuracy by 1 stage.",
+		shortDesc: "30% chance to lower the foe(s) acc by 1.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "searingsunrazesmash", target);
@@ -5421,7 +5421,7 @@ let BattleMovedex = {
 		type: "Filth",
 		target: "normal",
 		desc: "20% chance to poison the target. Hits 2-5 times.",
-		shortDesc: "20% chance to poison the target. Hits 2-5 times.",
+		shortDesc: "20% chance to psn the target. Hits 2-5 times.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "firstimpression", target);
@@ -5446,7 +5446,7 @@ let BattleMovedex = {
 		type: "Filth",
 		target: "normal",
 		desc: "40% chance to poison the target.",
-		shortDesc: "40% chance to poison the target.",
+		shortDesc: "40% chance to psn the target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "acidarmor", source);
@@ -5494,7 +5494,7 @@ let BattleMovedex = {
 		type: "Filth",
 		target: "allAdjacent",
 		desc: "10% chance of poisoning adjacent monsters.",
-		shortDesc: "10% chance of poisoning adjacent monsters.",
+		shortDesc: "10% chance of psn adjacent monsters.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "gunkshot", target);
@@ -5544,7 +5544,7 @@ let BattleMovedex = {
 		type: "Filth",
 		target: "normal",
 		desc: "30% chance to lower the target’s Speed by 2.",
-		shortDesc: "30% chance to lower the target’s Speed by 2.",
+		shortDesc: "30% chance to lower the target’s spe by 2.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "banefulbunker", source);
@@ -5568,8 +5568,8 @@ let BattleMovedex = {
 		category: "Special",
 		type: "Filth",
 		target: "allAdjacentFoes",
-		desc: "25% chance of poison. Hits all adjacent foes.",
-		shortDesc: "25% chance of poison. Hits all adjacent foes.",
+		desc: "25% chance of poison foe(s).",
+		shortDesc: "25% chance of psn foe(s).",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "nastyplot", source);
