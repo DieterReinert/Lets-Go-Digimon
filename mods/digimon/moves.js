@@ -5161,6 +5161,7 @@ let BattleMovedex = {
 		basePower: 0,
 		damage: 50,
 		category: "Physical",
+		desc: "Deals 50 HP of damage to the target.",
 		shortDesc: "Deals 50 HP of damage to the target.",
 		id: "tremar",
 		name: "Tremar",
