@@ -1,2387 +1,1019 @@
-'use strict';
-
-/**@type {{[k: string]: {learnset: {[k: string]: MoveSource[]}}}} */
-let BattleLearnsets = {
-	//Fresh
-	botamon: {
-		learnset: {
-			acidbubble: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	dodomon: {
-		learnset: {
-			acidbubble: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	kuramon: {
-		learnset: {
-			acidbubble: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	poyomon: {
-		learnset: {
-			acidbubble: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	punimon: {
-		learnset: {
-			acidbubble: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	yuramon: {
-		learnset: {
-			acidbubble: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	//In Training
-	bukamon: {
-		learnset: {
-			acidbubble: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	dorimon: {
-		learnset: {
-			acidbubble: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	koromon: {
-		learnset: {
-			acidbubble: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	motimon: {
-		learnset: {
-			acidbubble: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	nyaromon: {
-		learnset: {
-			acidbubble: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	tanemon: {
-		learnset: {
-			acidbubble: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	tokomon: {
-		learnset: {
-			acidbubble: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	tsumemon: {
-		learnset: {
-			acidbubble: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	tsunomon: {
-		learnset: {
-			acidbubble: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	//Rookie
-	agumon: {
-		learnset: {
-			burningheart: ["7M"],
-			heatbreath: ["7M"],
-			firetower: ["7M"],
-			infinityburn: ["7M"],
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			windcutter: ["7M"],
-			pepperbreath: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	aruraumon: {
-		learnset: {
-			charmperfume: ["7M"],
-			rootbind: ["7M"],
-			venomdisaster: ["7M"],
-			waterblitz: ["7M"],
-			superstinkyjet: ["7M"],
-			shadowfall: ["7M"],
-			blackout: ["7M"],
-			nemesisivy: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	betamon: {
-		learnset: {
-			staticelectricity: ["7M"],
-			electriccloud: ["7M"],
-			megalospark: ["7M"],
-			hailspear: ["7M"],
-			waterblitz: ["7M"],
-			oceanwave: ["7M"],
-			electricshock: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	biyomon: {
-		learnset: {
-			wingshoes: ["7M"],
-			windcutter: ["7M"],
-			burningheart: ["7M"],
-			heatbreath: ["7M"],
-			firetower: ["7M"],
-			meltdown: ["7M"],
-			warcry: ["7M"],
-			holyflash: ["7M"],
-			rootbind: ["7M"],
-			spiraltwister: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	clearagumon: {
-		learnset: {
-			heatbreath: ["7M"],
-			holyterrain: ["7M"],
-			saintray: ["7M"],
-			holyflash: ["7M"],
-			mechanicalclaw: ["7M"],
-			upgrade: ["7M"],
-			gigawattlaser: ["7M"],
-			preciousflame: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	demidevimon: {
-		learnset: {
-			blackout: ["7M"],
-			evilfantasy: ["7M"],
-			shadowfall: ["7M"],
-			hideandseek: ["7M"],
-			windcutter: ["7M"],
-			confusedstorm: ["7M"],
-			cootieskick: ["7M"],
-			demidart: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	dokunemon: {
-		learnset: {
-			staticelectricity: ["7M"],
-			shadowfall: ["7M"],
-			earthcoat: ["7M"],
-			massmorph: ["7M"],
-			bug: ["7M"],
-			venomdisaster: ["7M"],
-			blackout: ["7M"],
-			wormvenom: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	dorumon: {
-		learnset: {
-			burningheart: ["7M"],
-			megalospark: ["7M"],
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			fightingaura: ["7M"],
-			busterdrive: ["7M"],
-			mechanicalclaw: ["7M"],
-			antiattackfield: ["7M"],
-			metalcannon: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	elecmon: {
-		learnset: {
-			staticelectricity: ["7M"],
-			electriccloud: ["7M"],
-			thunderjustice: ["7M"],
-			saintheal: ["7M"],
-			warcry: ["7M"],
-			fightingaura: ["7M"],
-			superthunderstrike: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	gabumon: {
-		learnset: {
-			heatbreath: ["7M"],
-			firetower: ["7M"],
-			hailspear: ["7M"],
-			gigafreeze: ["7M"],
-			icestatue: ["7M"],
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			blueblaster: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	goburimon: {
-		learnset: {
-			heatbreath: ["7M"],
-			firetower: ["7M"],
-			infinityburn: ["7M"],
-			musclecharge: ["7M"],
-			burninheart: ["7M"],
-			tremar: ["7M"],
-			megatonpunch: ["7M"],
-			shadowfall: ["7M"],
-			pooptoss: ["7M"],
-			goblinstrike: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	gomamon: {
-		learnset: {
-			mechanicalclaw: ["7M"],
-			waterblitz: ["7M"],
-			oceanwave: ["7M"],
-			icestatue: ["7M"],
-			aurorafreeze: ["7M"],
-			warcry: ["7M"],
-			tremar: ["7M"],
-			marchingfishes: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	gotsumon: {
-		learnset: {
-			earthcoat: ["7M"],
-			rockfall: ["7M"],
-			charmperfume: ["7M"],
-			venomdisaster: ["7M"],
-			bug: ["7M"],
-			megatonpunch: ["7M"],
-			fightingaura: ["7M"],
-			rockfist: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	kunemon: {
-		learnset: {
-			staticelectricity: ["7M"],
-			megalospark: ["7M"],
-			earthcoat: ["7M"],
-			massmorph: ["7M"],
-			bug: ["7M"],
-			venomdisaster: ["7M"],
-			superstinkyjet: ["7M"],
-			electricthread: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	modokibetamon: {
-		learnset: {
-			staticelectricity: ["7M"],
-			electriccloud: ["7M"],
-			confusedstorm: ["7M"],
-			hailspear: ["7M"],
-			icestatue: ["7M"],
-			rootbind: ["7M"],
-			waterblitz: ["7M"],
-			aquatower: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	muchomon: {
-		learnset: {
-			burningheart: ["7M"],
-			hailspear: ["7M"],
-			waterblitz: ["7M"],
-			windcutter: ["7M"],
-			infinityburn: ["7M"],
-			firewall: ["7M"],
-			tropicalbeak: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	otamamon: {
-		learnset: {
-			hailspear: ["7M"],
-			waterblitz: ["7M"],
-			oceanwave: ["7M"],
-			icestatue: ["7M"],
-			bug: ["7M"],
-			charmperfume: ["7M"],
-			warcry: ["7M"],
-			lullabybubble: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	palmon: {
-		learnset: {
-			charmperfume: ["7M"],
-			rootbind: ["7M"],
-			venomdisaster: ["7M"],
-			waterblitz: ["7M"],
-			superstinkyjet: ["7M"],
-			burningheart: ["7M"],
-			confusedstorm: ["7M"],
-			poisonivy: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	patamon: {
-		learnset: {
-			wingshoes: ["7M"],
-			windcutter: ["7M"],
-			sonicjab: ["7M"],
-			busterdrive: ["7M"],
-			saintheal: ["7M"],
-			holybreath: ["7M"],
-			holyflash: ["7M"],
-			boombubble: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	penguinmon: {
-		learnset: {
-			musclecharge: ["7M"],
-			hailspear: ["7M"],
-			waterblitz: ["7M"],
-			icestatue: ["7M"],
-			megalospark: ["7M"],
-			earthcoat: ["7M"],
-			eternalslapping: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	psychemon: {
-		learnset: {
-			heatbreath: ["7M"],
-			firetower: ["7M"],
-			staticelectricity: ["7M"],
-			winterblast: ["7M"],
-			confusedstorm: ["7M"],
-			icestatue: ["7M"],
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			coloredsparkle: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	salamon: {
-		learnset: {
-			saintheal: ["7M"],
-			holybreath: ["7M"],
-			holyflash: ["7M"],
-			saintray: ["7M"],
-			warcry: ["7M"],
-			antiattackfield: ["7M"],
-			fightingaura: ["7M"],
-			puppyhowl: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	shamanmon: {
-		learnset: {
-			charmperfume: ["7M"],
-			rootbind: ["7M"],
-			rockfall: ["7M"],
-			musclecharge: ["7M"],
-			warcry: ["7M"],
-			tremar: ["7M"],
-			megatonpunch: ["7M"],
-			shadowfall: ["7M"],
-			pooptoss: ["7M"],
-			dancingbone: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	snowagumon: {
-		learnset: {
-			burningheart: ["7M"],
-			hailspear: ["7M"],
-			winterblast: ["7M"],
-			icestatue: ["7M"],
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			windcutter: ["7M"],
-			littleblizzard: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	snowgoburimon: {
-		learnset: {
-			hailspear: ["7M"],
-			winterblast: ["7M"],
-			icestatue: ["7M"],
-			musclecharge: ["7M"],
-			warcry: ["7M"],
-			tremar: ["7M"],
-			shadowfall: ["7M"],
-			pooptoss: ["7M"],
-			snowgobbolt: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	tentomon: {
-		learnset: {
-			staticelectricity: ["7M"],
-			confusedstorm: ["7M"],
-			electriccloud: ["7M"],
-			megalospark: ["7M"],
-			massmorph: ["7M"],
-			bug: ["7M"],
-			rockfall: ["7M"],
-			fightingaura: ["7M"],
-			supershocker: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	toyagumon: {
-		learnset: {
-			heatbreath: ["7M"],
-			firewall: ["7M"],
-			prominencebeam: ["7M"],
-			sonicjab: ["7M"],
-			mechanicalclaw: ["7M"],
-			upgrade: ["7M"],
-			giganticlaser: ["7M"],
-			plasticblaze: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	tsukaimon: {
-		learnset: {
-			wingshoes: ["7M"],
-			windcutter: ["7M"],
-			sonicjab: ["7M"],
-			darkspirit: ["7M"],
-			blackout: ["7M"],
-			evilfantasy: ["7M"],
-			chaoscloud: ["7M"],
-			evilspell: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	//Champion
-	airdramon: {
-		learnset: {
-			heatbreath: ["7M"],
-			firetower: ["7M"],
-			meltdown: ["7M"],
-			infinityburn: ["7M"],
-			wingshoes: ["7M"],
-			windcutter: ["7M"],
-			confusedstorm: ["7M"],
-			holybreath: ["7M"],
-			spinningneedle: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	akatorimon: {
-		learnset: {
-			heatbreath: ["7M"],
-			firewall: ["7M"],
-			wingshoes: ["7M"],
-			windcutter: ["7M"],
-			megalospark: ["7M"],
-			icestatue: ["7M"],
-			guerrillapoop: ["7M"],
-			scarredeye: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	angemon: {
-		learnset: {
-			wingshoes: ["7M"],
-			windcutter: ["7M"],
-			sonicjab: ["7M"],
-			busterdrive: ["7M"],
-			saintheal: ["7M"],
-			holybreath: ["7M"],
-			holyflash: ["7M"],
-			saintray: ["7M"],
-			holyjudgment: ["7M"],
-			handoffate: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	bakemon: {
-		learnset: {
-			darkspirit: ["7M"],
-			blckout: ["7M"],
-			evilfantasy: ["7M"],
-			shadowfall: ["7M"],
-			massmorph: ["7M"],
-			icestatue: ["7M"],
-			staticelectricity: ["7M"],
-			electriccloud: ["7M"],
-			thunderjustice: ["7M"],
-			evilcharm: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	birdramon: {
-		learnset: {
-			wingshoes: ["7M"],
-			windcutter: ["7M"],
-			burningheart: ["7M"],
-			heatbreath: ["7M"],
-			firetower: ["7M"],
-			meltdown: ["7M"],
-			infinityburn: ["7M"],
-			warcry: ["7M"],
-			holyflash: ["7M"],
-			meteorwing: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	blackgatomon: {
-		learnset: {
-			warcry: ["7M"],
-			sonicjab: ["7M"],
-			fightingaura: ["7M"],
-			evilsquall: ["7M"],
-			evilfantasy: ["7M"],
-			hideandseek: ["7M"],
-			gigafreeze: ["7M"],
-			darkpaw: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	centarumon: {
-		learnset: {
-			firetower: ["7M"],
-			firewall: ["7M"],
-			prominencebeam: ["7M"],
-			saintheal: ["7M"],
-			saintray: ["7M"],
-			fightingaura: ["7M"],
-			upgrade: ["7M"],
-			gigawattlaser: ["7M"],
-			solarray: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	coelamon: {
-		learnset: {
-			waterblitz: ["7M"],
-			icestatue: ["7M"],
-			mechcanicalclaw: ["7M"],
-			upgrade: ["7M"],
-			antiattackfield: ["7M"],
-			massmorph: ["7M"],
-			staticelectricity: ["7M"],
-			deleteprogram: ["7M"],
-			variabledarts: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	darkrizamon: {
-		learnset: {
-			heatbreath: ["7M"],
-			firetower: ["7M"],
-			firewall: ["7M"],
-			meltdown: ["7M"],
-			darkspirit: ["7M"],
-			evilfantasy: ["7M"],
-			shadowfall: ["7M"],
-			mechanicalclaw: ["7M"],
-			dreadfire: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	devimon: {
-		learnset: {
-			darkspirit: ["7M"],
-			windcutter: ["7M"],
-			evilfantasy: ["7M"],
-			chaoscloud: ["7M"],
-			aurorafreeze: ["7M"],
-			evilsquall: ["7M"],
-			confusedstorm: ["7M"],
-			wingshoes: ["7M"],
-			deathhand: ["7M"],
-			protect: ["7M"],
-
-		},
-	},
-	dolphmon: {
-		learnset: {
-			waterblitz: ["7M"],
-			gigafreeze: ["7M"],
-			oceanwave: ["7M"],
-			icestatue: ["7M"],
-			warcry: ["7M"],
-			sonicjab: ["7M"],
-			fightingaura: ["7M"],
-			holybreath: ["7M"],
-			saintheal: ["7M"],
-			pulseblast: ["7M"],
-			protect: ["7M"],
-
-		},
-	},
-	dorugamon: {
-		learnset: {
-			burningheart: ["7M"],
-			winterblast: ["7M"],
-			megalospark: ["7M"],
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			fightingaura: ["7M"],
-			busterdrive: ["7M"],
-			mechanicalclaw: ["7M"],
-			antiattackfield: ["7M"],
-			powermetal: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	drimogemon: {
-		learnset: {
-			mechanicalclaw: ["7M"],
-			deleteprogram: ["7M"],
-			earthcoat: ["7M"],
-			massmorph: ["7M"],
-			rootbind: ["7M"],
-			rockfall: ["7M"],
-			drillspin: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	flarerizamon: {
-		learnset: {
-			heatbreath: ["7M"],
-			firetower: ["7M"],
-			firewall: ["7M"],
-			meltdown: ["7M"],
-			sonicjab: ["7M"],
-			warcry: ["7M"],
-			megatonpunch: ["7M"],
-			mechanicalclaw: ["7M"],
-			blazebuster: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	frigimon: {
-		learnset: {
-			hailspear: ["7M"],
-			icestatue: ["7M"],
-			aurorafreeze: ["7M"],
-			waterblitz: ["7M"],
-			sonicjab: ["7M"],
-			musclecharge: ["7M"],
-			fightingaura: ["7M"],
-			subzeroicepunch: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	fugamon: {
-		learnset: {
-			staticelectricity: ["7M"],
-			windcutter: ["7M"],
-			megalospark: ["7M"],
-			blackout: ["7M"],
-			musclecharge: ["7M"],
-			warcry: ["7M"],
-			tremar: ["7M"],
-			megatonpunch: ["7M"],
-			evilhurricane: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	garurumon: {
-		learnset: {
-			warcry: ["7M"],
-			waterblitz: ["7M"],
-			fightingaura: ["7M"],
-			burningheart: ["7M"],
-			heatbreath: ["7M"],
-			gigafreeze: ["7M"],
-			hailspear: ["7M"],
-			meltdown: ["7M"],
-			aurorafreeze: ["7M"],
-			howlingblaster: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	gatomon: {
-		learnset: {
-			holybreath: ["7M"],
-			sonicjab: ["7M"],
-			fightingaura: ["7M"],
-			saintray: ["7M"],
-			saintheal: ["7M"],
-			holyflash: ["7M"],
-			confusedstorm: ["7M"],
-			lightningpaw: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	gekomon: {
-		learnset: {
-			hailspear: ["7M"],
-			confusedstorm: ["7M"],
-			oceanwave: ["7M"],
-			icestatue: ["7M"],
-			gigafreeze: ["7M"],
-			warcry: ["7M"],
-			charmperfume: ["7M"],
-			symphonycrusher: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	geremon: {
-		learnset: {
-			gigafreeze: ["7M"],
-			earthcoat: ["7M"],
-			bug: ["7M"],
-			venomdisaster: ["7M"],
-			warcry: ["7M"],
-			superstinkyjet: ["7M"],
-			poopattackfield: ["7M"],
-			guerrillapoop: ["7M"],
-			extremepoopdeath: ["7M"],
-			hypersmell: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	greymon: {
-		learnset: {
-			burningheart: ["7M"],
-			heatbreath: ["7M"],
-			firetower: ["7M"],
-			infinityburn: ["7M"],
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			megalospark: ["7M"],
-			megaflame: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	guardromon: {
-		learnset: {
-			upgrade: ["7M"],
-			reverseprogram: ["7M"],
-			antiattackfield: ["7M"],
-			gigawattlaser: ["7M"],
-			megalospark: ["7M"],
-			holyterrain: ["7M"],
-			firetower: ["7M"],
-			firewall: ["7M"],
-			thunderjustice: ["7M"],
-			guardianbarrage: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	gururumon: {
-		learnset: {
-			warcry: ["7M"],
-			waterblitz: ["7M"],
-			fightingaura: ["7M"],
-			burningheart: ["7M"],
-			blackout: ["7M"],
-			gigafreeze: ["7M"],
-			darkspirit: ["7M"],
-			evilfantasy: ["7M"],
-			aurorafreeze: ["7M"],
-			chaosblaster: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	hyogamon: {
-		learnset: {
-			hailspear: ["7M"],
-			winterblast: ["7M"],
-			icestatue: ["7M"],
-			blackout: ["7M"],
-			musclecharge: ["7M"],
-			warcry: ["7M"],
-			tremar: ["7M"],
-			megatonpunch: ["7M"],
-			snowpunch: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	icedevimon: {
-		learnset: {
-			waterblitz: ["7M"],
-			blackout: ["7M"],
-			evilfantasy: ["7M"],
-			icestatue: ["7M"],
-			shadowfall: ["7M"],
-			evilsquall: ["7M"],
-			winterblast: ["7M"],
-			gigafreeze: ["7M"],
-			frozenclaw: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	icemon: {
-		learnset: {
-			earthcoat: ["7M"],
-			rockfall: ["7M"],
-			hailspear: ["7M"],
-			aurorafreeze: ["7M"],
-			gigafreeze: ["7M"],
-			megatonpunch: ["7M"],
-			fightingaura: ["7M"],
-			iceballbomb: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	ikkakumon: {
-		learnset: {
-			hailspear: ["7M"],
-			oceanwave: ["7M"],
-			icestatue: ["7M"],
-			aurorafreeze: ["7M"],
-			mechanicalclaw: ["7M"],
-			warcry: ["7M"],
-			tremar: ["7M"],
-			harpoontorpedo: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	junglemojyamon: {
-		learnset: {
-			earthcoat: ["7M"],
-			rootbind: ["7M"],
-			warcry: ["7M"],
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			fightingaura: ["7M"],
-			superstinkyjet: ["7M"],
-			poopfling: ["7M"],
-			junglebone: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	kabuterimon: {
-		learnset: {
-			confusedstorm: ["7M"],
-			electriccloud: ["7M"],
-			megalospark: ["7M"],
-			thunderjustice: ["7M"],
-			massmorph: ["7M"],
-			bug: ["7M"],
-			rockfall: ["7M"],
-			fightingaura: ["7M"],
-			electroshocker: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	kokatorimon: {
-		learnset: {
-			wingshoes: ["7M"],
-			windcutter: ["7M"],
-			megalospark: ["7M"],
-			icestatue: ["7M"],
-			cootieskick: ["7M"],
-			pooptoss: ["7M"],
-			guerrillapoop: ["7M"],
-			frozenfireshot: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	kuwagamon: {
-		learnset: {
-			sonicjab: ["7M"],
-			busterdrive: ["7M"],
-			massmorph: ["7M"],
-			bug: ["7M"],
-			venomdisaster: ["7M"],
-			windcutter: ["7M"],
-			blackout: ["7M"],
-			scissorclaw: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	leomon: {
-		learnset: {
-			musclecharge: ["7M"],
-			warcry: ["7M"],
-			sonicjab: ["7M"],
-			meltdown: ["7M"],
-			infinityburn: ["7M"],
-			megatonpunch: ["7M"],
-			earthcoat: ["7M"],
-			holyterrain: ["7M"],
-			burningheart: ["7M"],
-			fistofthebeastking: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	meicoomon: {
-		learnset: {
-			warcry: ["7M"],
-			windcutter: ["7M"],
-			fightingaura: ["7M"],
-			megatonpunch: ["7M"],
-			mechanicalclaw: ["7M"],
-			venomdisaster: ["7M"],
-			shadowfall: ["7M"],
-			saintray: ["7M"],
-			xscratch: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	meramon: {
-		learnset: {
-			burningheart: ["7M"],
-			firewall: ["7M"],
-			firetower: ["7M"],
-			infinityburn: ["7M"],
-			holyflash: ["7M"],
-			fightingaura: ["7M"],
-			sonicjab: ["7M"],
-			megatonpunch: ["7M"],
-			burningfist: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	mikemon: {
-		learnset: {
-			warcry: ["7M"],
-			sonicjab: ["7M"],
-			fightingaura: ["7M"],
-			venomdisaster: ["7M"],
-			evilfantasy: ["7M"],
-			holyflash: ["7M"],
-			bug: ["7M"],
-			catclaw: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	mojyamon: {
-		learnset: {
-			warcry: ["7M"],
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			fightingaura: ["7M"],
-			hailspear: ["7M"],
-			winterblast: ["7M"],
-			superstinkyjet: ["7M"],
-			poopfling: ["7M"],
-			boneboomerang: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	monochromon: {
-		learnset: {
-			heatbreath: ["7M"],
-			firetower: ["7M"],
-			infinityburn: ["7M"],
-			earthcoat: ["7M"],
-			rockfall: ["7M"],
-			musclecharge: ["7M"],
-			busterdrive: ["7M"],
-			volcanicstrike: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	morishellmon: {
-		learnset: {
-			waterblitz: ["7M"],
-			oceanwave: ["7M"],
-			earthcoat: ["7M"],
-			charmperfume: ["7M"],
-			rootbind: ["7M"],
-			venomdisaster: ["7M"],
-			sonicjab: ["7M"],
-			mindfog: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	mudfrigimon: {
-		learnset: {
-			rootbind: ["7M"],
-			bug: ["7M"],
-			rockfall: ["7M"],
-			massmorph: ["7M"],
-			sonicjab: ["7M"],
-			earthcoat: ["7M"],
-			fightingaura: ["7M"],
-			mudball: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	nanimon: {
-		learnset: {
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			fightingaura: ["7M"],
-			pooptoss: ["7M"],
-			poopattackfield: ["7M"],
-			superstinkyjet: ["7M"],
-			evilfantasy: ["7M"],
-			blackout: ["7M"],
-			poopdunk: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	ninjamon: {
-		learnset: {
-			warcry: ["7M"],
-			sonicjab: ["7M"],
-			musclecharge: ["7M"],
-			charmperfume: ["7M"],
-			rootbind: ["7M"],
-			earthcoat: ["7M"],
-			tremar: ["7M"],
-			dancingleaves: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	nisedrimogemon: {
-		learnset: {
-			warcry: ["7M"],
-			sonicjab: ["7M"],
-			busterdrive: ["7M"],
-			tremar: ["7M"],
-			mechanicalclaw: ["7M"],
-			upgrade: ["7M"],
-			deleteprogram: ["7M"],
-			reverseprogram: ["7M"],
-			fakedrillspin: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	numemon: {
-		learnset: {
-			oceanwave: ["7M"],
-			earthcoat: ["7M"],
-			bug: ["7M"],
-			icestatue: ["7M"],
-			warcry: ["7M"],
-			cootieskick: ["7M"],
-			pooptoss: ["7M"],
-			guerrillapoop: ["7M"],
-			extremepoopdeath: ["7M"],
-			numesludge: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	ogremon: {
-		learnset: {
-			firetower: ["7M"],
-			infinityburn: ["7M"],
-			heatbreath: ["7M"],
-			blackout: ["7M"],
-			musclecharge: ["7M"],
-			warcry: ["7M"],
-			tremar: ["7M"],
-			megatonpunch: ["7M"],
-			pummelwhack: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	piddomon: {
-		learnset: {
-			burningheart: ["7M"],
-			firewall: ["7M"],
-			infinityburn: ["7M"],
-			holybreath: ["7M"],
-			windcutter: ["7M"],
-			sonicjab: ["7M"],
-			saintheal: ["7M"],
-			saintray: ["7M"],
-			holyjudgment: ["7M"],
-			firefeather: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	platinumsukamon: {
-		learnset: {
-			earthcoat: ["7M"],
-			rockfall: ["7M"],
-			holyflash: ["7M"],
-			mechanicalclaw: ["7M"],
-			reverseprogram: ["7M"],
-			deleteprogram: ["7M"],
-			cootieskick: ["7M"],
-			superstinkyjet: ["7M"],
-			guerrillapoop: ["7M"],
-			extremepoopdeath: ["7M"],
-			raremetalpoop: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	redvegiemon: {
-		learnset: {
-			heatbreath: ["7M"],
-			meltdown: ["7M"],
-			prominencebeam: ["7M"],
-			massmorph: ["7M"],
-			charmperfume: ["7M"],
-			venomdisaster: ["7M"],
-			earthcoat: ["7M"],
-			chilipepperpummel: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	rockmon: {
-		learnset: {
-			mechanicalclaw: ["7M"],
-			winterblast: ["7M"],
-			gigafreeze: ["7M"],
-			gigawattlaser: ["7M"],
-			dgdimension: ["7M"],
-			upgrade: ["7M"],
-			sonicjab: ["7M"],
-			antidigibeam: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	saberdramon: {
-		learnset: {
-			wingshoes: ["7M"],
-			windcutter: ["7M"],
-			burningheart: ["7M"],
-			blackout: ["7M"],
-			firetower: ["7M"],
-			shadowfall: ["7M"],
-			infinityburn: ["7M"],
-			evilfantasy: ["7M"],
-			nightroar: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	sandyanmamon: {
-		learnset: {
-			electriccloud: ["7M"],
-			windcutter: ["7M"],
-			confusedstorm: ["7M"],
-			thunderjustice: ["7M"],
-			earthcoat: ["7M"],
-			massmorph: ["7M"],
-			charmperfume: ["7M"],
-			bug: ["7M"],
-			holyflash: ["7M"],
-			stunray: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	seadramon: {
-		learnset: {
-			hailspear: ["7M"],
-			waterblitz: ["7M"],
-			gigafreeze: ["7M"],
-			aurorafreeze: ["7M"],
-			heatbreath: ["7M"],
-			meltdown: ["7M"],
-			holybreath: ["7M"],
-			iceblast: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	shellmon: {
-		learnset: {
-			waterblitz: ["7M"],
-			winterblast: ["7M"],
-			oceanwave: ["7M"],
-			aurorafreeze: ["7M"],
-			massmorph: ["7M"],
-			rockfall: ["7M"],
-			sonicjab: ["7M"],
-			hydropressure: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	shimaunimon: {
-		learnset: {
-			holybreath: ["7M"],
-			electriccloud: ["7M"],
-			confusedstorm: ["7M"],
-			saintheal: ["7M"],
-			holyflash: ["7M"],
-			saintray: ["7M"],
-			warcry: ["7M"],
-			fightingaura: ["7M"],
-			aurorafreeze: ["7M"],
-			sonicjab: ["7M"],
-			busterdrive: ["7M"],
-			lustershot: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	soulmon: {
-		learnset: {
-			darkspirit: ["7M"],
-			blackout: ["7M"],
-			evilfantasy: ["7M"],
-			shadowfall: ["7M"],
-			massmorph: ["7M"],
-			staticelectricity: ["7M"],
-			electriccloud: ["7M"],
-			aurorafreeze: ["7M"],
-			necromagic: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	sukamon: {
-		learnset: {
-			earthcoat: ["7M"],
-			bug: ["7M"],
-			rockfall: ["7M"],
-			warcry: ["7M"],
-			cootieskick: ["7M"],
-			superstinkyjet: ["7M"],
-			guerrillapoop: ["7M"],
-			extremepoopdeath: ["7M"],
-			hideandseek: ["7M"],
-			poop: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	tankmon: {
-		learnset: {
-			burningheart: ["7M"],
-			heatbreath: ["7M"],
-			infinityburn: ["7M"],
-			prominencebeam: ["7M"],
-			earthcoat: ["7M"],
-			antiattackfield: ["7M"],
-			gigawattlaser: ["7M"],
-			deleteprogram: ["7M"],
-			upgrade: ["7M"],
-			hypercannon: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	togemon: {
-		learnset: {
-			massmorph: ["7M"],
-			charmperfume: ["7M"],
-			rootbind: ["7M"],
-			venomdisaster: ["7M"],
-			waterblitz: ["7M"],
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			fightingaura: ["7M"],
-			megatonpunch: ["7M"],
-			needlespray: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	tyrannomon: {
-		learnset: {
-			burningheart: ["7M"],
-			heatbreath: ["7M"],
-			firetower: ["7M"],
-			prominencebeam: ["7M"],
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			tremar: ["7M"],
-			rockfall: ["7M"],
-			blazeblaster: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	unimon: {
-		learnset: {
-			wingshoes: ["7M"],
-			megalospark: ["7M"],
-			thunderjustice: ["7M"],
-			confusedstorm: ["7M"],
-			rockfall: ["7M"],
-			saintheal: ["7M"],
-			holyjudgment: ["7M"],
-			saintray: ["7M"],
-			musclecharge: ["7M"],
-			aerialattack: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	vegiemon: {
-		learnset: {
-			waterblitz: ["7M"],
-			gigafreeze: ["7M"],
-			oceanwave: ["7M"],
-			massmorph: ["7M"],
-			charmperfume: ["7M"],
-			venomdisaster: ["7M"],
-			earthcoat: ["7M"],
-			sweetbreath: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	weedmon: {
-		learnset: {
-			superstinkyjet: ["7M"],
-			poopattackfield: ["7M"],
-			extremepoopdeath: ["7M"],
-			massmorph: ["7M"],
-			charmperfume: ["7M"],
-			venomdisaster: ["7M"],
-			earthcoat: ["7M"],
-			deadlyweed: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	yanmamon: {
-		learnset: {
-			electriccloud: ["7M"],
-			windcutter: ["7M"],
-			confusedstorm: ["7M"],
-			thunderjustice: ["7M"],
-			earthcoat: ["7M"],
-			massmorph: ["7M"],
-			charmperfume: ["7M"],
-			bug: ["7M"],
-			holyflash: ["7M"],
-			thunderray: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	//Ultimate
-	andromon: {
-		learnset: {
-			windcutter: ["7M"],
-			electriccloud: ["7M"],
-			megalospark: ["7M"],
-			thunderjustice: ["7M"],
-			upgrade: ["7M"],
-			antiattackfield: ["7M"],
-			deleteprogram: ["7M"],
-			gigawattlaser: ["7M"],
-			bug: ["7M"],
-			spiralsword: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	angewomon: {
-		learnset: {
-			wingshoes: ["7M"],
-			windcutter: ["7M"],
-			thunderjustice: ["7M"],
-			fightingaura: ["7M"],
-			electriccloud: ["7M"],
-			saintheal: ["7M"],
-			holybreath: ["7M"],
-			holyflash: ["7M"],
-			saintray: ["7M"],
-			warcry: ["7M"],
-			celestialarrow: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	beastmon: {
-		learnset: {
-			warcry: ["7M"],
-			sonicjab: ["7M"],
-			megatonpunch: ["7M"],
-			venomdisaster: ["7M"],
-			shadowfall: ["7M"],
-			gigafreeze: ["7M"],
-			bug: ["7M"],
-			icestatue: ["7M"],
-			vampirewave: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	blackweregarurumon: {
-		learnset: {
-			warcry: ["7M"],
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			megatonpunch: ["7M"],
-			rockfall: ["7M"],
-			burningheart: ["7M"],
-			heatbreath: ["7M"],
-			evilsquall: ["7M"],
-			hideandseek: ["7M"],
-			winterblast: ["7M"],
-			gigafreeze: ["7M"],
-			fullmoonkick: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	bluemeramon: {
-		learnset: {
-			burningheart: ["7M"],
-			firewall: ["7M"],
-			meltdown: ["7M"],
-			infinityburn: ["7M"],
-			aurorafreeze: ["7M"],
-			holyflash: ["7M"],
-			fightingaura: ["7M"],
-			gigafreeze: ["7M"],
-			coldflame: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	digitamamon: {
-		learnset: {
-			hailspear: ["7M"],
-			blackout: ["7M"],
-			bug: ["7M"],
-			shadowfall: ["7M"],
-			firetower: ["7M"],
-			poopattackfield: ["7M"],
-			poopfling: ["7M"],
-			upgrade: ["7M"],
-			nightmaresyndrome: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	dorugreymon: {
-		learnset: {
-			burningheart: ["7M"],
-			infinityburn: ["7M"],
-			megalospark: ["7M"],
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			fightingaura: ["7M"],
-			busterdrive: ["7M"],
-			mechanicalclaw: ["7M"],
-			antiattackfield: ["7M"],
-			metalmeteor: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	etemon: {
-		learnset: {
-			earthcoat: ["7M"],
-			rockfall: ["7M"],
-			sonicjab: ["7M"],
-			megatonpunch: ["7M"],
-			charmperfume: ["7M"],
-			bug: ["7M"],
-			guerrillapoop: ["7M"],
-			extremepoopdeath: ["7M"],
-			loveserenade: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	garudamon: {
-		learnset: {
-			wingshoes: ["7M"],
-			windcutter: ["7M"],
-			burningheart: ["7M"],
-			firetower: ["7M"],
-			meltdown: ["7M"],
-			infinityburn: ["7M"],
-			warcry: ["7M"],
-			busterdrive: ["7M"],
-			holyflash: ["7M"],
-			shadowwing: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	gigadramon: {
-		learnset: {
-			upgrade: ["7M"],
-			gigawattlaser: ["7M"],
-			dgdimension: ["7M"],
-			darkspirit: ["7M"],
-			hideandseek: ["7M"],
-			windcutter: ["7M"],
-			electriccloud: ["7M"],
-			gigafreeze: ["7M"],
-			energyshot: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	giromon: {
-		learnset: {
-			upgrade: ["7M"],
-			deleteprogram: ["7M"],
-			reverseprogram: ["7M"],
-			tremar: ["7M"],
-			megatonpunch: ["7M"],
-			staticelectricity: ["7M"],
-			megalospark: ["7M"],
-			firewall: ["7M"],
-			deadlybomb: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	iceleomon: {
-		learnset: {
-			musclecharge: ["7M"],
-			warcry: ["7M"],
-			gigafreeze: ["7M"],
-			icestatue: ["7M"],
-			megatonpunch: ["7M"],
-			winterblast: ["7M"],
-			aurorafreeze: ["7M"],
-			holyterrain: ["7M"],
-			burningheart: ["7M"],
-			fistofice: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	ladydevimon: {
-		learnset: {
-			wingshoes: ["7M"],
-			windcutter: ["7M"],
-			evilsquall: ["7M"],
-			fightingaura: ["7M"],
-			electriccloud: ["7M"],
-			evilfantasy: ["7M"],
-			charmperfume: ["7M"],
-			darkspirit: ["7M"],
-			chaoscloud: ["7M"],
-			warcry: ["7M"],
-			darknesswave: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	lillymon: {
-		learnset: {
-			earthcoat: ["7M"],
-			charmperfume: ["7M"],
-			rootbind: ["7M"],
-			venomdisaster: ["7M"],
-			wingshoes: ["7M"],
-			windcutter: ["7M"],
-			confusedstorm: ["7M"],
-			saintheal: ["7M"],
-			holybreath: ["7M"],
-			flowercannon: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	magnaangemon: {
-		learnset: {
-			saintheal: ["7M"],
-			holyterrain: ["7M"],
-			shiningnova: ["7M"],
-			thunderjustice: ["7M"],
-			antiattackfield: ["7M"],
-			gigawattlaser: ["7M"],
-			deleteprogram: ["7M"],
-			sonicjab: ["7M"],
-			megalospark: ["7M"],
-			tremar: ["7M"],
-			holyjudgment: ["7M"],
-			wingshoes: ["7M"],
-			gateofdestiny: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	mamemon: {
-		learnset: {
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			fightingaura: ["7M"],
-			tremar: ["7M"],
-			antiattackfield: ["7M"],
-			upgrade: ["7M"],
-			reverseprogram: ["7M"],
-			gigawattlaser: ["7M"],
-			gigafreeze: ["7M"],
-			burningheart: ["7M"],
-			smilebomber: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	megadramon: {
-		learnset: {
-			mechanicalclaw: ["7M"],
-			upgrade: ["7M"],
-			deleteprogram: ["7M"],
-			blackout: ["7M"],
-			shadowfall: ["7M"],
-			staticelectricity: ["7M"],
-			megalospark: ["7M"],
-			firetower: ["7M"],
-			genocideattack: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	megakabuterimon: {
-		learnset: {
-			staticelectricity: ["7M"],
-			rockfall: ["7M"],
-			megatonpunch: ["7M"],
-			megalospark: ["7M"],
-			tremar: ["7M"],
-			earthcoat: ["7M"],
-			massmorph: ["7M"],
-			bug: ["7M"],
-			hornbuster: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	megaseadramon: {
-		learnset: {
-			hailspear: ["7M"],
-			waterblitz: ["7M"],
-			gigafreeze: ["7M"],
-			aurorafreeze: ["7M"],
-			heatbreath: ["7M"],
-			meltdown: ["7M"],
-			shiningnova: ["7M"],
-			staticelectricity: ["7M"],
-			megalospark: ["7M"],
-			lightningjavelin: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	meicrackmon: {
-		learnset: {
-			warcry: ["7M"],
-			windcutter: ["7M"],
-			fightingaura: ["7M"],
-			megatonpunch: ["7M"],
-			mechanicalclaw: ["7M"],
-			venomdisaster: ["7M"],
-			holyjudgment: ["7M"],
-			saintray: ["7M"],
-			holybreath: ["7M"],
-			modestlystun: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	meicrackmonviciousmode: {
-		learnset: {
-			warcry: ["7M"],
-			windcutter: ["7M"],
-			fightingaura: ["7M"],
-			megatonpunch: ["7M"],
-			mechanicalclaw: ["7M"],
-			venomdisaster: ["7M"],
-			shadowfall: ["7M"],
-			evilsquall: ["7M"],
-			blackout: ["7M"],
-			berserkthinking: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	metalgreymonvaccine: {
-		learnset: {
-			burningheart: ["7M"],
-			heatbreath: ["7M"],
-			firetower: ["7M"],
-			infinityburn: ["7M"],
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			tremar: ["7M"],
-			busterdrive: ["7M"],
-			mechanicalclaw: ["7M"],
-			gigawattlaser: ["7M"],
-			deleteprogram: ["7M"],
-			gigadestroyer: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	metalgreymonvirus: {
-		learnset: {
-			burningheart: ["7M"],
-			heatbreath: ["7M"],
-			firetower: ["7M"],
-			infinityburn: ["7M"],
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			blackout: ["7M"],
-			shadowfall: ["7M"],
-			mechanicalclaw: ["7M"],
-			gigawattlaser: ["7M"],
-			deleteprogram: ["7M"],
-			revengeflame: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	metalmamemon: {
-		learnset: {
-			musclecharge: ["7M"],
-			mechanicalclaw: ["7M"],
-			fightingaura: ["7M"],
-			tremar: ["7M"],
-			deleteprogram: ["7M"],
-			upgrade: ["7M"],
-			reverseprogram: ["7M"],
-			megalospark: ["7M"],
-			winterblast: ["7M"],
-			burningheart: ["7M"],
-			energybomb: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	meteormon: {
-		learnset: {
-			earthcoat: ["7M"],
-			rockfall: ["7M"],
-			heatbreath: ["7M"],
-			prominencebeam: ["7M"],
-			gigafreeze: ["7M"],
-			megatonpunch: ["7M"],
-			fightingaura: ["7M"],
-			galacticflare: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	monzaemon: {
-		learnset: {
-			fightingaura: ["7M"],
-			poopattackfield: ["7M"],
-			tremar: ["7M"],
-			megatonpunch: ["7M"],
-			saintheal: ["7M"],
-			holybreath: ["7M"],
-			holyterrain: ["7M"],
-			saintray: ["7M"],
-			charmperfume: ["7M"],
-			heartsattack: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	myotismon: {
-		learnset: {
-			darkspirit: ["7M"],
-			blackout: ["7M"],
-			evilfantasy: ["7M"],
-			electriccloud: ["7M"],
-			aurorafreeze: ["7M"],
-			evilsquall: ["7M"],
-			wingshoes: ["7M"],
-			confusedstorm: ["7M"],
-			venomdisaster: ["7M"],
-			reverseprogram: ["7M"],
-			grislywing: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	piximon: {
-		learnset: {
-			saintheal: ["7M"],
-			holybreath: ["7M"],
-			holyterrain: ["7M"],
-			fightingaura: ["7M"],
-			shiningnova: ["7M"],
-			wingshoes: ["7M"],
-			windcutter: ["7M"],
-			electriccloud: ["7M"],
-			antiattackfield: ["7M"],
-			earthcoat: ["7M"],
-			bug: ["7M"],
-			pitbomb: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	shogungekomon: {
-		learnset: {
-			earthcoat: ["7M"],
-			confusedstorm: ["7M"],
-			oceanwave: ["7M"],
-			icestatue: ["7M"],
-			gigafreeze: ["7M"],
-			aurorafreeze: ["7M"],
-			warcry: ["7M"],
-			fightingaura: ["7M"],
-			charmperfume: ["7M"],
-			musicalfist: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	skullgreymon: {
-		learnset: {
-			blackout: ["7M"],
-			shadowfall: ["7M"],
-			evilfantasy: ["7M"],
-			evilsquall: ["7M"],
-			heatbreath: ["7M"],
-			firetower: ["7M"],
-			infinityburn: ["7M"],
-			sonicjab: ["7M"],
-			tremar: ["7M"],
-			busterdrive: ["7M"],
-			mechanicalclaw: ["7M"],
-			deleteprogram: ["7M"],
-			oblivionbird: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	tekkamon: {
-		learnset: {
-			upgrade: ["7M"],
-			deleteprogram: ["7M"],
-			reverseprogram: ["7M"],
-			tremar: ["7M"],
-			megatonpunch: ["7M"],
-			staticelectricity: ["7M"],
-			shadowfall: ["7M"],
-			firewall: ["7M"],
-			fragbomb: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	vademon: {
-		learnset: {
-			massmorph: ["7M"],
-			charmperfume: ["7M"],
-			bug: ["7M"],
-			rockfall: ["7M"],
-			upgrade: ["7M"],
-			deleteprogram: ["7M"],
-			dgdimension: ["7M"],
-			cootieskick: ["7M"],
-			unidentifiedflyingkiss: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	vermilimon: {
-		learnset: {
-			heatbreath: ["7M"],
-			firetower: ["7M"],
-			infinityburn: ["7M"],
-			prominencebeam: ["7M"],
-			earthcoat: ["7M"],
-			rockfall: ["7M"],
-			musclecharge: ["7M"],
-			busterdrive: ["7M"],
-			volcanicstrikes: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	warumonzaemon: {
-		learnset: {
-			fightingaura: ["7M"],
-			poopattackfield: ["7M"],
-			tremar: ["7M"],
-			megatonpunch: ["7M"],
-			darkspirit: ["7M"],
-			evilfantasy: ["7M"],
-			hideandseek: ["7M"],
-			charmperfume: ["7M"],
-			heartbreakattack: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	waruseadramon: {
-		learnset: {
-			hailspear: ["7M"],
-			waterblitz: ["7M"],
-			gigafreeze: ["7M"],
-			aurorafreeze: ["7M"],
-			heatbreath: ["7M"],
-			meltdown: ["7M"],
-			staticelectricity: ["7M"],
-			megalospark: ["7M"],
-			evilsquall: ["7M"],
-			evilicicle: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	weregarurumon: {
-		learnset: {
-			warcry: ["7M"],
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			megatonpunch: ["7M"],
-			rockfall: ["7M"],
-			burningheart: ["7M"],
-			heatbreath: ["7M"],
-			icestatue: ["7M"],
-			aurorafreeze: ["7M"],
-			winterblast: ["7M"],
-			gigafreeze: ["7M"],
-			wolfclaw: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	whamon: {
-		learnset: {
-			waterblitz: ["7M"],
-			oceanwave: ["7M"],
-			icestatue: ["7M"],
-			aurorafreeze: ["7M"],
-			massmorph: ["7M"],
-			charmperfume: ["7M"],
-			holyterrain: ["7M"],
-			confusedstorm: ["7M"],
-			busterdrive: ["7M"],
-			saintheal: ["7M"],
-			tidalwave: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	zudomon: {
-		learnset: {
-			electriccloud: ["7M"],
-			thunderjustice: ["7M"],
-			hailspear: ["7M"],
-			icestatue: ["7M"],
-			mechanicalclaw: ["7M"],
-			aurorafreeze: ["7M"],
-			antiattackfield: ["7M"],
-			warcry: ["7M"],
-			tremar: ["7M"],
-			vulcanshammer: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	//Mega
-	alphamon: {
-		learnset: {
-			holyterrain: ["7M"],
-			saintray: ["7M"],
-			holyjudgment: ["7M"],
-			shiningnova: ["7M"],
-			warcry: ["7M"],
-			sonicjab: ["7M"],
-			tremar: ["7M"],
-			upgrade: ["7M"],
-			deleteprogram: ["7M"],
-			dgdimension: ["7M"],
-			burningheart: ["7M"],
-			thunderjustice: ["7M"],
-			bladeofthedragonking: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	blackmetalgarurumon: {
-		learnset: {
-			warcry: ["7M"],
-			mechanicalclaw: ["7M"],
-			megalospark: ["7M"],
-			winterblast: ["7M"],
-			gigafreeze: ["7M"],
-			icestatue: ["7M"],
-			shadowfall: ["7M"],
-			evilfantasy: ["7M"],
-			aurorafreeze: ["7M"],
-			garurutomahawk: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	blackwargreymon: {
-		learnset: {
-			burningheart: ["7M"],
-			firetower: ["7M"],
-			firewall: ["7M"],
-			shadowfall: ["7M"],
-			musclecharge: ["7M"],
-			blackout: ["7M"],
-			busterdrive: ["7M"],
-			mechanicalclaw: ["7M"],
-			antiattackfield: ["7M"],
-			deleteprogram: ["7M"],
-			evilfantasy: ["7M"],
-			blacktornado: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	boltmon: {
-		learnset: {
-			electriccloud: ["7M"],
-			megalospark: ["7M"],
-			fightingaura: ["7M"],
-			megatonpunch: ["7M"],
-			mechanicalclaw: ["7M"],
-			gigawattlaser: ["7M"],
-			meltdown: ["7M"],
-			infinityburn: ["7M"],
-			tomahawkstinger: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	cherubimonevil: {
-		learnset: {
-			wingshoes: ["7M"],
-			thunderjustice: ["7M"],
-			megalospark: ["7M"],
-			megatonpunch: ["7M"],
-			blackout: ["7M"],
-			chaoscloud: ["7M"],
-			shadowfall: ["7M"],
-			evilsquall: ["7M"],
-			dgdimension: ["7M"],
-			gigawattlaser: ["7M"],
-			lightningspear: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	cherubimongood: {
-		learnset: {
-			wingshoes: ["7M"],
-			thunderjustice: ["7M"],
-			megalospark: ["7M"],
-			megatonpunch: ["7M"],
-			holybreath: ["7M"],
-			saintray: ["7M"],
-			holyjudgment: ["7M"],
-			shiningnova: ["7M"],
-			dgdimension: ["7M"],
-			gigawattlaser: ["7M"],
-			heavensjudgment: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	devitamamon: {
-		learnset: {
-			hailspear: ["7M"],
-			blackout: ["7M"],
-			evilfantasy: ["7M"],
-			shadowfall: ["7M"],
-			evilsquall: ["7M"],
-			poopattackfield: ["7M"],
-			extremepoopdeath: ["7M"],
-			firetower: ["7M"],
-			blackdeathcloud: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	dorugoramon: {
-		learnset: {
-			burningheart: ["7M"],
-			infinityburn: ["7M"],
-			prominencebeam: ["7M"],
-			megalospark: ["7M"],
-			thunderjustice: ["7M"],
-			fightingaura: ["7M"],
-			busterdrive: ["7M"],
-			sonicjab: ["7M"],
-			mechanicalclaw: ["7M"],
-			antiattackfield: ["7M"],
-			deleteprogram: ["7M"],
-			gigawattlaser: ["7M"],
-			bravemetal: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	ebemon: {
-		learnset: {
-			confusedstorm: ["7M"],
-			electriccloud: ["7M"],
-			massmorph: ["7M"],
-			bug: ["7M"],
-			upgrade: ["7M"],
-			gigawattlaser: ["7M"],
-			dgdimension: ["7M"],
-			cootieskick: ["7M"],
-			brainrupture: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	herculeskabuterimon: {
-		learnset: {
-			confusedstorm: ["7M"],
-			electriccloud: ["7M"],
-			megalospark: ["7M"],
-			thunderjustice: ["7M"],
-			charmperfume: ["7M"],
-			massmorph: ["7M"],
-			bug: ["7M"],
-			holyterrain: ["7M"],
-			holyflash: ["7M"],
-			fightingaura: ["7M"],
-			gigablaster: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	hiandromon: {
-		learnset: {
-			sonicjab: ["7M"],
-			electriccloud: ["7M"],
-			megalospark: ["7M"],
-			thunderjustice: ["7M"],
-			saintheal: ["7M"],
-			upgrade: ["7M"],
-			antiattackfield: ["7M"],
-			deleteprogram: ["7M"],
-			gigawattlaser: ["7M"],
-			bug: ["7M"],
-			busterdrive: ["7M"],
-			megatonpunch: ["7M"],
-			atomicray: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	lilithmon: {
-		learnset: {
-			evilfantasy: ["7M"],
-			chaoscloud: ["7M"],
-			shadowfall: ["7M"],
-			windcutter: ["7M"],
-			confusedstorm: ["7M"],
-			charmperfume: ["7M"],
-			venomdisaster: ["7M"],
-			bug: ["7M"],
-			aurorafreeze: ["7M"],
-			mechanicalclaw: ["7M"],
-			phantompain: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	machinedramon: {
-		learnset: {
-			mechanicalclaw: ["7M"],
-			upgrade: ["7M"],
-			gigawattlaser: ["7M"],
-			dgdimension: ["7M"],
-			megalospark: ["7M"],
-			thunderjustice: ["7M"],
-			electriccloud: ["7M"],
-			hideandseek: ["7M"],
-			firewall: ["7M"],
-			gigafreeze: ["7M"],
-			infinitycannon: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	magnadramon: {
-		learnset: {
-			holybreath: ["7M"],
-			holyflash: ["7M"],
-			holyjudgment: ["7M"],
-			burningheart: ["7M"],
-			firetower: ["7M"],
-			prominencebeam: ["7M"],
-			wingshoes: ["7M"],
-			busterdrive: ["7M"],
-			fightingaura: ["7M"],
-			firetornado: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	marineangemon: {
-		learnset: {
-			waterblitz: ["7M"],
-			oceanwave: ["7M"],
-			aurorafreeze: ["7M"],
-			icestatue: ["7M"],
-			saintheal: ["7M"],
-			holybreath: ["7M"],
-			holyterrain: ["7M"],
-			shiningnova: ["7M"],
-			confusedstorm: ["7M"],
-			wingshoes: ["7M"],
-			antiattackfield: ["7M"],
-			earthcoat: ["7M"],
-			oceanlove: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	metaletemon: {
-		learnset: {
-			reverseprogram: ["7M"],
-			dgdimension: ["7M"],
-			upgrade: ["7M"],
-			gigawattlaser: ["7M"],
-			charmperfume: ["7M"],
-			holyflash: ["7M"],
-			guerrillapoop: ["7M"],
-			extremepoopdeath: ["7M"],
-			darkrecital: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	metalgarurumon: {
-		learnset: {
-			warcry: ["7M"],
-			mechanicalclaw: ["7M"],
-			busterdrive: ["7M"],
-			winterblast: ["7M"],
-			gigafreeze: ["7M"],
-			icestatue: ["7M"],
-			rockfall: ["7M"],
-			meltdown: ["7M"],
-			aurorafreeze: ["7M"],
-			icewolfclaw: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	metalseadramon: {
-		learnset: {
-			waterblitz: ["7M"],
-			winterblast: ["7M"],
-			oceanwave: ["7M"],
-			icestatue: ["7M"],
-			infinityburn: ["7M"],
-			staticelectricity: ["7M"],
-			megalospark: ["7M"],
-			upgrade: ["7M"],
-			deleteprogram: ["7M"],
-			riverofpower: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	ophanimon: {
-		learnset: {
-			wingshoes: ["7M"],
-			windcutter: ["7M"],
-			thunderjustice: ["7M"],
-			fightingaura: ["7M"],
-			aurorafreeze: ["7M"],
-			saintheal: ["7M"],
-			holybreath: ["7M"],
-			holyterrain: ["7M"],
-			saintray: ["7M"],
-			warcry: ["7M"],
-			edensjavelin: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	phoenixmon: {
-		learnset: {
-			wingshoes: ["7M"],
-			windcutter: ["7M"],
-			thunderjustice: ["7M"],
-			burningheart: ["7M"],
-			meltdown: ["7M"],
-			prominencebeam: ["7M"],
-			warcry: ["7M"],
-			busterdrive: ["7M"],
-			holyjudgment: ["7M"],
-			shiningnova: ["7M"],
-			infinityburn: ["7M"],
-			starlightexplosion: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	princemamemon: {
-		learnset: {
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			megatonpunch: ["7M"],
-			fightingaura: ["7M"],
-			upgrade: ["7M"],
-			reverseprogram: ["7M"],
-			deleteprogram: ["7M"],
-			dgdimension: ["7M"],
-			holyflash: ["7M"],
-			poopattackfield: ["7M"],
-			smilewarhead: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	raguelmon: {
-		learnset: {
-			warcry: ["7M"],
-			windcutter: ["7M"],
-			fightingaura: ["7M"],
-			megatonpunch: ["7M"],
-			mechanicalclaw: ["7M"],
-			venomdisaster: ["7M"],
-			shadowfall: ["7M"],
-			evilsquall: ["7M"],
-			blackout: ["7M"],
-			deleteprogram: ["7M"],
-			darknesszone: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	rasielmon: {
-		learnset: {
-			warcry: ["7M"],
-			windcutter: ["7M"],
-			fightingaura: ["7M"],
-			megatonpunch: ["7M"],
-			mechanicalclaw: ["7M"],
-			venomdisaster: ["7M"],
-			holyjudgment: ["7M"],
-			saintray: ["7M"],
-			holybreath: ["7M"],
-			dgdimension: ["7M"],
-			knowledgestream: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	rosemon: {
-		learnset: {
-			earthcoat: ["7M"],
-			charmperfume: ["7M"],
-			rootbind: ["7M"],
-			venomdisaster: ["7M"],
-			wingshoes: ["7M"],
-			confusedstorm: ["7M"],
-			evilfantasy: ["7M"],
-			saintheal: ["7M"],
-			shiningnova: ["7M"],
-			thornwhip: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	saberleomon: {
-		learnset: {
-			musclecharge: ["7M"],
-			warcry: ["7M"],
-			fightingaura: ["7M"],
-			busterdrive: ["7M"],
-			earthcoat: ["7M"],
-			venomdisaster: ["7M"],
-			holyterrain: ["7M"],
-			holyjudgment: ["7M"],
-			mechanicalclaw: ["7M"],
-			burningheart: ["7M"],
-			infinityburn: ["7M"],
-			shiningnova: ["7M"],
-			howlingcrusher: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	seraphimon: {
-		learnset: {
-			saintheal: ["7M"],
-			holyterrain: ["7M"],
-			shiningnova: ["7M"],
-			thunderjustice: ["7M"],
-			antiattackfield: ["7M"],
-			gigawattlaser: ["7M"],
-			deleteprogram: ["7M"],
-			sonicjab: ["7M"],
-			megalospark: ["7M"],
-			tremar: ["7M"],
-			holyjudgment: ["7M"],
-			wingshoes: ["7M"],
-			strikeofthesevenstars: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	venommyotismon: {
-		learnset: {
-			darkspirit: ["7M"],
-			blackout: ["7M"],
-			evilfantasy: ["7M"],
-			megalospark: ["7M"],
-			icestatue: ["7M"],
-			shadowfall: ["7M"],
-			wingshoes: ["7M"],
-			staticelectricity: ["7M"],
-			venomdisaster: ["7M"],
-			deleteprogram: ["7M"],
-			venominfusion: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	vikemon: {
-		learnset: {
-			hailspear: ["7M"],
-			winterblast: ["7M"],
-			icestatue: ["7M"],
-			aurorafreeze: ["7M"],
-			mechanicalclaw: ["7M"],
-			antiattackfield: ["7M"],
-			warcry: ["7M"],
-			tremar: ["7M"],
-			megatonpunch: ["7M"],
-			holyflash: ["7M"],
-			arcticblizzard: ["7M"],
-			protect: ["7M"],
-		},
-	},
-	wargreymon: {
-		learnset: {
-			burningheart: ["7M"],
-			firetower: ["7M"],
-			firewall: ["7M"],
-			infinityburn: ["7M"],
-			musclecharge: ["7M"],
-			sonicjab: ["7M"],
-			busterdrive: ["7M"],
-			mechanicalclaw: ["7M"],
-			antiattackfield: ["7M"],
-			deleteprogram: ["7M"],
-			fightingaura: ["7M"],
-			terraforce: ["7M"],
-			protect: ["7M"],
-		},
-	},
-};
-
-exports.BattleLearnsets = BattleLearnsets;
+module.exports = [
+    {
+        "species": "Botamon",
+        "ability": "Data",
+        "moves": ["Acid Bubble"]
+    },
+    {
+        "species": "Dodomon",
+        "ability": "Data",
+        "moves": ["Acid Bubble"]
+    },
+    {
+        "species": "Kuramon",
+        "ability": "Virus",
+        "moves": ["Acid Bubble"]
+    },
+    {
+        "species": "Poyomon",
+        "ability": "Data",
+        "moves": ["Acid Bubble"]
+    },
+    {
+        "species": "Punimon",
+        "ability": "Data",
+        "moves": ["Acid Bubble"]
+    },
+    {
+        "species": "Yuramon",
+        "ability": "Data",
+        "moves": ["Acid Bubble"]
+    },
+    {
+        "species": "Bukamon",
+        "ability": "Data",
+        "moves": ["Acid Bubble"]
+    },
+    {
+        "species": "Dorimon",
+        "ability": "Data",
+        "moves": ["Acid Bubble"]
+    },
+    {
+        "species": "Koromon",
+        "ability": "Data",
+        "moves": ["Acid Bubble"]
+    },
+    {
+        "species": "Motimon",
+        "ability": "Data",
+        "moves": ["Acid Bubble"]
+    },
+    {
+        "species": "Nyaromon",
+        "ability": "Vaccine",
+        "moves": ["Acid Bubble"]
+    },
+    {
+        "species": "Tanemon",
+        "ability": "Data",
+        "moves": ["Acid Bubble"]
+    },
+    {
+        "species": "Tokomon",
+        "ability": "Data",
+        "moves": ["Acid Bubble"]
+    },
+    {
+        "species": "Tsumemon",
+        "ability": "Virus",
+        "moves": ["Acid Bubble"]
+    },
+    {
+        "species": "Tsunomon",
+        "ability": "Data",
+        "moves": ["Acid Bubble"]
+    },
+    {
+        "species": "Agumon",
+        "ability": "Vaccine",
+        "moves": ["Burning Heart", "Heat Breath", "Fire Tower", "Infinity Burn", "Muscle Charge", "Sonic Jab", "Wind Cutter"],
+        "reservedMove": "Pepper Breath"
+    },
+    {
+        "species": "Aruraumon",
+        "ability": "Virus",
+        "moves": ["Charm Perfume", "Root Bind", "Venom Disaster", "Water Blitz", "Super Stinky Jet", "Shadow Fall", "Blackout"],
+        "reservedMove": "Nemesis Ivy"
+    },
+    {
+        "species": "Betamon",
+        "ability": "Virus",
+        "moves": ["Static Electricity", "Electric Cloud", "Megalo Spark", "Hail Spear", "Water Blitz", "Ocean Wave"],
+        "reservedMove": "Electric Shock"
+    },
+    {
+        "species": "Biyomon",
+        "ability": "Vaccine",
+        "moves": ["Wing Shoes", "Wind Cutter", "Burning Heart", "Heat Breath", "Fire Tower", "Meltdown", "War Cry", "Holy Flash", "Root Bind"],
+        "reservedMove": "Spiral Twister"
+    },
+    {
+        "species": "ClearAgumon",
+        "ability": "Vaccine",
+        "moves": ["Heat Breath", "Holy Terrain", "Saint Ray", "Holy Flash", "Mechanical Claw", "Upgrade", "Gigawatt Laser"],
+        "reservedMove": "Precious Flame"
+    },
+    {
+        "species": "DemiDevimon",
+        "ability": "Virus",
+        "moves": ["Blackout", "Evil Fantasy", "Shadow Fall", "Hide and Seek", "Wind Cutter", "Confused Storm", "Cooties Kick"],
+        "reservedMove": "Demi Dart"
+    },
+    {
+        "species": "Dokunemon",
+        "ability": "Virus",
+        "moves": ["Static Electricity", "Shadow Fall", "Earth Coat", "Mass Morph", "Bug", "Venom Disaster", "Blackout"],
+        "reservedMove": "Worm Venom"
+    },
+    {
+        "species": "Dorumon",
+        "ability": "Data",
+        "moves": ["Burning Heart", "Megalo Spark", "Muscle Charge", "Sonic Jab", "Fighting Aura", "Buster Drive", "Mechanical Claw", "Anti-Attack Field"],
+        "reservedMove": "Metal Cannon"
+    },
+    {
+        "species": "Elecmon",
+        "ability": "Data",
+        "moves": ["Static Electricity", "Electric Cloud", "Megalo Spark", "Thunder Justice", "Saint Heal", "War Cry", "Fighting Aura"],
+        "reservedMove": "Super Thunder Strike"
+    },
+    {
+        "species": "Gabumon",
+        "ability": "Data",
+        "moves": ["Heat Breath", "Fire Tower", "Hail Spear", "Winter Blast", "Giga Freeze", "Ice Statue", "Muscle Charge", "Sonic Jab"],
+        "reservedMove": "Blue Blaster"
+    },
+    {
+        "species": "Goburimon",
+        "ability": "Virus",
+        "moves": ["Heat Breath", "Fire Tower", "Infinity Burn", "Muscle Charge", "Burning Heart", "Tremar", "Megaton Punch", "Shadow Fall", "Poop Toss"],
+        "reservedMove": "Goblin Strike"
+    },
+    {
+        "species": "Gomamon",
+        "ability": "Vaccine",
+        "moves": ["Mechanical Claw", "Water Blitz", "Ocean Wave", "Ice Statue", "Aurora Freeze", "War Cry", "Tremar"],
+        "reservedMove": "Marching Fishes"
+    },
+    {
+        "species": "Gotsumon",
+        "ability": "Data",
+        "moves": ["Earth Coat", "Rock Fall", "Charm Perfume", "Venom Disaster", "Bug", "Megaton Punch", "Fighting Aura"],
+        "reservedMove": "Rock Fist"
+    },
+    {
+        "species": "Kunemon",
+        "ability": "Virus",
+        "moves": ["Static Electricity", "Megalo Spark", "Earth Coat", "Mass Morph", "Bug", "Venom Disaster", "Super Stinky Jet"],
+        "reservedMove": "Electric Thread"
+    },
+    {
+        "species": "ModokiBetamon",
+        "ability": "Vaccine",
+        "moves": ["Static Electricity", "Electric Cloud", "Confused Storm", "Hail Spear", "Ice Statue", "Root Bind", "Water Blitz"],
+        "reservedMove": "Aqua Tower"
+    },
+    {
+        "species": "Muchomon",
+        "ability": "Data",
+        "moves": ["Burning Heart", "Hail Spear", "Water Blitz", "Ice Statue", "Wind Cutter", "Infinity Burn", "Firewall"],
+        "reservedMove": "Tropical Beak"
+    },
+    {
+        "species": "Otamamon",
+        "ability": "Data",
+        "moves": ["Hail Spear", "Water Blitz", "Ocean Wave", "Ice Statue", "Bug", "Charm Perfume", "War Cry"],
+        "reservedMove": "Lullaby Bubble"
+    },
+    {
+        "species": "Palmon",
+        "ability": "Vaccine",
+        "moves": ["Charm Perfume", "Root Bind", "Venom Disaster", "Water Blitz", "Super Stinky Jet", "Burning Heart", "Confused Storm"],
+        "reservedMove": "Poison Ivy"
+    },
+    {
+        "species": "Patamon",
+        "ability": "Data",
+        "moves": ["Wing Shoes", "Wind Cutter", "Sonic Jab", "Buster Drive", "Saint Heal", "Holy Breath", "Holy Flash"],
+        "reservedMove": "Boom Bubble"
+    },
+    {
+        "species": "Penguinmon",
+        "ability": "Data",
+        "moves": ["Muscle Charge", "Hail Spear", "Water Blitz", "Ice Statue", "Wind Cutter", "Megalo Spark", "Earth Coat"],
+        "reservedMove": "Eternal Slapping"
+    },
+    {
+        "species": "Psychemon",
+        "ability": "Vaccine",
+        "moves": ["Heat Breath", "Fire Tower", "Static Electricity", "Winter Blast", "Confused Storm", "Ice Statue", "Muscle Charge", "Sonic Jab"],
+        "reservedMove": "Colored Sparkle"
+    },
+    {
+        "species": "Salamon",
+        "ability": "Vaccine",
+        "moves": ["Saint Heal", "Holy Breath", "Holy Flash", "Saint Ray", "War Cry", "Anti-Attack Field", "Fighting Aura"],
+        "reservedMove": "Puppy Howl"
+    },
+    {
+        "species": "Shamanmon",
+        "ability": "Virus",
+        "moves": ["Charm Perfume", "Root Bind", "Rock Fall", "Muscle Charge", "War Cry", "Tremar", "Megaton Punch", "Shadow Fall", "Poop Toss"],
+        "reservedMove": "Dancing Bone"
+    },
+    {
+        "species": "SnowAgumon",
+        "ability": "Vaccine",
+        "moves": ["Burning Heart", "Hail Spear", "Winter Blast", "Ice Statue", "Muscle Charge", "Sonic Jab", "Wind Cutter"],
+        "reservedMove": "Little Blizzard"
+    },
+    {
+        "species": "SnowGoburimon",
+        "ability": "Virus",
+        "moves": ["Hail Spear", "Winter Blast", "Ice Statue", "Muscle Charge", "War Cry", "Tremar", "Megaton Punch", "Shadow Fall", "Poop Toss"],
+        "reservedMove": "SnowGob Bolt"
+    },
+    {
+        "species": "Tentomon",
+        "ability": "Data",
+        "moves": ["Static Electricity", "Confused Storm", "Electric Cloud", "Megalo Spark", "Mass Morph", "Bug", "Rock Fall", "Fighting Aura"],
+        "reservedMove": "Super Shocker"
+    },
+    {
+        "species": "ToyAgumon",
+        "ability": "Data",
+        "moves": ["Heat Breath", "Firewall", "Prominence Beam", "Sonic Jab", "Mechanical Claw", "Upgrade", "Gigawatt Laser"],
+        "reservedMove": "Plastic Blaze"
+    },
+    {
+        "species": "Tsukaimon",
+        "ability": "Virus",
+        "moves": ["Wing Shoes", "Wind Cutter", "Sonic Jab", "Dark Spirit", "Blackout", "Evil Fantasy", "Chaos Cloud"],
+        "reservedMove": "Evil Spell"
+    },
+    {
+        "species": "Airdramon",
+        "ability": "Vaccine",
+        "moves": ["Heat Breath", "Fire Tower", "Meltdown", "Infinity Burn", "Wing Shoes", "Wind Cutter", "Confused Storm", "Holy Breath"],
+        "reservedMove": "Spinning Needle"
+    },
+    {
+        "species": "Akatorimon",
+        "ability": "Data",
+        "moves": ["Heat Breath", "Firewall", "Wing Shoes", "Wind Cutter", "Megalo Spark", "Ice Statue", "Guerrilla Poop"],
+        "reservedMove": "Scar-Red Eye"
+    },
+    {
+        "species": "Angemon",
+        "ability": "Vaccine",
+        "moves": ["Wing Shoes", "Wind Cutter", "Sonic Jab", "Buster Drive", "Saint Heal", "Holy Breath", "Holy Flash", "Saint Ray", "Holy Judgment"],
+        "reservedMove": "Hand of Fate"
+    },
+    {
+        "species": "Bakemon",
+        "ability": "Virus",
+        "moves": ["Dark Spirit", "Blackout", "Evil Fantasy", "Shadow Fall", "Mass Morph", "Ice Statue", "Static Electricity", "Electric Cloud", "Thunder Justice"],
+        "reservedMove": "Evil Charm"
+    },
+    {
+        "species": "Birdramon",
+        "ability": "Vaccine",
+        "moves": ["Wing Shoes", "Wind Cutter", "Burning Heart", "Heat Breath", "Fire Tower", "Meltdown", "Infinity Burn", "War Cry", "Holy Flash"],
+        "reservedMove": "Meteor Wing"
+    },
+    {
+        "species": "BlackGatomon",
+        "ability": "Virus",
+        "moves": ["War Cry", "Sonic Jab", "Fighting Aura", "Evil Squall", "Evil Fantasy", "Hide and Seek", "Giga Freeze"],
+        "reservedMove": "Dark Paw"
+    },
+    {
+        "species": "Centarumon",
+        "ability": "Data",
+        "moves": ["Fire Tower", "Firewall", "Prominence Beam", "Saint Heal", "Saint Ray", "Fighting Aura", "Upgrade", "Gigawatt Laser"],
+        "reservedMove": "Solar Ray"
+    },
+    {
+        "species": "Coelamon",
+        "ability": "Data",
+        "moves": ["Water Blitz", "Ice Statue", "Mechanical Claw", "Upgrade", "Anti-Attack Field", "Mass Morph", "Static Electricity", "Delete Program"],
+        "reservedMove": "Variable Darts"
+    },
+    {
+        "species": "Darkrizamon",
+        "ability": "Virus",
+        "moves": ["Heat Breath", "Fire Tower", "Firewall", "Meltdown", "Dark Spirit", "Evil Fantasy", "Shadow Fall", "Mechanical Claw"],
+        "reservedMove": "Dread Fire"
+    },
+    {
+        "species": "Devimon",
+        "ability": "Virus",
+        "moves": ["Dark Spirit", "Wind Cutter", "Evil Fantasy", "Chaos Cloud", "Aurora Freeze", "Evil Squall", "Confused Storm", "Wing Shoes"],
+        "reservedMove": "Death Hand"
+    },
+    {
+        "species": "Dolphmon",
+        "ability": "Vaccine",
+        "moves": ["Water Blitz", "Giga Freeze", "Ocean Wave", "Ice Statue", "War Cry", "Sonic Jab", "Fighting Aura", "Holy Breath", "Saint Heal"],
+        "reservedMove": "Pulse Blast"
+    },
+    {
+        "species": "Dorugamon",
+        "ability": "Data",
+        "moves": ["Burning Heart", "Winter Blast", "Megalo Spark", "Muscle Charge", "Sonic Jab", "Fighting Aura", "Buster Drive", "Mechanical Claw", "Anti-Attack Field"],
+        "reservedMove": "Power Metal"
+    },
+    {
+        "species": "Drimogemon",
+        "ability": "Data",
+        "moves": ["Mechanical Claw", "Delete Program", "Earth Coat", "Mass Morph", "Root Bind", "Rock Fall"],
+        "reservedMove": "Drill Spin"
+    },
+    {
+        "species": "Flarerizamon",
+        "ability": "Data",
+        "moves": ["Heat Breath", "Fire Tower", "Firewall", "Meltdown", "Sonic Jab", "War Cry", "Megaton Punch", "Mechanical Claw"],
+        "reservedMove": "Blaze Buster"
+    },
+    {
+        "species": "Frigimon",
+        "ability": "Vaccine",
+        "moves": ["Hail Spear", "Ice Statue", "Aurora Freeze", "Water Blitz", "Sonic Jab", "Muscle Charge", "Fighting Aura"],
+        "reservedMove": "Sub Zero Ice Punch"
+    },
+    {
+        "species": "Fugamon",
+        "ability": "Virus",
+        "moves": ["Static Electricity", "Wind Cutter", "Megalo Spark", "Blackout", "Muscle Charge", "War Cry", "Tremar", "Megaton Punch"],
+        "reservedMove": "Evil Hurricane"
+    },
+    {
+        "species": "Garurumon",
+        "ability": "Data",
+        "moves": ["War Cry", "Water Blitz", "Fighting Aura", "Burning Heart", "Heat Breath", "Giga Freeze", "Hail Spear", "Meltdown", "Aurora Freeze"],
+        "reservedMove": "Howling Blaster"
+    },
+    {
+        "species": "Gatomon",
+        "ability": "Vaccine",
+        "moves": ["Holy Breath", "Sonic Jab", "Fighting Aura", "Saint Ray", "Saint Heal", "Holy Flash", "Confused Storm"],
+        "reservedMove": "Lightning Paw"
+    },
+    {
+        "species": "Gekomon",
+        "ability": "Data",
+        "moves": ["Hail Spear", "Confused Storm", "Ocean Wave", "Ice Statue", "Giga Freeze", "War Cry", "Charm Perfume"],
+        "reservedMove": "Symphony Crusher"
+    },
+    {
+        "species": "Geremon",
+        "ability": "Virus",
+        "moves": ["Giga Freeze", "Earth Coat", "Bug", "Venom Disaster", "War Cry", "Super Stinky Jet", "Poop Attack Field", "Guerrilla Poop", "Extreme Poop Death"],
+        "reservedMove": "Hyper Smell"
+    },
+    {
+        "species": "Greymon",
+        "ability": "Vaccine",
+        "moves": ["Burning Heart", "Heat Breath", "Fire Tower", "Infinity Burn", "Muscle Charge", "Sonic Jab", "Megalo Spark"],
+        "reservedMove": "Mega Flame"
+    },
+    {
+        "species": "Guardromon",
+        "ability": "Vaccine",
+        "moves": ["Upgrade", "Reverse Program", "Anti-Attack Field", "Gigawatt Laser", "Megalo Spark", "Holy Terrain", "Fire Tower", "Firewall", "Thunder Justice"],
+        "reservedMove": "Guardian Barrage"
+    },
+    {
+        "species": "Gururumon",
+        "ability": "Vaccine",
+        "moves": ["War Cry", "Water Blitz", "Fighting Aura", "Burning Heart", "Blackout", "Giga Freeze", "Dark Spirit", "Evil Fantasy", "Aurora Freeze"],
+        "reservedMove": "Chaos Blaster"
+    },
+    {
+        "species": "Hyogamon",
+        "ability": "Virus",
+        "moves": ["Hail Spear", "Winter Blast", "Ice Statue", "Blackout", "Muscle Charge", "War Cry", "Tremar", "Megaton Punch"],
+        "reservedMove": "Snow Punch"
+    },
+    {
+        "species": "IceDevimon",
+        "ability": "Virus",
+        "moves": ["Water Blitz", "Blackout", "Evil Fantasy", "Ice Statue", "Shadow Fall", "Evil Squall", "Winter Blast", "Giga Freeze"],
+        "reservedMove": "Frozen Claw"
+    },
+    {
+        "species": "Icemon",
+        "ability": "Data",
+        "moves": ["Earth Coat", "Rock Fall", "Hail Spear", "Aurora Freeze", "Giga Freeze", "Megaton Punch", "Fighting Aura"],
+        "reservedMove": "Iceball Bomb"
+    },
+    {
+        "species": "Ikkakumon",
+        "ability": "Vaccine",
+        "moves": ["Hail Spear", "Ocean Wave", "Ice Statue", "Aurora Freeze", "Mechanical Claw", "War Cry", "Tremar"],
+        "reservedMove": "Harpoon Torpedo"
+    },
+    {
+        "species": "JungleMojyamon",
+        "ability": "Vaccine",
+        "moves": ["Earth Coat", "Root Bind", "War Cry", "Muscle Charge", "Sonic Jab", "Fighting Aura", "Super Stinky Jet", "Poop Fling"],
+        "reservedMove": "Jungle Bone"
+    },
+    {
+        "species": "Kabuterimon",
+        "ability": "Vaccine",
+        "moves": ["Confused Storm", "Electric Cloud", "Megalo Spark", "Thunder Justice", "Mass Morph", "Bug", "Rock Fall", "Fighting Aura"],
+        "reservedMove": "Electro Shocker"
+    },
+    {
+        "species": "Kokatorimon",
+        "ability": "Vaccine",
+        "moves": ["Wing Shoes", "Wind Cutter", "Megalo Spark", "Ice Statue", "Cooties Kick", "Poop Toss", "Guerrilla Poop"],
+        "reservedMove": "Frozen Fire Shot"
+    },
+    {
+        "species": "Kuwagamon",
+        "ability": "Virus",
+        "moves": ["Sonic Jab", "Buster Drive", "Mass Morph", "Bug", "Venom Disaster", "Wind Cutter", "Blackout"],
+        "reservedMove": "Scissor Claw"
+    },
+    {
+        "species": "Leomon",
+        "ability": "Vaccine",
+        "moves": ["Muscle Charge", "War Cry", "Sonic Jab", "Meltdown", "Infinity Burn", "Megaton Punch", "Earth Coat", "Holy Terrain", "Burning Heart"],
+        "reservedMove": "Fist of the Beast King"
+    },
+    {
+        "species": "Meicoomon",
+        "ability": "Data",
+        "moves": ["War Cry", "Wind Cutter", "Fighting Aura", "Megaton Punch", "Mechanical Claw", "Venom Disaster", "Shadow Fall", "Saint Ray"],
+        "reservedMove": "X Scratch"
+    },
+    {
+        "species": "Meramon",
+        "ability": "Data",
+        "moves": ["Burning Heart", "Firewall", "Fire Tower", "Infinity Burn", "Holy Flash", "Fighting Aura", "Sonic Jab", "Megaton Punch"],
+        "reservedMove": "Burning Fist"
+    },
+    {
+        "species": "Mikemon",
+        "ability": "Data",
+        "moves": ["War Cry", "Sonic Jab", "Fighting Aura", "Venom Disaster", "Evil Fantasy", "Holy Flash", "Bug"],
+        "reservedMove": "Cat Claw"
+    },
+    {
+        "species": "Mojyamon",
+        "ability": "Vaccine",
+        "moves": ["War Cry", "Muscle Charge", "Sonic Jab", "Fighting Aura", "Hail Spear", "Winter Blast", "Super Stinky Jet", "Poop Fling"],
+        "reservedMove": "Bone Boomerang"
+    },
+    {
+        "species": "Monochromon",
+        "ability": "Data",
+        "moves": ["Heat Breath", "Fire Tower", "Infinity Burn", "Earth Coat", "Rock Fall", "Muscle Charge", "Buster Drive"],
+        "reservedMove": "Volcanic Strike"
+    },
+    {
+        "species": "MoriShellmon",
+        "ability": "Data",
+        "moves": ["Water Blitz", "Ocean Wave", "Earth Coat", "Charm Perfume", "Root Bind", "Venom Disaster", "Sonic Jab"],
+        "reservedMove": "Mind Fog"
+    },
+    {
+        "species": "MudFrigimon",
+        "ability": "Vaccine",
+        "moves": ["Root Bind", "Bug", "Rock Fall", "Mass Morph", "Sonic Jab", "Earth Coat", "Fighting Aura"],
+        "reservedMove": "Mud Ball"
+    },
+    {
+        "species": "Nanimon",
+        "ability": "Virus",
+        "moves": ["Muscle Charge", "Sonic Jab", "Fighting Aura", "Poop Toss", "Poop Attack Field", "Super Stinky Jet", "Evil Fantasy", "Blackout"],
+        "reservedMove": "Poop Dunk"
+    },
+    {
+        "species": "Ninjamon",
+        "ability": "Data",
+        "moves": ["War Cry", "Sonic Jab", "Muscle Charge", "Charm Perfume", "Root Bind", "Earth Coat", "Tremar"],
+        "reservedMove": "Dancing Leaves"
+    },
+    {
+        "species": "NiseDrimogemon",
+        "ability": "Vaccine",
+        "moves": ["War Cry", "Sonic Jab", "Buster Drive", "Tremar", "Mechanical Claw", "Upgrade", "Delete Program", "Reverse Program"],
+        "reservedMove": "Fake Drill Spin"
+    },
+    {
+        "species": "Numemon",
+        "ability": "Virus",
+        "moves": ["Ocean Wave", "Earth Coat", "Bug", "Ice Statue", "War Cry", "Cooties Kick", "Poop Toss", "Guerrilla Poop", "Extreme Poop Death"],
+        "reservedMove": "Nume-Sludge"
+    },
+    {
+        "species": "Ogremon",
+        "ability": "Virus",
+        "moves": ["Fire Tower", "Infinity Burn", "Heat Breath", "Blackout", "Muscle Charge", "War Cry", "Tremar", "Megaton Punch"],
+        "reservedMove": "Pummel Whack"
+    },
+    {
+        "species": "Piddomon",
+        "ability": "Vaccine",
+        "moves": ["Burning Heart", "Firewall", "Infinity Burn", "Holy Breath", "Wind Cutter", "Sonic Jab", "Saint Heal", "Saint Ray", "Holy Judgment"],
+        "reservedMove": "Fire Feather"
+    },
+    {
+        "species": "PlatinumSukamon",
+        "ability": "Vaccine",
+        "moves": ["Earth Coat", "Rock Fall", "Holy Flash", "Mechanical Claw", "Reverse Program", "Delete Program", "Cooties Kick", "Super Stinky Jet", "Guerrilla Poop", "Extreme Poop Death"],
+        "reservedMove": "Rare Metal Poop"
+    },
+    {
+        "species": "RedVegiemon",
+        "ability": "Virus",
+        "moves": ["Heat Breath", "Meltdown", "Prominence Beam", "Mass Morph", "Charm Perfume", "Venom Disaster", "Earth Coat"],
+        "reservedMove": "Chili Pepper Pummel"
+    },
+    {
+        "species": "Rockmon",
+        "ability": "Virus",
+        "moves": ["Mechanical Claw", "Winter Blast", "Giga Freeze", "Gigawatt Laser", "DG Dimension", "Upgrade", "Sonic Jab"],
+        "reservedMove": "Anti-Digi Beam"
+    },
+    {
+        "species": "Saberdramon",
+        "ability": "Virus",
+        "moves": ["Wing Shoes", "Wind Cutter", "Burning Heart", "Blackout", "Fire Tower", "Shadow Fall", "Infinity Burn", "Evil Fantasy"],
+        "reservedMove": "Night Roar"
+    },
+    {
+        "species": "SandYanmamon",
+        "ability": "Virus",
+        "moves": ["Electric Cloud", "Wind Cutter", "Confused Storm", "Thunder Justice", "Earth Coat", "Mass Morph", "Charm Perfume", "Bug", "Holy Flash"],
+        "reservedMove": "Stun Ray"
+    },
+    {
+        "species": "Seadramon",
+        "ability": "Data",
+        "moves": ["Hail Spear", "Water Blitz", "Giga Freeze", "Aurora Freeze", "Heat Breath", "Meltdown", "Holy Breath"],
+        "reservedMove": "Ice Blast"
+    },
+    {
+        "species": "Shellmon",
+        "ability": "Data",
+        "moves": ["Water Blitz", "Winter Blast", "Ocean Wave", "Aurora Freeze", "Mass Morph", "Rock Fall", "Sonic Jab"],
+        "reservedMove": "Hydro Pressure"
+    },
+    {
+        "species": "ShimaUnimon",
+        "ability": "Data",
+        "moves": ["Holy Breath", "Electric Cloud", "Confused Storm", "Saint Heal", "Holy Flash", "Saint Ray", "War Cry", "Fighting Aura", "Sonic Jab", "Buster Drive"],
+        "reservedMove": "Luster Shot"
+    },
+    {
+        "species": "Soulmon",
+        "ability": "Virus",
+        "moves": ["Dark Spirit", "Blackout", "Evil Fantasy", "Shadow Fall", "Mass Morph", "Static Electricity", "Electric Cloud", "Aurora Freeze"],
+        "reservedMove": "Necro Magic"
+    },
+    {
+        "species": "Sukamon",
+        "ability": "Virus",
+        "moves": ["Earth Coat", "Bug", "Rock Fall", "War Cry", "Cooties Kick", "Super Stinky Jet", "Guerrilla Poop", "Extreme Poop Death", "Hide and Seek"],
+        "reservedMove": "Poop"
+    },
+    {
+        "species": "Tankmon",
+        "ability": "Data",
+        "moves": ["Burning Heart", "Heat Breath", "Infinity Burn", "Prominence Beam", "Earth Coat", "Anti-Attack Field", "Gigawatt Laser", "Delete Program", "Upgrade"],
+        "reservedMove": "Hyper Cannon"
+    },
+    {
+        "species": "Togemon",
+        "ability": "Data",
+        "moves": ["Mass Morph", "Charm Perfume", "Root Bind", "Venom Disaster", "Water Blitz", "Muscle Charge", "Sonic Jab", "Fighting Aura", "Megaton Punch"],
+        "reservedMove": "Needle Spray"
+    },
+    {
+        "species": "Tyrannomon",
+        "ability": "Data",
+        "moves": ["Burning Heart", "Heat Breath", "Fire Tower", "Prominence Beam", "Muscle Charge", "Sonic Jab", "Tremar", "Rock Fall"],
+        "reservedMove": "Blaze Blaster"
+    },
+    {
+        "species": "Unimon",
+        "ability": "Vaccine",
+        "moves": ["Wing Shoes", "Megalo Spark", "Thunder Justice", "Confused Storm", "Rock Fall", "Saint Heal", "Holy Judgment", "Saint Ray", "Muscle Charge"],
+        "reservedMove": "Aerial Attack"
+    },
+    {
+        "species": "Vegiemon",
+        "ability": "Virus",
+        "moves": ["Water Blitz", "Giga Freeze", "Ocean Wave", "Mass Morph", "Charm Perfume", "Venom Disaster", "Earth Coat"],
+        "reservedMove": "Sweet Breath"
+    },
+    {
+        "species": "Weedmon",
+        "ability": "Virus",
+        "moves": ["Super Stinky Jet", "Poop Attack Field", "Extreme Poop Death", "Mass Morph", "Charm Perfume", "Venom Disaster", "Earth Coat"],
+        "reservedMove": "Deadly Weed"
+    },
+    {
+        "species": "Yanmamon",
+        "ability": "Virus",
+        "moves": ["Electric Cloud", "Wind Cutter", "Confused Storm", "Thunder Justice", "Earth Coat", "Mass Morph", "Charm Perfume", "Bug", "Holy Flash"],
+        "reservedMove": "Thunder Ray"
+    },
+    {
+        "species": "Andromon",
+        "ability": "Vaccine",
+        "moves": ["Wind Cutter", "Electric Cloud", "Megalo Spark", "Thunder Justice", "Upgrade", "Anti-Attack Field", "Delete Program", "Gigawatt Laser", "Bug"],
+        "reservedMove": "Spiral Sword"
+    },
+    {
+        "species": "Angewomon",
+        "ability": "Vaccine",
+        "moves": ["Wing Shoes", "Wind Cutter", "Thunder Justice", "Fighting Aura", "Electric Cloud", "Saint Heal", "Holy Breath", "Holy Flash", "Saint Ray", "War Cry"],
+        "reservedMove": "Celestial Arrow"
+    },
+    {
+        "species": "Beastmon",
+        "ability": "Virus",
+        "moves": ["War Cry", "Sonic Jab", "Megaton Punch", "Venom Disaster", "Shadow Fall", "Giga Freeze", "Bug", "Ice Statue"],
+        "reservedMove": "Vampire Wave"
+    },
+    {
+        "species": "BlackWereGarurumon",
+        "ability": "Virus",
+        "moves": ["War Cry", "Muscle Charge", "Sonic Jab", "Megaton Punch", "Rock Fall", "Burning Heart", "Heat Breath", "Evil Squall", "Hide and Seek", "Winter Blast", "Giga Freeze"],
+        "reservedMove": "Full Moon Kick"
+    },
+    {
+        "species": "BlueMeramon",
+        "ability": "Vaccine",
+        "moves": ["Burning Heart", "Firewall", "Meltdown", "Infinity Burn", "Aurora Freeze", "Holy Flash", "Fighting Aura", "Giga Freeze"],
+        "reservedMove": "Cold Flame"
+    },
+    {
+        "species": "Digitamamon",
+        "ability": "Data",
+        "moves": ["Hail Spear", "Blackout", "Bug", "Shadow Fall", "Fire Tower", "Poop Attack Field", "Poop Fling", "Upgrade"],
+        "reservedMove": "Nightmare Syndrome"
+    },
+    {
+        "species": "DoruGreymon",
+        "ability": "Data",
+        "moves": ["Burning Heart", "Infinity Burn", "Megalo Spark", "Muscle Charge", "Sonic Jab", "Fighting Aura", "Buster Drive", "Mechanical Claw", "Anti-Attack Field"],
+        "reservedMove": "Metal Meteor"
+    },
+    {
+        "species": "Etemon",
+        "ability": "Virus",
+        "moves": ["Earth Coat", "Rock Fall", "Sonic Jab", "Megaton Punch", "Charm Perfume", "Bug", "Guerrilla Poop", "Extreme Poop Death"],
+        "reservedMove": "Love Serenade"
+    },
+    {
+        "species": "Garudamon",
+        "ability": "Vaccine",
+        "moves": ["Wing Shoes", "Wind Cutter", "Burning Heart", "Fire Tower", "Meltdown", "Infinity Burn", "War Cry", "Buster Drive", "Holy Flash"],
+        "reservedMove": "Shadow Wing"
+    },
+    {
+        "species": "Gigadramon",
+        "ability": "Data",
+        "moves": ["Upgrade", "Gigawatt Laser", "DG Dimension", "Dark Spirit", "Hide and Seek", "Wind Cutter", "Electric Cloud", "Giga Freeze"],
+        "reservedMove": "Energy Shot"
+    },
+    {
+        "species": "Giromon",
+        "ability": "Vaccine",
+        "moves": ["Upgrade", "Delete Program", "Reverse Program", "Tremar", "Megaton Punch", "Static Electricity", "Megalo Spark", "Firewall"],
+        "reservedMove": "Deadly Bomb"
+    },
+    {
+        "species": "IceLeomon",
+        "ability": "Data",
+        "moves": ["Muscle Charge", "War Cry", "Giga Freeze", "Ice Statue", "Megaton Punch", "Winter Blast", "Aurora Freeze", "Holy Terrain", "Burning Heart"],
+        "reservedMove": "Fist of Ice"
+    },
+    {
+        "species": "LadyDevimon",
+        "ability": "Virus",
+        "moves": ["Wing Shoes", "Wind Cutter", "Evil Squall", "Fighting Aura", "Electric Cloud", "Evil Fantasy", "Charm Perfume", "Dark Spirit", "Chaos Cloud", "War Cry"],
+        "reservedMove": "Darkness Wave"
+    },
+    {
+        "species": "Lillymon",
+        "ability": "Data",
+        "moves": ["Earth Coat", "Charm Perfume", "Root Bind", "Venom Disaster", "Wing Shoes", "Wind Cutter", "Confused Storm", "Saint Heal", "Holy Breath"],
+        "reservedMove": "Flower Cannon"
+    },
+    {
+        "species": "MagnaAngemon",
+        "ability": "Vaccine",
+        "moves": ["Saint Heal", "Holy Terrain", "Shining Nova", "Thunder Justice", "Anti-Attack Field", "Gigawatt Laser", "Delete Program", "Sonic Jab", "Megalo Spark", "Tremar", "Holy Judgment", "Wing Shoes"],
+        "reservedMove": "Gate of Destiny"
+    },
+    {
+        "species": "Mamemon",
+        "ability": "Data",
+        "moves": ["Muscle Charge", "Sonic Jab", "Fighting Aura", "Tremar", "Anti-Attack Field", "Upgrade", "Reverse Program", "Gigawatt Laser", "Giga Freeze", "Burning Heart"],
+        "reservedMove": "Smile Bomber"
+    },
+    {
+        "species": "Megadramon",
+        "ability": "Virus",
+        "moves": ["Mechanical Claw", "Upgrade", "Delete Program", "Blackout", "Shadow Fall", "Static Electricity", "Megalo Spark", "Fire Tower"],
+        "reservedMove": "Genocide Attack"
+    },
+    {
+        "species": "MegaKabuterimon",
+        "ability": "Vaccine",
+        "moves": ["Static Electricity", "Rock Fall", "Megaton Punch", "Megalo Spark", "Tremar", "Earth Coat", "Mass Morph", "Bug"],
+        "reservedMove": "Horn Buster"
+    },
+    {
+        "species": "MegaSeadramon",
+        "ability": "Data",
+        "moves": ["Hail Spear", "Water Blitz", "Giga Freeze", "Aurora Freeze", "Heat Breath", "Meltdown", "Shining Nova", "Static Electricity", "Megalo Spark"],
+        "reservedMove": "Lightning Javelin"
+    },
+    {
+        "species": "meicrackmon",
+        "ability": "Vaccine",
+        "moves": ["War Cry", "Wind Cutter", "Fighting Aura", "Megaton Punch", "Mechanical Claw", "Venom Disaster", "Holy Judgment", "Saint Ray", "Holy Breath"],
+        "reservedMove": "Modestly Stun"
+    },
+    {
+        "species": "meicrackmonviciousmode",
+        "ability": "Virus",
+        "moves": ["War Cry", "Wind Cutter", "Fighting Aura", "Megaton Punch", "Mechanical Claw", "Venom Disaster", "Shadow Fall", "Evil Squall", "Blackout"],
+        "reservedMove": "Berserk Thinking"
+    },
+    {
+        "species": "metalgreymonvaccine",
+        "ability": "Vaccine",
+        "moves": ["Burning Heart", "Heat Breath", "Fire Tower", "Infinity Burn", "Muscle Charge", "Sonic Jab", "Tremar", "Buster Drive", "Mechanical Claw", "Gigawatt Laser", "Delete Program"],
+        "reservedMove": "Giga Destroyer"
+    },
+    {
+        "species": "metalgreymonvirus",
+        "ability": "Virus",
+        "moves": ["Burning Heart", "Heat Breath", "Fire Tower", "Infinity Burn", "Muscle Charge", "Sonic Jab", "Blackout", "Shadow Fall", "Mechanical Claw", "Gigawatt Laser", "Delete Program"],
+        "reservedMove": "Revenge Flame"
+    },
+    {
+        "species": "MetalMamemon",
+        "ability": "Data",
+        "moves": ["Muscle Charge", "Mechanical Claw", "Fighting Aura", "Tremar", "Delete Program", "Upgrade", "Reverse Program", "Megalo Spark", "Winter Blast", "Burning Heart"],
+        "reservedMove": "Energy Bomb"
+    },
+    {
+        "species": "Meteormon",
+        "ability": "Data",
+        "moves": ["Earth Coat", "Rock Fall", "Heat Breath", "Prominence Beam", "Giga Freeze", "Megaton Punch", "Fighting Aura"],
+        "reservedMove": "Galactic Flare"
+    },
+    {
+        "species": "Monzaemon",
+        "ability": "Vaccine",
+        "moves": ["Fighting Aura", "Poop Attack Field", "Tremar", "Megaton Punch", "Saint Heal", "Holy Breath", "Holy Terrain", "Saint Ray", "Charm Perfume"],
+        "reservedMove": "Hearts Attack"
+    },
+    {
+        "species": "Myotismon",
+        "ability": "Virus",
+        "moves": ["Dark Spirit", "Blackout", "Evil Fantasy", "Electric Cloud", "Aurora Freeze", "Evil Squall", "Wing Shoes", "Confused Storm", "Venom Disaster", "Reverse Program"],
+        "reservedMove": "Grisly Wing"
+    },
+    {
+        "species": "Piximon",
+        "ability": "Data",
+        "moves": ["Saint Heal", "Holy Breath", "Holy Terrain", "Fighting Aura", "Shining Nova", "Wing Shoes", "Wind Cutter", "Electric Cloud", "Anti-Attack Field", "Earth Coat", "Bug"],
+        "reservedMove": "Pit Bomb"
+    },
+    {
+        "species": "ShogunGekomon",
+        "ability": "Data",
+        "moves": ["Earth Coat", "Confused Storm", "Ocean Wave", "Ice Statue", "Giga Freeze", "Aurora Freeze", "War Cry", "Fighting Aura", "Charm Perfume"],
+        "reservedMove": "Musical Fist"
+    },
+    {
+        "species": "SkullGreymon",
+        "ability": "Virus",
+        "moves": ["Blackout", "Shadow Fall", "Evil Fantasy", "Evil Squall", "Heat Breath", "Fire Tower", "Infinity Burn", "Sonic Jab", "Tremar", "Buster Drive", "Mechanical Claw", "Delete Program"],
+        "reservedMove": "Oblivion Bird"
+    },
+    {
+        "species": "Tekkamon",
+        "ability": "Virus",
+        "moves": ["Upgrade", "Delete Program", "Reverse Program", "Tremar", "Megaton Punch", "Static Electricity", "Shadow Fall", "Firewall"],
+        "reservedMove": "Frag Bomb"
+    },
+    {
+        "species": "Vademon",
+        "ability": "Virus",
+        "moves": ["Mass Morph", "Charm Perfume", "Bug", "Rock Fall", "Upgrade", "Delete Program", "DG Dimension", "Cooties Kick"],
+        "reservedMove": "Unidentified Flying Kiss"
+    },
+    {
+        "species": "Vermilimon",
+        "ability": "Data",
+        "moves": ["Heat Breath", "Fire Tower", "Infinity Burn", "Prominence Beam", "Earth Coat", "Rock Fall", "Muscle Charge", "Buster Drive"],
+        "reservedMove": "Volcanic Strike S"
+    },
+    {
+        "species": "WaruMonzaemon",
+        "ability": "Virus",
+        "moves": ["Fighting Aura", "Poop Attack Field", "Tremar", "Megaton Punch", "Dark Spirit", "Evil Fantasy", "Hide and Seek", "Charm Perfume"],
+        "reservedMove": "Heartbreak Attack"
+    },
+    {
+        "species": "WaruSeadramon",
+        "ability": "Virus",
+        "moves": ["Hail Spear", "Water Blitz", "Giga Freeze", "Aurora Freeze", "Heat Breath", "Meltdown", "Static Electricity", "Megalo Spark", "Evil Squall"],
+        "reservedMove": "Evil Icicle"
+    },
+    {
+        "species": "WereGarurumon",
+        "ability": "Data",
+        "moves": ["War Cry", "Muscle Charge", "Sonic Jab", "Megaton Punch", "Rock Fall", "Burning Heart", "Heat Breath", "Ice Statue", "Aurora Freeze", "Winter Blast", "Giga Freeze"],
+        "reservedMove": "Wolf Claw"
+    },
+    {
+        "species": "Whamon",
+        "ability": "Vaccine",
+        "moves": ["Water Blitz", "Ocean Wave", "Ice Statue", "Aurora Freeze", "Mass Morph", "Charm Perfume", "Holy Terrain", "Confused Storm", "Buster Drive", "Saint Heal"],
+        "reservedMove": "Tidal Wave"
+    },
+    {
+        "species": "Zudomon",
+        "ability": "Vaccine",
+        "moves": ["Electric Cloud", "Thunder Justice", "Hail Spear", "Ice Statue", "Mechanical Claw", "Aurora Freeze", "Anti-Attack Field", "War Cry", "Tremar"],
+        "reservedMove": "Vulcan's Hammer"
+    },
+    {
+        "species": "Alphamon",
+        "ability": "Vaccine",
+        "moves": ["Holy Terrain", "Saint Ray", "Holy Judgment", "Shining Nova", "War Cry", "Sonic Jab", "Tremar", "Upgrade", "Delete Program", "DG Dimension", "Burning Heart", "Thunder Justice"],
+        "reservedMove": "Blade of the Dragon King"
+    },
+    {
+        "species": "BlackMetalGarurumon",
+        "ability": "Virus",
+        "moves": ["War Cry", "Mechanical Claw", "Megalo Spark", "Winter Blast", "Giga Freeze", "Ice Statue", "Shadow Fall", "Evil Fantasy", "Aurora Freeze"],
+        "reservedMove": "Garuru Tomahawk"
+    },
+    {
+        "species": "BlackWarGreymon",
+        "ability": "Virus",
+        "moves": ["Burning Heart", "Fire Tower", "Firewall", "Shadow Fall", "Muscle Charge", "Blackout", "Buster Drive", "Mechanical Claw", "Anti-Attack Field", "Delete Program", "Evil Fantasy"],
+        "reservedMove": "Black Tornado"
+    },
+    {
+        "species": "Boltmon",
+        "ability": "Data",
+        "moves": ["Electric Cloud", "Megalo Spark", "Fighting Aura", "Megaton Punch", "Mechanical Claw", "Gigawatt Laser", "Meltdown", "Infinity Burn"],
+        "reservedMove": "Tomahawk Stinger"
+    },
+    {
+        "species": "CherubimonEvil",
+        "ability": "Virus",
+        "moves": ["Wing Shoes", "Thunder Justice", "Megalo Spark", "Megaton Punch", "Blackout", "Chaos Cloud", "Shadow Fall", "Evil Squall", "DG Dimension", "Gigawatt Laser"],
+        "reservedMove": "Lightning Spear"
+    },
+    {
+        "species": "CherubimonGood",
+        "ability": "Vaccine",
+        "moves": ["Wing Shoes", "Thunder Justice", "Megalo Spark", "Megaton Punch", "Holy Breath", "Saint Ray", "Holy Judgment", "Shining Nova", "DG Dimension", "Gigawatt Laser"],
+        "reservedMove": "Heaven's Judgment"
+    },
+    {
+        "species": "Devitamamon",
+        "ability": "Data",
+        "moves": ["Hail Spear", "Blackout", "Evil Fantasy", "Shadow Fall", "Evil Squall", "Poop Attack Field", "Extreme Poop Death", "Fire Tower"],
+        "reservedMove": "Black Death Cloud"
+    },
+    {
+        "species": "Dorugoramon",
+        "ability": "Data",
+        "moves": ["Burning Heart", "Infinity Burn", "Prominence Beam", "Megalo Spark", "Thunder Justice", "Fighting Aura", "Buster Drive", "Sonic Jab", "Mechanical Claw", "Anti-Attack Field", "Delete Program", "Gigawatt Laser"],
+        "reservedMove": "Brave Metal"
+    },
+    {
+        "species": "Ebemon",
+        "ability": "Virus",
+        "moves": ["Confused Storm", "Electric Cloud", "Mass Morph", "Bug", "Upgrade", "Gigawatt Laser", "DG Dimension", "Cooties Kick"],
+        "reservedMove": "Brain Rupture"
+    },
+    {
+        "species": "HerculesKabuterimon",
+        "ability": "Data",
+        "moves": ["Confused Storm", "Electric Cloud", "Megalo Spark", "Thunder Justice", "Charm Perfume", "Mass Morph", "Bug", "Holy Terrain", "Holy Flash", "Fighting Aura"],
+        "reservedMove": "Giga Blaster"
+    },
+    {
+        "species": "HiAndromon",
+        "ability": "Vaccine",
+        "moves": ["Sonic Jab", "Electric Cloud", "Megalo Spark", "Thunder Justice", "Saint Heal", "Upgrade", "Anti-Attack Field", "Delete Program", "Gigawatt Laser", "Bug", "Buster Drive", "Megaton Punch"],
+        "reservedMove": "Atomic Ray"
+    },
+    {
+        "species": "Lilithmon",
+        "ability": "Virus",
+        "moves": ["Evil Fantasy", "Chaos Cloud", "Shadow Fall", "Wind Cutter", "Confused Storm", "Charm Perfume", "Venom Disaster", "Bug", "Aurora Freeze", "Mechanical Claw"],
+        "reservedMove": "Phantom Pain"
+    },
+    {
+        "species": "Machinedramon",
+        "ability": "Virus",
+        "moves": ["Mechanical Claw", "Upgrade", "Gigawatt Laser", "DG Dimension", "Megalo Spark", "Thunder Justice", "Electric Cloud", "Hide and Seek", "Firewall", "Giga Freeze"],
+        "reservedMove": "Infinity Cannon"
+    },
+    {
+        "species": "Magnadramon",
+        "ability": "Vaccine",
+        "moves": ["Saint Heal", "Holy Breath", "Holy Flash", "Holy Judgment", "Burning Heart", "Fire Tower", "Prominence Beam", "Wing Shoes", "Buster Drive", "Fighting Aura"],
+        "reservedMove": "Fire Tornado"
+    },
+    {
+        "species": "MarineAngemon",
+        "ability": "Vaccine",
+        "moves": ["Water Blitz", "Ocean Wave", "Aurora Freeze", "Ice Statue", "Saint Heal", "Holy Breath", "Holy Terrain", "Shining Nova", "Confused Storm", "Wing Shoes", "Anti-Attack Field", "Earth Coat"],
+        "reservedMove": "Ocean Love"
+    },
+    {
+        "species": "MetalEtemon",
+        "ability": "Virus",
+        "moves": ["Reverse Program", "DG Dimension", "Upgrade", "Gigawatt Laser", "Charm Perfume", "Holy Flash", "Guerrilla Poop", "Extreme Poop Death"],
+        "reservedMove": "Dark Recital"
+    },
+    {
+        "species": "MetalGarurumon",
+        "ability": "Data",
+        "moves": ["War Cry", "Mechanical Claw", "Buster Drive", "Winter Blast", "Giga Freeze", "Ice Statue", "Rock Fall", "Meltdown", "Aurora Freeze"],
+        "reservedMove": "Ice Wolf Claw"
+    },
+    {
+        "species": "MetalSeadramon",
+        "ability": "Data",
+        "moves": ["Water Blitz", "Winter Blast", "Ocean Wave", "Ice Statue", "Infinity Burn", "Static Electricity", "Megalo Spark", "Upgrade", "Delete Program"],
+        "reservedMove": "River of Power"
+    },
+    {
+        "species": "Ophanimon",
+        "ability": "Vaccine",
+        "moves": ["Wing Shoes", "Wind Cutter", "Thunder Justice", "Fighting Aura", "Aurora Freeze", "Saint Heal", "Holy Breath", "Holy Terrain", "Saint Ray", "War Cry"],
+        "reservedMove": "Eden's Javelin"
+    },
+    {
+        "species": "Phoenixmon",
+        "ability": "Vaccine",
+        "moves": ["Wing Shoes", "Wind Cutter", "Thunder Justice", "Burning Heart", "Meltdown", "Prominence Beam", "War Cry", "Buster Drive", "Holy Judgment", "Shining Nova", "Infinity Burn"],
+        "reservedMove": "Starlight Explosion"
+    },
+    {
+        "species": "PrinceMamemon",
+        "ability": "Data",
+        "moves": ["Muscle Charge", "Sonic Jab", "Megaton Punch", "Fighting Aura", "Upgrade", "Reverse Program", "Delete Program", "DG Dimension", "Holy Flash", "Poop Attack Field"],
+        "reservedMove": "Smile Warhead"
+    },
+    {
+        "species": "Raguelmon",
+        "ability": "Virus",
+        "moves": ["War Cry", "Wind Cutter", "Fighting Aura", "Megaton Punch", "Mechanical Claw", "Venom Disaster", "Shadow Fall", "Evil Squall", "Blackout", "Delete Program"],
+        "reservedMove": "Darkness Zone"
+    },
+    {
+        "species": "Rasielmon",
+        "ability": "Vaccine",
+        "moves": ["War Cry", "Wind Cutter", "Fighting Aura", "Megaton Punch", "Mechanical Claw", "Venom Disaster", "Holy Judgment", "Saint Ray", "Holy Breath", "DG Dimension"],
+        "reservedMove": "Knowledge Stream"
+    },
+    {
+        "species": "Rosemon",
+        "ability": "Data",
+        "moves": ["Earth Coat", "Charm Perfume", "Root Bind", "Venom Disaster", "Wing Shoes", "Confused Storm", "Evil Fantasy", "Saint Heal", "Shining Nova"],
+        "reservedMove": "Thorn Whip"
+    },
+    {
+        "species": "SaberLeomon",
+        "ability": "Data",
+        "moves": ["Muscle Charge", "War Cry", "Fighting Aura", "Buster Drive", "Earth Coat", "Venom Disaster", "Holy Terrain", "Holy Judgment", "Mechanical Claw", "Burning Heart", "Infinity Burn", "Shining Nova"],
+        "reservedMove": "Howling Crusher"
+    },
+    {
+        "species": "Seraphimon",
+        "ability": "Vaccine",
+        "moves": ["Saint Heal", "Holy Terrain", "Shining Nova", "Thunder Justice", "Anti-Attack Field", "Gigawatt Laser", "Delete Program", "Sonic Jab", "Megalo Spark", "Tremar", "Holy Judgment", "Wing Shoes"],
+        "reservedMove": "Strike of the Seven Stars"
+    },
+    {
+        "species": "VenomMyotismon",
+        "ability": "Virus",
+        "moves": ["Dark Spirit", "Blackout", "Evil Fantasy", "Megalo Spark", "Ice Statue", "Shadow Fall", "Wing Shoes", "Static Electricity", "Venom Disaster", "Delete Program"],
+        "reservedMove": "Venom Infusion"
+    },
+    {
+        "species": "Vikemon",
+        "ability": "Vaccine",
+        "moves": ["Hail Spear", "Winter Blast", "Ice Statue", "Aurora Freeze", "Mechanical Claw", "Anti-Attack Field", "War Cry", "Tremar", "Megaton Punch", "Holy Flash"],
+        "reservedMove": "Arctic Blizzard"
+    },
+    {
+        "species": "WarGreymon",
+        "ability": "Vaccine",
+        "moves": ["Burning Heart", "Fire Tower", "Firewall", "Infinity Burn", "Muscle Charge", "Sonic Jab", "Buster Drive", "Mechanical Claw", "Anti-Attack Field", "Delete Program", "Fighting Aura"],
+        "reservedMove": "Terra Force"
+    }
+];
