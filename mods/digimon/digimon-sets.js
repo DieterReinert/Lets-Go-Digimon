@@ -137,13 +137,13 @@ module.exports = [
     {
         "species": "Goburimon",
         "ability": "Virus",
-        "moves": ["Heat Breath", "Fire Tower", "Infinity Burn", "Muscle Charge", "Burning Heart", "Rebound Strike", "Megaton Punch", "Shadow Fall", "Poop Toss"],
+        "moves": ["Heat Breath", "Fire Tower", "Infinity Burn", "Muscle Charge", "Burning Heart", "Tremar", "Megaton Punch", "Shadow Fall", "Poop Toss"],
         "reservedMove": "Goblin Strike"
     },
     {
         "species": "Gomamon",
         "ability": "Vaccine",
-        "moves": ["Mechanical Claw", "Water Blitz", "Ocean Wave", "Ice Statue", "Aurora Freeze", "War Cry", "Rebound Strike"],
+        "moves": ["Mechanical Claw", "Water Blitz", "Ocean Wave", "Ice Statue", "Aurora Freeze", "War Cry", "Tremar"],
         "reservedMove": "Marching Fishes"
     },
     {
