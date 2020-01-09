@@ -209,7 +209,7 @@ module.exports = [
     {
         "species": "Shamanmon",
         "ability": "Virus",
-        "moves": ["Charm Perfume", "Root Bind", "Rock Fall", "Muscle Charge", "War Cry", "Rebound Strike", "Megaton Punch", "Shadow Fall", "Poop Toss"],
+        "moves": ["Charm Perfume", "Root Bind", "Rock Fall", "Muscle Charge", "War Cry", "Tremar", "Megaton Punch", "Shadow Fall", "Poop Toss"],
         "reservedMove": "Dancing Bone"
     },
     {
@@ -221,7 +221,7 @@ module.exports = [
     {
         "species": "SnowGoburimon",
         "ability": "Virus",
-        "moves": ["Hail Spear", "Winter Blast", "Ice Statue", "Muscle Charge", "War Cry", "Rebound Strike", "Megaton Punch", "Shadow Fall", "Poop Toss"],
+        "moves": ["Hail Spear", "Winter Blast", "Ice Statue", "Muscle Charge", "War Cry", "Tremar", "Megaton Punch", "Shadow Fall", "Poop Toss"],
         "reservedMove": "SnowGob Bolt"
     },
     {
@@ -335,7 +335,7 @@ module.exports = [
     {
         "species": "Fugamon",
         "ability": "Virus",
-        "moves": ["Static Electricity", "Wind Cutter", "Megalo Spark", "Blackout", "Muscle Charge", "War Cry", "Rebound Strike", "Megaton Punch"],
+        "moves": ["Static Electricity", "Wind Cutter", "Megalo Spark", "Blackout", "Muscle Charge", "War Cry", "Tremar", "Megaton Punch"],
         "reservedMove": "Evil Hurricane"
     },
     {
@@ -383,7 +383,7 @@ module.exports = [
     {
         "species": "Hyogamon",
         "ability": "Virus",
-        "moves": ["Hail Spear", "Winter Blast", "Ice Statue", "Blackout", "Muscle Charge", "War Cry", "Rebound Strike", "Megaton Punch"],
+        "moves": ["Hail Spear", "Winter Blast", "Ice Statue", "Blackout", "Muscle Charge", "War Cry", "Tremar", "Megaton Punch"],
         "reservedMove": "Snow Punch"
     },
     {
@@ -401,7 +401,7 @@ module.exports = [
     {
         "species": "Ikkakumon",
         "ability": "Vaccine",
-        "moves": ["Hail Spear", "Ocean Wave", "Ice Statue", "Aurora Freeze", "Mechanical Claw", "War Cry", "Rebound Strike"],
+        "moves": ["Hail Spear", "Ocean Wave", "Ice Statue", "Aurora Freeze", "Mechanical Claw", "War Cry", "Tremar"],
         "reservedMove": "Harpoon Torpedo"
     },
     {
@@ -485,13 +485,13 @@ module.exports = [
     {
         "species": "Ninjamon",
         "ability": "Data",
-        "moves": ["War Cry", "Sonic Jab", "Muscle Charge", "Charm Perfume", "Root Bind", "Earth Coat", "Rebound Strike"],
+        "moves": ["War Cry", "Sonic Jab", "Muscle Charge", "Charm Perfume", "Root Bind", "Earth Coat", "Tremar"],
         "reservedMove": "Dancing Leaves"
     },
     {
         "species": "NiseDrimogemon",
         "ability": "Vaccine",
-        "moves": ["War Cry", "Sonic Jab", "Buster Drive", "Rebound Strike", "Mechanical Claw", "Upgrade", "Delete Program", "Reverse Program"],
+        "moves": ["War Cry", "Sonic Jab", "Buster Drive", "Tremar", "Mechanical Claw", "Upgrade", "Delete Program", "Reverse Program"],
         "reservedMove": "Fake Drill Spin"
     },
     {
@@ -503,7 +503,7 @@ module.exports = [
     {
         "species": "Ogremon",
         "ability": "Virus",
-        "moves": ["Fire Tower", "Infinity Burn", "Heat Breath", "Blackout", "Muscle Charge", "War Cry", "Rebound Strike", "Megaton Punch"],
+        "moves": ["Fire Tower", "Infinity Burn", "Heat Breath", "Blackout", "Muscle Charge", "War Cry", "Tremar", "Megaton Punch"],
         "reservedMove": "Pummel Whack"
     },
     {
@@ -587,7 +587,7 @@ module.exports = [
     {
         "species": "Tyrannomon",
         "ability": "Data",
-        "moves": ["Burning Heart", "Heat Breath", "Fire Tower", "Prominence Beam", "Muscle Charge", "Sonic Jab", "Rebound Strike", "Rock Fall"],
+        "moves": ["Burning Heart", "Heat Breath", "Fire Tower", "Prominence Beam", "Muscle Charge", "Sonic Jab", "Tremar", "Rock Fall"],
         "reservedMove": "Blaze Blaster"
     },
     {
@@ -677,7 +677,7 @@ module.exports = [
     {
         "species": "Giromon",
         "ability": "Vaccine",
-        "moves": ["Upgrade", "Delete Program", "Reverse Program", "Rebound Strike", "Megaton Punch", "Static Electricity", "Megalo Spark", "Firewall"],
+        "moves": ["Upgrade", "Delete Program", "Reverse Program", "Tremar", "Megaton Punch", "Static Electricity", "Megalo Spark", "Firewall"],
         "reservedMove": "Deadly Bomb"
     },
     {
@@ -701,13 +701,13 @@ module.exports = [
     {
         "species": "MagnaAngemon",
         "ability": "Vaccine",
-        "moves": ["Saint Heal", "Holy Terrain", "Shining Nova", "Thunder Justice", "Anti-Attack Field", "Gigawatt Laser", "Delete Program", "Sonic Jab", "Megalo Spark", "Rebound Strike", "Holy Judgment", "Wing Shoes"],
+        "moves": ["Saint Heal", "Holy Terrain", "Shining Nova", "Thunder Justice", "Anti-Attack Field", "Gigawatt Laser", "Delete Program", "Sonic Jab", "Megalo Spark", "Tremar", "Holy Judgment", "Wing Shoes"],
         "reservedMove": "Gate of Destiny"
     },
     {
         "species": "Mamemon",
         "ability": "Data",
-        "moves": ["Muscle Charge", "Sonic Jab", "Fighting Aura", "Rebound Strike", "Anti-Attack Field", "Upgrade", "Reverse Program", "Gigawatt Laser", "Giga Freeze", "Burning Heart"],
+        "moves": ["Muscle Charge", "Sonic Jab", "Fighting Aura", "Tremar", "Anti-Attack Field", "Upgrade", "Reverse Program", "Gigawatt Laser", "Giga Freeze", "Burning Heart"],
         "reservedMove": "Smile Bomber"
     },
     {
@@ -719,7 +719,7 @@ module.exports = [
     {
         "species": "MegaKabuterimon",
         "ability": "Vaccine",
-        "moves": ["Static Electricity", "Rock Fall", "Megaton Punch", "Megalo Spark", "Rebound Strike", "Earth Coat", "Mass Morph", "Bug"],
+        "moves": ["Static Electricity", "Rock Fall", "Megaton Punch", "Megalo Spark", "Tremar", "Earth Coat", "Mass Morph", "Bug"],
         "reservedMove": "Horn Buster"
     },
     {
@@ -743,7 +743,7 @@ module.exports = [
     {
         "species": "metalgreymonvaccine",
         "ability": "Vaccine",
-        "moves": ["Burning Heart", "Heat Breath", "Fire Tower", "Infinity Burn", "Muscle Charge", "Sonic Jab", "Rebound Strike", "Buster Drive", "Mechanical Claw", "Gigawatt Laser", "Delete Program"],
+        "moves": ["Burning Heart", "Heat Breath", "Fire Tower", "Infinity Burn", "Muscle Charge", "Sonic Jab", "Tremar", "Buster Drive", "Mechanical Claw", "Gigawatt Laser", "Delete Program"],
         "reservedMove": "Giga Destroyer"
     },
     {
@@ -755,7 +755,7 @@ module.exports = [
     {
         "species": "MetalMamemon",
         "ability": "Data",
-        "moves": ["Muscle Charge", "Mechanical Claw", "Fighting Aura", "Rebound Strike", "Delete Program", "Upgrade", "Reverse Program", "Megalo Spark", "Winter Blast", "Burning Heart"],
+        "moves": ["Muscle Charge", "Mechanical Claw", "Fighting Aura", "Tremar", "Delete Program", "Upgrade", "Reverse Program", "Megalo Spark", "Winter Blast", "Burning Heart"],
         "reservedMove": "Energy Bomb"
     },
     {
@@ -767,7 +767,7 @@ module.exports = [
     {
         "species": "Monzaemon",
         "ability": "Vaccine",
-        "moves": ["Fighting Aura", "Poop Attack Field", "Rebound Strike", "Megaton Punch", "Saint Heal", "Holy Breath", "Holy Terrain", "Saint Ray", "Charm Perfume"],
+        "moves": ["Fighting Aura", "Poop Attack Field", "Tremar", "Megaton Punch", "Saint Heal", "Holy Breath", "Holy Terrain", "Saint Ray", "Charm Perfume"],
         "reservedMove": "Hearts Attack"
     },
     {
@@ -791,13 +791,13 @@ module.exports = [
     {
         "species": "SkullGreymon",
         "ability": "Virus",
-        "moves": ["Blackout", "Shadow Fall", "Evil Fantasy", "Evil Squall", "Heat Breath", "Fire Tower", "Infinity Burn", "Sonic Jab", "Rebound Strike", "Buster Drive", "Mechanical Claw", "Delete Program"],
+        "moves": ["Blackout", "Shadow Fall", "Evil Fantasy", "Evil Squall", "Heat Breath", "Fire Tower", "Infinity Burn", "Sonic Jab", "Tremar", "Buster Drive", "Mechanical Claw", "Delete Program"],
         "reservedMove": "Oblivion Bird"
     },
     {
         "species": "Tekkamon",
         "ability": "Virus",
-        "moves": ["Upgrade", "Delete Program", "Reverse Program", "Rebound Strike", "Megaton Punch", "Static Electricity", "Shadow Fall", "Firewall"],
+        "moves": ["Upgrade", "Delete Program", "Reverse Program", "Tremar", "Megaton Punch", "Static Electricity", "Shadow Fall", "Firewall"],
         "reservedMove": "Frag Bomb"
     },
     {
@@ -815,7 +815,7 @@ module.exports = [
     {
         "species": "WaruMonzaemon",
         "ability": "Virus",
-        "moves": ["Fighting Aura", "Poop Attack Field", "Rebound Strike", "Megaton Punch", "Dark Spirit", "Evil Fantasy", "Hide and Seek", "Charm Perfume"],
+        "moves": ["Fighting Aura", "Poop Attack Field", "Tremar", "Megaton Punch", "Dark Spirit", "Evil Fantasy", "Hide and Seek", "Charm Perfume"],
         "reservedMove": "Heartbreak Attack"
     },
     {
@@ -839,13 +839,13 @@ module.exports = [
     {
         "species": "Zudomon",
         "ability": "Vaccine",
-        "moves": ["Electric Cloud", "Thunder Justice", "Hail Spear", "Ice Statue", "Mechanical Claw", "Aurora Freeze", "Anti-Attack Field", "War Cry", "Rebound Strike"],
+        "moves": ["Electric Cloud", "Thunder Justice", "Hail Spear", "Ice Statue", "Mechanical Claw", "Aurora Freeze", "Anti-Attack Field", "War Cry", "Tremar"],
         "reservedMove": "Vulcan's Hammer"
     },
     {
         "species": "Alphamon",
         "ability": "Vaccine",
-        "moves": ["Holy Terrain", "Saint Ray", "Holy Judgment", "Shining Nova", "War Cry", "Sonic Jab", "Rebound Strike", "Upgrade", "Delete Program", "DG Dimension", "Burning Heart", "Thunder Justice"],
+        "moves": ["Holy Terrain", "Saint Ray", "Holy Judgment", "Shining Nova", "War Cry", "Sonic Jab", "Tremar", "Upgrade", "Delete Program", "DG Dimension", "Burning Heart", "Thunder Justice"],
         "reservedMove": "Blade of the Dragon King"
     },
     {
@@ -995,7 +995,7 @@ module.exports = [
     {
         "species": "Seraphimon",
         "ability": "Vaccine",
-        "moves": ["Saint Heal", "Holy Terrain", "Shining Nova", "Thunder Justice", "Anti-Attack Field", "Gigawatt Laser", "Delete Program", "Sonic Jab", "Megalo Spark", "Rebound Strike", "Holy Judgment", "Wing Shoes"],
+        "moves": ["Saint Heal", "Holy Terrain", "Shining Nova", "Thunder Justice", "Anti-Attack Field", "Gigawatt Laser", "Delete Program", "Sonic Jab", "Megalo Spark", "Tremar", "Holy Judgment", "Wing Shoes"],
         "reservedMove": "Strike of the Seven Stars"
     },
     {
@@ -1007,7 +1007,7 @@ module.exports = [
     {
         "species": "Vikemon",
         "ability": "Vaccine",
-        "moves": ["Hail Spear", "Winter Blast", "Ice Statue", "Aurora Freeze", "Mechanical Claw", "Anti-Attack Field", "War Cry", "Rebound Strike", "Megaton Punch", "Holy Flash"],
+        "moves": ["Hail Spear", "Winter Blast", "Ice Statue", "Aurora Freeze", "Mechanical Claw", "Anti-Attack Field", "War Cry", "Tremar", "Megaton Punch", "Holy Flash"],
         "reservedMove": "Arctic Blizzard"
     },
     {
