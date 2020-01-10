@@ -5461,7 +5461,7 @@ let BattleMovedex = {
 	},
 	"guerrillapoop": {
 		accuracy: 90,
-		basePower: 95,
+		basePower: 50,
 		category: "Physical",
 		desc: "Hits twice",
 		shortDesc: "Hits twice",
