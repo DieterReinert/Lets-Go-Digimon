@@ -834,7 +834,7 @@ let BattleMovedex = {
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
 		onAfterMoveSecondarySelf(pokemon, target, move) {
-			this.boost({ spd: 1 }, pokemon, pokemon, move);
+			this.boost({ spe: 1 }, pokemon, pokemon, move);
 		},
 		target: "allAdjacentFoes",
 		type: "Flame",
@@ -4719,7 +4719,7 @@ let BattleMovedex = {
 		signature: false,
 		id: "evilfantasy",
 		basePower: 70,
-		priority: 0,
+		priority: 1,
 		category: "Special",
 		type: "Evil",
 		target: "normal",
