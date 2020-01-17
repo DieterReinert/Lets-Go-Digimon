@@ -2758,7 +2758,7 @@ let BattleMovedex = {
 		priority: 0,
 		basePower: 40,
 		category: "Physical",
-		type: "Battle",
+		type: "Evil",
 		target: "any",
 		desc: "Hits 2-4 times in one turn.",
 		shortDesc: "Hits 2-4 times in one turn.",
