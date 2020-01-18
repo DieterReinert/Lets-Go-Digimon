@@ -1046,7 +1046,7 @@ let BattlePokedex = {
 		num: -2080,
 		species: "MoriShellmon",
 		stage: "Champion",
-		types: ["Aqua"],
+		types: ["Nature"],
 		gender: "N",
 		baseStats: { hp: 96, atk: 59, def: 58, spa: 59, spd: 51, spe: 39 },
 		abilities: { 0: "Data" },
