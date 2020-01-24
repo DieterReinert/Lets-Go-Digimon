@@ -4794,6 +4794,7 @@ let BattleMovedex = {
 		signature: false,
 		id: "hideandseek",
 		basePower: 90,
+		accuracy: 100,
 		priority: 0,
 		pp: 10,
 		category: "Special",
