@@ -769,7 +769,7 @@ let BattleMovedex = {
 		desc: "50% chance to raise the user’s Attack and Special Attack by 2.",
 		shortDesc: "50% chance to raise the user’s Atk and Sp.Atk by 2.",
 		id: "handoffate",
-		name: "Hand Of fate",
+		name: "Hand Of Fate",
 		num: -131,
 		signature: true,
 		pp: 3,
@@ -1287,7 +1287,7 @@ let BattleMovedex = {
 		secondary: {
 			chance: 50,
 			self: {
-				boosts: { spd: 2 },
+				boosts: { spe: 2 },
 			},
 		},
 		target: "any",
@@ -4104,12 +4104,12 @@ let BattleMovedex = {
 		signature: false,
 		id: "infinityburn",
 		priority: 0,
-		basePower: 95,
+		basePower: 80,
 		category: "Physical",
 		type: "Flame",
 		target: "normal",
-		desc: "10% chance to burn the target, thaws.",
-		shortDesc: "10% chance to brn the target, thaws.",
+		desc: "30% chance to burn the target, thaws.",
+		shortDesc: "30% chance to brn the target, thaws.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "vcreate", target);
@@ -4118,7 +4118,7 @@ let BattleMovedex = {
 		pp: 10,
 		accuracy: 95,
 		secondary: {
-			chance: 10,
+			chance: 30,
 			status: 'brn',
 		},
 	},
@@ -4128,7 +4128,7 @@ let BattleMovedex = {
 		signature: false,
 		id: "prominencebeam",
 		priority: 0,
-		basePower: 100,
+		basePower: 90,
 		category: "Special",
 		type: "Flame",
 		target: "normal",
@@ -4771,21 +4771,21 @@ let BattleMovedex = {
 		num: -289,
 		signature: false,
 		id: "shadowfall",
-		basePower: 90,
+		basePower: 70,
 		priority: 0,
 		pp: 5,
 		category: "Physical",
 		type: "Evil",
 		target: "normal",
-		desc: "Breaks protection",
-		shortDesc: "Breaks protection",
+		desc: "High critical hit ratio.",
+		shortDesc: "High critical hit ratio.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "powertrip", target);
 		},
 		flags: { mirror: 1 },
-		accuracy: 90,
-		breaksProtect: true,
+		accuracy: 100,
+		critRatio: 2,
 		secondary: null,
 	},
 	"hideandseek": {
@@ -4793,23 +4793,35 @@ let BattleMovedex = {
 		num: -290,
 		signature: false,
 		id: "hideandseek",
-		basePower: 100,
+		basePower: 90,
 		priority: 0,
 		pp: 10,
 		category: "Special",
-		type: "Evil",
-		target: "normal",
-		desc: "10% chance to flinch the target.",
-		shortDesc: "10% chance to flinch the target.",
+		desc: "Disappears turn 1. Hits turn 2.",
+		shortDesc: "Disappears turn 1. Hits turn 2.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
-			this.add('-anim', source, "darkvoid", target);
+			this.add('-anim', source, "phantomforce", target);
 		},
-		flags: { protect: 1, mirror: 1 },
-		accuracy: 100,
-		secondary: {
-			chance: 10,
-			volatileStatus: 'flinch',
+		flags: {contact: 1, charge: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name, defender);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		effect: {
+			duration: 2,
+			onInvulnerability: false,
+		},
+		secondary: null,
+		target: "normal",
+		type: "Evil",
 		},
 	},
 	"evilsquall": {
@@ -4817,20 +4829,20 @@ let BattleMovedex = {
 		num: -291,
 		signature: false,
 		id: "evilsquall",
-		basePower: 100,
+		basePower: 85,
 		pp: 5,
 		priority: 0,
 		category: "Special",
 		type: "Evil",
 		target: "any",
-		desc: "30% chance to confuse any target.",
-		shortDesc: "30% chance to confuse any target.",
+		desc: "Has a 20% chance to confuse any target.",
+		shortDesc: "20% chance to confuse any target.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "blackholeeclipse", target);
 		},
 		flags: { protect: 1, mirror: 1, sound: 1, authentic: 1 },
-		accuracy: 85,
+		accuracy: 100,
 		secondary: {
 			chance: 10,
 			volatileStatus: 'confusion',
@@ -5009,7 +5021,7 @@ let BattleMovedex = {
 		num: -297,
 		signature: false,
 		id: "holyjudgment",
-		basePower: 100,
+		basePower: 90,
 		pp: 10,
 		priority: 0,
 		category: "Physical",
@@ -5033,7 +5045,7 @@ let BattleMovedex = {
 		num: -298,
 		signature: false,
 		id: "shiningnova",
-		basePower: 100,
+		basePower: 95,
 		priority: 0,
 		pp: 15,
 		category: "Special",
