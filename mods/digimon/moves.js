@@ -4822,7 +4822,6 @@ let BattleMovedex = {
 		secondary: null,
 		target: "normal",
 		type: "Evil",
-		},
 	},
 	"evilsquall": {
 		name: "Evil Squall",
