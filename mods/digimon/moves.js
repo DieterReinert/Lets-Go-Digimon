@@ -2733,7 +2733,7 @@ let BattleMovedex = {
 		priority: 0,
 		basePower: 80,
 		category: "Physical",
-		type: "Battle",
+		type: "Holy",
 		target: "normal",
 		desc: "80% chance to paralyze the target.",
 		shortDesc: "80% chance to paralyze the target.",
