@@ -222,7 +222,7 @@ exports.commands = {
 				});
 				if (invalidSearch) {
 					menu += `No digimon were found. (Your search was invalid)</div>`;
-					return user.sendTo(room, `${change ? `|uhtmlchange|cs${user.userid}|` : `|uhtml|cs${user.userid}|`}${menu}`);
+					return user.sendTo(room, `${change ? `|uhtmlchange|cs${user.id}|` : `|uhtml|cs${user.id}|`}${menu}`);
 				}
 				menu += `<center><div style='max-height: 300px; overflow-y: scroll;'>`;
 				let foundDigimon = 0;
@@ -287,7 +287,7 @@ exports.commands = {
 			let digimons = mod.dataSearch(target);
 			if (!digimons) {
 				menu += `The digimon "${toId(target)}" does not exist.</div>`;
-				return user.sendTo(room, `${change ? `|uhtmlchange|cs${user.userid}|` : `|uhtml|cs${user.userid}|`}${menu}`);
+				return user.sendTo(room, `${change ? `|uhtmlchange|cs${user.id}|` : `|uhtml|cs${user.id}|`}${menu}`);
 			}
 			let newTargets = mod.dataSearch(target);
 			let digimon = mod.getTemplate(newTargets[0].name);
@@ -323,7 +323,7 @@ exports.commands = {
 			movestring = move.join(', ');
 			menu += `<hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><span style="color: #333333; font-size: small;">${movestring}</span></td></tr></tbody></table></td></tr></tbody></table></center></div>`;
 		}
-		return user.sendTo(room, `${change ? `|uhtmlchange|cs${user.userid}|` : `|uhtml|cs${user.userid}|`}${menu}`);
+		return user.sendTo(room, `${change ? `|uhtmlchange|cs${user.id}|` : `|uhtml|cs${user.id}|`}${menu}`);
 	},
 	digipediahelp: ['/digimonsearch - sends a display to search for a list of digimon.'],
 
@@ -406,7 +406,7 @@ exports.commands = {
 			let digimonsmove = mod.dataSearch(target);
 			if (!digimonsmove) {
 				menu += `The digimon "${toID(target)}" does not exist.</div>`;
-				return user.sendTo(room, `${change ? `|uhtmlchange|cs${user.userid}|` : `|uhtml|cs${user.userid}|`}${menu}`);
+				return user.sendTo(room, `${change ? `|uhtmlchange|cs${user.id}|` : `|uhtml|cs${user.id}|`}${menu}`);
 			}
 			let digimonmove = mod.getMove(target);
 			let digimovetype = digimonmove.type;
@@ -419,7 +419,7 @@ exports.commands = {
 			menu += `<span style="color: black">: ${digimonmove.category}</span></td></tr><tr><td style="width: 457px"><strong><span style="color: #008dc5">Base Power</span></strong><span style="color: black">: ${digimonmove.basePower}</span></td><td style="width: 457px"><strong><span style="color: #008dc5">Accuracy</span></strong><span style="color: black">: ${digimonmove.accuracy}</span></td></tr><tr><td style="width: 457px"><strong><span style="color: #008dc5">Priority</span></strong>`;
 			menu += `<span style="color: black">: ${digimonmove.priority}</span></td><td style="width: 457px"><strong><span style="color: #008dc5">Power Points</span></strong><span style="color: black">: ${digimonmove.pp}</span></td></tr></tbody></table><table style="width: 468px ; background-color: #edf8ff ; border-color: #008dc5" border="3"><tbody><tr><td style="width: 465px"><strong><span style="color: black">${digimonmove.desc}</span></strong></td></tr></tbody></table></td></tr></tbody></table></center></div>`;
 		}
-		return user.sendTo(room, `${change ? `|uhtmlchange|cs${user.userid}|` : `|uhtml|cs${user.userid}|`}${menu}`);
+		return user.sendTo(room, `${change ? `|uhtmlchange|cs${user.id}|` : `|uhtml|cs${user.id}|`}${menu}`);
 	},
 	digimovesearchhelp: ['/digimovesearch - sends a display to search for a list of digimon moves.'],
 	
