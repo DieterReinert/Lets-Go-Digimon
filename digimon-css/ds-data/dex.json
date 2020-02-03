@@ -1,0 +1,1034 @@
+{
+    "botamon": {
+        "id": "botamon",
+        "name": null,
+        "species": "Botamon",
+        "hasFormes": false
+    },
+    "dodomon": {
+        "id": "dodomon",
+        "name": null,
+        "species": "Dodomon",
+        "hasFormes": false
+    },
+    "kuramon": {
+        "id": "kuramon",
+        "name": null,
+        "species": "Kuramon",
+        "hasFormes": false
+    },
+    "poyomon": {
+        "id": "poyomon",
+        "name": null,
+        "species": "Poyomon",
+        "hasFormes": false
+    },
+    "punimon": {
+        "id": "punimon",
+        "name": null,
+        "species": "Punimon",
+        "hasFormes": false
+    },
+    "yuramon": {
+        "id": "yuramon",
+        "name": null,
+        "species": "Yuramon",
+        "hasFormes": false
+    },
+    "bukamon": {
+        "id": "bukamon",
+        "name": null,
+        "species": "Bukamon",
+        "hasFormes": false
+    },
+    "dorimon": {
+        "id": "dorimon",
+        "name": null,
+        "species": "Dorimon",
+        "hasFormes": false
+    },
+    "koromon": {
+        "id": "koromon",
+        "name": null,
+        "species": "Koromon",
+        "hasFormes": false
+    },
+    "motimon": {
+        "id": "motimon",
+        "name": null,
+        "species": "Motimon",
+        "hasFormes": false
+    },
+    "nyaromon": {
+        "id": "nyaromon",
+        "name": null,
+        "species": "Nyaromon",
+        "hasFormes": false
+    },
+    "tanemon": {
+        "id": "tanemon",
+        "name": null,
+        "species": "Tanemon",
+        "hasFormes": false
+    },
+    "tokomon": {
+        "id": "tokomon",
+        "name": null,
+        "species": "Tokomon",
+        "hasFormes": false
+    },
+    "tsumemon": {
+        "id": "tsumemon",
+        "name": null,
+        "species": "Tsumemon",
+        "hasFormes": false
+    },
+    "tsunomon": {
+        "id": "tsunomon",
+        "name": null,
+        "species": "Tsunomon",
+        "hasFormes": false
+    },
+    "agumon": {
+        "id": "agumon",
+        "name": null,
+        "species": "Agumon",
+        "hasFormes": false
+    },
+    "aruraumon": {
+        "id": "aruraumon",
+        "name": null,
+        "species": "Aruraumon",
+        "hasFormes": false
+    },
+    "betamon": {
+        "id": "betamon",
+        "name": null,
+        "species": "Betamon",
+        "hasFormes": false
+    },
+    "biyomon": {
+        "id": "biyomon",
+        "name": null,
+        "species": "Biyomon",
+        "hasFormes": false
+    },
+    "clearagumon": {
+        "id": "clearagumon",
+        "name": null,
+        "species": "ClearAgumon",
+        "hasFormes": false
+    },
+    "demidevimon": {
+        "id": "demidevimon",
+        "name": null,
+        "species": "DemiDevimon",
+        "hasFormes": false
+    },
+    "dokunemon": {
+        "id": "dokunemon",
+        "name": null,
+        "species": "Dokunemon",
+        "hasFormes": false
+    },
+    "dorumon": {
+        "id": "dorumon",
+        "name": null,
+        "species": "Dorumon",
+        "hasFormes": false
+    },
+    "elecmon": {
+        "id": "elecmon",
+        "name": null,
+        "species": "Elecmon",
+        "hasFormes": false
+    },
+    "gabumon": {
+        "id": "gabumon",
+        "name": null,
+        "species": "Gabumon",
+        "hasFormes": false
+    },
+    "goburimon": {
+        "id": "goburimon",
+        "name": null,
+        "species": "Goburimon",
+        "hasFormes": false
+    },
+    "gomamon": {
+        "id": "gomamon",
+        "name": null,
+        "species": "Gomamon",
+        "hasFormes": false
+    },
+    "gotsumon": {
+        "id": "gotsumon",
+        "name": null,
+        "species": "Gotsumon",
+        "hasFormes": false
+    },
+    "kunemon": {
+        "id": "kunemon",
+        "name": null,
+        "species": "Kunemon",
+        "hasFormes": false
+    },
+    "modokibetamon": {
+        "id": "modokibetamon",
+        "name": null,
+        "species": "ModokiBetamon",
+        "hasFormes": false
+    },
+    "muchomon": {
+        "id": "muchomon",
+        "name": null,
+        "species": "Muchomon",
+        "hasFormes": false
+    },
+    "otamamon": {
+        "id": "otamamon",
+        "name": null,
+        "species": "Otamamon",
+        "hasFormes": false
+    },
+    "palmon": {
+        "id": "palmon",
+        "name": null,
+        "species": "Palmon",
+        "hasFormes": false
+    },
+    "patamon": {
+        "id": "patamon",
+        "name": null,
+        "species": "Patamon",
+        "hasFormes": false
+    },
+    "penguinmon": {
+        "id": "penguinmon",
+        "name": null,
+        "species": "Penguinmon",
+        "hasFormes": false
+    },
+    "psychemon": {
+        "id": "psychemon",
+        "name": null,
+        "species": "Psychemon",
+        "hasFormes": false
+    },
+    "salamon": {
+        "id": "salamon",
+        "name": null,
+        "species": "Salamon",
+        "hasFormes": false
+    },
+    "shamanmon": {
+        "id": "shamanmon",
+        "name": null,
+        "species": "Shamanmon",
+        "hasFormes": false
+    },
+    "snowagumon": {
+        "id": "snowagumon",
+        "name": null,
+        "species": "SnowAgumon",
+        "hasFormes": false
+    },
+    "snowgoburimon": {
+        "id": "snowgoburimon",
+        "name": null,
+        "species": "SnowGoburimon",
+        "hasFormes": false
+    },
+    "tentomon": {
+        "id": "tentomon",
+        "name": null,
+        "species": "Tentomon",
+        "hasFormes": false
+    },
+    "toyagumon": {
+        "id": "toyagumon",
+        "name": null,
+        "species": "ToyAgumon",
+        "hasFormes": false
+    },
+    "tsukaimon": {
+        "id": "tsukaimon",
+        "name": null,
+        "species": "Tsukaimon",
+        "hasFormes": false
+    },
+    "airdramon": {
+        "id": "airdramon",
+        "name": null,
+        "species": "Airdramon",
+        "hasFormes": false
+    },
+    "akatorimon": {
+        "id": "akatorimon",
+        "name": null,
+        "species": "Akatorimon",
+        "hasFormes": false
+    },
+    "angemon": {
+        "id": "angemon",
+        "name": null,
+        "species": "Angemon",
+        "hasFormes": false
+    },
+    "bakemon": {
+        "id": "bakemon",
+        "name": null,
+        "species": "Bakemon",
+        "hasFormes": false
+    },
+    "birdramon": {
+        "id": "birdramon",
+        "name": null,
+        "species": "Birdramon",
+        "hasFormes": false
+    },
+    "blackgatomon": {
+        "id": "blackgatomon",
+        "name": null,
+        "species": "BlackGatomon",
+        "hasFormes": false
+    },
+    "centarumon": {
+        "id": "centarumon",
+        "name": null,
+        "species": "Centarumon",
+        "hasFormes": false
+    },
+    "coelamon": {
+        "id": "coelamon",
+        "name": null,
+        "species": "Coelamon",
+        "hasFormes": false
+    },
+    "darkrizamon": {
+        "id": "darkrizamon",
+        "name": null,
+        "species": "Darkrizamon",
+        "hasFormes": false
+    },
+    "devimon": {
+        "id": "devimon",
+        "name": null,
+        "species": "Devimon",
+        "hasFormes": false
+    },
+    "dolphmon": {
+        "id": "dolphmon",
+        "name": null,
+        "species": "Dolphmon",
+        "hasFormes": false
+    },
+    "dorugamon": {
+        "id": "dorugamon",
+        "name": null,
+        "species": "Dorugamon",
+        "hasFormes": false
+    },
+    "drimogemon": {
+        "id": "drimogemon",
+        "name": null,
+        "species": "Drimogemon",
+        "hasFormes": false
+    },
+    "flarerizamon": {
+        "id": "flarerizamon",
+        "name": null,
+        "species": "Flarerizamon",
+        "hasFormes": false
+    },
+    "frigimon": {
+        "id": "frigimon",
+        "name": null,
+        "species": "Frigimon",
+        "hasFormes": false
+    },
+    "fugamon": {
+        "id": "fugamon",
+        "name": null,
+        "species": "Fugamon",
+        "hasFormes": false
+    },
+    "garurumon": {
+        "id": "garurumon",
+        "name": null,
+        "species": "Garurumon",
+        "hasFormes": false
+    },
+    "gatomon": {
+        "id": "gatomon",
+        "name": null,
+        "species": "Gatomon",
+        "hasFormes": false
+    },
+    "gekomon": {
+        "id": "gekomon",
+        "name": null,
+        "species": "Gekomon",
+        "hasFormes": false
+    },
+    "geremon": {
+        "id": "geremon",
+        "name": null,
+        "species": "Geremon",
+        "hasFormes": false
+    },
+    "greymon": {
+        "id": "greymon",
+        "name": null,
+        "species": "Greymon",
+        "hasFormes": false
+    },
+    "guardromon": {
+        "id": "guardromon",
+        "name": null,
+        "species": "Guardromon",
+        "hasFormes": false
+    },
+    "gururumon": {
+        "id": "gururumon",
+        "name": null,
+        "species": "Gururumon",
+        "hasFormes": false
+    },
+    "hyogamon": {
+        "id": "hyogamon",
+        "name": null,
+        "species": "Hyogamon",
+        "hasFormes": false
+    },
+    "icedevimon": {
+        "id": "icedevimon",
+        "name": null,
+        "species": "IceDevimon",
+        "hasFormes": false
+    },
+    "icemon": {
+        "id": "icemon",
+        "name": null,
+        "species": "Icemon",
+        "hasFormes": false
+    },
+    "ikkakumon": {
+        "id": "ikkakumon",
+        "name": null,
+        "species": "Ikkakumon",
+        "hasFormes": false
+    },
+    "junglemojyamon": {
+        "id": "junglemojyamon",
+        "name": null,
+        "species": "JungleMojyamon",
+        "hasFormes": false
+    },
+    "kabuterimon": {
+        "id": "kabuterimon",
+        "name": null,
+        "species": "Kabuterimon",
+        "hasFormes": false
+    },
+    "kokatorimon": {
+        "id": "kokatorimon",
+        "name": null,
+        "species": "Kokatorimon",
+        "hasFormes": false
+    },
+    "kuwagamon": {
+        "id": "kuwagamon",
+        "name": null,
+        "species": "Kuwagamon",
+        "hasFormes": false
+    },
+    "leomon": {
+        "id": "leomon",
+        "name": null,
+        "species": "Leomon",
+        "hasFormes": false
+    },
+    "meicoomon": {
+        "id": "meicoomon",
+        "name": null,
+        "species": "Meicoomon",
+        "hasFormes": false
+    },
+    "meramon": {
+        "id": "meramon",
+        "name": null,
+        "species": "Meramon",
+        "hasFormes": false
+    },
+    "mikemon": {
+        "id": "mikemon",
+        "name": null,
+        "species": "Mikemon",
+        "hasFormes": false
+    },
+    "mojyamon": {
+        "id": "mojyamon",
+        "name": null,
+        "species": "Mojyamon",
+        "hasFormes": false
+    },
+    "monochromon": {
+        "id": "monochromon",
+        "name": null,
+        "species": "Monochromon",
+        "hasFormes": false
+    },
+    "morishellmon": {
+        "id": "morishellmon",
+        "name": null,
+        "species": "MoriShellmon",
+        "hasFormes": false
+    },
+    "mudfrigimon": {
+        "id": "mudfrigimon",
+        "name": null,
+        "species": "MudFrigimon",
+        "hasFormes": false
+    },
+    "nanimon": {
+        "id": "nanimon",
+        "name": null,
+        "species": "Nanimon",
+        "hasFormes": false
+    },
+    "ninjamon": {
+        "id": "ninjamon",
+        "name": null,
+        "species": "Ninjamon",
+        "hasFormes": false
+    },
+    "nisedrimogemon": {
+        "id": "nisedrimogemon",
+        "name": null,
+        "species": "NiseDrimogemon",
+        "hasFormes": false
+    },
+    "numemon": {
+        "id": "numemon",
+        "name": null,
+        "species": "Numemon",
+        "hasFormes": false
+    },
+    "ogremon": {
+        "id": "ogremon",
+        "name": null,
+        "species": "Ogremon",
+        "hasFormes": false
+    },
+    "piddomon": {
+        "id": "piddomon",
+        "name": null,
+        "species": "Piddomon",
+        "hasFormes": false
+    },
+    "platinumsukamon": {
+        "id": "platinumsukamon",
+        "name": null,
+        "species": "PlatinumSukamon",
+        "hasFormes": false
+    },
+    "redvegiemon": {
+        "id": "redvegiemon",
+        "name": null,
+        "species": "RedVegiemon",
+        "hasFormes": false
+    },
+    "rockmon": {
+        "id": "rockmon",
+        "name": null,
+        "species": "Rockmon",
+        "hasFormes": false
+    },
+    "saberdramon": {
+        "id": "saberdramon",
+        "name": null,
+        "species": "Saberdramon",
+        "hasFormes": false
+    },
+    "sandyanmamon": {
+        "id": "sandyanmamon",
+        "name": null,
+        "species": "SandYanmamon",
+        "hasFormes": false
+    },
+    "seadramon": {
+        "id": "seadramon",
+        "name": null,
+        "species": "Seadramon",
+        "hasFormes": false
+    },
+    "shellmon": {
+        "id": "shellmon",
+        "name": null,
+        "species": "Shellmon",
+        "hasFormes": false
+    },
+    "shimaunimon": {
+        "id": "shimaunimon",
+        "name": null,
+        "species": "ShimaUnimon",
+        "hasFormes": false
+    },
+    "soulmon": {
+        "id": "soulmon",
+        "name": null,
+        "species": "Soulmon",
+        "hasFormes": false
+    },
+    "sukamon": {
+        "id": "sukamon",
+        "name": null,
+        "species": "Sukamon",
+        "hasFormes": false
+    },
+    "tankmon": {
+        "id": "tankmon",
+        "name": null,
+        "species": "Tankmon",
+        "hasFormes": false
+    },
+    "togemon": {
+        "id": "togemon",
+        "name": null,
+        "species": "Togemon",
+        "hasFormes": false
+    },
+    "tyrannomon": {
+        "id": "tyrannomon",
+        "name": null,
+        "species": "Tyrannomon",
+        "hasFormes": false
+    },
+    "unimon": {
+        "id": "unimon",
+        "name": null,
+        "species": "Unimon",
+        "hasFormes": false
+    },
+    "vegiemon": {
+        "id": "vegiemon",
+        "name": null,
+        "species": "Vegiemon",
+        "hasFormes": false
+    },
+    "weedmon": {
+        "id": "weedmon",
+        "name": null,
+        "species": "Weedmon",
+        "hasFormes": false
+    },
+    "yanmamon": {
+        "id": "yanmamon",
+        "name": null,
+        "species": "Yanmamon",
+        "hasFormes": false
+    },
+    "andromon": {
+        "id": "andromon",
+        "name": null,
+        "species": "Andromon",
+        "hasFormes": false
+    },
+    "angewomon": {
+        "id": "angewomon",
+        "name": null,
+        "species": "Angewomon",
+        "hasFormes": false
+    },
+    "beastmon": {
+        "id": "beastmon",
+        "name": null,
+        "species": "Beastmon",
+        "hasFormes": false
+    },
+    "blackweregarurumon": {
+        "id": "blackweregarurumon",
+        "name": null,
+        "species": "BlackWereGarurumon",
+        "hasFormes": false
+    },
+    "bluemeramon": {
+        "id": "bluemeramon",
+        "name": null,
+        "species": "BlueMeramon",
+        "hasFormes": false
+    },
+    "digitamamon": {
+        "id": "digitamamon",
+        "name": null,
+        "species": "Digitamamon",
+        "hasFormes": false
+    },
+    "dorugreymon": {
+        "id": "dorugreymon",
+        "name": null,
+        "species": "DoruGreymon",
+        "hasFormes": false
+    },
+    "etemon": {
+        "id": "etemon",
+        "name": null,
+        "species": "Etemon",
+        "hasFormes": false
+    },
+    "garudamon": {
+        "id": "garudamon",
+        "name": null,
+        "species": "Garudamon",
+        "hasFormes": false
+    },
+    "gigadramon": {
+        "id": "gigadramon",
+        "name": null,
+        "species": "Gigadramon",
+        "hasFormes": false
+    },
+    "giromon": {
+        "id": "giromon",
+        "name": null,
+        "species": "Giromon",
+        "hasFormes": false
+    },
+    "iceleomon": {
+        "id": "iceleomon",
+        "name": null,
+        "species": "IceLeomon",
+        "hasFormes": false
+    },
+    "ladydevimon": {
+        "id": "ladydevimon",
+        "name": null,
+        "species": "LadyDevimon",
+        "hasFormes": false
+    },
+    "lillymon": {
+        "id": "lillymon",
+        "name": null,
+        "species": "Lillymon",
+        "hasFormes": false
+    },
+    "magnaangemon": {
+        "id": "magnaangemon",
+        "name": null,
+        "species": "MagnaAngemon",
+        "hasFormes": false
+    },
+    "mamemon": {
+        "id": "mamemon",
+        "name": null,
+        "species": "Mamemon",
+        "hasFormes": false
+    },
+    "megadramon": {
+        "id": "megadramon",
+        "name": null,
+        "species": "Megadramon",
+        "hasFormes": false
+    },
+    "megakabuterimon": {
+        "id": "megakabuterimon",
+        "name": null,
+        "species": "MegaKabuterimon",
+        "hasFormes": false
+    },
+    "megaseadramon": {
+        "id": "megaseadramon",
+        "name": null,
+        "species": "MegaSeadramon",
+        "hasFormes": false
+    },
+    "meicrackmon": {
+        "id": "meicrackmon",
+        "name": null,
+        "species": "Meicrackmon",
+        "hasFormes": false
+    },
+    "meicrackmonvm": {
+        "id": "meicrackmonvm",
+        "name": "Meicrackmon",
+        "species": "Meicrackmon VM",
+        "hasFormes": true
+    },
+    "metalgreymonvaccine": {
+        "id": "metalgreymonvaccine",
+        "name": "MetalGreymon",
+        "species": "MetalGreymon Vaccine",
+        "hasFormes": true
+    },
+    "metalgreymonvirus": {
+        "id": "metalgreymonvirus",
+        "name": "MetalGreymon",
+        "species": "MetalGreymon Virus",
+        "hasFormes": true
+    },
+    "metalmamemon": {
+        "id": "metalmamemon",
+        "name": null,
+        "species": "MetalMamemon",
+        "hasFormes": false
+    },
+    "meteormon": {
+        "id": "meteormon",
+        "name": null,
+        "species": "Meteormon",
+        "hasFormes": false
+    },
+    "monzaemon": {
+        "id": "monzaemon",
+        "name": null,
+        "species": "Monzaemon",
+        "hasFormes": false
+    },
+    "myotismon": {
+        "id": "myotismon",
+        "name": null,
+        "species": "Myotismon",
+        "hasFormes": false
+    },
+    "piximon": {
+        "id": "piximon",
+        "name": null,
+        "species": "Piximon",
+        "hasFormes": false
+    },
+    "shogungekomon": {
+        "id": "shogungekomon",
+        "name": null,
+        "species": "ShogunGekomon",
+        "hasFormes": false
+    },
+    "skullgreymon": {
+        "id": "skullgreymon",
+        "name": null,
+        "species": "SkullGreymon",
+        "hasFormes": false
+    },
+    "tekkamon": {
+        "id": "tekkamon",
+        "name": null,
+        "species": "Tekkamon",
+        "hasFormes": false
+    },
+    "vademon": {
+        "id": "vademon",
+        "name": null,
+        "species": "Vademon",
+        "hasFormes": false
+    },
+    "vermilimon": {
+        "id": "vermilimon",
+        "name": null,
+        "species": "Vermilimon",
+        "hasFormes": false
+    },
+    "warumonzaemon": {
+        "id": "warumonzaemon",
+        "name": null,
+        "species": "WaruMonzaemon",
+        "hasFormes": false
+    },
+    "waruseadramon": {
+        "id": "waruseadramon",
+        "name": null,
+        "species": "WaruSeadramon",
+        "hasFormes": false
+    },
+    "weregarurumon": {
+        "id": "weregarurumon",
+        "name": null,
+        "species": "WereGarurumon",
+        "hasFormes": false
+    },
+    "whamon": {
+        "id": "whamon",
+        "name": null,
+        "species": "Whamon",
+        "hasFormes": false
+    },
+    "zudomon": {
+        "id": "zudomon",
+        "name": null,
+        "species": "Zudomon",
+        "hasFormes": false
+    },
+    "alphamon": {
+        "id": "alphamon",
+        "name": null,
+        "species": "Alphamon",
+        "hasFormes": false
+    },
+    "blackmetalgarurumon": {
+        "id": "blackmetalgarurumon",
+        "name": null,
+        "species": "BlackMetalGarurumon",
+        "hasFormes": false
+    },
+    "blackwargreymon": {
+        "id": "blackwargreymon",
+        "name": null,
+        "species": "BlackWarGreymon",
+        "hasFormes": false
+    },
+    "boltmon": {
+        "id": "boltmon",
+        "name": null,
+        "species": "Boltmon",
+        "hasFormes": false
+    },
+    "cherubimonevil": {
+        "id": "cherubimonevil",
+        "name": "Cherubimon",
+        "species": "Cherubimon Evil",
+        "hasFormes": true
+    },
+    "cherubimongood": {
+        "id": "cherubimongood",
+        "name": "Cherubimon",
+        "species": "Cherubimon Good",
+        "hasFormes": true
+    },
+    "devitamamon": {
+        "id": "devitamamon",
+        "name": null,
+        "species": "Devitamamon",
+        "hasFormes": false
+    },
+    "dorugoramon": {
+        "id": "dorugoramon",
+        "name": null,
+        "species": "Dorugoramon",
+        "hasFormes": false
+    },
+    "ebemon": {
+        "id": "ebemon",
+        "name": null,
+        "species": "Ebemon",
+        "hasFormes": false
+    },
+    "herculeskabuterimon": {
+        "id": "herculeskabuterimon",
+        "name": null,
+        "species": "HerculesKabuterimon",
+        "hasFormes": false
+    },
+    "hiandromon": {
+        "id": "hiandromon",
+        "name": null,
+        "species": "HiAndromon",
+        "hasFormes": false
+    },
+    "lilithmon": {
+        "id": "lilithmon",
+        "name": null,
+        "species": "Lilithmon",
+        "hasFormes": false
+    },
+    "machinedramon": {
+        "id": "machinedramon",
+        "name": null,
+        "species": "Machinedramon",
+        "hasFormes": false
+    },
+    "magnadramon": {
+        "id": "magnadramon",
+        "name": null,
+        "species": "Magnadramon",
+        "hasFormes": false
+    },
+    "marineangemon": {
+        "id": "marineangemon",
+        "name": null,
+        "species": "MarineAngemon",
+        "hasFormes": false
+    },
+    "metaletemon": {
+        "id": "metaletemon",
+        "name": null,
+        "species": "MetalEtemon",
+        "hasFormes": false
+    },
+    "metalgarurumon": {
+        "id": "metalgarurumon",
+        "name": null,
+        "species": "MetalGarurumon",
+        "hasFormes": false
+    },
+    "metalseadramon": {
+        "id": "metalseadramon",
+        "name": null,
+        "species": "MetalSeadramon",
+        "hasFormes": false
+    },
+    "ophanimon": {
+        "id": "ophanimon",
+        "name": null,
+        "species": "Ophanimon",
+        "hasFormes": false
+    },
+    "phoenixmon": {
+        "id": "phoenixmon",
+        "name": null,
+        "species": "Phoenixmon",
+        "hasFormes": false
+    },
+    "princemamemon": {
+        "id": "princemamemon",
+        "name": null,
+        "species": "PrinceMamemon",
+        "hasFormes": false
+    },
+    "raguelmon": {
+        "id": "raguelmon",
+        "name": null,
+        "species": "Raguelmon",
+        "hasFormes": false
+    },
+    "rasielmon": {
+        "id": "rasielmon",
+        "name": null,
+        "species": "Rasielmon",
+        "hasFormes": false
+    },
+    "rosemon": {
+        "id": "rosemon",
+        "name": null,
+        "species": "Rosemon",
+        "hasFormes": false
+    },
+    "saberleomon": {
+        "id": "saberleomon",
+        "name": null,
+        "species": "SaberLeomon",
+        "hasFormes": false
+    },
+    "seraphimon": {
+        "id": "seraphimon",
+        "name": null,
+        "species": "Seraphimon",
+        "hasFormes": false
+    },
+    "venommyotismon": {
+        "id": "venommyotismon",
+        "name": null,
+        "species": "VenomMyotismon",
+        "hasFormes": false
+    },
+    "vikemon": {
+        "id": "vikemon",
+        "name": null,
+        "species": "Vikemon",
+        "hasFormes": false
+    },
+    "wargreymon": {
+        "id": "wargreymon",
+        "name": null,
+        "species": "WarGreymon",
+        "hasFormes": false
+    }
+}

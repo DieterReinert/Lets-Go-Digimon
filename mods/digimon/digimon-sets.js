@@ -729,25 +729,25 @@ module.exports = [
         "reservedMove": "Lightning Javelin"
     },
     {
-        "species": "meicrackmon",
+        "species": "Meicrackmon",
         "ability": "Vaccine",
         "moves": ["War Cry", "Wind Cutter", "Fighting Aura", "Megaton Punch", "Mechanical Claw", "Venom Disaster", "Holy Judgment", "Saint Ray", "Holy Breath"],
         "reservedMove": "Modestly Stun"
     },
     {
-        "species": "meicrackmonviciousmode",
+        "species": "Meicrackmon VM",
         "ability": "Virus",
         "moves": ["War Cry", "Wind Cutter", "Fighting Aura", "Megaton Punch", "Mechanical Claw", "Venom Disaster", "Shadow Fall", "Evil Squall", "Blackout"],
         "reservedMove": "Berserk Thinking"
     },
     {
-        "species": "metalgreymonvaccine",
+        "species": "MetalGreymon Vaccine",
         "ability": "Vaccine",
         "moves": ["Burning Heart", "Heat Breath", "Fire Tower", "Infinity Burn", "Muscle Charge", "Sonic Jab", "Tremar", "Buster Drive", "Mechanical Claw", "Gigawatt Laser", "Delete Program"],
         "reservedMove": "Giga Destroyer"
     },
     {
-        "species": "metalgreymonvirus",
+        "species": "MetalGreymon Virus",
         "ability": "Virus",
         "moves": ["Burning Heart", "Heat Breath", "Fire Tower", "Infinity Burn", "Muscle Charge", "Sonic Jab", "Blackout", "Shadow Fall", "Mechanical Claw", "Gigawatt Laser", "Delete Program"],
         "reservedMove": "Revenge Flame"
@@ -867,13 +867,13 @@ module.exports = [
         "reservedMove": "Tomahawk Stinger"
     },
     {
-        "species": "CherubimonEvil",
+        "species": "Cherubimon Evil",
         "ability": "Virus",
         "moves": ["Wing Shoes", "Thunder Justice", "Megalo Spark", "Megaton Punch", "Blackout", "Chaos Cloud", "Shadow Fall", "Evil Squall", "DG Dimension", "Gigawatt Laser"],
         "reservedMove": "Lightning Spear"
     },
     {
-        "species": "CherubimonGood",
+        "species": "Cherubimon Good",
         "ability": "Vaccine",
         "moves": ["Wing Shoes", "Thunder Justice", "Megalo Spark", "Megaton Punch", "Holy Breath", "Saint Ray", "Holy Judgment", "Shining Nova", "DG Dimension", "Gigawatt Laser"],
         "reservedMove": "Heaven's Judgment"

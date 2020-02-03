@@ -1,0 +1,17 @@
+%startComment
+/** %moveName CSS **/
+
+:::.movemenu button[data-move="%moveName"],
+.movemenu button[data-move="%moveName"]:hover {
+    background: #e3e3e3 url('%move_panel') no-repeat;
+    background-size: cover;
+}
+
+.movemenu button[data-move="%moveName"] .type:after {
+    font-weight: bold;
+    content: "[%moveCat] [BP: %movePower] [Acc: %moveAcc]";
+}:::
+
+div[id*="digimon"] .movemenu button[data-move="%moveName"] .pp:before {
+    content: "(%moveDesc) ";
+}

@@ -1,0 +1,9 @@
+%startComment
+/** TYPE: %type CSS **/
+
+div[id*="digimon"] .innerbattle img[src*="%type.png"],
+.tooltipinner img[src*="%type.png"] {
+    content: url('%battle_type_image');
+    width: auto;
+    height: auto;
+}

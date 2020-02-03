@@ -1,0 +1,22 @@
+{
+  "name": "digimon-showdown",
+  "version": "0.0.1",
+  "description": "This is the official Digimon Showdown repository.",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd ./digimon-css && node build && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DieterReinert/Digimon-Showdown.git"
+  },
+  "author": "DieterReinert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DieterReinert/Digimon-Showdown/issues"
+  },
+  "homepage": "https://github.com/DieterReinert/Digimon-Showdown#readme",
+  "dependencies": {
+    "clean-css": "^4.2.3"
+  }
+}

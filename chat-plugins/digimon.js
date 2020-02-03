@@ -24,15 +24,15 @@ const colorTable = {
 
 function getSpecies(digimon) {
 	switch (digimon.species) {
-		case 'MeicrackmonViciousMode':
+		case 'Meicrackmon VM':
 			return 'Meicrackmon [Vicious Mode]';
-		case 'CherubimonEvil':
+		case 'Cherubimon Evil':
 			return 'Cherubimon [Evil]';
-		case 'CherubimonGood':
+		case 'Cherubimon Good':
 			return 'Cherubimon [Good]';
-		case 'MetalGreymonVaccine':
+		case 'MetalGreymon Vaccine':
 			return 'MetalGreymon [Vaccine]';
-		case 'MetalGreymonVirus':
+		case 'MetalGreymon Virus':
 			return 'MetalGreymon [Virus]';
 		default:
 			return digimon.species;
@@ -253,7 +253,7 @@ exports.commands = {
 						menu += `<td style="height: 17px; text-align: center;"><strong><img style="float: left;" src="${type1}">`;
 						menu += `<img style="float: right;" src="${ability}"><br></strong></td></tr><tr style="height: 98px;">`;
 						menu += `<td style="width: 122px; height: 98px;"><strong><img src="https://play.pokemonshowdown.com/sprites/digimon/sprites/digimon/${template.id}.png"><br><span style="font-size: xx-small;">${template.name}<br></span></strong></td></tr></tbody></table></td></tr></tbody></table> `;
-					} else if (!template.types[2] && (template.id === 'meicrackmonviciousmode' || template.id === 'cherubimonevil' || template.id === 'cherubimongood')) {
+					} else if (!template.types[2] && (template.id === 'meicrackmonvm' || template.id === 'cherubimonevil' || template.id === 'cherubimongood')) {
 						menu += `<button class="button" name="send" value="/digisearchdisplay ${template.id}"><table style="width: 135px; background-color: #011f55; border-color: #008dc5; float: left;" border="2"><tbody><tr>`;
 						menu += `<td style="width: 135px; text-align: center;"><table style="width: 123px; background-color: #ffffff; border-color: #011f55; float: left;" border="1"><tbody><tr style="height: 17px;">`;
 						menu += `<td style="height: 17px; text-align: center;"><strong><img style="float: left;" src="${type1}"><img style="float: left;" src="${type2}">`;
