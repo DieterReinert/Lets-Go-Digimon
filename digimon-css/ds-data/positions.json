@@ -1,0 +1,690 @@
+{
+    "botamon": {
+        "x": 0,
+        "y": 0
+    },
+    "dodomon": {
+        "x": -40,
+        "y": 0
+    },
+    "kuramon": {
+        "x": -80,
+        "y": 0
+    },
+    "poyomon": {
+        "x": -120,
+        "y": 0
+    },
+    "punimon": {
+        "x": -160,
+        "y": 0
+    },
+    "yuramon": {
+        "x": -200,
+        "y": 0
+    },
+    "bukamon": {
+        "x": -240,
+        "y": 0
+    },
+    "dorimon": {
+        "x": -280,
+        "y": 0
+    },
+    "koromon": {
+        "x": -320,
+        "y": 0
+    },
+    "motimon": {
+        "x": -360,
+        "y": 0
+    },
+    "nyaromon": {
+        "x": -400,
+        "y": 0
+    },
+    "tanemon": {
+        "x": -440,
+        "y": 0
+    },
+    "tokomon": {
+        "x": 0,
+        "y": -30
+    },
+    "tsumemon": {
+        "x": -40,
+        "y": -30
+    },
+    "tsunomon": {
+        "x": -80,
+        "y": -30
+    },
+    "agumon": {
+        "x": -120,
+        "y": -30
+    },
+    "aruraumon": {
+        "x": -160,
+        "y": -30
+    },
+    "betamon": {
+        "x": -200,
+        "y": -30
+    },
+    "biyomon": {
+        "x": -240,
+        "y": -30
+    },
+    "clearagumon": {
+        "x": -280,
+        "y": -30
+    },
+    "demidevimon": {
+        "x": -320,
+        "y": -30
+    },
+    "dokunemon": {
+        "x": -360,
+        "y": -30
+    },
+    "dorumon": {
+        "x": -400,
+        "y": -30
+    },
+    "elecmon": {
+        "x": -440,
+        "y": -30
+    },
+    "gabumon": {
+        "x": 0,
+        "y": -60
+    },
+    "goburimon": {
+        "x": -40,
+        "y": -60
+    },
+    "gomamon": {
+        "x": -80,
+        "y": -60
+    },
+    "gotsumon": {
+        "x": -120,
+        "y": -60
+    },
+    "kunemon": {
+        "x": -160,
+        "y": -60
+    },
+    "modokibetamon": {
+        "x": -200,
+        "y": -60
+    },
+    "muchomon": {
+        "x": -240,
+        "y": -60
+    },
+    "otamamon": {
+        "x": -280,
+        "y": -60
+    },
+    "palmon": {
+        "x": -320,
+        "y": -60
+    },
+    "patamon": {
+        "x": -360,
+        "y": -60
+    },
+    "penguinmon": {
+        "x": -400,
+        "y": -60
+    },
+    "psychemon": {
+        "x": -440,
+        "y": -60
+    },
+    "salamon": {
+        "x": 0,
+        "y": -90
+    },
+    "shamanmon": {
+        "x": -40,
+        "y": -90
+    },
+    "snowagumon": {
+        "x": -80,
+        "y": -90
+    },
+    "snowgoburimon": {
+        "x": -120,
+        "y": -90
+    },
+    "tentomon": {
+        "x": -160,
+        "y": -90
+    },
+    "toyagumon": {
+        "x": -200,
+        "y": -90
+    },
+    "tsukaimon": {
+        "x": -240,
+        "y": -90
+    },
+    "airdramon": {
+        "x": -280,
+        "y": -90
+    },
+    "akatorimon": {
+        "x": -320,
+        "y": -90
+    },
+    "angemon": {
+        "x": -360,
+        "y": -90
+    },
+    "bakemon": {
+        "x": -400,
+        "y": -90
+    },
+    "birdramon": {
+        "x": -440,
+        "y": -90
+    },
+    "blackgatomon": {
+        "x": 0,
+        "y": -120
+    },
+    "centarumon": {
+        "x": -40,
+        "y": -120
+    },
+    "coelamon": {
+        "x": -80,
+        "y": -120
+    },
+    "darkrizamon": {
+        "x": -120,
+        "y": -120
+    },
+    "devimon": {
+        "x": -160,
+        "y": -120
+    },
+    "dolphmon": {
+        "x": -200,
+        "y": -120
+    },
+    "dorugamon": {
+        "x": -240,
+        "y": -120
+    },
+    "drimogemon": {
+        "x": -280,
+        "y": -120
+    },
+    "flarerizamon": {
+        "x": -320,
+        "y": -120
+    },
+    "frigimon": {
+        "x": -360,
+        "y": -120
+    },
+    "fugamon": {
+        "x": -400,
+        "y": -120
+    },
+    "garurumon": {
+        "x": -440,
+        "y": -120
+    },
+    "gatomon": {
+        "x": 0,
+        "y": -150
+    },
+    "gekomon": {
+        "x": -40,
+        "y": -150
+    },
+    "geremon": {
+        "x": -80,
+        "y": -150
+    },
+    "greymon": {
+        "x": -120,
+        "y": -150
+    },
+    "guardromon": {
+        "x": -160,
+        "y": -150
+    },
+    "gururumon": {
+        "x": -200,
+        "y": -150
+    },
+    "hyogamon": {
+        "x": -240,
+        "y": -150
+    },
+    "icedevimon": {
+        "x": -280,
+        "y": -150
+    },
+    "icemon": {
+        "x": -320,
+        "y": -150
+    },
+    "ikkakumon": {
+        "x": -360,
+        "y": -150
+    },
+    "junglemojyamon": {
+        "x": -400,
+        "y": -150
+    },
+    "kabuterimon": {
+        "x": -440,
+        "y": -150
+    },
+    "kokatorimon": {
+        "x": 0,
+        "y": -180
+    },
+    "kuwagamon": {
+        "x": -40,
+        "y": -180
+    },
+    "leomon": {
+        "x": -80,
+        "y": -180
+    },
+    "meicoomon": {
+        "x": -120,
+        "y": -180
+    },
+    "meramon": {
+        "x": -160,
+        "y": -180
+    },
+    "mikemon": {
+        "x": -200,
+        "y": -180
+    },
+    "mojyamon": {
+        "x": -240,
+        "y": -180
+    },
+    "monochromon": {
+        "x": -280,
+        "y": -180
+    },
+    "morishellmon": {
+        "x": -320,
+        "y": -180
+    },
+    "mudfrigimon": {
+        "x": -360,
+        "y": -180
+    },
+    "nanimon": {
+        "x": -400,
+        "y": -180
+    },
+    "ninjamon": {
+        "x": -440,
+        "y": -180
+    },
+    "nisedrimogemon": {
+        "x": 0,
+        "y": -210
+    },
+    "numemon": {
+        "x": -40,
+        "y": -210
+    },
+    "ogremon": {
+        "x": -80,
+        "y": -210
+    },
+    "piddomon": {
+        "x": -120,
+        "y": -210
+    },
+    "platinumsukamon": {
+        "x": -160,
+        "y": -210
+    },
+    "redvegiemon": {
+        "x": -200,
+        "y": -210
+    },
+    "rockmon": {
+        "x": -240,
+        "y": -210
+    },
+    "saberdramon": {
+        "x": -280,
+        "y": -210
+    },
+    "sandyanmamon": {
+        "x": -320,
+        "y": -210
+    },
+    "seadramon": {
+        "x": -360,
+        "y": -210
+    },
+    "shellmon": {
+        "x": -400,
+        "y": -210
+    },
+    "shimaunimon": {
+        "x": -440,
+        "y": -210
+    },
+    "soulmon": {
+        "x": 0,
+        "y": -240
+    },
+    "sukamon": {
+        "x": -40,
+        "y": -240
+    },
+    "tankmon": {
+        "x": -80,
+        "y": -240
+    },
+    "togemon": {
+        "x": -120,
+        "y": -240
+    },
+    "tyrannomon": {
+        "x": -160,
+        "y": -240
+    },
+    "unimon": {
+        "x": -200,
+        "y": -240
+    },
+    "vegiemon": {
+        "x": -240,
+        "y": -240
+    },
+    "weedmon": {
+        "x": -280,
+        "y": -240
+    },
+    "yanmamon": {
+        "x": -320,
+        "y": -240
+    },
+    "andromon": {
+        "x": -360,
+        "y": -240
+    },
+    "angewomon": {
+        "x": -400,
+        "y": -240
+    },
+    "beastmon": {
+        "x": -440,
+        "y": -240
+    },
+    "blackweregarurumon": {
+        "x": 0,
+        "y": -270
+    },
+    "bluemeramon": {
+        "x": -40,
+        "y": -270
+    },
+    "digitamamon": {
+        "x": -80,
+        "y": -270
+    },
+    "dorugreymon": {
+        "x": -120,
+        "y": -270
+    },
+    "etemon": {
+        "x": -160,
+        "y": -270
+    },
+    "garudamon": {
+        "x": -200,
+        "y": -270
+    },
+    "gigadramon": {
+        "x": -240,
+        "y": -270
+    },
+    "giromon": {
+        "x": -280,
+        "y": -270
+    },
+    "iceleomon": {
+        "x": -320,
+        "y": -270
+    },
+    "ladydevimon": {
+        "x": -360,
+        "y": -270
+    },
+    "lillymon": {
+        "x": -400,
+        "y": -270
+    },
+    "magnaangemon": {
+        "x": -440,
+        "y": -270
+    },
+    "mamemon": {
+        "x": 0,
+        "y": -300
+    },
+    "megadramon": {
+        "x": -40,
+        "y": -300
+    },
+    "megakabuterimon": {
+        "x": -80,
+        "y": -300
+    },
+    "megaseadramon": {
+        "x": -120,
+        "y": -300
+    },
+    "meicrackmon": {
+        "x": -160,
+        "y": -300
+    },
+    "meicrackmonvm": {
+        "x": -200,
+        "y": -300
+    },
+    "metalgreymonvaccine": {
+        "x": -240,
+        "y": -300
+    },
+    "metalgreymonvirus": {
+        "x": -280,
+        "y": -300
+    },
+    "metalmamemon": {
+        "x": -320,
+        "y": -300
+    },
+    "meteormon": {
+        "x": -360,
+        "y": -300
+    },
+    "monzaemon": {
+        "x": -400,
+        "y": -300
+    },
+    "myotismon": {
+        "x": -440,
+        "y": -300
+    },
+    "piximon": {
+        "x": 0,
+        "y": -330
+    },
+    "shogungekomon": {
+        "x": -40,
+        "y": -330
+    },
+    "skullgreymon": {
+        "x": -80,
+        "y": -330
+    },
+    "tekkamon": {
+        "x": -120,
+        "y": -330
+    },
+    "vademon": {
+        "x": -160,
+        "y": -330
+    },
+    "vermilimon": {
+        "x": -200,
+        "y": -330
+    },
+    "warumonzaemon": {
+        "x": -240,
+        "y": -330
+    },
+    "waruseadramon": {
+        "x": -280,
+        "y": -330
+    },
+    "weregarurumon": {
+        "x": -320,
+        "y": -330
+    },
+    "whamon": {
+        "x": -360,
+        "y": -330
+    },
+    "zudomon": {
+        "x": -400,
+        "y": -330
+    },
+    "alphamon": {
+        "x": -440,
+        "y": -330
+    },
+    "blackmetalgarurumon": {
+        "x": 0,
+        "y": -360
+    },
+    "blackwargreymon": {
+        "x": -40,
+        "y": -360
+    },
+    "boltmon": {
+        "x": -80,
+        "y": -360
+    },
+    "cherubimonevil": {
+        "x": -120,
+        "y": -360
+    },
+    "cherubimongood": {
+        "x": -160,
+        "y": -360
+    },
+    "devitamamon": {
+        "x": -200,
+        "y": -360
+    },
+    "dorugoramon": {
+        "x": -240,
+        "y": -360
+    },
+    "ebemon": {
+        "x": -280,
+        "y": -360
+    },
+    "herculeskabuterimon": {
+        "x": -320,
+        "y": -360
+    },
+    "hiandromon": {
+        "x": -360,
+        "y": -360
+    },
+    "lilithmon": {
+        "x": -400,
+        "y": -360
+    },
+    "machinedramon": {
+        "x": -440,
+        "y": -360
+    },
+    "magnadramon": {
+        "x": 0,
+        "y": -390
+    },
+    "marineangemon": {
+        "x": -40,
+        "y": -390
+    },
+    "metaletemon": {
+        "x": -80,
+        "y": -390
+    },
+    "metalgarurumon": {
+        "x": -120,
+        "y": -390
+    },
+    "metalseadramon": {
+        "x": -160,
+        "y": -390
+    },
+    "ophanimon": {
+        "x": -200,
+        "y": -390
+    },
+    "phoenixmon": {
+        "x": -240,
+        "y": -390
+    },
+    "princemamemon": {
+        "x": -280,
+        "y": -390
+    },
+    "raguelmon": {
+        "x": -320,
+        "y": -390
+    },
+    "rasielmon": {
+        "x": -360,
+        "y": -390
+    },
+    "rosemon": {
+        "x": -400,
+        "y": -390
+    },
+    "saberleomon": {
+        "x": -440,
+        "y": -390
+    },
+    "seraphimon": {
+        "x": 0,
+        "y": -420
+    },
+    "venommyotismon": {
+        "x": -40,
+        "y": -420
+    },
+    "vikemon": {
+        "x": -80,
+        "y": -420
+    },
+    "wargreymon": {
+        "x": -120,
+        "y": -420
+    }
+}

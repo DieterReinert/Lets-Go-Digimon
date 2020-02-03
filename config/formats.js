@@ -1,3 +1,4 @@
+exports.Formats = [
 	// Digimon Metas
 	{
 		section: "Digmon Metas",
@@ -126,3 +127,4 @@
 			this.add('-start', pokemon, 'typechange', pokemon.types.join('/'), '[silent]');
 		},
 	},
+];

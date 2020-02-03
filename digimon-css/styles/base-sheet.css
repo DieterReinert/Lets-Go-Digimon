@@ -1,0 +1,82 @@
+/************************
+ * DIGIMON SHOWDOWN CSS *
+ ************************/
+
+/* DIGIMON SHOWDOWN BATTLE BACKDROP */
+div[id*="digimon"] .innerbattle .backdrop {
+    background-image: url('%battle_background') !important;
+    background-position: 0 -20px;
+}
+
+/* POSITION DIGIMONS IN POKEMON X DIGIMON TIERS */
+div[id*="digimonxpokemon"] .innerbattle div > div:nth-child(1) > img:nth-child(4) {
+    top: 90px !important;
+}
+
+div[id*="digimonxpokemon"] .innerbattle div > div:nth-child(1) > img:nth-child(5) {
+    top: 93px !important;
+}
+
+div[id*="digimonxpokemon"] .innerbattle div > div:nth-child(1) > img:nth-child(6) {
+    top: 96px !important;
+}
+
+div[id*="digimonxpokemon"] .innerbattle div > div:nth-child(4) > img:nth-child(4) {
+    top: 240px !important;
+}
+
+div[id*="digimonxpokemon"] .innerbattle div > div:nth-child(4) > img:nth-child(5) {
+    top: 243px !important;
+}
+
+div[id*="digimonxpokemon"] .innerbattle div > div:nth-child(4) > img:nth-child(6) {
+    top: 246px !important;
+}
+
+/* RESTYLE MOVE BUTTONS */
+div[id*="digimon"] .movemenu button {
+    height: 60px;
+    width: 48%;
+    margin: 0.5%;
+    overflow: hidden;
+}
+
+div[id*="digimon"] .movemenu button .pp {
+    float: left;
+}
+
+div[id*="digimon"] .movemenu button[data-move="Protect"] .pp {
+    float: right;
+}
+
+div[id*="digimon"] .movemenu button .pp:before {
+    color: #000;
+    font-weight: bold;
+    font-size: 0.75em;
+    content: " ";
+}
+
+/* RESTYLE SWITCH BUTTONS */
+div[id*="digimon"] button[name="chooseSwitch"],
+div[id*="digimon"] button.disabled {
+    width: 15%;
+    margin-right: 1.5%;
+}
+
+div[id*="digimon"] .teamicons .picon[aria-label="Not revealed"],
+div[id*="digimon"] button[name="chooseSwitch"] .picon,
+div[id*="digimon"] button[name="chooseTeamPreview"] .picon  {
+    background: url('%digivice_sheet') !important;
+}
+
+/* POSITION DIGIMONS DURING BATTLE */
+div[id*="digimon"] .innerbattle div > img[style*="left: 111px; top: 173px;"] {
+    left: 170px !important;
+    top: 210px !important;
+}
+
+div[id*="digimon"] .innerbattle div > img[style*="left: 223px; top: 188px;"] {
+    left: 278px !important;
+    top: 225px !important;
+}
+

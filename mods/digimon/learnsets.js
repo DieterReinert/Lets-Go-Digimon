@@ -1637,7 +1637,7 @@ let BattleLearnsets = {
 			protect: ["7M"],
 		},
 	},
-	meicrackmonviciousmode: {
+	meicrackmonvm: {
 		learnset: {
 			warcry: ["7M"],
 			windcutter: ["7M"],

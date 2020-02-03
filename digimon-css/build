@@ -1,0 +1,115 @@
+'use strict';
+
+const { existsSync, mkdirSync, writeFileSync } = require('fs');
+const join = require('path').join;
+
+// OUTPUT DIRECTORIES
+const DS_OUTPUT_DIR = join(__dirname, '/ds-data');
+const OUTPUT_DIR = join(__dirname, '/ds-css');
+if (!existsSync(DS_OUTPUT_DIR)) mkdirSync(DS_OUTPUT_DIR);
+if (!existsSync(OUTPUT_DIR)) mkdirSync(OUTPUT_DIR);
+
+// DATA DIRECTORIES
+const DIGIMON_SHOWDOWN_DIR = join(__dirname, '../mods/digimon');
+const POKEMON_SHOWDOWN_DIR = join(__dirname, '/pokemonshowdown');
+
+// IMPORT DIGIMON SHOWDOWN DATA
+const digimonShowdown = {
+    moves: require(`${DIGIMON_SHOWDOWN_DIR}/moves`).BattleMovedex,
+    dex: require(`${DIGIMON_SHOWDOWN_DIR}/pokedex`).BattlePokedex,
+    sets: require(`${DIGIMON_SHOWDOWN_DIR}/digimon-sets`).Sets,
+    typechart: require(`${DIGIMON_SHOWDOWN_DIR}/typechart`).BattleTypeChart,
+};
+
+// IMPORT POKEMON SHOWDOWN DATA
+const pokemonShowdown = {
+    moves: require(`${POKEMON_SHOWDOWN_DIR}/moves`).BattleMovedex,
+    typechart: require(`${POKEMON_SHOWDOWN_DIR}/typechart`).BattleTypeChart,
+};
+
+// EXPORTABLE
+const exportable = {
+    moves: {},
+    dex: {},
+    typechart: {},
+    positions: {},
+};
+
+// DIGIMON MOVES
+
+Object.entries(digimonShowdown.moves).forEach(move => {
+    let [moveName, moveData] = move;
+    let isInherited = moveData.inherit;
+    if (isInherited) moveData = pokemonShowdown.moves[moveName];
+
+    exportable.moves[moveName] = {
+        id: moveData.id,
+        name: moveData.name,
+        desc: moveData.shortDesc,
+        type: moveData.type,
+        basePower: moveData.basePower,
+        category: moveData.category,
+        accuracy: moveData.accuracy === true ? '-' : moveData.accuracy,
+        pokemonMove: isInherited !== undefined,
+    };
+});
+
+writeFileSync(`${DS_OUTPUT_DIR}/moves.json`, JSON.stringify(exportable.moves, null, 4));
+console.log(`"${DS_OUTPUT_DIR}/moves.json" has been written.`);
+
+// DIGIMON DEX + BACKGROUND POSITIONS
+
+let row = 0, col = 0;
+
+// overwrites the existing names
+const digimonFormesObj = {
+    'Meicrackmon VM': 'Meicrackmon',
+    'Cherubimon Evil': 'Cherubimon',
+    'Cherubimon Good': 'Cherubimon',
+    'MetalGreymon Vaccine': 'MetalGreymon',
+    'MetalGreymon Virus': 'MetalGreymon',
+};
+const digimonFormes = Object.keys(digimonFormesObj);
+
+Object.entries(digimonShowdown.dex).forEach(digimon => {
+    let [digimonName, digimonData] = digimon;
+    let hasFormes = digimonFormes.includes(digimonData.species);
+    if (hasFormes) digimonData.name = digimonFormesObj[digimonData.species];
+
+    exportable.dex[digimonName] = {
+        id: digimonName,
+        name: hasFormes ? digimonData.name : null,
+        species: digimonData.species,
+        hasFormes: hasFormes,
+    };
+
+    // BACKGROUND POSITIONS
+
+    exportable.positions[digimonName] = {
+        x: -(col * 40),
+        y: -(row * 30),
+    }
+
+    // increment row after 12 columns
+    if (col === 11) {
+        row++;
+        col = 0;
+    } else {
+        col++;
+    }
+});
+
+writeFileSync(`${DS_OUTPUT_DIR}/dex.json`, JSON.stringify(exportable.dex, null, 4));
+console.log(`"${DS_OUTPUT_DIR}/dex.json" has been written.`);
+
+writeFileSync(`${DS_OUTPUT_DIR}/positions.json`, JSON.stringify(exportable.positions, null, 4));
+console.log(`"${DS_OUTPUT_DIR}/positions.json" has been written.`);
+
+// DIGIMON TYPES
+
+Object.keys(digimonShowdown.typechart).filter(type => {
+    if (!pokemonShowdown.typechart[type]) exportable.typechart[type] = true;
+});
+
+writeFileSync(`${DS_OUTPUT_DIR}/types.json`, JSON.stringify(exportable.typechart, null, 4));
+console.log(`"${DS_OUTPUT_DIR}/types.json" has been written.`);

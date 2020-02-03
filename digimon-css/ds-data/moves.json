@@ -1,0 +1,2312 @@
+{
+    "acidbubble": {
+        "id": "acidbubble",
+        "name": "Acid Bubble",
+        "desc": "25% chance to flinch the target.",
+        "type": "Aqua",
+        "basePower": 60,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "pepperbreath": {
+        "id": "pepperbreath",
+        "name": "Pepper Breath",
+        "desc": "No additional effect.",
+        "type": "Flame",
+        "basePower": 110,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "nemesisivy": {
+        "id": "nemesisivy",
+        "name": "Nemesis Ivy",
+        "desc": "User recovers 50% of the damage dealt.",
+        "type": "Nature",
+        "basePower": 95,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "electricshock": {
+        "id": "electricshock",
+        "name": "Electric Shock",
+        "desc": "20% chance to paralyze the target.",
+        "type": "Air",
+        "basePower": 100,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "spiraltwister": {
+        "id": "spiraltwister",
+        "name": "Spiral Twister",
+        "desc": "Raises the user's Sp.Atk by 1.",
+        "type": "Flame",
+        "basePower": 80,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "preciousflame": {
+        "id": "preciousflame",
+        "name": "Precious Flame",
+        "desc": "Lowers the target's Sp.Def by 1.",
+        "type": "Flame",
+        "basePower": 105,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "demidart": {
+        "id": "demidart",
+        "name": "Demi Dart",
+        "desc": "User recovers 50% of the damage dealt to foes.",
+        "type": "Evil",
+        "basePower": 90,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "wormvenom": {
+        "id": "wormvenom",
+        "name": "Worm Venom",
+        "desc": "Poisons the target. Does not check accuracy.",
+        "type": "Nature",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "metalcannon": {
+        "id": "metalcannon",
+        "name": "Metal Cannon",
+        "desc": "50% chance to raise the user’s Def by 2.",
+        "type": "Mech",
+        "basePower": 115,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "superthunderstrike": {
+        "id": "superthunderstrike",
+        "name": "Super Thunder Strike",
+        "desc": "Hits 2 times in one turn.",
+        "type": "Air",
+        "basePower": 55,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "blueblaster": {
+        "id": "blueblaster",
+        "name": "Blue Blaster",
+        "desc": "Lowers the target’s Def by 1.",
+        "type": "Flame",
+        "basePower": 105,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "goblinstrike": {
+        "id": "goblinstrike",
+        "name": "Goblin Strike",
+        "desc": "30% chance to flinch the target.",
+        "type": "Battle",
+        "basePower": 100,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "marchingfishes": {
+        "id": "marchingfishes",
+        "name": "Marching Fishes",
+        "desc": "Hits adjacent foe(s) 2-3 times in one turn.",
+        "type": "Aqua",
+        "basePower": 40,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "rockfist": {
+        "id": "rockfist",
+        "name": "Rock Fist",
+        "desc": "Raises the user’s Def by 1.",
+        "type": "Nature",
+        "basePower": 100,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "electricthread": {
+        "id": "electricthread",
+        "name": "Electric Thread",
+        "desc": "Paralyzes the target. Does not check accuracy.",
+        "type": "Air",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "aquatower": {
+        "id": "aquatower",
+        "name": "Aqua Tower",
+        "desc": "75% chance to force the target to randomly switch.",
+        "type": "Aqua",
+        "basePower": 95,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "tropicalbeak": {
+        "id": "tropicalbeak",
+        "name": "Tropical Beak",
+        "desc": "Hits 1-3 times in one turn.",
+        "type": "Battle",
+        "basePower": 40,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "lullabybubble": {
+        "id": "lullabybubble",
+        "name": "Lullaby Bubble",
+        "desc": "20% chance to put the target to sleep.",
+        "type": "Aqua",
+        "basePower": 80,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "poisonivy": {
+        "id": "poisonivy",
+        "name": "Poison Ivy",
+        "desc": "50% chance to poison the target.",
+        "type": "Nature",
+        "basePower": 105,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "boombubble": {
+        "id": "boombubble",
+        "name": "Boom Bubble",
+        "desc": "50% chance to raise the user’s Speed by 2.",
+        "type": "Air",
+        "basePower": 80,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "eternalslapping": {
+        "id": "eternalslapping",
+        "name": "Eternal Slapping",
+        "desc": "Hits 2-5 times in one turn.",
+        "type": "Battle",
+        "basePower": 25,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "coloredsparkle": {
+        "id": "coloredsparkle",
+        "name": "Colored Sparkle",
+        "desc": "Lowers the target’s Def by 1.",
+        "type": "Air",
+        "basePower": 105,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "puppyhowl": {
+        "id": "puppyhowl",
+        "name": "Puppy Howl",
+        "desc": "Ignores target’s stat changes. 50% paralyze chance.",
+        "type": "Holy",
+        "basePower": 125,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "dancingbone": {
+        "id": "dancingbone",
+        "name": "Dancing Bone",
+        "desc": "30% chance to flinch the target.",
+        "type": "Evil",
+        "basePower": 100,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "littleblizzard": {
+        "id": "littleblizzard",
+        "name": "Little Blizzard",
+        "desc": "No additional effect.",
+        "type": "Aqua",
+        "basePower": 110,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "snowgobbolt": {
+        "id": "snowgobbolt",
+        "name": "Snowgob Bolt",
+        "desc": "30% chance to flinch the target.",
+        "type": "Aqua",
+        "basePower": 100,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "supershocker": {
+        "id": "supershocker",
+        "name": "Super Shocker",
+        "desc": "No additional effect.",
+        "type": "Air",
+        "basePower": 110,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "plasticblaze": {
+        "id": "plasticblaze",
+        "name": "Plastic Blaze",
+        "desc": "Lowers the target's Sp.Def by 1.",
+        "type": "Mech",
+        "basePower": 105,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "evilspell": {
+        "id": "evilspell",
+        "name": "Evil Spell",
+        "desc": "50% chance to raise the user's Sp.Atk by 2.",
+        "type": "Evil",
+        "basePower": 80,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "spinningneedle": {
+        "id": "spinningneedle",
+        "name": "Spinning Needle",
+        "desc": "50% chance to raise Speed by 2.",
+        "type": "Air",
+        "basePower": 100,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "scarredeye": {
+        "id": "scarredeye",
+        "name": "Scar-Red Eye",
+        "desc": "Causes the foe(s) to flinch.",
+        "type": "Flame",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": 85,
+        "pokemonMove": false
+    },
+    "handoffate": {
+        "id": "handoffate",
+        "name": "Hand Of Fate",
+        "desc": "50% chance to raise the user’s Atk and Sp.Atk by 2.",
+        "type": "Holy",
+        "basePower": 105,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "evilcharm": {
+        "id": "evilcharm",
+        "name": "Evil Charm",
+        "desc": "Does damage equal to 1/2 target’s current HP.",
+        "type": "Evil",
+        "basePower": 0,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "meteorwing": {
+        "id": "meteorwing",
+        "name": "Meteor Wing",
+        "desc": "Raises the user's Speed by 1.",
+        "type": "Flame",
+        "basePower": 100,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "darkpaw": {
+        "id": "darkpaw",
+        "name": "Dark Paw",
+        "desc": "Priority +1, always does 150 HP of damage. 80% flinch chance.",
+        "type": "Battle",
+        "basePower": 0,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "solarray": {
+        "id": "solarray",
+        "name": "Solar Ray",
+        "desc": "This move does not check accuracy.",
+        "type": "Mech",
+        "basePower": 110,
+        "category": "Special",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "variabledarts": {
+        "id": "variabledarts",
+        "name": "Variable Darts",
+        "desc": "Lowers the target's Sp.Def by 1.",
+        "type": "Aqua",
+        "basePower": 100,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "dreadfire": {
+        "id": "dreadfire",
+        "name": "Dread Fire",
+        "desc": "30% chance to confuse the target.",
+        "type": "Flame",
+        "basePower": 90,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "deathhand": {
+        "id": "deathhand",
+        "name": "Death Hand",
+        "desc": "User recovers 50% of the damage dealt.",
+        "type": "Evil",
+        "basePower": 120,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "pulseblast": {
+        "id": "pulseblast",
+        "name": "Pulse Blast",
+        "desc": "20% chance to put the target to sleep.",
+        "type": "Aqua",
+        "basePower": 90,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "powermetal": {
+        "id": "powermetal",
+        "name": "Power Metal",
+        "desc": "50% chance to raise the user's Atk by 2.",
+        "type": "Mech",
+        "basePower": 120,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "drillspin": {
+        "id": "drillspin",
+        "name": "Drill Spin",
+        "desc": "Ignores target’s stat changes.",
+        "type": "Mech",
+        "basePower": 90,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "blazebuster": {
+        "id": "blazebuster",
+        "name": "Blaze Buster",
+        "desc": "Lowers the target's Sp.Def by 1.",
+        "type": "Flame",
+        "basePower": 90,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "subzeroicepunch": {
+        "id": "subzeroicepunch",
+        "name": "Sub Zero Ice Punch",
+        "desc": "80% chance to flinch the target.",
+        "type": "Aqua",
+        "basePower": 85,
+        "category": "Physical",
+        "accuracy": 80,
+        "pokemonMove": false
+    },
+    "evilhurricane": {
+        "id": "evilhurricane",
+        "name": "Evil Hurricane",
+        "desc": "No additional effect.",
+        "type": "Air",
+        "basePower": 110,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "howlingblaster": {
+        "id": "howlingblaster",
+        "name": "Howling Blaster",
+        "desc": "50% chance to raise the user’s Speed by 2.",
+        "type": "Flame",
+        "basePower": 105,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "lightningpaw": {
+        "id": "lightningpaw",
+        "name": "Lightning Paw",
+        "desc": "Always does 150 HP damage. 80% chance to confuse.",
+        "type": "Battle",
+        "basePower": 0,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "symphonycrusher": {
+        "id": "symphonycrusher",
+        "name": "Symphony Crusher",
+        "desc": "30% chance to put the target to sleep.",
+        "type": "Battle",
+        "basePower": 80,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "hypersmell": {
+        "id": "hypersmell",
+        "name": "Hyper Smell",
+        "desc": "30% chance to confuse or paralyze the target.",
+        "type": "Filth",
+        "basePower": 75,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "megaflame": {
+        "id": "megaflame",
+        "name": "Mega Flame",
+        "desc": "No additional effect.",
+        "type": "Flame",
+        "basePower": 115,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "guardianbarrage": {
+        "id": "guardianbarrage",
+        "name": "Guardian Barrage",
+        "desc": "This move does not check accuracy.",
+        "type": "Mech",
+        "basePower": 90,
+        "category": "Physical",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "chaosblaster": {
+        "id": "chaosblaster",
+        "name": "Chaos Blaster",
+        "desc": "50% chance to raise the user’s Speed by 2.",
+        "type": "Air",
+        "basePower": 105,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "snowpunch": {
+        "id": "snowpunch",
+        "name": "Snow Punch",
+        "desc": "No additional effect.",
+        "type": "Aqua",
+        "basePower": 110,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "frozenclaw": {
+        "id": "frozenclaw",
+        "name": "Frozen Claw",
+        "desc": "Ignores target’s stat changes.",
+        "type": "Aqua",
+        "basePower": 120,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "iceballbomb": {
+        "id": "iceballbomb",
+        "name": "Iceball Bomb",
+        "desc": "Raises the user’s Def by 1.",
+        "type": "Aqua",
+        "basePower": 100,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "harpoontorpedo": {
+        "id": "harpoontorpedo",
+        "name": "Harpoon Torpedo",
+        "desc": "This move does not check accuracy.",
+        "type": "Mech",
+        "basePower": 110,
+        "category": "Physical",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "junglebone": {
+        "id": "junglebone",
+        "name": "Jungle Bone",
+        "desc": "Hits 2 times in one turn.",
+        "type": "Nature",
+        "basePower": 40,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "electroshocker": {
+        "id": "electroshocker",
+        "name": "Electro Shocker",
+        "desc": "No additional effect.",
+        "type": "Air",
+        "basePower": 115,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "frozenfireshot": {
+        "id": "frozenfireshot",
+        "name": "Frozen Fire Shot",
+        "desc": "Paralyzes the foe(s).",
+        "type": "Flame",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": 85,
+        "pokemonMove": false
+    },
+    "scissorclaw": {
+        "id": "scissorclaw",
+        "name": "Scissor Claw",
+        "desc": "Ignores target’s stat changes.",
+        "type": "Nature",
+        "basePower": 110,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "fistofthebeastking": {
+        "id": "fistofthebeastking",
+        "name": "Fist of the Beast King",
+        "desc": "Raises the user's Atk by 1.",
+        "type": "Battle",
+        "basePower": 120,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "xscratch": {
+        "id": "xscratch",
+        "name": "X Scratch",
+        "desc": "Hits 2-5 times in one turn.",
+        "type": "Battle",
+        "basePower": 30,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "burningfist": {
+        "id": "burningfist",
+        "name": "Burning Fist",
+        "desc": "50% chance to raise the user's Atk by 2.",
+        "type": "Flame",
+        "basePower": 100,
+        "category": "Physical",
+        "accuracy": 80,
+        "pokemonMove": false
+    },
+    "catclaw": {
+        "id": "catclaw",
+        "name": "Cat Claw",
+        "desc": "Always does 150 HP damage. 80% chance to poison.",
+        "type": "Battle",
+        "basePower": 0,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "boneboomerang": {
+        "id": "boneboomerang",
+        "name": "Bone Boomerang",
+        "desc": "Hits 2 times in one turn.",
+        "type": "Battle",
+        "basePower": 45,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "volcanicstrike": {
+        "id": "volcanicstrike",
+        "name": "Volcanic Strike",
+        "desc": "No additional effect.",
+        "type": "Flame",
+        "basePower": 100,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "mindfog": {
+        "id": "mindfog",
+        "name": "Mind Fog",
+        "desc": "20% chance to put the foe(s) to sleep.",
+        "type": "Nature",
+        "basePower": 80,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "mudball": {
+        "id": "mudball",
+        "name": "Mud Ball",
+        "desc": "80% chance to flinch the target.",
+        "type": "Nature",
+        "basePower": 85,
+        "category": "Special",
+        "accuracy": 85,
+        "pokemonMove": false
+    },
+    "poopdunk": {
+        "id": "poopdunk",
+        "name": "Poop Dunk",
+        "desc": "Lowers the target's Def by 2.",
+        "type": "Filth",
+        "basePower": 75,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "dancingleaves": {
+        "id": "dancingleaves",
+        "name": "Dancing Leaves",
+        "desc": "50% chance to lower the target’s accuracy by 2.",
+        "type": "Nature",
+        "basePower": 100,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "fakedrillspin": {
+        "id": "fakedrillspin",
+        "name": "Fake Drill Spin",
+        "desc": "Ignores target’s stat changes.",
+        "type": "Mech",
+        "basePower": 90,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "numesludge": {
+        "id": "numesludge",
+        "name": "Nume Sludge",
+        "desc": "Lowers the target's Atk by 2.",
+        "type": "Filth",
+        "basePower": 70,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "pummelwhack": {
+        "id": "pummelwhack",
+        "name": "Pummel Whack",
+        "desc": "No additional effect.",
+        "type": "Evil",
+        "basePower": 110,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "firefeather": {
+        "id": "firefeather",
+        "name": "Fire Feather",
+        "desc": "50% chance of raising the user's Atk and Sp.Atk by 2",
+        "type": "Flame",
+        "basePower": 110,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "raremetalpoop": {
+        "id": "raremetalpoop",
+        "name": "Rare Metal Poop",
+        "desc": "Forces the target to switch to a random ally.",
+        "type": "Filth",
+        "basePower": 80,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "chilipepperpummel": {
+        "id": "chilipepperpummel",
+        "name": "Chili Pepper Pummel",
+        "desc": "50% chance to lower the foe(s) accuracy by 2.",
+        "type": "Flame",
+        "basePower": 70,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "antidigibeam": {
+        "id": "antidigibeam",
+        "name": "Anti-Digi Beam",
+        "desc": "Dots the Target.",
+        "type": "Mech",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "nightroar": {
+        "id": "nightroar",
+        "name": "Night Roar",
+        "desc": "Raises the user’s Speed by 1.",
+        "type": "Air",
+        "basePower": 100,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "stunray": {
+        "id": "stunray",
+        "name": "Stun Ray",
+        "desc": "30% chance to flinch the target.",
+        "type": "Nature",
+        "basePower": 100,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "iceblast": {
+        "id": "iceblast",
+        "name": "Ice Blast",
+        "desc": "Lowers the target’s Speed by 1.",
+        "type": "Aqua",
+        "basePower": 105,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "hydropressure": {
+        "id": "hydropressure",
+        "name": "Hydro Pressure",
+        "desc": "20% chance to force the foe(s) to randomly switch.",
+        "type": "Aqua",
+        "basePower": 80,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "lustershot": {
+        "id": "lustershot",
+        "name": "Luster Shot",
+        "desc": "Priority +1, does not check accuracy.",
+        "type": "Holy",
+        "basePower": 90,
+        "category": "Special",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "necromagic": {
+        "id": "necromagic",
+        "name": "Necro Magic",
+        "desc": "OHKOs the target. Fails if user is a lower level.",
+        "type": "Evil",
+        "basePower": 0,
+        "category": "Special",
+        "accuracy": 30,
+        "pokemonMove": false
+    },
+    "poop": {
+        "id": "poop",
+        "name": "Poop",
+        "desc": "Lowers the target’s Speed by 2.",
+        "type": "Filth",
+        "basePower": 70,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "hypercannon": {
+        "id": "hypercannon",
+        "name": "Hyper Cannon",
+        "desc": "User cannot move next turn.",
+        "type": "Mech",
+        "basePower": 160,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "needlespray": {
+        "id": "needlespray",
+        "name": "Needle Spray",
+        "desc": "30% chance to paralyze the foe(s).",
+        "type": "Nature",
+        "basePower": 90,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "blazeblaster": {
+        "id": "blazeblaster",
+        "name": "Blaze Blaster",
+        "desc": "High critical hit ratio.",
+        "type": "Flame",
+        "basePower": 100,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "aerialattack": {
+        "id": "aerialattack",
+        "name": "Aerial Attack",
+        "desc": "Priority +1, high critical hit ratio.",
+        "type": "Holy",
+        "basePower": 90,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "sweetbreath": {
+        "id": "sweetbreath",
+        "name": "Sweet Breath",
+        "desc": "Lowers the foe(s) evasion by 2.",
+        "type": "Nature",
+        "basePower": 70,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "deadlyweed": {
+        "id": "deadlyweed",
+        "name": "Deadly Weed",
+        "desc": "50% chance to lower the target’s Speed and accuracy by 2.",
+        "type": "Nature",
+        "basePower": 70,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "thunderray": {
+        "id": "thunderray",
+        "name": "Thunder Ray",
+        "desc": "30% chance to paralyze the target.",
+        "type": "Air",
+        "basePower": 100,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "spiralsword": {
+        "id": "spiralsword",
+        "name": "Spiral Sword",
+        "desc": "High critical hit ratio.",
+        "type": "Mech",
+        "basePower": 110,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "celestialarrow": {
+        "id": "celestialarrow",
+        "name": "Celestial Arrow",
+        "desc": "Ignores target’s stat changes. This move does not check accuracy.",
+        "type": "Holy",
+        "basePower": 110,
+        "category": "Special",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "vampirewave": {
+        "id": "vampirewave",
+        "name": "Vampire Wave",
+        "desc": "User gains 50% HP dealt. 50% chance to confuse.",
+        "type": "Evil",
+        "basePower": 100,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "fullmoonkick": {
+        "id": "fullmoonkick",
+        "name": "Full Moon Kick",
+        "desc": "Raises the user’s Speed by 2.",
+        "type": "Battle",
+        "basePower": 115,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "coldflame": {
+        "id": "coldflame",
+        "name": "Cold Flame",
+        "desc": "Raises the user’s Atk by 2.",
+        "type": "Flame",
+        "basePower": 100,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "nightmaresyndrome": {
+        "id": "nightmaresyndrome",
+        "name": "Nightmare Syndrome",
+        "desc": "Halves target’s HP. 50% chance to sleep target.",
+        "type": "Filth",
+        "basePower": 0,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "metalmeteor": {
+        "id": "metalmeteor",
+        "name": "Metal Meteor",
+        "desc": "No additional effect.",
+        "type": "Mech",
+        "basePower": 130,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "loveserenade": {
+        "id": "loveserenade",
+        "name": "Love Serenade",
+        "desc": "Ignores foe(s) stat changes. 30% paralyze chance.",
+        "type": "Filth",
+        "basePower": 105,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "shadowwing": {
+        "id": "shadowwing",
+        "name": "Shadow Wing",
+        "desc": "Raises user’s Speed by 1.",
+        "type": "Flame",
+        "basePower": 105,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "energyshot": {
+        "id": "energyshot",
+        "name": "Energy Shot",
+        "desc": "Causes the foe(s) to be buggy.",
+        "type": "Mech",
+        "basePower": 95,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "deadlybomb": {
+        "id": "deadlybomb",
+        "name": "Deadly Bomb",
+        "desc": "Hits all adjacent foes. The user faints.",
+        "type": "Mech",
+        "basePower": 200,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "fistofice": {
+        "id": "fistofice",
+        "name": "Fist of Ice",
+        "desc": "80% chance to flinch the target.",
+        "type": "Aqua",
+        "basePower": 120,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "flowercannon": {
+        "id": "flowercannon",
+        "name": "Flower Cannon",
+        "desc": "Priority +1",
+        "type": "Nature",
+        "basePower": 100,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "gateofdestiny": {
+        "id": "gateofdestiny",
+        "name": "Gate of Destiny",
+        "desc": "25% chance to OHKO. Fails if user is lower level.",
+        "type": "Holy",
+        "basePower": 100,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "darknesswave": {
+        "id": "darknesswave",
+        "name": "Darkness Wave",
+        "desc": "Hits adjacent foe(s) 2 times in one turn.",
+        "type": "Evil",
+        "basePower": 60,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "smilebomber": {
+        "id": "smilebomber",
+        "name": "Smile Bomber",
+        "desc": "Does not check accuracy.",
+        "type": "Mech",
+        "basePower": 95,
+        "category": "Physical",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "genocideattack": {
+        "id": "genocideattack",
+        "name": "Genocide Attack",
+        "desc": "High critical hit ratio.",
+        "type": "Evil",
+        "basePower": 110,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "hornbuster": {
+        "id": "hornbuster",
+        "name": "Horn Buster",
+        "desc": "Ignores target's stat changes.",
+        "type": "Air",
+        "basePower": 125,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "lightningjavelin": {
+        "id": "lightningjavelin",
+        "name": "Lightning Javelin",
+        "desc": "No additional effect.",
+        "type": "Air",
+        "basePower": 110,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "modestlystun": {
+        "id": "modestlystun",
+        "name": "Modestly Stun",
+        "desc": "80% chance to paralyze the target.",
+        "type": "Holy",
+        "basePower": 80,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "berserkthinking": {
+        "id": "berserkthinking",
+        "name": "Berserk Thinking",
+        "desc": "Hits 2-4 times in one turn.",
+        "type": "Evil",
+        "basePower": 40,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "gigadestroyer": {
+        "id": "gigadestroyer",
+        "name": "Giga Destroyer",
+        "desc": "No additional effect.",
+        "type": "Flame",
+        "basePower": 125,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "revengeflame": {
+        "id": "revengeflame",
+        "name": "Revenge Flame",
+        "desc": "Power doubles if user is damaged by the target.",
+        "type": "Flame",
+        "basePower": 70,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "energybomb": {
+        "id": "energybomb",
+        "name": "Energy Bomb",
+        "desc": "Does not check accuracy.",
+        "type": "Mech",
+        "basePower": 95,
+        "category": "Special",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "galacticflare": {
+        "id": "galacticflare",
+        "name": "Galactic Flare",
+        "desc": "50% chance to raise Defense by 2.",
+        "type": "Battle",
+        "basePower": 90,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "heartsattack": {
+        "id": "heartsattack",
+        "name": "Hearts Attack",
+        "desc": "Ignores target’s stat changes. 50% confuse chance.",
+        "type": "Holy",
+        "basePower": 100,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "grislywing": {
+        "id": "grislywing",
+        "name": "Grisly Wing",
+        "desc": "User recovers 50% of the damage dealt to foes.",
+        "type": "Evil",
+        "basePower": 100,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "pitbomb": {
+        "id": "pitbomb",
+        "name": "Pit Bomb",
+        "desc": "Priority +1.",
+        "type": "Holy",
+        "basePower": 100,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "musicalfist": {
+        "id": "musicalfist",
+        "name": "Musical Fist",
+        "desc": "30% chance to lower foe(s) Atk, Sp.Atk, Sp.Def by 2. 10% chance of sleep.",
+        "type": "Battle",
+        "basePower": 100,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "oblivionbird": {
+        "id": "oblivionbird",
+        "name": "Oblivion Bird",
+        "desc": "Lowers the target’s Defense by 2.",
+        "type": "Evil",
+        "basePower": 130,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "fragbomb": {
+        "id": "fragbomb",
+        "name": "Frag Bomb",
+        "desc": "Hits adjacent foes. The user faints.",
+        "type": "Evil",
+        "basePower": 200,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "unidentifiedflyingkiss": {
+        "id": "unidentifiedflyingkiss",
+        "name": "Unidentified Flying Kiss",
+        "desc": "50% chance to dot the target.",
+        "type": "Filth",
+        "basePower": 95,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "volcanicstrikes": {
+        "id": "volcanicstrikes",
+        "name": "Volcanic Strike S",
+        "desc": "No additional effect.",
+        "type": "Flame",
+        "basePower": 110,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "heartbreakattack": {
+        "id": "heartbreakattack",
+        "name": "Heartbreak Attack",
+        "desc": "Ignores target’s stat changes. 50% confuse chance.",
+        "type": "Evil",
+        "basePower": 100,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "evilicicle": {
+        "id": "evilicicle",
+        "name": "Evil Icicle",
+        "desc": "No additional effect.",
+        "type": "Aqua",
+        "basePower": 110,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "wolfclaw": {
+        "id": "wolfclaw",
+        "name": "Wolf Claw",
+        "desc": "Raises the user’s Speed by 2.",
+        "type": "Battle",
+        "basePower": 115,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "tidalwave": {
+        "id": "tidalwave",
+        "name": "Tidal Wave",
+        "desc": "No additional effect.",
+        "type": "Aqua",
+        "basePower": 105,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "vulcanshammer": {
+        "id": "vulcanshammer",
+        "name": "Vulcan's Hammer",
+        "desc": "Ignores the target’s stat stage changes.",
+        "type": "Air",
+        "basePower": 130,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "bladeofthedragonking": {
+        "id": "bladeofthedragonking",
+        "name": "Blade of the Dragon King",
+        "desc": "Hits 2-5 times in one turn.",
+        "type": "Battle",
+        "basePower": 55,
+        "category": "Physical",
+        "accuracy": 85,
+        "pokemonMove": false
+    },
+    "garurutomahawk": {
+        "id": "garurutomahawk",
+        "name": "Garuru Tomahawk",
+        "desc": "Does not check accuracy.",
+        "type": "Mech",
+        "basePower": 130,
+        "category": "Physical",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "blacktornado": {
+        "id": "blacktornado",
+        "name": "Black Tornado",
+        "desc": "Ignores the target’s stat stage changes.",
+        "type": "Mech",
+        "basePower": 140,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "tomahawkstinger": {
+        "id": "tomahawkstinger",
+        "name": "Tomahawk Stinger",
+        "desc": "30% chance to confuse the target.",
+        "type": "Battle",
+        "basePower": 110,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "lightningspear": {
+        "id": "lightningspear",
+        "name": "Lightning Spear",
+        "desc": "Ignores target’s stat changes. High critical hit ratio.",
+        "type": "Air",
+        "basePower": 130,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "heavensjudgment": {
+        "id": "heavensjudgment",
+        "name": "Heaven's Judgment",
+        "desc": "High critical hit ratio.",
+        "type": "Air",
+        "basePower": 110,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "blackdeathcloud": {
+        "id": "blackdeathcloud",
+        "name": "Black Death Cloud",
+        "desc": "50% chance to put the target to sleep.",
+        "type": "Filth",
+        "basePower": 105,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "bravemetal": {
+        "id": "bravemetal",
+        "name": "Brave Metal",
+        "desc": "No additional effect.",
+        "type": "Mech",
+        "basePower": 135,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "brainrupture": {
+        "id": "brainrupture",
+        "name": "Brain Rupture",
+        "desc": "50% chance to confuse the target.",
+        "type": "Mech",
+        "basePower": 110,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "gigablaster": {
+        "id": "gigablaster",
+        "name": "Giga Blaster",
+        "desc": "Does not check accuracy",
+        "type": "Air",
+        "basePower": 130,
+        "category": "Special",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "atomicray": {
+        "id": "atomicray",
+        "name": "Atomic Ray",
+        "desc": "80% chance to flinch the target.",
+        "type": "Mech",
+        "basePower": 120,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "phantompain": {
+        "id": "phantompain",
+        "name": "Phantom Pain",
+        "desc": "Ignores stat changes. User gains 50% HP dealt.",
+        "type": "Evil",
+        "basePower": 125,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "infinitycannon": {
+        "id": "infinitycannon",
+        "name": "Infinity Cannon",
+        "desc": "Hits adjacent foe(s) 1-2 times in one turn.",
+        "type": "Mech",
+        "basePower": 125,
+        "category": "Special",
+        "accuracy": 75,
+        "pokemonMove": false
+    },
+    "firetornado": {
+        "id": "firetornado",
+        "name": "Fire Tornado",
+        "desc": "No additional effect.",
+        "type": "Holy",
+        "basePower": 105,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "oceanlove": {
+        "id": "oceanlove",
+        "name": "Ocean Love",
+        "desc": "Cures allies status. Heals allies by 50% max HP.",
+        "type": "Aqua",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "darkrecital": {
+        "id": "darkrecital",
+        "name": "Dark Recital",
+        "desc": "Flinches the target.",
+        "type": "Filth",
+        "basePower": 115,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "icewolfclaw": {
+        "id": "icewolfclaw",
+        "name": "Ice Wolf Claw",
+        "desc": "80% chance to flinch the foe(s). Hits 2 times.",
+        "type": "Aqua",
+        "basePower": 60,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "riverofpower": {
+        "id": "riverofpower",
+        "name": "River of Power",
+        "desc": "Lowers the target's Sp.Def by 2.",
+        "type": "Aqua",
+        "basePower": 110,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "edensjavelin": {
+        "id": "edensjavelin",
+        "name": "Eden's Javelin",
+        "desc": "Raises the user's Sp.Atk by 2.",
+        "type": "Holy",
+        "basePower": 120,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "starlightexplosion": {
+        "id": "starlightexplosion",
+        "name": "Starlight Explosion",
+        "desc": "Hits adjacent foes. Heals allies by 50% max HP.",
+        "type": "Flame",
+        "basePower": 105,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "smilewarhead": {
+        "id": "smilewarhead",
+        "name": "Smile Warhead",
+        "desc": "Forces the target to switch to a random ally.",
+        "type": "Mech",
+        "basePower": 110,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "darknesszone": {
+        "id": "darknesszone",
+        "name": "Darkness Zone",
+        "desc": "Hits foe(s) 3 times. Lowers foe(s) Defense by 1.",
+        "type": "Evil",
+        "basePower": 40,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "knowledgestream": {
+        "id": "knowledgestream",
+        "name": "Knowledge Stream",
+        "desc": "20% chance to paralyze or sleep or panic target.",
+        "type": "Holy",
+        "basePower": 120,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "thornwhip": {
+        "id": "thornwhip",
+        "name": "Thorn Whip",
+        "desc": "Priority +1, User gains 50% HP dealt. 50% chance to paralyze.",
+        "type": "Nature",
+        "basePower": 115,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "howlingcrusher": {
+        "id": "howlingcrusher",
+        "name": "Howling Crusher",
+        "desc": "Hits 2 times in one turn. High critical hit ratio.",
+        "type": "Battle",
+        "basePower": 60,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "strikeofthesevenstars": {
+        "id": "strikeofthesevenstars",
+        "name": "Strike of the Seven Stars",
+        "desc": "Hits adjacent foe(s) 7 times in one turn.",
+        "type": "Holy",
+        "basePower": 20,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "venominfusion": {
+        "id": "venominfusion",
+        "name": "Venom Infusion",
+        "desc": "User gains 50% HP dealt, poisons the target.",
+        "type": "Evil",
+        "basePower": 130,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "arcticblizzard": {
+        "id": "arcticblizzard",
+        "name": "Arctic Blizzard",
+        "desc": "Flinches the target.",
+        "type": "Aqua",
+        "basePower": 130,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "terraforce": {
+        "id": "terraforce",
+        "name": "Terra Force",
+        "desc": "100% chance to raise Atk by 2.",
+        "type": "Flame",
+        "basePower": 125,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "burningheart": {
+        "id": "burningheart",
+        "name": "Burning Heart",
+        "desc": "Raises the user’s atk by 2.",
+        "type": "Flame",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "heatbreath": {
+        "id": "heatbreath",
+        "name": "Heat Breath",
+        "desc": "Priority +1, 10% chance to brn the target.",
+        "type": "Flame",
+        "basePower": 50,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "firetower": {
+        "id": "firetower",
+        "name": "Fire Tower",
+        "desc": "Ignores target's stat changes, 10% brn chance.",
+        "type": "Flame",
+        "basePower": 60,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "firewall": {
+        "id": "firewall",
+        "name": "Firewall",
+        "desc": "Protect, 1/8 max hp contact damage unless fire/flame type.",
+        "type": "Flame",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "meltdown": {
+        "id": "meltdown",
+        "name": "Meltdown",
+        "desc": "30% chance to brn the foe(s).",
+        "type": "Flame",
+        "basePower": 75,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "infinityburn": {
+        "id": "infinityburn",
+        "name": "Infinity Burn",
+        "desc": "30% chance to brn the target, thaws.",
+        "type": "Flame",
+        "basePower": 80,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "prominencebeam": {
+        "id": "prominencebeam",
+        "name": "Prominence Beam",
+        "desc": "10% chance to brn the target.",
+        "type": "Flame",
+        "basePower": 90,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "hailspear": {
+        "id": "hailspear",
+        "name": "Hail Spear",
+        "desc": "Usually Goes first it has Priority +1.",
+        "type": "Aqua",
+        "basePower": 45,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "waterblitz": {
+        "id": "waterblitz",
+        "name": "Water Blitz",
+        "desc": "Attack foe(s) and raises the users Spe by 2.",
+        "type": "Aqua",
+        "basePower": 50,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "winterblast": {
+        "id": "winterblast",
+        "name": "Winter Blast",
+        "desc": "10% chance to frz the foe(s).",
+        "type": "Aqua",
+        "basePower": 65,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "gigafreeze": {
+        "id": "gigafreeze",
+        "name": "Giga Freeze",
+        "desc": "10% chance to frz the target.",
+        "type": "Aqua",
+        "basePower": 70,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "oceanwave": {
+        "id": "oceanwave",
+        "name": "Ocean Wave",
+        "desc": "30% chance to lower the foe(s) acc by 1.",
+        "type": "Aqua",
+        "basePower": 80,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "icestatue": {
+        "id": "icestatue",
+        "name": "Ice Statue",
+        "desc": "30% chance to flinch the target.",
+        "type": "Aqua",
+        "basePower": 80,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "aurorafreeze": {
+        "id": "aurorafreeze",
+        "name": "Aurora Freeze",
+        "desc": "Has a 30% chance to par the foe(s).",
+        "type": "Aqua",
+        "basePower": 90,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "wingshoes": {
+        "id": "wingshoes",
+        "name": "Wing Shoes",
+        "desc": "Raises user's and allies spe by 1.",
+        "type": "Air",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "staticelectricity": {
+        "id": "staticelectricity",
+        "name": "Static Electricity",
+        "desc": "Priority +1, high crit.",
+        "type": "Air",
+        "basePower": 40,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "windcutter": {
+        "id": "windcutter",
+        "name": "Wind Cutter",
+        "desc": "30% chance to par any target.",
+        "type": "Air",
+        "basePower": 50,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "confusedstorm": {
+        "id": "confusedstorm",
+        "name": "Confused Storm",
+        "desc": "30% chance to confuse the foe(s).",
+        "type": "Air",
+        "basePower": 65,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "electriccloud": {
+        "id": "electriccloud",
+        "name": "Electric Cloud",
+        "desc": "20% chance to par the target.",
+        "type": "Air",
+        "basePower": 80,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "megalospark": {
+        "id": "megalospark",
+        "name": "Megalo Spark",
+        "desc": "10% chance to par the target.",
+        "type": "Air",
+        "basePower": 85,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "thunderjustice": {
+        "id": "thunderjustice",
+        "name": "Thunder Justice",
+        "desc": "Does not check acc, 10% chance to par.",
+        "type": "Air",
+        "basePower": 90,
+        "category": "Special",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "earthcoat": {
+        "id": "earthcoat",
+        "name": "Earth Coat",
+        "desc": "Cures ally side status and raises Sp.Def by 1.",
+        "type": "Nature",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "massmorph": {
+        "id": "massmorph",
+        "name": "Mass Morph",
+        "desc": "Raises the user’s Def by 2 and Atk by 1.",
+        "type": "Nature",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "charmperfume": {
+        "id": "charmperfume",
+        "name": "Charm Perfume",
+        "desc": "30% chance of psn, and 2x BP if foe(s) are psn.",
+        "type": "Nature",
+        "basePower": 45,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "rootbind": {
+        "id": "rootbind",
+        "name": "Root Bind",
+        "desc": "25% chance to lower target’s Spe. Traps target.",
+        "type": "Nature",
+        "basePower": 65,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "bug": {
+        "id": "bug",
+        "name": "Bug",
+        "desc": "Causes the target to be buggy.",
+        "type": "Nature",
+        "basePower": 70,
+        "category": "Physical",
+        "accuracy": 85,
+        "pokemonMove": false
+    },
+    "rockfall": {
+        "id": "rockfall",
+        "name": "Rock Fall",
+        "desc": "No additional effect.",
+        "type": "Nature",
+        "basePower": 95,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "venomdisaster": {
+        "id": "venomdisaster",
+        "name": "Venom Disaster",
+        "desc": "20% chance to psn adjacent monsters.",
+        "type": "Nature",
+        "basePower": 95,
+        "category": "Special",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "darkspirit": {
+        "id": "darkspirit",
+        "name": "Dark Spirit",
+        "desc": "25% chance to par the target.",
+        "type": "Evil",
+        "basePower": 55,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "blackout": {
+        "id": "blackout",
+        "name": "Blackout",
+        "desc": "15% chance to confuse all adjacent monsters.",
+        "type": "Evil",
+        "basePower": 60,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "evilfantasy": {
+        "id": "evilfantasy",
+        "name": "Evil Fantasy",
+        "desc": "Usually goes first. Fails if target is not attacking.",
+        "type": "Evil",
+        "basePower": 70,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "chaoscloud": {
+        "id": "chaoscloud",
+        "name": "Chaos Cloud",
+        "desc": "20% chance to lower that target's sp.def by 1.",
+        "type": "Evil",
+        "basePower": 80,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "shadowfall": {
+        "id": "shadowfall",
+        "name": "Shadow Fall",
+        "desc": "High critical hit ratio.",
+        "type": "Evil",
+        "basePower": 70,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "hideandseek": {
+        "id": "hideandseek",
+        "name": "Hide and Seek",
+        "desc": "Disappears turn 1. Hits turn 2.",
+        "type": "Evil",
+        "basePower": 90,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "evilsquall": {
+        "id": "evilsquall",
+        "name": "Evil Squall",
+        "desc": "20% chance to confuse any target.",
+        "type": "Evil",
+        "basePower": 85,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "saintheal": {
+        "id": "saintheal",
+        "name": "Saint Heal",
+        "desc": "Heals any target by 40% of its max HP.",
+        "type": "Holy",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "holybreath": {
+        "id": "holybreath",
+        "name": "Holy Breath",
+        "desc": "Raises the user’s Sp.Def and Spe by 1.",
+        "type": "Holy",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "holyterrain": {
+        "id": "holyterrain",
+        "name": "Holy Terrain",
+        "desc": "5 turns. No Volatile, +1/16 hp. Holy moves don't miss.",
+        "type": "Holy",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "holyflash": {
+        "id": "holyflash",
+        "name": "Holy Flash",
+        "desc": "Priority +1, 15% chance to raise users Sp.Atk by 1.",
+        "type": "Holy",
+        "basePower": 55,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "saintray": {
+        "id": "saintray",
+        "name": "Saint Ray",
+        "desc": "10% chance to lower the target's sp.def by 1.",
+        "type": "Holy",
+        "basePower": 90,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "holyjudgment": {
+        "id": "holyjudgment",
+        "name": "Holy Judgment",
+        "desc": "10% chance to lower the target's atk by 1.",
+        "type": "Holy",
+        "basePower": 90,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "shiningnova": {
+        "id": "shiningnova",
+        "name": "Shining Nova",
+        "desc": "30% chance to lower the target's sp.atk by 1.",
+        "type": "Holy",
+        "basePower": 95,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "musclecharge": {
+        "id": "musclecharge",
+        "name": "Muscle Charge",
+        "desc": "Raises the user’s atk and spe by 1.",
+        "type": "Battle",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "warcry": {
+        "id": "warcry",
+        "name": "War Cry",
+        "desc": "Lowers user’s def, sp.def by 2; raises atk, sp.atk by 2.",
+        "type": "Battle",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "sonicjab": {
+        "id": "sonicjab",
+        "name": "Sonic Jab",
+        "desc": "priority +1.",
+        "type": "Battle",
+        "basePower": 65,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "fightingaura": {
+        "id": "fightingaura",
+        "name": "Fighting Aura",
+        "desc": "attacks foe(s), 10% chance to raise sp.atk by 1.",
+        "type": "Battle",
+        "basePower": 95,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "tremar": {
+        "id": "tremar",
+        "name": "Tremar",
+        "desc": "Deals 50 HP of damage to the target.",
+        "type": "Battle",
+        "basePower": 0,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "busterdrive": {
+        "id": "busterdrive",
+        "name": "Buster Drive",
+        "desc": "Charges turn 1, hits turn 2. 75% chance of flinch.",
+        "type": "Battle",
+        "basePower": 100,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "megatonpunch": {
+        "id": "megatonpunch",
+        "name": "Megaton Punch",
+        "desc": "15% chance to flinch the target.",
+        "type": "Battle",
+        "basePower": 90,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "mechanicalclaw": {
+        "id": "mechanicalclaw",
+        "name": "Mechanical Claw",
+        "desc": "Hits 2-5 times in one turn.",
+        "type": "Mech",
+        "basePower": 15,
+        "category": "Physical",
+        "accuracy": 95,
+        "pokemonMove": false
+    },
+    "upgrade": {
+        "id": "upgrade",
+        "name": "Upgrade",
+        "desc": "Priority -1. Raises user’s atk, def, sp.atk and spe by 1.",
+        "type": "Mech",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "reverseprogram": {
+        "id": "reverseprogram",
+        "name": "Reverse Program",
+        "desc": "Causes adjacent monsters to be buggy.",
+        "type": "Mech",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "antiattackfield": {
+        "id": "antiattackfield",
+        "name": "Anti-Attack Field",
+        "desc": "Has a 30% chance to flinch the foe(s).",
+        "type": "Mech",
+        "basePower": 70,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "gigawattlaser": {
+        "id": "gigawattlaser",
+        "name": "Gigawatt Laser",
+        "desc": "10% chance to par the target.",
+        "type": "Mech",
+        "basePower": 80,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "deleteprogram": {
+        "id": "deleteprogram",
+        "name": "Delete Program",
+        "desc": "30% chance to bug the target.",
+        "type": "Mech",
+        "basePower": 90,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "dgdimension": {
+        "id": "dgdimension",
+        "name": "DG Dimension",
+        "desc": "30% chance to lower the foe(s) acc by 1.",
+        "type": "Mech",
+        "basePower": 90,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "cootieskick": {
+        "id": "cootieskick",
+        "name": "Cooties Kick",
+        "desc": "20% chance to psn the target. Hits 2-5 times.",
+        "type": "Filth",
+        "basePower": 10,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "superstinkyjet": {
+        "id": "superstinkyjet",
+        "name": "Super Stinky Jet",
+        "desc": "40% chance to psn the target.",
+        "type": "Filth",
+        "basePower": 30,
+        "category": "Special",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "guerrillapoop": {
+        "id": "guerrillapoop",
+        "name": "Guerrilla Poop",
+        "desc": "Hits twice",
+        "type": "Filth",
+        "basePower": 50,
+        "category": "Physical",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "poopattackfield": {
+        "id": "poopattackfield",
+        "name": "Poop Attack Field",
+        "desc": "10% chance of psn adjacent monsters.",
+        "type": "Filth",
+        "basePower": 80,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "poopfling": {
+        "id": "poopfling",
+        "name": "Poop Fling",
+        "desc": "5% chance to confuse the target. Hits 3-5 times.",
+        "type": "Filth",
+        "basePower": 18,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "pooptoss": {
+        "id": "pooptoss",
+        "name": "Poop Toss",
+        "desc": "30% chance to lower the target’s spe by 2.",
+        "type": "Filth",
+        "basePower": 75,
+        "category": "Physical",
+        "accuracy": 100,
+        "pokemonMove": false
+    },
+    "extremepoopdeath": {
+        "id": "extremepoopdeath",
+        "name": "Extreme Poop Death",
+        "desc": "25% chance of psn foe(s).",
+        "type": "Filth",
+        "basePower": 85,
+        "category": "Special",
+        "accuracy": 90,
+        "pokemonMove": false
+    },
+    "panicattack": {
+        "id": "panicattack",
+        "name": "Panic Attack",
+        "desc": "No additional effects.",
+        "type": "Battle",
+        "basePower": 40,
+        "category": "Physical",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "dotbeam": {
+        "id": "dotbeam",
+        "name": "Dot Beam",
+        "desc": "No additional effects.",
+        "type": "Mech",
+        "basePower": 40,
+        "category": "Physical",
+        "accuracy": "-",
+        "pokemonMove": false
+    },
+    "watersport": {
+        "id": "watersport",
+        "name": "Water Sport",
+        "desc": "For 5 turns, Fire-type attacks have 1/3 power.",
+        "type": "Water",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": true
+    },
+    "mudsport": {
+        "id": "mudsport",
+        "name": "Mud Sport",
+        "desc": "For 5 turns, Electric-type attacks have 1/3 power.",
+        "type": "Ground",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": true
+    },
+    "electricterrain": {
+        "id": "electricterrain",
+        "name": "Electric Terrain",
+        "desc": "5 turns. Grounded: +Electric power, can't sleep.",
+        "type": "Electric",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": true
+    },
+    "rototiller": {
+        "id": "rototiller",
+        "name": "Rototiller",
+        "desc": "Raises Atk/Sp. Atk of grounded Grass types by 1.",
+        "type": "Ground",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": true
+    },
+    "grassyterrain": {
+        "id": "grassyterrain",
+        "name": "Grassy Terrain",
+        "desc": "5 turns. Grounded: +Grass power,+1/16 max HP.",
+        "type": "Grass",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": true
+    },
+    "flowershield": {
+        "id": "flowershield",
+        "name": "Flower Shield",
+        "desc": "Raises Defense by 1 of all active Grass types.",
+        "type": "Fairy",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": true
+    },
+    "raindance": {
+        "id": "raindance",
+        "name": "Rain Dance",
+        "desc": "For 5 turns, heavy rain powers Water moves.",
+        "type": "Water",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": true
+    },
+    "sunnyday": {
+        "id": "sunnyday",
+        "name": "Sunny Day",
+        "desc": "For 5 turns, intense sunlight powers Fire moves.",
+        "type": "Fire",
+        "basePower": 0,
+        "category": "Status",
+        "accuracy": "-",
+        "pokemonMove": true
+    }
+}

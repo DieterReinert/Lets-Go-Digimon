@@ -1627,9 +1627,9 @@ let BattlePokedex = {
 		color: "Brown",
 		eggGroups: ["Undiscovered"],
 	},
-	meicrackmonviciousmode: {
+	meicrackmonvm: {
 		num: -2125,
-		species: "MeicrackmonViciousMode",
+		species: "Meicrackmon VM",
 		stage: "Ultimate",
 		types: ["Evil"],
 		gender: "N",
@@ -1642,7 +1642,7 @@ let BattlePokedex = {
 	},
 	metalgreymonvaccine: {
 		num: -2126,
-		species: "MetalGreymonVaccine",
+		species: "MetalGreymon Vaccine",
 		stage: "Ultimate",
 		types: ["Flame"],
 		gender: "N",
@@ -1655,7 +1655,7 @@ let BattlePokedex = {
 	},
 	metalgreymonvirus: {
 		num: -2127,
-		species: "MetalGreymonVirus",
+		species: "MetalGreymon Virus",
 		stage: "Ultimate",
 		types: ["Flame", "Evil"],
 		gender: "N",
@@ -1915,7 +1915,7 @@ let BattlePokedex = {
 	},
 	cherubimonevil: {
 		num: -2147,
-		species: "CherubimonEvil",
+		species: "Cherubimon Evil",
 		stage: "Mega",
 		types: ["Evil"],
 		gender: "N",
@@ -1928,7 +1928,7 @@ let BattlePokedex = {
 	},
 	cherubimongood: {
 		num: -2148,
-		species: "CherubimonGood",
+		species: "Cherubimon Good",
 		stage: "Mega",
 		types: ["Holy"],
 		gender: "N",
