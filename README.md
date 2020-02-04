@@ -17,7 +17,7 @@ Generates a basic CSS template for Digimon-Showdown.
 
 # Usage
 (NOTE: Node.js is required)
-- Open `Command Prompt` in the `Digimon-Showdown-CSS` directory.
+- Open `Command Prompt` in the `Digimon-Showdown` directory.
 - Type `npm run start` or `node index.js`.
 - Enjoy Digimon-Showdown on your server.
 
