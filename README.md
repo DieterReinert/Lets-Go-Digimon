@@ -1,6 +1,6 @@
-# Digimon-Showdown
+# Digimon Showdown: Dimensional Rift
 
-This is the official Digimon Showdown repository.
+This is the official Digimon Showdown: Dimensional Rift repository.
 
 This is to be used with [Pokémon Showdown](https://github.com/Zarel/Pokemon-Showdown).
 
