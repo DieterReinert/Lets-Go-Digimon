@@ -4463,19 +4463,19 @@ let BattleMovedex = {
 		signature: false,
 		id: "thunderjustice",
 		priority: 0,
-		basePower: 90,
+		basePower: 110,
 		pp: 10,
 		category: "Special",
 		type: "Air",
 		target: "normal",
-		desc: "Does not check accuracy, 10% chance to paralyze.",
-		shortDesc: "Does not check acc, 10% chance to par.",
+		desc: "10% chance to paralyze.",
+		shortDesc: "10% chance to par.",
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "stokedsparksurfer", target);
 		},
 		flags: { protect: 1, mirror: 1 },
-		accuracy: true,
+		accuracy: 70,
 		secondary: {
 			chance: 10,
 			volatileStatus: 'par',
