@@ -2381,6 +2381,7 @@ let BattleLearnsets = {
 			terraforce: ["7M"],
 			protect: ["7M"],
 		},
+	},
 	blackagumon: {
 		learnset: {
 			guerrillapoop: ["7M"],
@@ -2397,6 +2398,7 @@ let BattleLearnsets = {
 			reverseprogram: ["7M"],
 			musclecharge: ["7M"],
 		},
+	},
 	blackgabumon: {
 		learnset: {
 			heatbreath: ["7M"],
@@ -2408,6 +2410,7 @@ let BattleLearnsets = {
 			sonicjab: ["7M"],
 			protect: ["7M"],
 		},
+	},
 	blackgreymon: {
 		learnset: {
 			blackout: ["7M"],
@@ -2428,6 +2431,7 @@ let BattleLearnsets = {
 			evilfantasy: ["7M"],
 			reverseprogram: ["7M"],
 		},
+	},	
 	blackgarurumon: {
 		learnset: {
 			sonicjab: ["7M"],
@@ -2447,6 +2451,7 @@ let BattleLearnsets = {
 			warcry: ["7M"],
 			blackout: ["7M"],
 		},
+	},
 	keramon: {
 		learnset: {
 			burningheart: ["7M"],
@@ -2459,6 +2464,7 @@ let BattleLearnsets = {
 			antiattackfield: ["7M"],
 			protect: ["7M"],
 		},
+	},
 	keramon: {
 		learnset: {
 			burningheart: ["7M"],
@@ -2471,6 +2477,7 @@ let BattleLearnsets = {
 			antiattackfield: ["7M"],
 			protect: ["7M"],
 		},
+	},
 	chrysalimon: {
 		learnset: {
 			burningheart: ["7M"],
@@ -2484,6 +2491,7 @@ let BattleLearnsets = {
 			antiattackfield: ["7M"],
 			protect: ["7M"],
 		},
+	},
 	infermon: {
 		learnset: {
 			burningheart: ["7M"],
@@ -2497,6 +2505,7 @@ let BattleLearnsets = {
 			antiattackfield: ["7M"],
 			protect: ["7M"],
 		},
+	},
 	diaboromon: {
 		learnset: {
 			burningheart: ["7M"],
@@ -2513,6 +2522,7 @@ let BattleLearnsets = {
 			gigawattlaser: ["7M"],
 			protect: ["7M"],
 		},
+	},
 	omnimon: {
 		learnset: {
 			holyterrain: ["7M"],
@@ -2529,6 +2539,7 @@ let BattleLearnsets = {
 			thunderjustice: ["7M"],
 			protect: ["7M"],
 		},
+	},
 	omnimonzwart: {
 		learnset: {
 			evilfantasy: ["7M"],
