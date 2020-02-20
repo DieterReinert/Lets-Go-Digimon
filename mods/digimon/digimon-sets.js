@@ -1015,5 +1015,55 @@ module.exports = [
         "ability": "Vaccine",
         "moves": ["Burning Heart", "Fire Tower", "Firewall", "Infinity Burn", "Muscle Charge", "Sonic Jab", "Buster Drive", "Mechanical Claw", "Anti-Attack Field", "Delete Program", "Fighting Aura"],
         "reservedMove": "Terra Force"
+    },
+	{
+        "species": "BlackAgumon",
+        "ability": "Virus",
+        "moves": ["guerrillapoop", "shadowfall", "sonicjab", "deleteprogram", "fightingaura", "heatbreath", "infinityburn", "meltdown", "blackout", "firewall", "evilfantasy", "reverseprogram", "musclecharge"],
+	},
+	{
+        "species": "BlackGabumon",
+        "ability": "Virus",
+        "moves": ["Heat Breath", "Fire Tower", "Hail Spear", "Winter Blast", "Giga Freeze", "Ice Statue", "Muscle Charge", "Sonic Jab"],
+	},
+	{
+        "species": "BlackGreymon",
+        "ability": "Virus",
+        "moves": ["blackout", shadowfall", "guerrillapoop", "infinityburn", "sonicjab", "deleteprogram", "megalospark", "busterdrive", "heatbreath", "prominencebeam", "meltdown", "wingshoes", "musclecharge", "warcry", "firewall", "evilfantasy", "reverseprogram"],
+	},
+	{
+        "species": "BlackGarurumon",
+        "ability": "Virus",
+        "moves": ["sonicjab", "pooptoss", "firetower", "icestatue", "heatbreath", "aurorafreeze", "gigafreeze", "shadowfall", "oceanwave", "charmperfume", "meltdown", "massmorph", "protect", "evilfantasy", "warcry", "blackout"],
+    },
+	{
+        "species": "Keramon",
+        "ability": "Virus",
+        "moves": ["burningheart", "shadowfall", "musclecharge", "sonicjab", "fightingaura", "busterdrive", "mechanicalclaw", "antiattackfield", "protect"],
+    },
+	{
+        "species": "Chrysalimon",
+        "ability": "Virus",
+        "moves": ["burningheart", "winterblast", "shadowfall", "musclecharge", "sonicjab", "icestatue", "busterdrive", "mechanicalclaw", "antiattackfield", "protect"],
+    },
+	{
+        "species": "Infermon",
+        "ability": "Virus",
+        "moves": ["burningheart", "infinityburn", "shadowfall", "musclecharge", "sonicjab", "icestatue", "busterdrive", "mechanicalclaw", "antiattackfield", "protect"],
+    },
+	{
+        "species": "Diaboromon",
+        "ability": "Virus",
+        "moves": ["burningheart", "infinityburn", "prominencebeam", "shadowfall", "evilsquall", "icestatue", "busterdrive", "sonicjab", "mechanicalclaw", "antiattackfield", "deleteprogram", "gigawattlaser", "protect"],
+    },
+	{
+        "species": "Omnimon",
+        "ability": "Vaccine",
+        "moves": ["holyterrain", "saintray", "holyjudgment", "shiningnova", "warcry", "sonicjab", "tremar", "upgrade", "deleteprogram", "dgdimension", "burningheart", "thunderjustice", "protect",
+    },
+	{
+        "species": "OmnimonZwart",
+        "ability": "Vaccine",
+        "moves": ["evilfantasy", "saintray", "evilsquall", "hideandseek", "warcry", "sonicjab", "tremar", "upgrade", "deleteprogram", "dgdimension", "burningheart", "shadowfall", "protect"],
     }
 ];
