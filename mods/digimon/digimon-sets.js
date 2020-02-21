@@ -1029,7 +1029,7 @@ module.exports = [
 	{
         "species": "BlackGreymon",
         "ability": "Virus",
-        "moves": ["blackout", shadowfall", "guerrillapoop", "infinityburn", "sonicjab", "deleteprogram", "megalospark", "busterdrive", "heatbreath", "prominencebeam", "meltdown", "wingshoes", "musclecharge", "warcry", "firewall", "evilfantasy", "reverseprogram"],
+        "moves": ["blackout", "shadowfall", "guerrillapoop", "infinityburn", "sonicjab", "deleteprogram", "megalospark", "busterdrive", "heatbreath", "prominencebeam", "meltdown", "wingshoes", "musclecharge", "warcry", "firewall", "evilfantasy", "reverseprogram"],
 	},
 	{
         "species": "BlackGarurumon",
@@ -1059,7 +1059,7 @@ module.exports = [
 	{
         "species": "Omnimon",
         "ability": "Vaccine",
-        "moves": ["holyterrain", "saintray", "holyjudgment", "shiningnova", "warcry", "sonicjab", "tremar", "upgrade", "deleteprogram", "dgdimension", "burningheart", "thunderjustice", "protect",
+        "moves": ["holyterrain", "saintray", "holyjudgment", "shiningnova", "warcry", "sonicjab", "tremar", "upgrade", "deleteprogram", "dgdimension", "burningheart", "thunderjustice", "protect",]
     },
 	{
         "species": "OmnimonZwart",
