@@ -4035,7 +4035,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "firespin", source);
 			this.add('-anim', source, "protect", source);
-			return !!this.willAct() && this.runEvent('StallMove', pokemon);
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
 		},
 		flags: { defrost: 1 },
 		accuracy: true,
