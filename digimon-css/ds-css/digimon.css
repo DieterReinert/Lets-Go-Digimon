@@ -2827,6 +2827,166 @@ button[value^="Vikemon"] .picon {
 button[value^="WarGreymon"] .picon {
   background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -120px -420px !important
 }
+/** BlackAgumon CSS **/
+.innerbattle div > div > img[src*="gen5/blackagumon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani/blackagumon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle div > div > img[src*="gen5-back/blackagumon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani-back/blackagumon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle .picon[aria-label^="BlackAgumon"],
+.innerbattle .picon[aria-label^="blackagumon"],
+button[value^="BlackAgumon"] .picon {
+  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -160px -420px !important
+}
+/** BlackGabumon CSS **/
+.innerbattle div > div > img[src*="gen5/blackgabumon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani/blackgabumon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle div > div > img[src*="gen5-back/blackgabumon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani-back/blackgabumon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle .picon[aria-label^="BlackGabumon"],
+.innerbattle .picon[aria-label^="blackgabumon"],
+button[value^="BlackGabumon"] .picon {
+  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -200px -420px !important
+}
+/** BlackGreymon CSS **/
+.innerbattle div > div > img[src*="gen5/blackgreymon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani/blackgreymon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle div > div > img[src*="gen5-back/blackgreymon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani-back/blackgreymon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle .picon[aria-label^="BlackGreymon"],
+.innerbattle .picon[aria-label^="blackgreymon"],
+button[value^="BlackGreymon"] .picon {
+  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -240px -420px !important
+}
+/** BlackGarurumon CSS **/
+.innerbattle div > div > img[src*="gen5/blackgarurumon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani/blackgarurumon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle div > div > img[src*="gen5-back/blackgarurumon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani-back/blackgarurumon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle .picon[aria-label^="BlackGarurumon"],
+.innerbattle .picon[aria-label^="blackgarurumon"],
+button[value^="BlackGarurumon"] .picon {
+  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -280px -420px !important
+}
+/** Keramon CSS **/
+.innerbattle div > div > img[src*="gen5/keramon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani/keramon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle div > div > img[src*="gen5-back/keramon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani-back/keramon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle .picon[aria-label^="Keramon"],
+.innerbattle .picon[aria-label^="keramon"],
+button[value^="Keramon"] .picon {
+  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -320px -420px !important
+}
+/** Chrysalimon CSS **/
+.innerbattle div > div > img[src*="gen5/chrysalimon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani/chrysalimon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle div > div > img[src*="gen5-back/chrysalimon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani-back/chrysalimon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle .picon[aria-label^="Chrysalimon"],
+.innerbattle .picon[aria-label^="chrysalimon"],
+button[value^="Chrysalimon"] .picon {
+  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -360px -420px !important
+}
+/** Infermon CSS **/
+.innerbattle div > div > img[src*="gen5/infermon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani/infermon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle div > div > img[src*="gen5-back/infermon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani-back/infermon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle .picon[aria-label^="Infermon"],
+.innerbattle .picon[aria-label^="infermon"],
+button[value^="Infermon"] .picon {
+  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -400px -420px !important
+}
+/** Diaboromon CSS **/
+.innerbattle div > div > img[src*="gen5/diaboromon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani/diaboromon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle div > div > img[src*="gen5-back/diaboromon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani-back/diaboromon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle .picon[aria-label^="Diaboromon"],
+.innerbattle .picon[aria-label^="diaboromon"],
+button[value^="Diaboromon"] .picon {
+  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -440px -420px !important
+}
+/** Omnimon CSS **/
+.innerbattle div > div > img[src*="gen5/omnimon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani/omnimon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle div > div > img[src*="gen5-back/omnimon"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani-back/omnimon.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle .picon[aria-label^="Omnimon"],
+.innerbattle .picon[aria-label^="omnimon"],
+button[value^="Omnimon"] .picon {
+  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll 0px -450px !important
+}
+/** OmnimonZwart CSS **/
+.innerbattle div > div > img[src*="gen5/omnimonzwart"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani/omnimonzwart.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle div > div > img[src*="gen5-back/omnimonzwart"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani-back/omnimonzwart.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle .picon[aria-label^="OmnimonZwart"],
+.innerbattle .picon[aria-label^="omnimonzwart"],
+button[value^="OmnimonZwart"] .picon {
+  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -40px -450px !important
+}
 /** DIGIMON MOVES CSS **/
 /** Acid Bubble CSS **/
 .movemenu button[data-move="Acid Bubble"],
@@ -5150,10 +5310,10 @@ div[id*="digimon"] .movemenu button[data-move="Megalo Spark"] .pp:before {
 }
 .movemenu button[data-move="Thunder Justice"] .type:after {
   font-weight: bold;
-  content: "[SPA] [BP: 90] [Acc: -]"
+  content: "[SPA] [BP: 110] [Acc: 70]"
 }
 div[id*="digimon"] .movemenu button[data-move="Thunder Justice"] .pp:before {
-  content: "(Does not check acc, 10% chance to par.) "
+  content: "(10% chance to par.) "
 }
 /** Earth Coat CSS **/
 .movemenu button[data-move="Earth Coat"],
