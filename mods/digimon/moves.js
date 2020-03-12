@@ -4731,7 +4731,7 @@ let BattleMovedex = {
 		},
 		flags: { protect: 1, mirror: 1, authentic: 1 },
 		onTry(source, target) {
-			let action = this.willMove(target);
+			let action = this.queue.willMove(target);
 			if (!action || action.choice !== 'move' || (action.move.category === 'Status' && action.move.id !== 'mefirst') || target.volatiles.mustrecharge) {
 				this.add('-fail', source);
 				this.attrLastMove('[still]');
