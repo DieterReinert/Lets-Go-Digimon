@@ -23,7 +23,7 @@ const digiDex = require('../../data/mods/digimon/pokedex').BattlePokedex;
  */ 
 let tierDexList = {digimon: digiDex};
 
-const TB = {};
+let TB = {};
 
 function writeTB() {
 	FS("config/chat-plugins/teambuilder.json").write(JSON.stringify((TB ? TB : {})));
