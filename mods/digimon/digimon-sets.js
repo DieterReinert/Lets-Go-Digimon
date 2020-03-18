@@ -1067,7 +1067,7 @@ module.exports = [
 	{
         "species": "Omnimon",
         "ability": "Vaccine",
-        "moves": ["holyterrain", "saintray", "holyjudgment", "shiningnova", "warcry", "sonicjab", "tremar", "upgrade", "deleteprogram", "dgdimension", "burningheart", "thunderjustice", "protect",]
+        "moves": ["holyterrain", "saintray", "holyjudgment", "shiningnova", "warcry", "sonicjab", "tremar", "upgrade", "deleteprogram", "dgdimension", "burningheart", "thunderjustice", "protect"],
 		"reservedMove": "Transcendent Sword"
     },
 	{
