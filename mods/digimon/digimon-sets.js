@@ -1020,50 +1020,60 @@ module.exports = [
         "species": "BlackAgumon",
         "ability": "Virus",
         "moves": ["guerrillapoop", "shadowfall", "sonicjab", "deleteprogram", "fightingaura", "heatbreath", "infinityburn", "meltdown", "blackout", "firewall", "evilfantasy", "reverseprogram", "musclecharge"],
+		"reservedMove": "Dangerous Bite"
 	},
 	{
         "species": "BlackGabumon",
         "ability": "Virus",
         "moves": ["Heat Breath", "Fire Tower", "Hail Spear", "Winter Blast", "Giga Freeze", "Ice Statue", "Muscle Charge", "Sonic Jab"],
+		"reservedMove": "Black Ice"
 	},
 	{
         "species": "BlackGreymon",
         "ability": "Virus",
         "moves": ["blackout", "shadowfall", "guerrillapoop", "infinityburn", "sonicjab", "deleteprogram", "megalospark", "busterdrive", "heatbreath", "prominencebeam", "meltdown", "wingshoes", "musclecharge", "warcry", "firewall", "evilfantasy", "reverseprogram"],
+		"reservedMove": "Bit Fire"
 	},
 	{
         "species": "BlackGarurumon",
         "ability": "Virus",
         "moves": ["sonicjab", "pooptoss", "firetower", "icestatue", "heatbreath", "aurorafreeze", "gigafreeze", "shadowfall", "oceanwave", "charmperfume", "meltdown", "massmorph", "protect", "evilfantasy", "warcry", "blackout"],
+		"reservedMove": "Fox Fire"
     },
 	{
         "species": "Keramon",
         "ability": "Virus",
         "moves": ["burningheart", "shadowfall", "musclecharge", "sonicjab", "fightingaura", "busterdrive", "mechanicalclaw", "antiattackfield", "protect"],
+		"reservedMove": "Bug Blaster"
     },
 	{
         "species": "Chrysalimon",
         "ability": "Virus",
         "moves": ["burningheart", "winterblast", "shadowfall", "musclecharge", "sonicjab", "icestatue", "busterdrive", "mechanicalclaw", "antiattackfield", "protect"],
+		"reservedMove": "Misconnecting"
     },
 	{
         "species": "Infermon",
         "ability": "Virus",
         "moves": ["burningheart", "infinityburn", "shadowfall", "musclecharge", "sonicjab", "icestatue", "busterdrive", "mechanicalclaw", "antiattackfield", "protect"],
+		"reservedMove": "Spider Shooter"
     },
 	{
         "species": "Diaboromon",
         "ability": "Virus",
         "moves": ["burningheart", "infinityburn", "prominencebeam", "shadowfall", "evilsquall", "icestatue", "busterdrive", "sonicjab", "mechanicalclaw", "antiattackfield", "deleteprogram", "gigawattlaser", "protect"],
+		"reservedMove": "Web Wrecker"
     },
 	{
         "species": "Omnimon",
         "ability": "Vaccine",
         "moves": ["holyterrain", "saintray", "holyjudgment", "shiningnova", "warcry", "sonicjab", "tremar", "upgrade", "deleteprogram", "dgdimension", "burningheart", "thunderjustice", "protect",]
+		"reservedMove": "Transcendent Sword"
     },
 	{
         "species": "OmnimonZwart",
         "ability": "Vaccine",
         "moves": ["evilfantasy", "saintray", "evilsquall", "hideandseek", "warcry", "sonicjab", "tremar", "upgrade", "deleteprogram", "dgdimension", "burningheart", "shadowfall", "protect"],
+		"reservedMove": "Supreme Cannon"
     }
 ];
