@@ -2384,6 +2384,7 @@ let BattleLearnsets = {
 	},
 	blackagumon: {
 		learnset: {
+			dangerousbite: ["7M"],
 			guerrillapoop: ["7M"],
 			shadowfall: ["7M"],
 			sonicjab: ["7M"],
@@ -2401,6 +2402,7 @@ let BattleLearnsets = {
 	},
 	blackgabumon: {
 		learnset: {
+			blackice: ["7M"],
 			heatbreath: ["7M"],
 			firetower: ["7M"],
 			hailspear: ["7M"],
@@ -2413,6 +2415,7 @@ let BattleLearnsets = {
 	},
 	blackgreymon: {
 		learnset: {
+			bitfire: ["7M"],
 			blackout: ["7M"],
 			shadowfall: ["7M"],
 			guerrillapoop: ["7M"],
@@ -2434,6 +2437,7 @@ let BattleLearnsets = {
 	},	
 	blackgarurumon: {
 		learnset: {
+			foxfire: ["7M"],
 			sonicjab: ["7M"],
 			pooptoss: ["7M"],
 			firetower: ["7M"],
@@ -2454,6 +2458,7 @@ let BattleLearnsets = {
 	},
 	keramon: {
 		learnset: {
+			bugblaster: ["7M"],
 			burningheart: ["7M"],
 			shadowfall: ["7M"],
 			musclecharge: ["7M"],
@@ -2467,6 +2472,7 @@ let BattleLearnsets = {
 	},
 	chrysalimon: {
 		learnset: {
+			misconnecting: ["7M"],
 			burningheart: ["7M"],
 			winterblast: ["7M"],
 			shadowfall: ["7M"],
@@ -2481,6 +2487,7 @@ let BattleLearnsets = {
 	},
 	infermon: {
 		learnset: {
+			spidershooter: ["7M"],
 			burningheart: ["7M"],
 			infinityburn: ["7M"],
 			shadowfall: ["7M"],
@@ -2495,6 +2502,7 @@ let BattleLearnsets = {
 	},
 	diaboromon: {
 		learnset: {
+			webwrecker: ["7M"],
 			burningheart: ["7M"],
 			infinityburn: ["7M"],
 			prominencebeam: ["7M"],
@@ -2512,6 +2520,7 @@ let BattleLearnsets = {
 	},
 	omnimon: {
 		learnset: {
+			transcendentsword: ["7M"],
 			holyterrain: ["7M"],
 			saintray: ["7M"],
 			holyjudgment: ["7M"],
@@ -2529,6 +2538,7 @@ let BattleLearnsets = {
 	},
 	omnimonzwart: {
 		learnset: {
+			supremecannon: ["7M"],
 			evilfantasy: ["7M"],
 			saintray: ["7M"],
 			evilsquall: ["7M"],
