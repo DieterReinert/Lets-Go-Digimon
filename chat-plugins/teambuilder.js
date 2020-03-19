@@ -353,16 +353,20 @@ class TeamBuilder {
 exports.TeamBuilder = TeamBuilder;
 
 try {
-	FS("config/chat-plugins/teambuilder.json").readIfExistsSync();
+	FS("config/chat-plugins/teambuilder.json").readSync();
 } catch (e) {
-	FS("config/chat-plugins/teambuilder.json").write("{}", function (err) {
-		if (err) {
-			console.error('Error while loading teambuilder.json ' + err);
-			TB = {};
-		} else {
-			console.log('config/chat-plugins/teambuilder.json is not found, making a new one');
-		}
-	});
+	// Temp hack
+	console.log("config/chat-plugins/teambuilder.json is not found, making a new one");
+	FS("config/chat-plugins/teambuilder.json").writeSync("{}");
+
+	// FS("config/chat-plugins/teambuilder.json").write("{}", function (err) {
+	// 	if (err) {
+	// 		console.error('Error while loading teambuilder.json ' + err);
+	// 		TB = {};
+	// 	} else {
+	// 		console.log('config/chat-plugins/teambuilder.json is not found, making a new one');
+	// 	}
+	// });
 }
 
 try {
