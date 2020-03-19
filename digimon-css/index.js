@@ -4,6 +4,8 @@ const execSync = require('child_process').execSync;
 const { existsSync, readdirSync, readFileSync, writeFileSync } = require('fs');
 const join = require('path').join;
 
+process.chdir(__dirname + '/..');
+
 // DATA DIRECTORY
 const DATA_DIR = join(__dirname, '/ds-data');
 if (!existsSync(DATA_DIR)) {

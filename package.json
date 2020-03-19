@@ -4,7 +4,8 @@
   "description": "This is the official Digimon Showdown repository.",
   "main": "index.js",
   "scripts": {
-    "start": "cd ./digimon-css && node build && node index.js"
+    "build": "cd ./digimon-css && node build && node index.js",
+    "start": "./pokemon-showdown/pokemon-showdown"
   },
   "repository": {
     "type": "git",
