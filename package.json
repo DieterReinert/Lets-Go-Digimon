@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "cd ./digimon-css && node build && node index.js",
-    "start": "./pokemon-showdown/pokemon-showdown"
+    "start": "./deploy && ./pokemon-showdown/pokemon-showdown"
   },
   "repository": {
     "type": "git",
