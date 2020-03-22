@@ -252,31 +252,31 @@ exports.commands = {
 						menu += `<td style="width: 135px; text-align: center;"><table style="width: 123px; background-color: #ffffff; border-color: #011f55; float: left;" border="1"><tbody><tr style="height: 17px;">`;
 						menu += `<td style="height: 17px; text-align: center;"><strong><img style="float: left;" src="${type1}">`;
 						menu += `<img style="float: right;" src="${ability}"><br></strong></td></tr><tr style="height: 98px;">`;
-						menu += `<td style="width: 122px; height: 98px;"><strong><img src="https://play.pokemonshowdown.com/sprites/digimon/sprites/digimon/${template.id}.png"><br><span style="font-size: xx-small;">${template.name}<br></span></strong></td></tr></tbody></table></td></tr></tbody></table> `;
+						menu += `<td style="width: 122px; height: 98px;"><strong><img src="https://play.pokemonshowdown.com/sprites/digimon/sprites/digimon/${template.id}.png"><br><span style="font-size: xx-small; color: #000000;">${template.name}<br></span></strong></td></tr></tbody></table></td></tr></tbody></table> `;
 					} else if (!template.types[2] && (template.id === 'meicrackmonvm' || template.id === 'cherubimonevil' || template.id === 'cherubimongood')) {
 						menu += `<button class="button" name="send" value="/digisearchdisplay ${template.id}"><table style="width: 135px; background-color: #011f55; border-color: #008dc5; float: left;" border="2"><tbody><tr>`;
 						menu += `<td style="width: 135px; text-align: center;"><table style="width: 123px; background-color: #ffffff; border-color: #011f55; float: left;" border="1"><tbody><tr style="height: 17px;">`;
 						menu += `<td style="height: 17px; text-align: center;"><strong><img style="float: left;" src="${type1}"><img style="float: left;" src="${type2}">`;
 						menu += `<img style="float: right;" src="${ability}"><br></strong></td></tr><tr style="height: 98px;">`;
-						menu += `<td style="width: 122px; height: 98px;"><strong><img src="https://play.pokemonshowdown.com/sprites/digimon/sprites/digimon/${template.id}.png"><br><span style="font-size: xx-small;">${first}<br>${second}<br></span></strong></td></tr></tbody></table></td></tr></tbody></table> `;
+						menu += `<td style="width: 122px; height: 98px;"><strong><img src="https://play.pokemonshowdown.com/sprites/digimon/sprites/digimon/${template.id}.png"><br><span style="font-size: xx-small; color: #000000;">${first}<br>${second}<br></span></strong></td></tr></tbody></table></td></tr></tbody></table> `;
 					} else if (!template.types[2]) {
 						menu += `<button class="button" name="send" value="/digisearchdisplay ${template.id}"><table style="width: 135px; background-color: #011f55; border-color: #008dc5; float: left;" border="2"><tbody><tr>`;
 						menu += `<td style="width: 135px; text-align: center;"><table style="width: 123px; background-color: #ffffff; border-color: #011f55; float: left;" border="1"><tbody><tr style="height: 17px;">`;
 						menu += `<td style="height: 17px; text-align: center;"><strong><img style="float: left;" src="${type1}"><img style="float: left;" src="${type2}">`;
 						menu += `<img style="float: right;" src="${ability}"><br></strong></td></tr><tr style="height: 98px;">`;
-						menu += `<td style="width: 122px; height: 98px;"><strong><img src="https://play.pokemonshowdown.com/sprites/digimon/sprites/digimon/${template.id}.png"><br><span style="font-size: xx-small;">${template.name}<br></span></strong></td></tr></tbody></table></td></tr></tbody></table> `;
+						menu += `<td style="width: 122px; height: 98px;"><strong><img src="https://play.pokemonshowdown.com/sprites/digimon/sprites/digimon/${template.id}.png"><br><span style="font-size: xx-small; color: #000000;">${template.name}<br></span></strong></td></tr></tbody></table></td></tr></tbody></table> `;
 					} else if (template.id === 'metalgreymonvaccine' || template.id === 'metalgreymonvirus') {
 						menu += `<button class="button" name="send" value="/digisearchdisplay ${template.id}"><table style="width: 135px; background-color: #011f55; border-color: #008dc5; float: left;" border="2"><tbody><tr>`;
 						menu += `<td style="width: 135px; text-align: center;"><table style="width: 123px; background-color: #ffffff; border-color: #011f55; float: left;" border="1"><tbody><tr style="height: 17px;">`;
 						menu += `<td style="height: 17px; text-align: center;"><strong><img style="float: left;" src="${type1}"><img style="float: left;" src="${type2}">`;
 						menu += `<img style="float: left;" src="${type3}"><img style="float: right;" src="${ability}"><br></strong></td></tr><tr style="height: 98px;">`;
-						menu += `<td style="width: 122px; height: 98px;"><strong><img src="https://play.pokemonshowdown.com/sprites/digimon/sprites/digimon/${template.id}.png"><br><span style="font-size: xx-small;">${first}<br>${second}<br></span></strong></td></tr></tbody></table></td></tr></tbody></table> `;
+						menu += `<td style="width: 122px; height: 98px;"><strong><img src="https://play.pokemonshowdown.com/sprites/digimon/sprites/digimon/${template.id}.png"><br><span style="font-size: xx-small; color: #000000;">${first}<br>${second}<br></span></strong></td></tr></tbody></table></td></tr></tbody></table> `;
 					} else {
 						menu += `<button class="button" name="send" value="/digisearchdisplay ${template.id}"><table style="width: 135px; background-color: #011f55; border-color: #008dc5; float: left;" border="2"><tbody><tr>`;
 						menu += `<td style="width: 135px; text-align: center;"><table style="width: 123px; background-color: #ffffff; border-color: #011f55; float: left;" border="1"><tbody><tr style="height: 17px;">`;
 						menu += `<td style="height: 17px; text-align: center;"><strong><img style="float: left;" src="${type1}"><img style="float: left;" src="${type2}">`;
 						menu += `<img style="float: left;" src="${type3}"><img style="float: right;" src="${ability}"><br></strong></td></tr><tr style="height: 98px;">`;
-						menu += `<td style="width: 122px; height: 98px;"><strong><img src="https://play.pokemonshowdown.com/sprites/digimon/sprites/digimon/${template.id}.png"><br><span style="font-size: xx-small;">${template.name}<br></span></strong></td></tr></tbody></table></td></tr></tbody></table> `;
+						menu += `<td style="width: 122px; height: 98px;"><strong><img src="https://play.pokemonshowdown.com/sprites/digimon/sprites/digimon/${template.id}.png"><br><span style="font-size: xx-small; color: #000000;">${template.name}<br></span></strong></td></tr></tbody></table></td></tr></tbody></table> `;
 					}
 				}
 				if (!foundDigimon) menu += `No digimon were found.`;
