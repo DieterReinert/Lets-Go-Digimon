@@ -1,12 +1,13 @@
-exports.Formats = [
+/**@type {(FormatsData | {section: string, column?: number})[]} */
+let DigimonFormats = [
 	// Digimon Metas
 	{
 		section: "Digmon Metas",
 		column: 2,
 	},
-{
+	{
 		name: "[Digimon] Digimon Showdown Singles",
-		desc: ["Battle and play with your friends with Digimon."],
+		desc: "Battle and play with your friends with Digimon.",
 
 		mod: "digimon",
 		team: "randomDigimon",
@@ -26,7 +27,7 @@ exports.Formats = [
 	},
 	{
 		name: "[Digimon] Digimon Showdown Doubles",
-		desc: ["Battle and play with your friends with Digimon."],
+		desc: "Battle and play with your friends with Digimon.",
 
 		mod: "digimon",
 		gameType: 'doubles',
@@ -47,7 +48,7 @@ exports.Formats = [
 	},
 	{
 		name: "[Digimon] Digimon Showdown Triples",
-		desc: ["Battle and play with your friends with Digimon."],
+		desc: "Battle and play with your friends with Digimon.",
 
 		mod: "digimon",
 		gameType: 'triples',
@@ -67,7 +68,7 @@ exports.Formats = [
 	},
 	{
 		name: "[Digimon] Digimon Showdown Monotype",
-		desc: ["Battle with Digimon across 9 Types!"],
+		desc: "Battle with Digimon across 9 Types!",
 
 		mod: "digimon",
 		team: "randomDigimon",
@@ -86,7 +87,7 @@ exports.Formats = [
 	},
 	{
 		name: "[Digimon] Digimon Showdown Monotype Doubles",
-		desc: ["Battle with Digimon across 9 Types!"],
+		desc: "Battle with Digimon across 9 Types!",
 
 		mod: "digimon",
 		gameType: 'doubles',
@@ -106,7 +107,7 @@ exports.Formats = [
 	},
 	{
 		name: "[Digimon] Digimon x Pokemon",
-		desc: ["Battle with Digimon and Pokemon Together!"],
+		desc: "Battle with Digimon and Pokemon Together!",
 
 		mod: "digimon",
 		team: "randomDigimon",
@@ -125,7 +126,7 @@ exports.Formats = [
 	},
 	{
 		name: "[Digimon] Digimon x Pokemon Doubles",
-		desc: ["Battle with Digimon and Pokemon Together!"],
+		desc: "Battle with Digimon and Pokemon Together!",
 
 		mod: "digimon",
 		gameType: 'doubles',
@@ -144,3 +145,4 @@ exports.Formats = [
 		},
 	},
 ];
+exports.Formats.push(...DigimonFormats);

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cd "$(dirname "$0")"
+
+if [ -d pokemon-showdown ]; then
+  exit
+fi
+
+git clone git@github.com:smogon/pokemon-showdown.git pokemon-showdown
+npm run build
+cp -r mods/ pokemon-showdown/data/mods/
+cp -r chat-plugins/ pokemon-showdown/server/chat-plugins/
+cp custom.css pokemon-showdown/config/custom.css
+cat config/formats.js >> pokemon-showdown/config/formats.js
+
+./pokemon-showdown/build
