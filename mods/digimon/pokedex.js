@@ -4,7 +4,7 @@
 let BattlePokedex = {
 	botamon: {
 		num: -2000,
-		species: "Botamon",
+		name: "Botamon",
 		stage: "Fresh",
 		types: ["Flame"],
 		gender: "N",
@@ -17,7 +17,7 @@ let BattlePokedex = {
 	},
 	dodomon: {
 		num: -2001,
-		species: "Dodomon",
+		name: "Dodomon",
 		stage: "Fresh",
 		types: ["Mech"],
 		gender: "N",
@@ -30,7 +30,7 @@ let BattlePokedex = {
 	},
 	kuramon: {
 		num: -2002,
-		species: "Kuramon",
+		name: "Kuramon",
 		stage: "Fresh",
 		types: ["Evil"],
 		gender: "N",
@@ -43,7 +43,7 @@ let BattlePokedex = {
 	},
 	poyomon: {
 		num: -2003,
-		species: "Poyomon",
+		name: "Poyomon",
 		stage: "Fresh",
 		types: ["Air"],
 		gender: "N",
@@ -56,7 +56,7 @@ let BattlePokedex = {
 	},
 	punimon: {
 		num: -2004,
-		species: "Punimon",
+		name: "Punimon",
 		stage: "Fresh",
 		types: ["Air"],
 		gender: "N",
@@ -69,7 +69,7 @@ let BattlePokedex = {
 	},
 	yuramon: {
 		num: -2005,
-		species: "Yuramon",
+		name: "Yuramon",
 		stage: "Fresh",
 		types: ["Nature"],
 		gender: "N",
@@ -82,7 +82,7 @@ let BattlePokedex = {
 	},
 	bukamon: {
 		num: -2006,
-		species: "Bukamon",
+		name: "Bukamon",
 		stage: "In-Training",
 		types: ["Aqua"],
 		gender: "N",
@@ -95,7 +95,7 @@ let BattlePokedex = {
 	},
 	dorimon: {
 		num: -2007,
-		species: "Dorimon",
+		name: "Dorimon",
 		stage: "In-Training",
 		types: ["Mech"],
 		gender: "N",
@@ -108,7 +108,7 @@ let BattlePokedex = {
 	},
 	koromon: {
 		num: -2008,
-		species: "Koromon",
+		name: "Koromon",
 		stage: "In-Training",
 		types: ["Flame"],
 		gender: "N",
@@ -121,7 +121,7 @@ let BattlePokedex = {
 	},
 	motimon: {
 		num: -2009,
-		species: "Motimon",
+		name: "Motimon",
 		stage: "In-Training",
 		types: ["Nature"],
 		gender: "N",
@@ -134,7 +134,7 @@ let BattlePokedex = {
 	},
 	nyaromon: {
 		num: -2010,
-		species: "Nyaromon",
+		name: "Nyaromon",
 		stage: "In-Training",
 		types: ["Holy"],
 		gender: "N",
@@ -147,7 +147,7 @@ let BattlePokedex = {
 	},
 	tanemon: {
 		num: -2011,
-		species: "Tanemon",
+		name: "Tanemon",
 		stage: "In-Training",
 		types: ["Nature"],
 		gender: "N",
@@ -160,7 +160,7 @@ let BattlePokedex = {
 	},
 	tokomon: {
 		num: -2012,
-		species: "Tokomon",
+		name: "Tokomon",
 		stage: "In-Training",
 		types: ["Battle"],
 		gender: "N",
@@ -173,7 +173,7 @@ let BattlePokedex = {
 	},
 	tsumemon: {
 		num: -2013,
-		species: "Tsumemon",
+		name: "Tsumemon",
 		stage: "In-Training",
 		types: ["Evil"],
 		gender: "N",
@@ -186,7 +186,7 @@ let BattlePokedex = {
 	},
 	tsunomon: {
 		num: -2014,
-		species: "Tsunomon",
+		name: "Tsunomon",
 		stage: "In-Training",
 		types: ["Battle"],
 		gender: "N",
@@ -199,7 +199,7 @@ let BattlePokedex = {
 	},
 	agumon: {
 		num: -2015,
-		species: "Agumon",
+		name: "Agumon",
 		stage: "Rookie",
 		types: ["Flame", "Battle"],
 		gender: "N",
@@ -212,7 +212,7 @@ let BattlePokedex = {
 	},
 	aruraumon: {
 		num: -2016,
-		species: "Aruraumon",
+		name: "Aruraumon",
 		stage: "Rookie",
 		types: ["Nature"],
 		gender: "N",
@@ -225,7 +225,7 @@ let BattlePokedex = {
 	},
 	betamon: {
 		num: -2017,
-		species: "Betamon",
+		name: "Betamon",
 		stage: "Rookie",
 		types: ["Aqua", "Air"],
 		gender: "N",
@@ -238,7 +238,7 @@ let BattlePokedex = {
 	},
 	biyomon: {
 		num: -2018,
-		species: "Biyomon",
+		name: "Biyomon",
 		stage: "Rookie",
 		types: ["Air", "Flame"],
 		gender: "N",
@@ -251,7 +251,7 @@ let BattlePokedex = {
 	},
 	clearagumon: {
 		num: -2019,
-		species: "ClearAgumon",
+		name: "ClearAgumon",
 		stage: "Rookie",
 		types: ["Holy"],
 		gender: "N",
@@ -264,7 +264,7 @@ let BattlePokedex = {
 	},
 	demidevimon: {
 		num: -2020,
-		species: "DemiDevimon",
+		name: "DemiDevimon",
 		stage: "Rookie",
 		types: ["Evil", "Air"],
 		gender: "N",
@@ -277,7 +277,7 @@ let BattlePokedex = {
 	},
 	dokunemon: {
 		num: -2021,
-		species: "Dokunemon",
+		name: "Dokunemon",
 		stage: "Rookie",
 		types: ["Nature", "Air"],
 		gender: "N",
@@ -290,7 +290,7 @@ let BattlePokedex = {
 	},
 	dorumon: {
 		num: -2022,
-		species: "Dorumon",
+		name: "Dorumon",
 		stage: "Rookie",
 		types: ["Mech"],
 		gender: "N",
@@ -303,7 +303,7 @@ let BattlePokedex = {
 	},
 	elecmon: {
 		num: -2023,
-		species: "Elecmon",
+		name: "Elecmon",
 		stage: "Rookie",
 		types: ["Air", "Battle"],
 		gender: "N",
@@ -316,7 +316,7 @@ let BattlePokedex = {
 	},
 	gabumon: {
 		num: -2024,
-		species: "Gabumon",
+		name: "Gabumon",
 		stage: "Rookie",
 		types: ["Battle", "Flame"],
 		gender: "N",
@@ -329,7 +329,7 @@ let BattlePokedex = {
 	},
 	goburimon: {
 		num: -2025,
-		species: "Goburimon",
+		name: "Goburimon",
 		stage: "Rookie",
 		types: ["Nature", "Battle"],
 		gender: "N",
@@ -342,7 +342,7 @@ let BattlePokedex = {
 	},
 	gomamon: {
 		num: -2026,
-		species: "Gomamon",
+		name: "Gomamon",
 		stage: "Rookie",
 		types: ["Aqua"],
 		gender: "N",
@@ -355,7 +355,7 @@ let BattlePokedex = {
 	},
 	gotsumon: {
 		num: -2027,
-		species: "Gotsumon",
+		name: "Gotsumon",
 		stage: "Rookie",
 		types: ["Nature"],
 		gender: "N",
@@ -368,7 +368,7 @@ let BattlePokedex = {
 	},
 	kunemon: {
 		num: -2028,
-		species: "Kunemon",
+		name: "Kunemon",
 		stage: "Rookie",
 		types: ["Nature", "Air"],
 		gender: "N",
@@ -381,7 +381,7 @@ let BattlePokedex = {
 	},
 	modokibetamon: {
 		num: -2029,
-		species: "ModokiBetamon",
+		name: "ModokiBetamon",
 		stage: "Rookie",
 		types: ["Aqua", "Air"],
 		gender: "N",
@@ -394,7 +394,7 @@ let BattlePokedex = {
 	},
 	muchomon: {
 		num: -2030,
-		species: "Muchomon",
+		name: "Muchomon",
 		stage: "Rookie",
 		types: ["Flame", "Nature"],
 		gender: "N",
@@ -407,7 +407,7 @@ let BattlePokedex = {
 	},
 	otamamon: {
 		num: -2031,
-		species: "Otamamon",
+		name: "Otamamon",
 		stage: "Rookie",
 		types: ["Aqua"],
 		gender: "N",
@@ -420,7 +420,7 @@ let BattlePokedex = {
 	},
 	palmon: {
 		num: -2032,
-		species: "Palmon",
+		name: "Palmon",
 		stage: "Rookie",
 		types: ["Nature"],
 		gender: "N",
@@ -433,7 +433,7 @@ let BattlePokedex = {
 	},
 	patamon: {
 		num: -2033,
-		species: "Patamon",
+		name: "Patamon",
 		stage: "Rookie",
 		types: ["Air", "Battle"],
 		gender: "N",
@@ -446,7 +446,7 @@ let BattlePokedex = {
 	},
 	penguinmon: {
 		num: -2034,
-		species: "Penguinmon",
+		name: "Penguinmon",
 		stage: "Rookie",
 		types: ["Aqua", "Nature"],
 		gender: "N",
@@ -459,7 +459,7 @@ let BattlePokedex = {
 	},
 	psychemon: {
 		num: -2035,
-		species: "Psychemon",
+		name: "Psychemon",
 		stage: "Rookie",
 		types: ["Aqua", "Air"],
 		gender: "N",
@@ -472,7 +472,7 @@ let BattlePokedex = {
 	},
 	salamon: {
 		num: -2036,
-		species: "Salamon",
+		name: "Salamon",
 		stage: "Rookie",
 		types: ["Holy"],
 		gender: "N",
@@ -485,7 +485,7 @@ let BattlePokedex = {
 	},
 	shamanmon: {
 		num: -2037,
-		species: "Shamanmon",
+		name: "Shamanmon",
 		stage: "Rookie",
 		types: ["Evil", "Battle"],
 		gender: "N",
@@ -498,7 +498,7 @@ let BattlePokedex = {
 	},
 	snowagumon: {
 		num: -2038,
-		species: "SnowAgumon",
+		name: "SnowAgumon",
 		stage: "Rookie",
 		types: ["Aqua", "Battle"],
 		gender: "N",
@@ -511,7 +511,7 @@ let BattlePokedex = {
 	},
 	snowgoburimon: {
 		num: -2039,
-		species: "SnowGoburimon",
+		name: "SnowGoburimon",
 		stage: "Rookie",
 		types: ["Aqua", "Battle"],
 		gender: "N",
@@ -524,7 +524,7 @@ let BattlePokedex = {
 	},
 	tentomon: {
 		num: -2040,
-		species: "Tentomon",
+		name: "Tentomon",
 		stage: "Rookie",
 		types: ["Air", "Nature"],
 		gender: "N",
@@ -537,7 +537,7 @@ let BattlePokedex = {
 	},
 	toyagumon: {
 		num: -2041,
-		species: "ToyAgumon",
+		name: "ToyAgumon",
 		stage: "Rookie",
 		types: ["Mech"],
 		gender: "N",
@@ -550,7 +550,7 @@ let BattlePokedex = {
 	},
 	tsukaimon: {
 		num: -2042,
-		species: "Tsukaimon",
+		name: "Tsukaimon",
 		stage: "Rookie",
 		types: ["Evil", "Air"],
 		gender: "N",
@@ -563,7 +563,7 @@ let BattlePokedex = {
 	},
 	airdramon: {
 		num: -2043,
-		species: "Airdramon",
+		name: "Airdramon",
 		stage: "Champion",
 		types: ["Air", "Flame"],
 		gender: "N",
@@ -576,7 +576,7 @@ let BattlePokedex = {
 	},
 	akatorimon: {
 		num: -2044,
-		species: "Akatorimon",
+		name: "Akatorimon",
 		stage: "Champion",
 		types: ["Air", "Flame"],
 		gender: "N",
@@ -589,7 +589,7 @@ let BattlePokedex = {
 	},
 	angemon: {
 		num: -2045,
-		species: "Angemon",
+		name: "Angemon",
 		stage: "Champion",
 		types: ["Holy", "Air"],
 		gender: "N",
@@ -602,7 +602,7 @@ let BattlePokedex = {
 	},
 	bakemon: {
 		num: -2046,
-		species: "Bakemon",
+		name: "Bakemon",
 		stage: "Champion",
 		types: ["Evil"],
 		gender: "N",
@@ -615,7 +615,7 @@ let BattlePokedex = {
 	},
 	birdramon: {
 		num: -2047,
-		species: "Birdramon",
+		name: "Birdramon",
 		stage: "Champion",
 		types: ["Air", "Flame"],
 		gender: "N",
@@ -628,7 +628,7 @@ let BattlePokedex = {
 	},
 	blackgatomon: {
 		num: -2048,
-		species: "BlackGatomon",
+		name: "BlackGatomon",
 		stage: "Champion",
 		types: ["Evil"],
 		gender: "N",
@@ -641,7 +641,7 @@ let BattlePokedex = {
 	},
 	centarumon: {
 		num: -2049,
-		species: "Centarumon",
+		name: "Centarumon",
 		stage: "Champion",
 		types: ["Mech"],
 		gender: "N",
@@ -654,7 +654,7 @@ let BattlePokedex = {
 	},
 	coelamon: {
 		num: -2050,
-		species: "Coelamon",
+		name: "Coelamon",
 		stage: "Champion",
 		types: ["Aqua", "Mech"],
 		gender: "N",
@@ -667,7 +667,7 @@ let BattlePokedex = {
 	},
 	darkrizamon: {
 		num: -2051,
-		species: "Darkrizamon",
+		name: "Darkrizamon",
 		stage: "Champion",
 		types: ["Flame", "Evil"],
 		gender: "N",
@@ -680,7 +680,7 @@ let BattlePokedex = {
 	},
 	devimon: {
 		num: -2052,
-		species: "Devimon",
+		name: "Devimon",
 		stage: "Champion",
 		types: ["Evil", "Air"],
 		gender: "N",
@@ -693,7 +693,7 @@ let BattlePokedex = {
 	},
 	dolphmon: {
 		num: -2053,
-		species: "Dolphmon",
+		name: "Dolphmon",
 		stage: "Champion",
 		types: ["Aqua"],
 		gender: "N",
@@ -706,7 +706,7 @@ let BattlePokedex = {
 	},
 	dorugamon: {
 		num: -2054,
-		species: "Dorugamon",
+		name: "Dorugamon",
 		stage: "Champion",
 		types: ["Mech"],
 		gender: "N",
@@ -719,7 +719,7 @@ let BattlePokedex = {
 	},
 	drimogemon: {
 		num: -2055,
-		species: "Drimogemon",
+		name: "Drimogemon",
 		stage: "Champion",
 		types: ["Mech", "Battle"],
 		gender: "N",
@@ -732,7 +732,7 @@ let BattlePokedex = {
 	},
 	flarerizamon: {
 		num: -2056,
-		species: "Flarerizamon",
+		name: "Flarerizamon",
 		stage: "Champion",
 		types: ["Flame"],
 		gender: "N",
@@ -745,7 +745,7 @@ let BattlePokedex = {
 	},
 	frigimon: {
 		num: -2057,
-		species: "Frigimon",
+		name: "Frigimon",
 		stage: "Champion",
 		types: ["Aqua", "Battle"],
 		gender: "N",
@@ -758,7 +758,7 @@ let BattlePokedex = {
 	},
 	fugamon: {
 		num: -2058,
-		species: "Fugamon",
+		name: "Fugamon",
 		stage: "Champion",
 		types: ["Air", "Battle"],
 		gender: "N",
@@ -771,7 +771,7 @@ let BattlePokedex = {
 	},
 	garurumon: {
 		num: -2059,
-		species: "Garurumon",
+		name: "Garurumon",
 		stage: "Champion",
 		types: ["Aqua", "Flame"],
 		gender: "N",
@@ -784,7 +784,7 @@ let BattlePokedex = {
 	},
 	gatomon: {
 		num: -2060,
-		species: "Gatomon",
+		name: "Gatomon",
 		stage: "Champion",
 		types: ["Holy"],
 		gender: "N",
@@ -797,7 +797,7 @@ let BattlePokedex = {
 	},
 	gekomon: {
 		num: -2061,
-		species: "Gekomon",
+		name: "Gekomon",
 		stage: "Champion",
 		types: ["Aqua"],
 		gender: "N",
@@ -810,7 +810,7 @@ let BattlePokedex = {
 	},
 	geremon: {
 		num: -2062,
-		species: "Geremon",
+		name: "Geremon",
 		stage: "Champion",
 		types: ["Filth"],
 		gender: "N",
@@ -823,7 +823,7 @@ let BattlePokedex = {
 	},
 	greymon: {
 		num: -2063,
-		species: "Greymon",
+		name: "Greymon",
 		stage: "Champion",
 		types: ["Flame", "Battle"],
 		gender: "N",
@@ -836,7 +836,7 @@ let BattlePokedex = {
 	},
 	guardromon: {
 		num: -2064,
-		species: "Guardromon",
+		name: "Guardromon",
 		stage: "Champion",
 		types: ["Mech"],
 		gender: "N",
@@ -849,7 +849,7 @@ let BattlePokedex = {
 	},
 	gururumon: {
 		num: -2065,
-		species: "Gururumon",
+		name: "Gururumon",
 		stage: "Champion",
 		types: ["Evil", "Aqua"],
 		gender: "N",
@@ -862,7 +862,7 @@ let BattlePokedex = {
 	},
 	hyogamon: {
 		num: -2066,
-		species: "Hyogamon",
+		name: "Hyogamon",
 		stage: "Champion",
 		types: ["Aqua", "Battle"],
 		gender: "N",
@@ -875,7 +875,7 @@ let BattlePokedex = {
 	},
 	icedevimon: {
 		num: -2067,
-		species: "IceDevimon",
+		name: "IceDevimon",
 		stage: "Champion",
 		types: ["Evil", "Aqua"],
 		gender: "N",
@@ -888,7 +888,7 @@ let BattlePokedex = {
 	},
 	icemon: {
 		num: -2068,
-		species: "Icemon",
+		name: "Icemon",
 		stage: "Champion",
 		types: ["Aqua"],
 		gender: "N",
@@ -901,7 +901,7 @@ let BattlePokedex = {
 	},
 	ikkakumon: {
 		num: -2069,
-		species: "Ikkakumon",
+		name: "Ikkakumon",
 		stage: "Champion",
 		types: ["Aqua"],
 		gender: "N",
@@ -914,7 +914,7 @@ let BattlePokedex = {
 	},
 	junglemojyamon: {
 		num: -2070,
-		species: "JungleMojyamon",
+		name: "JungleMojyamon",
 		stage: "Champion",
 		types: ["Battle"],
 		gender: "N",
@@ -927,7 +927,7 @@ let BattlePokedex = {
 	},
 	kabuterimon: {
 		num: -2071,
-		species: "Kabuterimon",
+		name: "Kabuterimon",
 		stage: "Champion",
 		types: ["Air", "Nature"],
 		gender: "N",
@@ -940,7 +940,7 @@ let BattlePokedex = {
 	},
 	kokatorimon: {
 		num: -2072,
-		species: "Kokatorimon",
+		name: "Kokatorimon",
 		stage: "Champion",
 		types: ["Air", "Battle"],
 		gender: "N",
@@ -953,7 +953,7 @@ let BattlePokedex = {
 	},
 	kuwagamon: {
 		num: -2073,
-		species: "Kuwagamon",
+		name: "Kuwagamon",
 		stage: "Champion",
 		types: ["Nature"],
 		gender: "N",
@@ -966,7 +966,7 @@ let BattlePokedex = {
 	},
 	leomon: {
 		num: -2074,
-		species: "Leomon",
+		name: "Leomon",
 		stage: "Champion",
 		types: ["Battle"],
 		gender: "N",
@@ -979,7 +979,7 @@ let BattlePokedex = {
 	},
 	meicoomon: {
 		num: -2075,
-		species: "Meicoomon",
+		name: "Meicoomon",
 		stage: "Champion",
 		types: ["Battle"],
 		gender: "N",
@@ -992,7 +992,7 @@ let BattlePokedex = {
 	},
 	meramon: {
 		num: -2076,
-		species: "Meramon",
+		name: "Meramon",
 		stage: "Champion",
 		types: ["Flame"],
 		gender: "N",
@@ -1005,7 +1005,7 @@ let BattlePokedex = {
 	},
 	mikemon: {
 		num: -2077,
-		species: "Mikemon",
+		name: "Mikemon",
 		stage: "Champion",
 		types: ["Battle"],
 		gender: "N",
@@ -1018,7 +1018,7 @@ let BattlePokedex = {
 	},
 	mojyamon: {
 		num: -2078,
-		species: "Mojyamon",
+		name: "Mojyamon",
 		stage: "Champion",
 		types: ["Battle", "Aqua"],
 		gender: "N",
@@ -1031,7 +1031,7 @@ let BattlePokedex = {
 	},
 	monochromon: {
 		num: -2079,
-		species: "Monochromon",
+		name: "Monochromon",
 		stage: "Champion",
 		types: ["Flame", "Nature"],
 		gender: "N",
@@ -1044,7 +1044,7 @@ let BattlePokedex = {
 	},
 	morishellmon: {
 		num: -2080,
-		species: "MoriShellmon",
+		name: "MoriShellmon",
 		stage: "Champion",
 		types: ["Nature"],
 		gender: "N",
@@ -1057,7 +1057,7 @@ let BattlePokedex = {
 	},
 	mudfrigimon: {
 		num: -2081,
-		species: "MudFrigimon",
+		name: "MudFrigimon",
 		stage: "Champion",
 		types: ["Nature", "Battle"],
 		gender: "N",
@@ -1070,7 +1070,7 @@ let BattlePokedex = {
 	},
 	nanimon: {
 		num: -2082,
-		species: "Nanimon",
+		name: "Nanimon",
 		stage: "Champion",
 		types: ["Filth"],
 		gender: "N",
@@ -1083,7 +1083,7 @@ let BattlePokedex = {
 	},
 	ninjamon: {
 		num: -2083,
-		species: "Ninjamon",
+		name: "Ninjamon",
 		stage: "Champion",
 		types: ["Nature", "Battle"],
 		gender: "N",
@@ -1096,7 +1096,7 @@ let BattlePokedex = {
 	},
 	nisedrimogemon: {
 		num: -2084,
-		species: "NiseDrimogemon",
+		name: "NiseDrimogemon",
 		stage: "Champion",
 		types: ["Mech", "Battle"],
 		gender: "N",
@@ -1109,7 +1109,7 @@ let BattlePokedex = {
 	},
 	numemon: {
 		num: -2085,
-		species: "Numemon",
+		name: "Numemon",
 		stage: "Champion",
 		types: ["Filth"],
 		gender: "N",
@@ -1122,7 +1122,7 @@ let BattlePokedex = {
 	},
 	ogremon: {
 		num: -2086,
-		species: "Ogremon",
+		name: "Ogremon",
 		stage: "Champion",
 		types: ["Nature", "Battle"],
 		gender: "N",
@@ -1135,7 +1135,7 @@ let BattlePokedex = {
 	},
 	piddomon: {
 		num: -2087,
-		species: "Piddomon",
+		name: "Piddomon",
 		stage: "Champion",
 		types: ["Holy", "Flame"],
 		gender: "N",
@@ -1148,7 +1148,7 @@ let BattlePokedex = {
 	},
 	platinumsukamon: {
 		num: -2088,
-		species: "PlatinumSukamon",
+		name: "PlatinumSukamon",
 		stage: "Champion",
 		types: ["Filth", "Mech"],
 		gender: "N",
@@ -1161,7 +1161,7 @@ let BattlePokedex = {
 	},
 	redvegiemon: {
 		num: -2089,
-		species: "RedVegiemon",
+		name: "RedVegiemon",
 		stage: "Champion",
 		types: ["Nature", "Flame"],
 		gender: "N",
@@ -1174,7 +1174,7 @@ let BattlePokedex = {
 	},
 	rockmon: {
 		num: -2090,
-		species: "Rockmon",
+		name: "Rockmon",
 		stage: "Champion",
 		types: ["Mech", "Battle"],
 		gender: "N",
@@ -1187,7 +1187,7 @@ let BattlePokedex = {
 	},
 	saberdramon: {
 		num: -2091,
-		species: "Saberdramon",
+		name: "Saberdramon",
 		stage: "Champion",
 		types: ["Air", "Evil"],
 		gender: "N",
@@ -1200,7 +1200,7 @@ let BattlePokedex = {
 	},
 	sandyanmamon: {
 		num: -2092,
-		species: "SandYanmamon",
+		name: "SandYanmamon",
 		stage: "Champion",
 		types: ["Air", "Nature"],
 		gender: "N",
@@ -1213,7 +1213,7 @@ let BattlePokedex = {
 	},
 	seadramon: {
 		num: -2093,
-		species: "Seadramon",
+		name: "Seadramon",
 		stage: "Champion",
 		types: ["Aqua"],
 		gender: "N",
@@ -1226,7 +1226,7 @@ let BattlePokedex = {
 	},
 	shellmon: {
 		num: -2094,
-		species: "Shellmon",
+		name: "Shellmon",
 		stage: "Champion",
 		types: ["Aqua"],
 		gender: "N",
@@ -1239,7 +1239,7 @@ let BattlePokedex = {
 	},
 	shimaunimon: {
 		num: -2095,
-		species: "ShimaUnimon",
+		name: "ShimaUnimon",
 		stage: "Champion",
 		types: ["Battle"],
 		gender: "N",
@@ -1252,7 +1252,7 @@ let BattlePokedex = {
 	},
 	soulmon: {
 		num: -2096,
-		species: "Soulmon",
+		name: "Soulmon",
 		stage: "Champion",
 		types: ["Evil"],
 		gender: "N",
@@ -1265,7 +1265,7 @@ let BattlePokedex = {
 	},
 	sukamon: {
 		num: -2097,
-		species: "Sukamon",
+		name: "Sukamon",
 		stage: "Champion",
 		types: ["Filth"],
 		gender: "N",
@@ -1278,7 +1278,7 @@ let BattlePokedex = {
 	},
 	tankmon: {
 		num: -2098,
-		species: "Tankmon",
+		name: "Tankmon",
 		stage: "Champion",
 		types: ["Mech", "Flame"],
 		gender: "N",
@@ -1291,7 +1291,7 @@ let BattlePokedex = {
 	},
 	togemon: {
 		num: -2099,
-		species: "Togemon",
+		name: "Togemon",
 		stage: "Champion",
 		types: ["Nature", "Battle"],
 		gender: "N",
@@ -1304,7 +1304,7 @@ let BattlePokedex = {
 	},
 	tyrannomon: {
 		num: -2100,
-		species: "Tyrannomon",
+		name: "Tyrannomon",
 		stage: "Champion",
 		types: ["Flame", "Battle"],
 		gender: "N",
@@ -1317,7 +1317,7 @@ let BattlePokedex = {
 	},
 	unimon: {
 		num: -2101,
-		species: "Unimon",
+		name: "Unimon",
 		stage: "Champion",
 		types: ["Holy", "Air"],
 		gender: "N",
@@ -1330,7 +1330,7 @@ let BattlePokedex = {
 	},
 	vegiemon: {
 		num: -2102,
-		species: "Vegiemon",
+		name: "Vegiemon",
 		stage: "Champion",
 		types: ["Nature"],
 		gender: "N",
@@ -1343,7 +1343,7 @@ let BattlePokedex = {
 	},
 	weedmon: {
 		num: -2103,
-		species: "Weedmon",
+		name: "Weedmon",
 		stage: "Champion",
 		types: ["Nature", "Filth"],
 		gender: "N",
@@ -1356,7 +1356,7 @@ let BattlePokedex = {
 	},
 	yanmamon: {
 		num: -2104,
-		species: "Yanmamon",
+		name: "Yanmamon",
 		stage: "Champion",
 		types: ["Air"],
 		gender: "N",
@@ -1369,7 +1369,7 @@ let BattlePokedex = {
 	},
 	andromon: {
 		num: -2105,
-		species: "Andromon",
+		name: "Andromon",
 		stage: "Ultimate",
 		types: ["Mech"],
 		gender: "N",
@@ -1382,7 +1382,7 @@ let BattlePokedex = {
 	},
 	angewomon: {
 		num: -2106,
-		species: "Angewomon",
+		name: "Angewomon",
 		stage: "Ultimate",
 		types: ["Holy", "Air"],
 		gender: "N",
@@ -1395,7 +1395,7 @@ let BattlePokedex = {
 	},
 	beastmon: {
 		num: -2107,
-		species: "Beastmon",
+		name: "Beastmon",
 		stage: "Ultimate",
 		types: ["Battle"],
 		gender: "N",
@@ -1408,7 +1408,7 @@ let BattlePokedex = {
 	},
 	blackweregarurumon: {
 		num: -2108,
-		species: "BlackWereGarurumon",
+		name: "BlackWereGarurumon",
 		stage: "Ultimate",
 		types: ["Evil", "Battle"],
 		gender: "N",
@@ -1421,7 +1421,7 @@ let BattlePokedex = {
 	},
 	bluemeramon: {
 		num: -2109,
-		species: "BlueMeramon",
+		name: "BlueMeramon",
 		stage: "Ultimate",
 		types: ["Flame", "Aqua"],
 		gender: "N",
@@ -1434,7 +1434,7 @@ let BattlePokedex = {
 	},
 	digitamamon: {
 		num: -2110,
-		species: "Digitamamon",
+		name: "Digitamamon",
 		stage: "Ultimate",
 		types: ["Filth"],
 		gender: "N",
@@ -1447,7 +1447,7 @@ let BattlePokedex = {
 	},
 	dorugreymon: {
 		num: -2111,
-		species: "DoruGreymon",
+		name: "DoruGreymon",
 		stage: "Ultimate",
 		types: ["Mech"],
 		gender: "N",
@@ -1460,7 +1460,7 @@ let BattlePokedex = {
 	},
 	etemon: {
 		num: -2112,
-		species: "Etemon",
+		name: "Etemon",
 		stage: "Ultimate",
 		types: ["Filth"],
 		gender: "N",
@@ -1473,7 +1473,7 @@ let BattlePokedex = {
 	},
 	garudamon: {
 		num: -2113,
-		species: "Garudamon",
+		name: "Garudamon",
 		stage: "Ultimate",
 		types: ["Air", "Flame"],
 		gender: "N",
@@ -1486,7 +1486,7 @@ let BattlePokedex = {
 	},
 	gigadramon: {
 		num: -2114,
-		species: "Gigadramon",
+		name: "Gigadramon",
 		stage: "Ultimate",
 		types: ["Mech"],
 		gender: "N",
@@ -1499,7 +1499,7 @@ let BattlePokedex = {
 	},
 	giromon: {
 		num: -2115,
-		species: "Giromon",
+		name: "Giromon",
 		stage: "Ultimate",
 		types: ["Mech"],
 		gender: "N",
@@ -1512,7 +1512,7 @@ let BattlePokedex = {
 	},
 	iceleomon: {
 		num: -2116,
-		species: "IceLeomon",
+		name: "IceLeomon",
 		stage: "Ultimate",
 		types: ["Battle", "Aqua"],
 		gender: "N",
@@ -1525,7 +1525,7 @@ let BattlePokedex = {
 	},
 	ladydevimon: {
 		num: -2117,
-		species: "LadyDevimon",
+		name: "LadyDevimon",
 		stage: "Ultimate",
 		types: ["Evil", "Air"],
 		gender: "N",
@@ -1538,7 +1538,7 @@ let BattlePokedex = {
 	},
 	lillymon: {
 		num: -2118,
-		species: "Lillymon",
+		name: "Lillymon",
 		stage: "Ultimate",
 		types: ["Nature"],
 		gender: "N",
@@ -1551,7 +1551,7 @@ let BattlePokedex = {
 	},
 	magnaangemon: {
 		num: -2119,
-		species: "MagnaAngemon",
+		name: "MagnaAngemon",
 		stage: "Ultimate",
 		types: ["Holy", "Air"],
 		gender: "N",
@@ -1564,7 +1564,7 @@ let BattlePokedex = {
 	},
 	mamemon: {
 		num: -2120,
-		species: "Mamemon",
+		name: "Mamemon",
 		stage: "Ultimate",
 		types: ["Battle"],
 		gender: "N",
@@ -1577,7 +1577,7 @@ let BattlePokedex = {
 	},
 	megadramon: {
 		num: -2121,
-		species: "Megadramon",
+		name: "Megadramon",
 		stage: "Ultimate",
 		types: ["Mech"],
 		gender: "N",
@@ -1590,7 +1590,7 @@ let BattlePokedex = {
 	},
 	megakabuterimon: {
 		num: -2122,
-		species: "MegaKabuterimon",
+		name: "MegaKabuterimon",
 		stage: "Ultimate",
 		types: ["Air", "Nature"],
 		gender: "N",
@@ -1603,7 +1603,7 @@ let BattlePokedex = {
 	},
 	megaseadramon: {
 		num: -2123,
-		species: "MegaSeadramon",
+		name: "MegaSeadramon",
 		stage: "Ultimate",
 		types: ["Aqua"],
 		gender: "N",
@@ -1616,7 +1616,7 @@ let BattlePokedex = {
 	},
 	meicrackmon: {
 		num: -2124,
-		species: "Meicrackmon",
+		name: "Meicrackmon",
 		stage: "Ultimate",
 		types: ["Holy"],
 		gender: "N",
@@ -1629,7 +1629,7 @@ let BattlePokedex = {
 	},
 	meicrackmonvm: {
 		num: -2125,
-		species: "Meicrackmon VM",
+		name: "Meicrackmon VM",
 		stage: "Ultimate",
 		types: ["Evil"],
 		gender: "N",
@@ -1642,7 +1642,7 @@ let BattlePokedex = {
 	},
 	metalgreymonvaccine: {
 		num: -2126,
-		species: "MetalGreymon Vaccine",
+		name: "MetalGreymon Vaccine",
 		stage: "Ultimate",
 		types: ["Flame"],
 		gender: "N",
@@ -1655,7 +1655,7 @@ let BattlePokedex = {
 	},
 	metalgreymonvirus: {
 		num: -2127,
-		species: "MetalGreymon Virus",
+		name: "MetalGreymon Virus",
 		stage: "Ultimate",
 		types: ["Flame", "Evil"],
 		gender: "N",
@@ -1668,7 +1668,7 @@ let BattlePokedex = {
 	},
 	metalmamemon: {
 		num: -2128,
-		species: "MetalMamemon",
+		name: "MetalMamemon",
 		stage: "Ultimate",
 		types: ["Mech"],
 		gender: "N",
@@ -1681,7 +1681,7 @@ let BattlePokedex = {
 	},
 	meteormon: {
 		num: -2129,
-		species: "Meteormon",
+		name: "Meteormon",
 		stage: "Ultimate",
 		types: ["Nature"],
 		gender: "N",
@@ -1694,7 +1694,7 @@ let BattlePokedex = {
 	},
 	monzaemon: {
 		num: -2130,
-		species: "Monzaemon",
+		name: "Monzaemon",
 		stage: "Ultimate",
 		types: ["Holy"],
 		gender: "N",
@@ -1707,7 +1707,7 @@ let BattlePokedex = {
 	},
 	myotismon: {
 		num: -2131,
-		species: "Myotismon",
+		name: "Myotismon",
 		stage: "Ultimate",
 		types: ["Evil", "Air"],
 		gender: "N",
@@ -1720,7 +1720,7 @@ let BattlePokedex = {
 	},
 	piximon: {
 		num: -2132,
-		species: "Piximon",
+		name: "Piximon",
 		stage: "Ultimate",
 		types: ["Air"],
 		gender: "N",
@@ -1733,7 +1733,7 @@ let BattlePokedex = {
 	},
 	shogungekomon: {
 		num: -2133,
-		species: "ShogunGekomon",
+		name: "ShogunGekomon",
 		stage: "Ultimate",
 		types: ["Aqua"],
 		gender: "N",
@@ -1746,7 +1746,7 @@ let BattlePokedex = {
 	},
 	skullgreymon: {
 		num: -2134,
-		species: "SkullGreymon",
+		name: "SkullGreymon",
 		stage: "Ultimate",
 		types: ["Evil"],
 		gender: "N",
@@ -1759,7 +1759,7 @@ let BattlePokedex = {
 	},
 	tekkamon: {
 		num: -2135,
-		species: "Tekkamon",
+		name: "Tekkamon",
 		stage: "Ultimate",
 		types: ["Mech", "Evil"],
 		gender: "N",
@@ -1772,7 +1772,7 @@ let BattlePokedex = {
 	},
 	vademon: {
 		num: -2136,
-		species: "Vademon",
+		name: "Vademon",
 		stage: "Ultimate",
 		types: ["Filth"],
 		gender: "N",
@@ -1785,7 +1785,7 @@ let BattlePokedex = {
 	},
 	vermilimon: {
 		num: -2137,
-		species: "Vermilimon",
+		name: "Vermilimon",
 		stage: "Ultimate",
 		types: ["Flame", "Nature"],
 		gender: "N",
@@ -1798,7 +1798,7 @@ let BattlePokedex = {
 	},
 	warumonzaemon: {
 		num: -2138,
-		species: "WaruMonzaemon",
+		name: "WaruMonzaemon",
 		stage: "Ultimate",
 		types: ["Evil"],
 		gender: "N",
@@ -1811,7 +1811,7 @@ let BattlePokedex = {
 	},
 	waruseadramon: {
 		num: -2139,
-		species: "WaruSeadramon",
+		name: "WaruSeadramon",
 		stage: "Ultimate",
 		types: ["Evil", "Aqua"],
 		gender: "N",
@@ -1824,7 +1824,7 @@ let BattlePokedex = {
 	},
 	weregarurumon: {
 		num: -2140,
-		species: "WereGarurumon",
+		name: "WereGarurumon",
 		stage: "Ultimate",
 		types: ["Battle", "Aqua"],
 		gender: "N",
@@ -1837,7 +1837,7 @@ let BattlePokedex = {
 	},
 	whamon: {
 		num: -2141,
-		species: "Whamon",
+		name: "Whamon",
 		stage: "Ultimate",
 		types: ["Aqua"],
 		gender: "N",
@@ -1850,7 +1850,7 @@ let BattlePokedex = {
 	},
 	zudomon: {
 		num: -2142,
-		species: "Zudomon",
+		name: "Zudomon",
 		stage: "Ultimate",
 		types: ["Aqua", "Mech"],
 		gender: "N",
@@ -1863,7 +1863,7 @@ let BattlePokedex = {
 	},
 	alphamon: {
 		num: -2143,
-		species: "Alphamon",
+		name: "Alphamon",
 		stage: "Mega",
 		types: ["Holy"],
 		gender: "N",
@@ -1876,7 +1876,7 @@ let BattlePokedex = {
 	},
 	blackmetalgarurumon: {
 		num: -2144,
-		species: "BlackMetalGarurumon",
+		name: "BlackMetalGarurumon",
 		stage: "Mega",
 		types: ["Evil", "Aqua"],
 		gender: "N",
@@ -1889,7 +1889,7 @@ let BattlePokedex = {
 	},
 	blackwargreymon: {
 		num: -2145,
-		species: "BlackWarGreymon",
+		name: "BlackWarGreymon",
 		stage: "Mega",
 		types: ["Evil", "Flame"],
 		gender: "N",
@@ -1902,7 +1902,7 @@ let BattlePokedex = {
 	},
 	boltmon: {
 		num: -2146,
-		species: "Boltmon",
+		name: "Boltmon",
 		stage: "Mega",
 		types: ["Mech", "Air"],
 		gender: "N",
@@ -1915,7 +1915,7 @@ let BattlePokedex = {
 	},
 	cherubimonevil: {
 		num: -2147,
-		species: "Cherubimon Evil",
+		name: "Cherubimon Evil",
 		stage: "Mega",
 		types: ["Evil"],
 		gender: "N",
@@ -1928,7 +1928,7 @@ let BattlePokedex = {
 	},
 	cherubimongood: {
 		num: -2148,
-		species: "Cherubimon Good",
+		name: "Cherubimon Good",
 		stage: "Mega",
 		types: ["Holy"],
 		gender: "N",
@@ -1941,7 +1941,7 @@ let BattlePokedex = {
 	},
 	devitamamon: {
 		num: -2149,
-		species: "Devitamamon",
+		name: "Devitamamon",
 		stage: "Mega",
 		types: ["Filth", "Evil"],
 		gender: "N",
@@ -1954,7 +1954,7 @@ let BattlePokedex = {
 	},
 	dorugoramon: {
 		num: -2150,
-		species: "Dorugoramon",
+		name: "Dorugoramon",
 		stage: "Mega",
 		types: ["Mech", "Flame"],
 		gender: "N",
@@ -1967,7 +1967,7 @@ let BattlePokedex = {
 	},
 	ebemon: {
 		num: -2151,
-		species: "Ebemon",
+		name: "Ebemon",
 		stage: "Mega",
 		types: ["Mech", "Filth"],
 		gender: "N",
@@ -1980,7 +1980,7 @@ let BattlePokedex = {
 	},
 	herculeskabuterimon: {
 		num: -2152,
-		species: "HerculesKabuterimon",
+		name: "HerculesKabuterimon",
 		stage: "Mega",
 		types: ["Air", "Nature"],
 		gender: "N",
@@ -1993,7 +1993,7 @@ let BattlePokedex = {
 	},
 	hiandromon: {
 		num: -2153,
-		species: "HiAndromon",
+		name: "HiAndromon",
 		stage: "Mega",
 		types: ["Mech"],
 		gender: "N",
@@ -2006,7 +2006,7 @@ let BattlePokedex = {
 	},
 	lilithmon: {
 		num: -2154,
-		species: "Lilithmon",
+		name: "Lilithmon",
 		stage: "Mega",
 		types: ["Evil"],
 		gender: "N",
@@ -2019,7 +2019,7 @@ let BattlePokedex = {
 	},
 	machinedramon: {
 		num: -2155,
-		species: "Machinedramon",
+		name: "Machinedramon",
 		stage: "Mega",
 		types: ["Mech"],
 		gender: "N",
@@ -2032,7 +2032,7 @@ let BattlePokedex = {
 	},
 	magnadramon: {
 		num: -2156,
-		species: "Magnadramon",
+		name: "Magnadramon",
 		stage: "Mega",
 		types: ["Holy"],
 		gender: "N",
@@ -2045,7 +2045,7 @@ let BattlePokedex = {
 	},
 	marineangemon: {
 		num: -2157,
-		species: "MarineAngemon",
+		name: "MarineAngemon",
 		stage: "Mega",
 		types: ["Aqua", "Holy"],
 		gender: "N",
@@ -2058,7 +2058,7 @@ let BattlePokedex = {
 	},
 	metaletemon: {
 		num: -2158,
-		species: "MetalEtemon",
+		name: "MetalEtemon",
 		stage: "Mega",
 		types: ["Filth", "Mech"],
 		gender: "N",
@@ -2071,7 +2071,7 @@ let BattlePokedex = {
 	},
 	metalgarurumon: {
 		num: -2159,
-		species: "MetalGarurumon",
+		name: "MetalGarurumon",
 		stage: "Mega",
 		types: ["Aqua", "Mech"],
 		gender: "N",
@@ -2084,7 +2084,7 @@ let BattlePokedex = {
 	},
 	metalseadramon: {
 		num: -2160,
-		species: "MetalSeadramon",
+		name: "MetalSeadramon",
 		stage: "Mega",
 		types: ["Aqua", "Mech"],
 		gender: "N",
@@ -2097,7 +2097,7 @@ let BattlePokedex = {
 	},
 	ophanimon: {
 		num: -2161,
-		species: "Ophanimon",
+		name: "Ophanimon",
 		stage: "Mega",
 		types: ["Holy", "Air"],
 		gender: "N",
@@ -2110,7 +2110,7 @@ let BattlePokedex = {
 	},
 	phoenixmon: {
 		num: -2162,
-		species: "Phoenixmon",
+		name: "Phoenixmon",
 		stage: "Mega",
 		types: ["Air", "Flame"],
 		gender: "N",
@@ -2123,7 +2123,7 @@ let BattlePokedex = {
 	},
 	princemamemon: {
 		num: -2163,
-		species: "PrinceMamemon",
+		name: "PrinceMamemon",
 		stage: "Mega",
 		types: ["Holy", "Filth"],
 		gender: "N",
@@ -2136,7 +2136,7 @@ let BattlePokedex = {
 	},
 	raguelmon: {
 		num: -2164,
-		species: "Raguelmon",
+		name: "Raguelmon",
 		stage: "Mega",
 		types: ["Evil"],
 		gender: "N",
@@ -2149,7 +2149,7 @@ let BattlePokedex = {
 	},
 	rasielmon: {
 		num: -2165,
-		species: "Rasielmon",
+		name: "Rasielmon",
 		stage: "Mega",
 		types: ["Holy"],
 		gender: "N",
@@ -2162,7 +2162,7 @@ let BattlePokedex = {
 	},
 	rosemon: {
 		num: -2166,
-		species: "Rosemon",
+		name: "Rosemon",
 		stage: "Mega",
 		types: ["Nature"],
 		gender: "N",
@@ -2175,7 +2175,7 @@ let BattlePokedex = {
 	},
 	saberleomon: {
 		num: -2167,
-		species: "SaberLeomon",
+		name: "SaberLeomon",
 		stage: "Mega",
 		types: ["Battle"],
 		gender: "N",
@@ -2188,7 +2188,7 @@ let BattlePokedex = {
 	},
 	seraphimon: {
 		num: -2168,
-		species: "Seraphimon",
+		name: "Seraphimon",
 		stage: "Mega",
 		types: ["Holy", "Air"],
 		gender: "N",
@@ -2201,7 +2201,7 @@ let BattlePokedex = {
 	},
 	venommyotismon: {
 		num: -2169,
-		species: "VenomMyotismon",
+		name: "VenomMyotismon",
 		stage: "Mega",
 		types: ["Evil", "Air"],
 		gender: "N",
@@ -2214,7 +2214,7 @@ let BattlePokedex = {
 	},
 	vikemon: {
 		num: -2170,
-		species: "Vikemon",
+		name: "Vikemon",
 		stage: "Mega",
 		types: ["Aqua", "Mech"],
 		gender: "N",
@@ -2227,7 +2227,7 @@ let BattlePokedex = {
 	},
 	wargreymon: {
 		num: -2171,
-		species: "WarGreymon",
+		name: "WarGreymon",
 		stage: "Mega",
 		types: ["Flame", "Battle"],
 		gender: "N",
@@ -2240,7 +2240,7 @@ let BattlePokedex = {
 	},
 		blackagumon: {
 		num: -2172,
-		species: "BlackAgumon",
+		name: "BlackAgumon",
 		stage: "Rookie",
 		types: ["Flame", "Evil"],
 		gender: "N",
@@ -2253,7 +2253,7 @@ let BattlePokedex = {
 	},
 		blackgabumon: {
 		num: -2173,
-		species: "BlackGabumon",
+		name: "BlackGabumon",
 		stage: "Rookie",
 		types: ["Evil", "Flame"],
 		gender: "N",
@@ -2266,7 +2266,7 @@ let BattlePokedex = {
 	},
 		blackgreymon: {
 		num: -2174,
-		species: "BlackGreymon",
+		name: "BlackGreymon",
 		stage: "Champion",
 		types: ["Flame", "Evil"],
 		gender: "N",
@@ -2279,7 +2279,7 @@ let BattlePokedex = {
 	},
 		blackgarurumon: {
 		num: -2175,
-		species: "BlackGarurumon",
+		name: "BlackGarurumon",
 		stage: "Champion",
 		types: ["Aqua", "Evil"],
 		gender: "N",
@@ -2292,7 +2292,7 @@ let BattlePokedex = {
 	},
 		keramon: {
 		num: -2176,
-		species: "Keramon",
+		name: "Keramon",
 		stage: "Rookie",
 		types: ["Evil"],
 		gender: "N",
@@ -2305,7 +2305,7 @@ let BattlePokedex = {
 	},
 		chrysalimon: {
 		num: -2177,
-		species: "Chrysalimon",
+		name: "Chrysalimon",
 		stage: "Champion",
 		types: ["Evil"],
 		gender: "N",
@@ -2318,7 +2318,7 @@ let BattlePokedex = {
 	},
 		infermon: {
 		num: -2178,
-		species: "Infermon",
+		name: "Infermon",
 		stage: "Ultimate",
 		types: ["Evil"],
 		gender: "N",
@@ -2331,7 +2331,7 @@ let BattlePokedex = {
 	},
 		diaboromon: {
 		num: -2179,
-		species: "Diaboromon",
+		name: "Diaboromon",
 		stage: "Mega",
 		types: ["Evil"],
 		gender: "N",
@@ -2344,7 +2344,7 @@ let BattlePokedex = {
 	},
 		omnimon: {
 		num: -2180,
-		species: "Omnimon",
+		name: "Omnimon",
 		stage: "Mega",
 		types: ["Holy", "Battle"],
 		gender: "N",
@@ -2357,7 +2357,7 @@ let BattlePokedex = {
 	},
 		omnimonzwart: {
 		num: -2181,
-		species: "OmnimonZwart",
+		name: "OmnimonZwart",
 		stage: "Mega",
 		types: ["Evil", "Battle"],
 		gender: "N",

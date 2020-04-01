@@ -1,4 +1,3 @@
-/* eslint-disable eol-last */
 /**
  * Digimon Plugin for Digimon Showdown
  * Programmed by AlfaStorm & Ashely the Pikachu
@@ -117,7 +116,7 @@ function getAbilityImgSrc(ability) {
 function getBst(target) {
 	const mod = Dex.mod('digimon');
 	let newTargets = mod.dataSearch(target);
-	let digimon = mod.getTemplate(newTargets[0].name);
+	let digimon = mod.getSpecies(newTargets[0].name);
 	let bstnumber = digimon.baseStats.hp + digimon.baseStats.atk + digimon.baseStats.def + digimon.baseStats.spa + digimon.baseStats.spe + digimon.baseStats.spd;
 	return bstnumber;
 }
@@ -131,15 +130,15 @@ exports.commands = {
 		if (!target) return this.parse(`/digipediahelp`);
 		if (!mod.dataSearch(target, ['Pokedex'], true)) return this.errorReply(`That digimon does not exist.`);
 		let newTargets = mod.dataSearch(target);
-		let digimon = mod.getTemplate(newTargets[0].name);
+		let digimon = mod.getSpecies(newTargets[0].name);
 		let color = digimon.color;
 		let [firstcolor, secondcolor, thirdcolor] = colorTable[color];
 		let display = `<div><center><table style="width: 480px; background-color: ${firstcolor}; border-color: ${thirdcolor};" border="2"><tbody><tr><td style="width: 159px; text-align: center;"><table style="width: 468px; background-color: #ffffff; border-color: ${secondcolor};" border="1"><tbody><tr><td style="width: 462px;"><span style="color: #333333;"><strong>Digimon Field Guide</strong></span></td>`;
 		display += `</tr></tbody></table><table style="width: 468px; background-color: #ffffff; border-color: ${secondcolor}; margin-left: auto; margin-right: auto;" border="1"><tbody><tr><td style="width: 198px;"><span style="font-size: small; color: #333333;"><strong>${digimon.stage}</strong></span></td><td style="width: 131px;"><span style="font-size: small; color: #333333;"><strong>Stats</strong></span>`;
 		display += `</td></tr><tr><td style="width: 198px;"><p><strong><img src="https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani/${target}.gif" title="${target}" width="56" height="56"></strong></p><p><strong><span style="color: #333333;">${getSpecies(digimon)} </span></strong></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><p style="text-align: left;">`;
 		display += `<span style="color: #333333;"><strong><span style="font-size: small;">Type: </span></strong><span style="font-size: small;">${digimon.types.join(', ')}</span></span></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><p style="text-align: left;"><span style="color: #333333;"><strong><span style="font-size: small;">Ability:</span></strong><span style="font-size: small;"> ${digimon.abilities[0]}</span>`;
-		let templates = mod.getTemplate(target);
-		templates = mod.getTemplate(templates.baseSpecies);
+		let templates = mod.getSpecies(target);
+		templates = mod.getSpecies(templates.baseSpecies);
 		let sigmove = Object.keys(templates.learnset);
 		sigmove = sigmove.map(id => mod.getMove(id).name);
 		sigmove = sigmove[sigmove.length - 2];
@@ -156,8 +155,8 @@ exports.commands = {
 
 		display += `</span></span></span></span></span></span></span></td></tr></tbody></table><table style="height: 207px; background-color: #ffffff; border-color: ${secondcolor}; margin-left: auto; margin-right: auto;" border="1" width="466"><tbody><tr><td style="width: 456px;"><span style="color: #333333; font-size: small;"><strong>Type Interactions</strong></span><hr style="border-top: 1px solid ${secondcolor}; background: transparent;">`;
 		display += `<span style="color: #333333; font-size: small;"><strong>Weaknesses<br></strong>${(weaknesses.join(', ') || '<font color=#999999>None</font>')}<strong><br>Resistances<br></strong>${(resistances.join(', ') || '<font color=#999999>None</font>')}<strong><br>Immunities<br></strong>${(immunities.join(', ') || '<font color=#999999>None</font>')}</span></td></tr><tr><td style="text-align: center; width: 456px;"><span style="color: #333333; font-size: small;"><strong><strong><strong><strong>Move Pool</strong></strong></strong></strong></span>`;
-		let template = mod.getTemplate(target);
-		template = mod.getTemplate(template.baseSpecies);
+		let template = mod.getSpecies(target);
+		template = mod.getSpecies(template.baseSpecies);
 		let move = Object.keys(template.learnset);
 		move = move.map(id => mod.getMove(id).name);
 		let movestring = 0;
@@ -227,7 +226,7 @@ exports.commands = {
 				menu += `<center><div style='max-height: 300px; overflow-y: scroll;'>`;
 				let foundDigimon = 0;
 				for (const digimon in mod.data.Pokedex) {
-					let template = mod.getTemplate(digimon);
+					let template = mod.getSpecies(digimon);
 					if (template.num > -2000 || template.num < -3000) continue;
 					if (reqs.alphabetical && !template.id.startsWith(reqs.alphabetical)) continue;
 					if (reqs.stage && reqs.stage !== template.stage) continue;
@@ -290,15 +289,15 @@ exports.commands = {
 				return user.sendTo(room, `${change ? `|uhtmlchange|cs${user.id}|` : `|uhtml|cs${user.id}|`}${menu}`);
 			}
 			let newTargets = mod.dataSearch(target);
-			let digimon = mod.getTemplate(newTargets[0].name);
+			let digimon = mod.getSpecies(newTargets[0].name);
 			let color = digimon.color;
 			let [firstcolor, secondcolor, thirdcolor] = colorTable[color];
 			menu += `<div><center><table style="width: 480px; background-color: ${firstcolor}; border-color: ${thirdcolor};" border="2"><tbody><tr><td style="width: 159px; text-align: center;"><table style="width: 468px; background-color: #ffffff; border-color: ${secondcolor};" border="1"><tbody><tr><td style="width: 462px;"><span style="color: #333333;"><strong>Digimon Field Guide</strong></span></td>`;
 			menu += `</tr></tbody></table><table style="width: 468px; background-color: #ffffff; border-color: ${secondcolor}; margin-left: auto; margin-right: auto;" border="1"><tbody><tr><td style="width: 198px;"><span style="font-size: small; color: #333333;"><strong>${digimon.stage}</strong></span></td><td style="width: 131px;"><span style="font-size: small; color: #333333;"><strong>Stats</strong></span>`;
 			menu += `</td></tr><tr><td style="width: 198px;"><p><strong><img src="https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani/${target}.gif" title="${target}" width="56" height="56"></strong></p><p><strong><span style="color: #333333;">${getSpecies(digimon)} </span></strong></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><p style="text-align: left;">`;
 			menu += `<span style="color: #333333;"><strong><span style="font-size: small;">Type: </span></strong><span style="font-size: small;">${digimon.types.join(', ')}</span></span></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><p style="text-align: left;"><span style="color: #333333;"><strong><span style="font-size: small;">Ability:</span></strong><span style="font-size: small;"> ${digimon.abilities[0]}</span>`;
-			let templates = mod.getTemplate(target);
-			templates = mod.getTemplate(templates.baseSpecies);
+			let templates = mod.getSpecies(target);
+			templates = mod.getSpecies(templates.baseSpecies);
 			let sigmove = Object.keys(templates.learnset);
 			sigmove = sigmove.map(id => mod.getMove(id).name);
 			sigmove = sigmove[sigmove.length - 2];
@@ -315,8 +314,8 @@ exports.commands = {
 
 			menu += `</span></span></span></span></span></span></span></td></tr></tbody></table><table style="height: 207px; background-color: #ffffff; border-color: ${secondcolor}; margin-left: auto; margin-right: auto;" border="1" width="466"><tbody><tr><td style="width: 456px;"><span style="color: #333333; font-size: small;"><strong>Type Interactions</strong></span><hr style="border-top: 1px solid ${secondcolor}; background: transparent;">`;
 			menu += `<span style="color: #333333; font-size: small;"><strong>Weaknesses<br></strong>${(weaknesses.join(', ') || '<font color=#999999>None</font>')}<strong><br>Resistances<br></strong>${(resistances.join(', ') || '<font color=#999999>None</font>')}<strong><br>Immunities<br></strong>${(immunities.join(', ') || '<font color=#999999>None</font>')}</span></td></tr><tr><td style="text-align: center; width: 456px;"><span style="color: #333333; font-size: small;"><strong><strong><strong><strong>Move Pool</strong></strong></strong></strong></span>`;
-			let template = mod.getTemplate(target);
-			template = mod.getTemplate(template.baseSpecies);
+			let template = mod.getSpecies(target);
+			template = mod.getSpecies(template.baseSpecies);
 			let move = Object.keys(template.learnset);
 			move = move.map(id => mod.getMove(id).name);
 			let movestring = 0;
@@ -430,7 +429,7 @@ digiweak(target, room, user) {
 		let mod = Dex.mod('digimon');
 		let targets = target.split(/ ?[,/] ?/);
 		/** @type {{types: string[], [k: string]: any}} */
-		let digimon = mod.getTemplate(targets[0]);
+		let digimon = mod.getSpecies(targets[0]);
 		let type1 = mod.getType(targets[0]);
 		let type2 = mod.getType(targets[1]);
 		let type3 = mod.getType(targets[2]);

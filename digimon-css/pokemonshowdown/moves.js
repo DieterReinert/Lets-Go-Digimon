@@ -17499,7 +17499,7 @@ const BattleMovedex = {
 				if (type === 'Ground') return false;
 			},
 			onUpdate(pokemon) {
-				if (pokemon.baseTemplate.species === 'Gengar-Mega') {
+				if (pokemon.baseSpecies.name === 'Gengar-Mega') {
 					delete pokemon.volatiles['telekinesis'];
 					this.add('-end', pokemon, 'Telekinesis', '[silent]');
 				}
@@ -18826,7 +18826,7 @@ const BattleMovedex = {
 		accuracy: 100,
 		basePower: 15,
 		basePowerCallback(pokemon, target, move) {
-			if (pokemon.template.species === 'Greninja-Ash' && pokemon.hasAbility('battlebond')) {
+			if (pokemon.species.name === 'Greninja-Ash' && pokemon.hasAbility('battlebond')) {
 				return move.basePower + 5;
 			}
 			return move.basePower;
