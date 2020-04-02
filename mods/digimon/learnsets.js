@@ -2434,7 +2434,7 @@ let BattleLearnsets = {
 			evilfantasy: ["7M"],
 			reverseprogram: ["7M"],
 		},
-	},	
+	},
 	blackgarurumon: {
 		learnset: {
 			foxfire: ["7M"],

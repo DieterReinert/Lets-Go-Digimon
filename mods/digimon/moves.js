@@ -1,6 +1,6 @@
 'use strict';
 
-/**@type {{[k: string]: ModdedMoveData}} */
+/** @type {{[k: string]: ModdedMoveData & {signature?: boolean}}} */
 let BattleMovedex = {
 	"acidbubble": {
 		accuracy: 90,
@@ -19,7 +19,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "bubble", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 25,
 			volatileStatus: 'flinch',
@@ -27,7 +27,7 @@ let BattleMovedex = {
 		target: "normal",
 		type: "Aqua",
 	},
-		"dangerousbite": {
+	"dangerousbite": {
 		accuracy: 100,
 		basePower: 110,
 		category: "Physical",
@@ -44,7 +44,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "crunch", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Evil",
@@ -66,10 +66,10 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "freezeshock", target);
 		},
-		flags: { protect: 1, mirror: 1, bullet: 1 },
+		flags: {protect: 1, mirror: 1, bullet: 1},
 		secondary: {
 			chance: 50,
-			boosts: { spe: -1 },
+			boosts: {spe: -1},
 		},
 		target: "any",
 		type: "Aqua",
@@ -91,7 +91,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "ember", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 20,
 			status: 'brn',
@@ -116,7 +116,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "sleeppowder", target);
 		},
-		flags: { protect: 1, mirror: 1, reflectable: 1 },
+		flags: {protect: 1, mirror: 1, reflectable: 1},
 		status: 'bug',
 		target: "normal",
 		type: "Evil",
@@ -138,7 +138,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "fireblast", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Flame",
@@ -160,11 +160,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "sacredfire", target);
 		},
-		flags: { protect: 1, mirror: 1, sound: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
 		secondary: {
 			chance: 50,
 			self: {
-				boosts: { spe: 2 },
+				boosts: {spe: 2},
 			},
 		},
 		target: "any",
@@ -187,7 +187,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "metalburst", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 20,
 			status: 'par',
@@ -212,7 +212,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "chargebeam", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 20,
 			status: 'brn',
@@ -237,7 +237,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "charge", source);
 			this.add('-anim', source, "secretsword", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		accuracy: 90,
 		pp: 3,
@@ -245,7 +245,6 @@ let BattleMovedex = {
 		critRatio: 2,
 	},
 	"supremecannon": {
-		accuracy: 90,
 		basePower: 120,
 		category: "Physical",
 		desc: "High critical hit ratio.",
@@ -254,17 +253,15 @@ let BattleMovedex = {
 		name: "Supreme Cannon",
 		num: -329,
 		signature: true,
-		pp: 2,
-		noPPBoosts: true,
 		priority: 0,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "iceball", target);
 		},
-		flags: { protect: 1, mirror: 1, bullet: 1 },
-				secondary: null,
+		flags: {protect: 1, mirror: 1, bullet: 1},
+		secondary: null,
 		accuracy: 90,
-		pp: 3,
+		pp: 2,
 		noPPBoosts: true,
 		critRatio: 2,
 		target: "normal",
@@ -287,7 +284,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "ember", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Flame",
@@ -309,7 +306,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "hornleech", target);
 		},
-		flags: { protect: 1, mirror: 1, heal: 1 },
+		flags: {protect: 1, mirror: 1, heal: 1},
 		drain: [1, 2],
 		secondary: null,
 		target: "normal",
@@ -332,7 +329,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "chargebeam", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 20,
 			status: 'par',
@@ -357,11 +354,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "firespin", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
 			self: {
-				boosts: { spa: 1 },
+				boosts: {spa: 1},
 			},
 		},
 		target: "any",
@@ -384,10 +381,10 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "ember", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
-			boosts: { spd: -1 },
+			boosts: {spd: -1},
 		},
 		target: "normal",
 		type: "Flame",
@@ -410,7 +407,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "spikecannon", target);
 			this.add('-anim', source, "mefirst", target);
 		},
-		flags: { protect: 1, mirror: 1, heal: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, heal: 1, contact: 1},
 		secondary: null,
 		drain: [1, 2],
 		target: "allAdjacentFoes",
@@ -433,7 +430,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "toxic", target);
 		},
-		flags: { protect: 1, mirror: 1, reflectable: 1 },
+		flags: {protect: 1, mirror: 1, reflectable: 1},
 		status: 'psn',
 		target: "normal",
 		type: "Nature",
@@ -455,11 +452,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "fling", target);
 		},
-		flags: { protect: 1, mirror: 1, bullet: 1 },
+		flags: {protect: 1, mirror: 1, bullet: 1},
 		secondary: {
 			chance: 50,
 			self: {
-				boosts: { def: 2 },
+				boosts: {def: 2},
 			},
 		},
 		target: "normal",
@@ -482,7 +479,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "chargebeam", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		multihit: 2,
 		target: "any",
 		type: "Air",
@@ -504,10 +501,10 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "willowisp", target);
 		},
-		flags: { protect: 1, mirror: 1, bullet: 1 },
+		flags: {protect: 1, mirror: 1, bullet: 1},
 		secondary: {
 			chance: 100,
-			boosts: { def: -1 },
+			boosts: {def: -1},
 		},
 		target: "any",
 		type: "Flame",
@@ -529,7 +526,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "brickbreak", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: {
 			chance: 30,
 			volatileStatus: 'flinch',
@@ -554,7 +551,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "razorshell", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		multihit: [2, 3],
 		target: "allAdjacentFoes",
 		type: "Aqua",
@@ -576,11 +573,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "smackdown", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1, punch: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1, punch: 1},
 		secondary: {
 			chance: 100,
 			self: {
-				boosts: { def: 1 },
+				boosts: {def: 1},
 			},
 		},
 		target: "normal",
@@ -603,7 +600,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "electroweb", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		status: 'par',
 		target: "normal",
 		type: "Air",
@@ -625,7 +622,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "watergun", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 75,
 			onHit(target, source, move) {
@@ -652,7 +649,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "hornattack", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		multihit: [1, 3],
 		target: "normal",
 		type: "Battle",
@@ -675,7 +672,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "growl", target);
 			this.add('-anim', source, "bubble", target);
 		},
-		flags: { protect: 1, mirror: 1, sound: 1 },
+		flags: {protect: 1, mirror: 1, sound: 1},
 		secondary: {
 			chance: 20,
 			status: "slp",
@@ -700,7 +697,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "poisonjab", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 50,
 			status: 'psn',
@@ -725,11 +722,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "present", target);
 		},
-		flags: { protect: 1, mirror: 1, bullet: 1 },
+		flags: {protect: 1, mirror: 1, bullet: 1},
 		secondary: {
 			chance: 50,
 			self: {
-				boosts: { spe: 2 },
+				boosts: {spe: 2},
 			},
 		},
 		target: "any",
@@ -752,7 +749,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "doubleslap", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		multihit: [2, 5],
 		target: "normal",
 		type: "Battle",
@@ -774,10 +771,10 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "psybeam", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
-			boosts: { def: -1 },
+			boosts: {def: -1},
 		},
 		target: "any",
 		type: "Air",
@@ -799,7 +796,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "tailwind", target);
 		},
-		flags: { protect: 1, mirror: 1, sound: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
 		secondary: {
 			chance: 50,
 			status: "par",
@@ -826,7 +823,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "boneclub", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 30,
 			volatileStatus: 'flinch',
@@ -851,7 +848,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "iceball", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		target: "normal",
 		type: "Aqua",
 	},
@@ -872,7 +869,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "iceball", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 30,
 			volatileStatus: 'flinch',
@@ -897,7 +894,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "shockwave", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		target: "any",
 		type: "Air",
 	},
@@ -918,10 +915,10 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "dragonbreath", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
-			boosts: { spd: -1 },
+			boosts: {spd: -1},
 		},
 		target: "normal",
 		type: "Mech",
@@ -943,11 +940,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "spite", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 50,
 			self: {
-				boosts: { spa: 2 },
+				boosts: {spa: 2},
 			},
 		},
 		target: "any",
@@ -970,10 +967,10 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "aeroblast", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		onAfterMoveSecondarySelf(pokemon, target, move) {
-			if (this.random(100) < 50) this.boost({ spe: 2 }, pokemon, pokemon, move);
+			if (this.random(100) < 50) this.boost({spe: 2}, pokemon, pokemon, move);
 		},
 		target: "allAdjacentFoes",
 		type: "Air",
@@ -995,11 +992,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "glare", target);
 		},
-		flags: { protect: 1, mirror: 1, reflectable: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, reflectable: 1, authentic: 1},
 		volatileStatus: 'flinch',
 		onTryHit(target, source, move) {
 			//this is implemented solely to have a failure message. since flinch doesn't already have one
-			if (!this.willMove(target)) return false;
+			if (!this.queue.willMove(target)) return false;
 			this.add('-message', target.name + ' is disrupted!');
 		},
 		target: "normal",
@@ -1022,11 +1019,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "lusterpurge", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: {
 			chance: 50,
 			self: {
-				boosts: { atk: 2, spa: 2 },
+				boosts: {atk: 2, spa: 2},
 			},
 		},
 		target: "normal",
@@ -1052,7 +1049,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "nightshade", target);
 		},
-		flags: { protect: 1, mirror: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, authentic: 1},
 		secondary: null,
 		target: "normal",
 		type: "Evil",
@@ -1074,10 +1071,10 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "flameburst", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		onAfterMoveSecondarySelf(pokemon, target, move) {
-			this.boost({ spe: 1 }, pokemon, pokemon, move);
+			this.boost({spe: 1}, pokemon, pokemon, move);
 		},
 		target: "allAdjacentFoes",
 		type: "Flame",
@@ -1100,7 +1097,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "lowkick", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: {
 			chance: 80,
 			volatileStatus: 'flinch',
@@ -1125,7 +1122,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "dragonpulse", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "any",
 		type: "Mech",
@@ -1148,10 +1145,10 @@ let BattleMovedex = {
 			this.add('-anim', source, "spikecannon", target);
 			this.add('-anim', source, "spikecannon", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
-			boosts: { spd: -1 },
+			boosts: {spd: -1},
 		},
 		target: "any",
 		type: "Aqua",
@@ -1173,7 +1170,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "blastburn", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 30,
 			volatileStatus: 'confusion',
@@ -1199,7 +1196,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "nightslash", target);
 			this.add('-anim', source, "mefirst", target);
 		},
-		flags: { protect: 1, mirror: 1, heal: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, heal: 1, contact: 1},
 		secondary: null,
 		drain: [1, 2],
 		target: "normal",
@@ -1222,7 +1219,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "supersonic", target);
 		},
-		flags: { protect: 1, mirror: 1, pulse: 1 },
+		flags: {protect: 1, mirror: 1, pulse: 1},
 		secondary: {
 			chance: 20,
 			status: "slp",
@@ -1247,11 +1244,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "powergem", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 50,
 			self: {
-				boosts: { atk: 2 },
+				boosts: {atk: 2},
 			},
 		},
 		target: "normal",
@@ -1274,7 +1271,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "geargrind", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		ignoreEvasion: true,
 		ignoreDefensive: true,
@@ -1298,10 +1295,10 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "blueflare", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
-			boosts: { spd: -1 },
+			boosts: {spd: -1},
 		},
 		target: "normal",
 		type: "Flame",
@@ -1323,7 +1320,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "icepunch", target);
 		},
-		flags: { protect: 1, mirror: 1, punch: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, punch: 1, contact: 1},
 		secondary: {
 			chance: 80,
 			volatileStatus: 'flinch',
@@ -1349,7 +1346,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "roost", source);
 			this.add('-anim', source, "megapunch", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Air",
@@ -1371,11 +1368,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "sacredfire", target);
 		},
-		flags: { protect: 1, mirror: 1, sound: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
 		secondary: {
 			chance: 50,
 			self: {
-				boosts: { spe: 2 },
+				boosts: {spe: 2},
 			},
 		},
 		target: "any",
@@ -1399,7 +1396,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "playrough", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: {
 			chance: 80,
 			volatileStatus: 'confusion',
@@ -1424,7 +1421,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "uproar", target);
 		},
-		flags: { protect: 1, mirror: 1, sound: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
 		secondary: {
 			chance: 30,
 			status: 'slp',
@@ -1450,7 +1447,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "nastyplot", source);
 			this.add('-anim', source, "smog", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 30,
 			onHit(target, source) {
@@ -1481,7 +1478,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "fireblast", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Flame",
@@ -1504,7 +1501,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "gearup", source);
 			this.add('-anim', source, "twineedle", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Mech",
@@ -1526,11 +1523,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "dazzlinggleam", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 50,
 			self: {
-				boosts: { spe: 2 },
+				boosts: {spe: 2},
 			},
 		},
 		target: "any",
@@ -1553,7 +1550,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "icepunch", target);
 		},
-		flags: { protect: 1, mirror: 1, punch: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, punch: 1, contact: 1},
 		secondary: null,
 		target: "normal",
 		type: "Aqua",
@@ -1576,7 +1573,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "hail", target);
 			this.add('-anim', source, "cut", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: null,
 		ignoreEvasion: true,
 		ignoreDefensive: true,
@@ -1600,11 +1597,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "iciclecrash", target);
 		},
-		flags: { protect: 1, mirror: 1, bullet: 1 },
+		flags: {protect: 1, mirror: 1, bullet: 1},
 		secondary: {
 			chance: 100,
 			self: {
-				boosts: { def: 1 },
+				boosts: {def: 1},
 			},
 		},
 		target: "normal",
@@ -1628,7 +1625,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "shellsmash", source);
 			this.add('-anim', source, "pinmissile", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "any",
 		type: "Mech",
@@ -1650,7 +1647,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "shadowbone", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		multihit: 2,
 		secondary: null,
 		target: "normal",
@@ -1673,7 +1670,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "electroball", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Air",
@@ -1695,7 +1692,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "revelationdance", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		status: "par",
 		secondary: null,
 		target: "allAdjacentFoes",
@@ -1718,7 +1715,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "crunch", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		ignoreEvasion: true,
 		ignoreDefensive: true,
 		secondary: null,
@@ -1742,11 +1739,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "megapunch", target);
 		},
-		flags: { protect: 1, mirror: 1, punch: 1 },
+		flags: {protect: 1, mirror: 1, punch: 1},
 		secondary: {
 			chance: 100,
 			self: {
-				boosts: { atk: 1 },
+				boosts: {atk: 1},
 			},
 		},
 		target: "normal",
@@ -1769,7 +1766,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "furyswipes", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: null,
 		multihit: [2, 5],
 		target: "normal",
@@ -1792,11 +1789,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "firepunch", target);
 		},
-		flags: { protect: 1, mirror: 1, defrost: 1, punch: 1 },
+		flags: {protect: 1, mirror: 1, defrost: 1, punch: 1},
 		secondary: {
 			chance: 50,
 			self: {
-				boosts: { atk: 2 },
+				boosts: {atk: 2},
 			},
 		},
 		target: "normal",
@@ -1820,7 +1817,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "cut", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: {
 			chance: 80,
 			status: 'psn',
@@ -1845,7 +1842,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "bonemerang", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		multihit: 2,
 		target: "normal",
@@ -1868,7 +1865,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "lavaplume", target);
 		},
-		flags: { protect: 1, mirror: 1, defrost: 1 },
+		flags: {protect: 1, mirror: 1, defrost: 1},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Flame",
@@ -1891,7 +1888,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "clearsmog", target);
 			this.add('-anim', source, "poisongas", target);
 		},
-		flags: { protect: 1, mirror: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, authentic: 1},
 		secondary: {
 			chance: 20,
 			status: 'slp',
@@ -1916,7 +1913,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "magnitude", target);
 		},
-		flags: { protect: 1, mirror: 1, bullet: 1 },
+		flags: {protect: 1, mirror: 1, bullet: 1},
 		secondary: {
 			chance: 80,
 			volatileStatus: 'flinch',
@@ -1942,10 +1939,10 @@ let BattleMovedex = {
 			this.add('-anim', source, "acidarmor", source);
 			this.add('-anim', source, "bodyslam", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
-			boosts: { def: -2 },
+			boosts: {def: -2},
 		},
 		target: "normal",
 		type: "Filth",
@@ -1967,10 +1964,10 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "leaftornado", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 50,
-			boosts: { accuracy: -2 },
+			boosts: {accuracy: -2},
 		},
 		target: "normal",
 		type: "Nature",
@@ -1992,7 +1989,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "geargrind", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		ignoreEvasion: true,
 		ignoreDefensive: true,
@@ -2016,10 +2013,10 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "sludgebomb", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
-			boosts: { atk: -2 },
+			boosts: {atk: -2},
 		},
 		target: "normal",
 		type: "Filth",
@@ -2037,7 +2034,7 @@ let BattleMovedex = {
 		num: -172,
 		signature: true,
 		id: "pummelwhack",
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
@@ -2063,11 +2060,11 @@ let BattleMovedex = {
 			this.add('-anim', source, "roost", source);
 			this.add('-anim', source, "flameburst", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 50,
 			self: {
-				boosts: { atk: 2, spa: 2 },
+				boosts: {atk: 2, spa: 2},
 			},
 		},
 		accuracy: 90,
@@ -2091,7 +2088,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "rockpolish", source);
 			this.add('-anim', source, "acid", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		forceSwitch: true,
 		accuracy: 95,
@@ -2114,10 +2111,10 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "smog", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 50,
-			boosts: { accuracy: -2 },
+			boosts: {accuracy: -2},
 		},
 		accuracy: 95,
 		pp: 5,
@@ -2139,7 +2136,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "anchorshot", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		volatileStatus: "dot",
 		accuracy: 90,
@@ -2162,13 +2159,13 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "ominouswind", target);
 		},
-		flags: { protect: 1, mirror: 1, sound: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
 		accuracy: 95,
 		pp: 5,
 		noPPBoosts: true,
 		secondary: null,
 		onAfterMoveSecondarySelf(pokemon, target, move) {
-			this.boost({ spe: 1 }, pokemon, pokemon, move);
+			this.boost({spe: 1}, pokemon, pokemon, move);
 		},
 	},
 	"stunray": {
@@ -2187,7 +2184,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "bugbuzz", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 3,
 		noPPBoosts: true,
@@ -2212,13 +2209,13 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "watershuriken", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 3,
 		noPPBoosts: true,
 		secondary: {
 			chance: 100,
-			boosts: { spe: -1 },
+			boosts: {spe: -1},
 		},
 	},
 	"hydropressure": {
@@ -2243,7 +2240,7 @@ let BattleMovedex = {
 				move.forceSwitch = true;
 			},
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 95,
 		pp: 3,
 		noPPBoosts: true,
@@ -2264,7 +2261,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "moonblast", target);
 		},
-		flags: { protect: 1, mirror: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, authentic: 1},
 		secondary: null,
 		accuracy: true,
 		pp: 3,
@@ -2286,7 +2283,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "hex", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		ohko: true,
 		accuracy: 30,
@@ -2309,13 +2306,13 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "acid", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 95,
 		pp: 5,
 		noPPBoosts: true,
 		secondary: {
 			chance: 100,
-			boosts: { spe: -2 },
+			boosts: {spe: -2},
 		},
 	},
 	"hypercannon": {
@@ -2334,7 +2331,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "dragonpulse", target);
 		},
-		flags: { protect: 1, mirror: 1, recharge: 1 },
+		flags: {protect: 1, mirror: 1, recharge: 1},
 		secondary: null,
 		self: {
 			volatileStatus: 'mustrecharge',
@@ -2359,7 +2356,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "seedflare", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 5,
 		noPPBoosts: true,
@@ -2384,7 +2381,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "fireblast", target);
 		},
-		flags: { protect: 1, mirror: 1, defrost: 1 },
+		flags: {protect: 1, mirror: 1, defrost: 1},
 		secondary: null,
 		accuracy: 100,
 		pp: 3,
@@ -2407,7 +2404,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "moonblast", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		accuracy: 90,
 		pp: 3,
@@ -2430,13 +2427,13 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "smog", target);
 		},
-		flags: { protect: 1, mirror: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, authentic: 1},
 		accuracy: 95,
 		pp: 5,
 		noPPBoosts: true,
 		secondary: {
 			chance: 100,
-			boosts: { evasion: -2 },
+			boosts: {evasion: -2},
 		},
 	},
 	"deadlyweed": {
@@ -2455,13 +2452,13 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "grasspledge", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 95,
 		pp: 5,
 		noPPBoosts: true,
 		secondary: {
 			chance: 50,
-			boosts: { spe: -2, accuracy: -2 },
+			boosts: {spe: -2, accuracy: -2},
 		},
 	},
 	"thunderray": {
@@ -2480,7 +2477,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "thunderbolt", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 3,
 		noPPBoosts: true,
@@ -2506,7 +2503,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "charge", source);
 			this.add('-anim', source, "secretsword", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		accuracy: 90,
 		pp: 3,
@@ -2530,7 +2527,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "extremeevoboost", source);
 			this.add('-anim', source, "spikecannon", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		accuracy: true,
 		pp: 3,
@@ -2555,7 +2552,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "bite", target);
 			this.add('-anim', source, "drainingkiss", target);
 		},
-		flags: { protect: 1, mirror: 1, heal: 1 },
+		flags: {protect: 1, mirror: 1, heal: 1},
 		accuracy: 100,
 		pp: 3,
 		noPPBoosts: true,
@@ -2582,14 +2579,14 @@ let BattleMovedex = {
 			this.add('-anim', source, "cosmicpower", source);
 			this.add('-anim', source, "highjumpkick", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		accuracy: 95,
 		pp: 2,
 		noPPBoosts: true,
 		secondary: {
 			chance: 100,
 			self: {
-				boosts: { spe: 2 },
+				boosts: {spe: 2},
 			},
 		},
 	},
@@ -2610,14 +2607,14 @@ let BattleMovedex = {
 			this.add('-anim', source, "hail", target);
 			this.add('-anim', source, "firepunch", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		pp: 2,
 		noPPBoosts: true,
 		secondary: {
 			chance: 100,
 			self: {
-				boosts: { atk: 2 },
+				boosts: {atk: 2},
 			},
 		},
 	},
@@ -2641,7 +2638,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "topsyturvy", target);
 			this.add('-anim', source, "darkvoid", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 3,
 		noPPBoosts: true,
@@ -2666,7 +2663,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "corkscrewcrash", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		accuracy: 90,
 		pp: 3,
@@ -2689,7 +2686,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "spotlight", target);
 			this.add('-anim', source, "snarl", target);
 		},
-		flags: { protect: 1, mirror: 1, sound: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
 		accuracy: 95,
 		pp: 2,
 		noPPBoosts: true,
@@ -2716,13 +2713,13 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "sunsteelstrike", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		pp: 5,
 		noPPBoosts: true,
 		secondary: null,
 		onAfterMoveSecondarySelf(pokemon, target, move) {
-			this.boost({ spe: 1 }, pokemon, pokemon, move);
+			this.boost({spe: 1}, pokemon, pokemon, move);
 		},
 	},
 	"energyshot": {
@@ -2741,7 +2738,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "clangingscales", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		pp: 3,
 		noPPBoosts: true,
@@ -2766,7 +2763,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "explosion", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		accuracy: 100,
 		pp: 2,
@@ -2790,7 +2787,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "hail", target);
 			this.add('-anim', source, "icepunch", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1, punch: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1, punch: 1},
 		accuracy: 95,
 		pp: 3,
 		noPPBoosts: true,
@@ -2815,7 +2812,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "petalblizzard", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		accuracy: 95,
 		pp: 3,
@@ -2838,7 +2835,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "swordsdance", source);
 			this.add('-anim', source, "spacialrend", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 2,
 		noPPBoosts: true,
@@ -2871,7 +2868,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "octazooka", target);
 			this.add('-anim', source, "ominouswind", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		type: "Evil",
 	},
@@ -2891,7 +2888,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "dynamicpunch", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		accuracy: true,
 		pp: 5,
@@ -2914,7 +2911,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "darkpulse", target);
 			this.add('-anim', source, "foulplay", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: null,
 		accuracy: 100,
 		pp: 3,
@@ -2938,7 +2935,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "paraboliccharge", target);
 			this.add('-anim', source, "voltswitch", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: null,
 		accuracy: 95,
 		pp: 2,
@@ -2962,7 +2959,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "thunder", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		accuracy: 100,
 		pp: 3,
@@ -2984,7 +2981,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "crosschop", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		pp: 2,
 		noPPBoosts: true,
@@ -3009,7 +3006,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "smartstrike", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		accuracy: 90,
 		pp: 3,
@@ -3032,7 +3029,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "infernooverdrive", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		accuracy: 100,
 		pp: 3,
@@ -3054,14 +3051,17 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "moongeistbeam", target);
 		},
-		flags: { protect: 1, mirror: 1, defrost: 1 },
+		flags: {protect: 1, mirror: 1, defrost: 1},
 		secondary: null,
 		accuracy: 100,
 		pp: 5,
 		noPPBoosts: true,
-		basePowerCallback: function (pokemon, target, move) {
-			if (target.lastDamage > 0 && pokemon.lastAttackedBy && pokemon.lastAttackedBy.thisTurn && pokemon.lastAttackedBy.pokemon === target) {
-				this.debug('Boosted for getting hit by ' + pokemon.lastAttackedBy.move);
+		basePowerCallback(pokemon, target, move) {
+			let damagedByTarget = pokemon.attackedBy.some(
+				p => p.source === target && p.damage > 0 && p.thisTurn
+			);
+			if (damagedByTarget) {
+				this.debug('Boosted for getting hit by ' + target);
 				return move.basePower * 2;
 			}
 			return move.basePower;
@@ -3083,7 +3083,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "magnetbomb", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		accuracy: true,
 		pp: 5,
@@ -3105,13 +3105,13 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "dragonascent", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 5,
 		noPPBoosts: true,
 		secondary: null,
 		onAfterMoveSecondarySelf(pokemon, target, move) {
-			if (this.random(100) < 50) this.boost({ def: 2 }, pokemon, pokemon, move);
+			if (this.random(100) < 50) this.boost({def: 2}, pokemon, pokemon, move);
 		},
 	},
 	"heartsattack": {
@@ -3131,7 +3131,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "charm", target);
 			this.add('-anim', source, "miracleeye", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 2,
 		noPPBoosts: true,
@@ -3159,7 +3159,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "octazooka", target);
 			this.add('-anim', source, "drainingkiss", target);
 		},
-		flags: { protect: 1, mirror: 1, heal: 1 },
+		flags: {protect: 1, mirror: 1, heal: 1},
 		secondary: null,
 		accuracy: 100,
 		pp: 3,
@@ -3182,7 +3182,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "psychoboost", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		accuracy: 95,
 		pp: 3,
@@ -3204,7 +3204,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "boomburst", target);
 		},
-		flags: { protect: 1, mirror: 1, sound: 1, punch: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, sound: 1, punch: 1, contact: 1},
 		secondary: null,
 		accuracy: 95,
 		pp: 3,
@@ -3240,13 +3240,13 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "clangoroussoulblaze", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		pp: 2,
 		noPPBoosts: true,
 		secondary: {
 			chance: 100,
-			boosts: { def: -2 },
+			boosts: {def: -2},
 		},
 	},
 	"fragbomb": {
@@ -3267,7 +3267,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "explosion", target);
 		},
 		secondary: null,
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 2,
 		noPPBoosts: true,
@@ -3290,7 +3290,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "lovelykiss", target);
 			this.add('-anim', source, "dracometeor", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		accuracy: 100,
 		pp: 3,
 		noPPBoosts: true,
@@ -3316,7 +3316,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "eruption", target);
 		},
 		secondary: null,
-		flags: { protect: 1, mirror: 1, defrost: 1 },
+		flags: {protect: 1, mirror: 1, defrost: 1},
 		accuracy: 90,
 		pp: 3,
 		noPPBoosts: true,
@@ -3338,7 +3338,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "lovelykiss", target);
 			this.add('-anim', source, "darkvoid", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 2,
 		noPPBoosts: true,
@@ -3366,7 +3366,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "grudge", source);
 			this.add('-anim', source, "icebeam", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		accuracy: 100,
 		pp: 3,
@@ -3389,14 +3389,14 @@ let BattleMovedex = {
 			this.add('-anim', source, "cosmicpower", source);
 			this.add('-anim', source, "block", target);
 		},
-		flags: { protect: 1, mirror: 1, distance: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, distance: 1, contact: 1},
 		accuracy: 95,
 		pp: 2,
 		noPPBoosts: true,
 		secondary: {
 			chance: 100,
 			self: {
-				boosts: { spe: 2 },
+				boosts: {spe: 2},
 			},
 		},
 	},
@@ -3417,7 +3417,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "waterspout", target);
 		},
 		secondary: null,
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 3,
 		noPPBoosts: true,
@@ -3439,7 +3439,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "plasmafists", target);
 		},
 		secondary: null,
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		pp: 2,
 		noPPBoosts: true,
@@ -3463,7 +3463,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "swordsdance", source);
 			this.add('-anim', source, "sacredsword", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 85,
 		pp: 2,
 		noPPBoosts: true,
@@ -3487,7 +3487,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "gearup", source);
 			this.add('-anim', source, "mistball", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: true,
 		pp: 3,
 		noPPBoosts: true,
@@ -3510,7 +3510,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "tailwhip", target);
 			this.add('-anim', source, "photongeyser", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		pp: 2,
 		noPPBoosts: true,
@@ -3535,7 +3535,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "tailwhip", target);
 			this.add('-anim', source, "secretsword", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 95,
 		pp: 5,
 		noPPBoosts: true,
@@ -3560,7 +3560,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "10000000voltthunderbolt", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		pp: 2,
 		noPPBoosts: true,
@@ -3585,7 +3585,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "gigavolthavoc", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 95,
 		pp: 3,
 		noPPBoosts: true,
@@ -3609,7 +3609,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "sludgewave", target);
 			this.add('-anim', source, "darkvoid", target);
 		},
-		flags: { protect: 1, mirror: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, authentic: 1},
 		accuracy: 100,
 		pp: 3,
 		noPPBoosts: true,
@@ -3634,7 +3634,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "spectralthief", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		accuracy: 95,
 		pp: 2,
 		noPPBoosts: true,
@@ -3656,7 +3656,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "prismaticlaser", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		pp: 3,
 		noPPBoosts: true,
@@ -3681,7 +3681,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "zapcannon", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: true,
 		pp: 3,
 		noPPBoosts: true,
@@ -3704,7 +3704,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "gearup", source);
 			this.add('-anim', source, "zapcannon", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		pp: 3,
 		noPPBoosts: true,
@@ -3730,7 +3730,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "refresh", source);
 			this.add('-anim', source, "neverendingnightmare", target);
 		},
-		flags: { protect: 1, mirror: 1, heal: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, heal: 1, contact: 1},
 		accuracy: 95,
 		pp: 2,
 		noPPBoosts: true,
@@ -3755,7 +3755,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "coreenforcer", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 75,
 		pp: 2,
 		noPPBoosts: true,
@@ -3779,7 +3779,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "skillswap", target);
 			this.add('-anim', source, "firespin", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 5,
 		noPPBoosts: true,
@@ -3802,7 +3802,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "aquaring", source);
 			this.add('-anim', source, "attract", target);
 		},
-		flags: { heal: 1, snatch: 1 },
+		flags: {heal: 1, snatch: 1},
 		accuracy: true,
 		pp: 5,
 		noPPBoosts: true,
@@ -3833,7 +3833,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "spotlight", target);
 			this.add('-anim', source, "roaroftime", target);
 		},
-		flags: { protect: 1, mirror: 1, sound: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
 		accuracy: 100,
 		pp: 2,
 		noPPBoosts: true,
@@ -3859,7 +3859,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "blizzard", target);
 			this.add('-anim', source, "sheercold", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		accuracy: 90,
 		pp: 2,
 		noPPBoosts: true,
@@ -3885,13 +3885,13 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "originpulse", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 3,
 		noPPBoosts: true,
 		secondary: {
 			chance: 100,
-			boosts: { spd: -2 },
+			boosts: {spd: -2},
 		},
 	},
 	"edensjavelin": {
@@ -3910,14 +3910,14 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "lightofruin", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 2,
 		noPPBoosts: true,
 		secondary: {
 			chance: 100,
 			self: {
-				boosts: { spa: 2 },
+				boosts: {spa: 2},
 			},
 		},
 	},
@@ -3938,7 +3938,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "doomdesire", target);
 			this.add('-anim', source, "moonlight", source);
 		},
-		flags: { protect: 1, mirror: 1, heal: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, heal: 1, authentic: 1},
 		accuracy: 100,
 		pp: 3,
 		noPPBoosts: true,
@@ -3965,7 +3965,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "pulverizingpancake", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		accuracy: 95,
 		pp: 3,
 		noPPBoosts: true,
@@ -3988,14 +3988,14 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "sinisterarrowraid", target);
 		},
-		flags: { protect: 1, mirror: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, authentic: 1},
 		accuracy: 95,
 		pp: 3,
 		noPPBoosts: true,
 		multihit: 3,
 		secondary: null,
 		onAfterMoveSecondary(target, source, move) {
-			this.boost({ def: -1 });
+			this.boost({def: -1});
 		},
 	},
 	"knowledgestream": {
@@ -4015,7 +4015,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "moonlight", source);
 			this.add('-anim', source, "hyperbeam", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 95,
 		pp: 3,
 		noPPBoosts: true,
@@ -4023,14 +4023,14 @@ let BattleMovedex = {
 			chance: 20,
 			onHit(target) {
 				switch (this.random(3)) {
-					case 0:
-						target.trySetStatus('par');
-						break;
-					case 1:
-						target.trySetStatus('slp');
-						break;
-					case 2:
-						target.addVolatile('panic');
+				case 0:
+					target.trySetStatus('par');
+					break;
+				case 1:
+					target.trySetStatus('slp');
+					break;
+				case 2:
+					target.addVolatile('panic');
 				}
 			},
 		},
@@ -4052,7 +4052,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "crosspoison", target);
 			this.add('-anim', source, "paraboliccharge", target);
 		},
-		flags: { protect: 1, mirror: 1, heal: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, heal: 1, contact: 1},
 		accuracy: 90,
 		pp: 3,
 		noPPBoosts: true,
@@ -4079,7 +4079,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "honeclaws", source);
 			this.add('-anim', source, "crushclaw", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		accuracy: 95,
 		pp: 3,
 		noPPBoosts: true,
@@ -4104,7 +4104,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "hiddenpower", target);
 			this.add('-anim', source, "judgment", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		accuracy: 90,
 		pp: 3,
@@ -4128,7 +4128,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "grudge", source);
 			this.add('-anim', source, "thousandwaves", target);
 		},
-		flags: { protect: 1, mirror: 1, heal: 1 },
+		flags: {protect: 1, mirror: 1, heal: 1},
 		accuracy: 95,
 		pp: 2,
 		noPPBoosts: true,
@@ -4154,7 +4154,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "icehammer", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		pp: 2,
 		noPPBoosts: true,
@@ -4179,13 +4179,13 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "fusionflare", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 3,
 		noPPBoosts: true,
 		secondary: null,
 		onAfterMoveSecondarySelf(pokemon, target, move) {
-			this.boost({ atk: 2 }, pokemon, pokemon, move);
+			this.boost({atk: 2}, pokemon, pokemon, move);
 		},
 	},
 
@@ -4206,10 +4206,10 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "tailglow", target);
 		},
-		flags: { defrost: 1, snatch: 1 },
+		flags: {defrost: 1, snatch: 1},
 		accuracy: true,
 		pp: 20,
-		boosts: { atk: 2 },
+		boosts: {atk: 2},
 		secondary: null,
 	},
 	"heatbreath": {
@@ -4228,7 +4228,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "heatwave", target);
 		},
-		flags: { protect: 1, mirror: 1, defrost: 1 },
+		flags: {protect: 1, mirror: 1, defrost: 1},
 		accuracy: 100,
 		pp: 30,
 		secondary: {
@@ -4252,7 +4252,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "flamecharge", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 25,
 		ignoreDefensive: true,
@@ -4280,7 +4280,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "protect", source);
 			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
 		},
-		flags: { defrost: 1 },
+		flags: {defrost: 1},
 		accuracy: true,
 		pp: 10,
 		secondary: null,
@@ -4299,7 +4299,7 @@ let BattleMovedex = {
 			onTryHitPriority: 3,
 			onTryHit(target, source, move) {
 				if (!move.flags['protect']) {
-					if (move.isZ) move.zBrokeProtect = true;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
 					return;
 				}
 				this.add('-activate', target, 'move: Firewall'); //ditto ^^^^^
@@ -4333,7 +4333,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "burnup", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 95,
 		pp: 15,
 		secondary: {
@@ -4357,7 +4357,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "vcreate", target);
 		},
-		flags: { protect: 1, mirror: 1, defrost: 1 },
+		flags: {protect: 1, mirror: 1, defrost: 1},
 		pp: 10,
 		accuracy: 95,
 		secondary: {
@@ -4381,7 +4381,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "solarbeam", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		pp: 15,
 		accuracy: 95,
 		secondary: {
@@ -4405,7 +4405,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "iceshard", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 30,
 		secondary: null,
@@ -4426,12 +4426,12 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "dive", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 30,
 		secondary: null,
 		onAfterMoveSecondarySelf(pokemon, target, move) {
-			this.boost({ spe: 2 }, pokemon, pokemon, move);
+			this.boost({spe: 2}, pokemon, pokemon, move);
 		},
 	},
 	"winterblast": {
@@ -4451,7 +4451,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "hail", target);
 			this.add('-anim', source, "avalanche", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 95,
 		pp: 10,
 		secondary: {
@@ -4476,7 +4476,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "freezedry", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 95,
 		secondary: {
 			chance: 20,
@@ -4499,12 +4499,12 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "surf", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		pp: 10,
 		secondary: {
 			chance: 30,
-			boosts: { accuracy: -1 },
+			boosts: {accuracy: -1},
 		},
 	},
 	"icestatue": {
@@ -4523,7 +4523,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "sheercold", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		pp: 15,
 		secondary: {
@@ -4547,7 +4547,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "iceburn", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		pp: 15,
 		secondary: {
@@ -4577,7 +4577,7 @@ let BattleMovedex = {
 		accuracy: true,
 		onHitSide(side) {
 			for (let pokemon of side.active) {
-				if (pokemon) this.boost({ spe: 1 }, pokemon);
+				if (pokemon) this.boost({spe: 1}, pokemon);
 			}
 		},
 	},
@@ -4598,7 +4598,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "spark", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		critRatio: 2,
 		secondary: null,
@@ -4620,7 +4620,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "airslash", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		secondary: {
 			chance: 30,
@@ -4644,7 +4644,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "featherdance", target);
 			this.add('-anim', source, "megapunch", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 95,
 		pp: 15,
 		secondary: {
@@ -4669,7 +4669,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "discharge", target);
 		},
-		flags: { protect: 1, mirror: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, authentic: 1},
 		accuracy: 100,
 		secondary: {
 			chance: 20,
@@ -4692,7 +4692,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "boltstrike", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 95,
 		pp: 10,
 		secondary: {
@@ -4717,7 +4717,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "stokedsparksurfer", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 70,
 		secondary: {
 			chance: 10,
@@ -4740,14 +4740,14 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "mudsport", target);
 		},
-		flags: { snatch: 1 },
+		flags: {snatch: 1},
 		accuracy: true,
 		pp: 10,
 		secondary: null,
 		onHitSide(side) {
 			for (let pokemon of side.active) {
 				if (pokemon) {
-					this.boost({ spd: 1 }, pokemon);
+					this.boost({spd: 1}, pokemon);
 					pokemon.cureStatus();
 				}
 			}
@@ -4771,7 +4771,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "coil", target);
 		},
 		secondary: null,
-		flags: { snatch: 1 },
+		flags: {snatch: 1},
 		accuracy: true,
 		boosts: {
 			def: 2,
@@ -4783,7 +4783,7 @@ let BattleMovedex = {
 		num: -280,
 		signature: false,
 		id: "charmperfume",
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		basePower: 45,
 		basePowerCallback(pokemon, target, move) {
 			if (target.status === 'psn' || target.status === 'tox') {
@@ -4825,7 +4825,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "grassknot", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		accuracy: 95,
 		secondaries: [
 			{
@@ -4836,7 +4836,7 @@ let BattleMovedex = {
 			},
 			{
 				chance: 25,
-				boosts: { spe: -1 },
+				boosts: {spe: -1},
 			},
 		],
 	},
@@ -4858,7 +4858,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "leechseed", target);
 			this.add('-anim', source, "forestscurse", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 85,
 		volatileStatus: 'bug',
 		secondary: null,
@@ -4880,7 +4880,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "rockslide", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		secondary: null,
 	},
@@ -4901,7 +4901,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "aciddownpour", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 95,
 		secondary: {
 			chance: 20,
@@ -4925,11 +4925,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "spiritshackle", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		secondary: {
 			chance: 25,
-			status: 'par'
+			status: 'par',
 		},
 	},
 	"blackout": {
@@ -4948,7 +4948,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "brutalswing", target);
 		},
-		flags: { protect: 1, mirror: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, authentic: 1},
 		accuracy: 100,
 		pp: 15,
 		secondary: {
@@ -4972,7 +4972,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "embargo", target);
 		},
-		flags: { protect: 1, mirror: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, authentic: 1},
 		onTry(source, target) {
 			let action = this.queue.willMove(target);
 			if (!action || action.choice !== 'move' || (action.move.category === 'Status' && action.move.id !== 'mefirst') || target.volatiles.mustrecharge) {
@@ -5002,11 +5002,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "trickortreat", target);
 		},
-		flags: { protect: 1, mirror: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, authentic: 1},
 		accuracy: 100,
 		secondary: {
 			chance: 20,
-			boosts: { spd: -1 },
+			boosts: {spd: -1},
 		},
 	},
 	"shadowfall": {
@@ -5026,7 +5026,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "powertrip", target);
 		},
-		flags: { mirror: 1 },
+		flags: {mirror: 1},
 		accuracy: 100,
 		critRatio: 2,
 		secondary: null,
@@ -5084,7 +5084,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "blackholeeclipse", target);
 		},
-		flags: { protect: 1, mirror: 1, sound: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
 		accuracy: 100,
 		secondary: {
 			chance: 10,
@@ -5108,11 +5108,13 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "geomancy", target);
 		},
-		flags: { protect: 1, pulse: 1, reflectable: 1, distance: 1, heal: 1, mystery: 1 },
+		flags: {protect: 1, pulse: 1, reflectable: 1, distance: 1, heal: 1, mystery: 1},
 		accuracy: true,
 		secondary: null,
-		onHit: function (target, source) {
-			return this.heal(Math.ceil(target.maxhp * 0.4));
+		onHit(target, source) {
+			if (!this.heal(Math.ceil(target.maxhp * 0.4))) {
+				return false;
+			}
 		},
 	},
 	"holybreath": {
@@ -5133,7 +5135,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "morningsun", target);
 		},
-		flags: { snatch: 1 },
+		flags: {snatch: 1},
 		accuracy: true,
 		boosts: {
 			spe: 1,
@@ -5152,24 +5154,24 @@ let BattleMovedex = {
 		signature: false,
 		pp: 10,
 		priority: 0,
-		flags: { nonsky: 1 },
+		flags: {nonsky: 1},
 		terrain: 'holyterrain',
 		effect: {
 			duration: 5,
-			durationCallback: function (source, effect) {
+			durationCallback(source, effect) {
 				if (source && source.hasItem('terrainextender')) {
 					return 8;
 				}
 				return 5;
 			},
-			onSetStatus: function (status, target, source, effect) {
+			onSetStatus(status, target, source, effect) {
 				if (!target.isGrounded() || target.isSemiInvulnerable()) return;
 				if (effect && effect.status) {
 					this.add('-activate', target, 'move: Holy Terrain');
 				}
 				return false;
 			},
-			onTryAddVolatile: function (status, target, source, effect) {
+			onTryAddVolatile(status, target, source, effect) {
 				if (!target.isGrounded() || target.isSemiInvulnerable()) return;
 				if (status.id === 'confusion') {
 					if (effect.effectType === 'Move' && !effect.secondaries) this.add('-activate', target, 'move: Holy Terrain');
@@ -5181,7 +5183,7 @@ let BattleMovedex = {
 
 				return accuracy;
 			},
-			onStart: function (battle, source, effect) {
+			onStart(battle, source, effect) {
 				if (effect && effect.effectType === 'Ability') {
 					this.add('-fieldstart', 'move: Holy Terrain', '[from] ability: ' + effect, '[of] ' + source);
 				} else {
@@ -5190,24 +5192,24 @@ let BattleMovedex = {
 			},
 			onResidualOrder: 5,
 			onResidualSubOrder: 2,
-			onResidual: function () {
+			onResidual() {
 				this.eachEvent('Terrain');
 			},
-			onTerrain: function (pokemon) {
+			onTerrain(pokemon) {
 				if (pokemon.isGrounded() && !pokemon.isSemiInvulnerable()) {
 					this.debug('Pokemon is grounded, healing through Holy Terrain.');
 					this.heal(pokemon.maxhp / 16, pokemon, pokemon);
 				}
 			},
-			onEnd: function () {
+			onEnd() {
 				this.eachEvent('Terrain');
 				this.add('-fieldend', 'move: Holy Terrain');
 			},
 		},
-		secondary: false,
+		secondary: null,
 		target: "all",
 		type: "Holy",
-		zMoveBoost: { def: 1 },
+		zMoveBoost: {def: 1},
 		contestType: "Beautiful",
 	},
 
@@ -5228,11 +5230,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "fairylock", target);
 		},
-		flags: { protect: 1, mirror: 1, authentic: 1 },
+		flags: {protect: 1, mirror: 1, authentic: 1},
 		accuracy: 90,
 		secondary: null,
 		onAfterMoveSecondarySelf(pokemon, target, move) {
-			if (this.random(100) < 70) this.boost({ spa: 1 }, pokemon, pokemon, move);
+			if (this.random(100) < 70) this.boost({spa: 1}, pokemon, pokemon, move);
 		},
 	},
 	"saintray": {
@@ -5252,11 +5254,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "naturesmadness", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		secondary: {
 			chance: 10,
-			boosts: { spd: -1 },
+			boosts: {spd: -1},
 		},
 	},
 	"holyjudgment": {
@@ -5276,11 +5278,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "supersonicskystrike", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		secondary: {
 			chance: 10,
-			boosts: { atk: -1 },
+			boosts: {atk: -1},
 		},
 	},
 	"shiningnova": {
@@ -5301,11 +5303,11 @@ let BattleMovedex = {
 			this.add('-anim', source, "happyhour", source);
 			this.add('-anim', source, "fleurcannon", target);
 		},
-		flags: { protect: 1, mirror: 1, authentic: 1, recharge: 1 },
+		flags: {protect: 1, mirror: 1, authentic: 1, recharge: 1},
 		accuracy: 100,
 		secondary: {
 			chance: 10,
-			boosts: { spa: -1 },
+			boosts: {spa: -1},
 		},
 	},
 	"musclecharge": {
@@ -5324,7 +5326,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "growth", target);
 		},
-		flags: { snatch: 1 },
+		flags: {snatch: 1},
 		accuracy: true,
 		pp: 20,
 		secondary: null,
@@ -5351,7 +5353,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "nobleroar", target);
 			this.add('-anim', source, "encore", target);
 		},
-		flags: { snatch: 1 },
+		flags: {snatch: 1},
 		secondary: null,
 		accuracy: true,
 		boosts: {
@@ -5378,7 +5380,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "machpunch", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		accuracy: 100,
 		secondary: null,
 	},
@@ -5399,17 +5401,17 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "focusblast", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		secondary: {
 			chance: 10,
 			self: {
-				boosts: { spa: 1 },
+				boosts: {spa: 1},
 			},
 		},
 	},
 	"tremar": {
-		name: "tremar",
+		name: "Tremar",
 		num: -303,
 		signature: false,
 		accuracy: 100,
@@ -5419,7 +5421,6 @@ let BattleMovedex = {
 		desc: "Deals 50 HP of damage to the target.",
 		shortDesc: "Deals 50 HP of damage to the target.",
 		id: "tremar",
-		name: "Tremar",
 		pp: 10,
 		priority: 0,
 		onPrepareHit(target, source, move) {
@@ -5448,7 +5449,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "happyhour", source);
 		},
-		flags: { protect: 1, mirror: 1, charge: 1 },
+		flags: {protect: 1, mirror: 1, charge: 1},
 		accuracy: 95,
 		onTry(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -5488,7 +5489,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "focuspunch", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		accuracy: 90,
 		secondary: {
 			chance: 15,
@@ -5513,7 +5514,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "gearup", source);
 			this.add('-anim', source, "cut", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		accuracy: 95,
 		multihit: [2, 5],
 		secondary: null,
@@ -5563,7 +5564,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "gravity", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: true,
 		volatileStatus: 'bug',
 		secondary: null,
@@ -5585,7 +5586,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "storedpower", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		secondary: {
 			chance: 30,
@@ -5609,7 +5610,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "mirrorshot", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		secondary: {
 			chance: 10,
@@ -5633,7 +5634,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "endeavor", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		secondary: {
 			chance: 30,
@@ -5657,11 +5658,11 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "searingsunrazesmash", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		secondary: {
 			chance: 30,
-			boosts: { accuracy: -1 },
+			boosts: {accuracy: -1},
 		},
 	},
 	"cootieskick": {
@@ -5681,7 +5682,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "firstimpression", target);
 		},
-		flags: { protect: 1, mirror: 1, contact: 1 },
+		flags: {protect: 1, mirror: 1, contact: 1},
 		accuracy: 100,
 		multihit: [2, 5],
 		secondary: {
@@ -5707,7 +5708,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "acidarmor", source);
 			this.add('-anim', source, "smog", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		secondary: {
 			chance: 40,
@@ -5731,7 +5732,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "nastyplot", source);
 			this.add('-anim', source, "toxic", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		multihit: 2,
 		secondary: null,
 		target: "normal",
@@ -5754,7 +5755,7 @@ let BattleMovedex = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "gunkshot", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		secondary: {
 			chance: 10,
@@ -5779,7 +5780,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "nastyplot", source);
 			this.add('-anim', source, "sludgebomb", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		multihit: [3, 5],
 		secondary: null,
@@ -5805,11 +5806,11 @@ let BattleMovedex = {
 			this.add('-anim', source, "banefulbunker", source);
 			this.add('-anim', source, "sludgebomb", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 100,
 		secondary: {
 			chance: 30,
-			boosts: { spe: -2 },
+			boosts: {spe: -2},
 		},
 	},
 	"extremepoopdeath": {
@@ -5830,7 +5831,7 @@ let BattleMovedex = {
 			this.add('-anim', source, "nastyplot", source);
 			this.add('-anim', source, "aciddownpour", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		accuracy: 90,
 		secondary: {
 			chance: 25,
@@ -5858,7 +5859,7 @@ let BattleMovedex = {
 		name: "Panic Attack",
 		pp: 35,
 		priority: 0,
-		flags: { protect: 1 },
+		flags: {protect: 1},
 		target: "randomNormal",
 		type: "Battle",
 	},
@@ -5880,7 +5881,7 @@ let BattleMovedex = {
 		name: "Dot Beam",
 		pp: 35,
 		priority: 0,
-		flags: { protect: 1 },
+		flags: {protect: 1},
 		target: "normal",
 		type: "Mech",
 	},
@@ -5999,7 +6000,7 @@ let BattleMovedex = {
 			}
 			if (!targets.length && !anyAirborne) return false; // Fails when there are no grounded Grass types or airborne Pokemon
 			for (const pokemon of targets) {
-				this.boost({ atk: 1, spa: 1 }, pokemon, source);
+				this.boost({atk: 1, spa: 1}, pokemon, source);
 			}
 		},
 	},
@@ -6066,7 +6067,7 @@ let BattleMovedex = {
 			}
 			let success = false;
 			for (const target of targets) {
-				success = this.boost({ def: 1 }, target, source, move) || success;
+				success = this.boost({def: 1}, target, source, move) || success;
 			}
 			return success;
 		},

@@ -65,6 +65,7 @@ let BattleStatuses = {
 		},
 		onBeforeMovePriority: 4,
 		onBeforeMove(pokemon) {
+			if (!pokemon.volatiles.bug) return;
 			pokemon.volatiles.bug.time--;
 			if (!pokemon.volatiles.bug.time) {
 				pokemon.removeVolatile('bug');
@@ -100,7 +101,8 @@ let BattleStatuses = {
 		onStallMove(target) {
 			let counter = this.effectData.counter || 1;
 			this.debug("Success chance: " + Math.round(100 / counter) + "%");
-			return Math.floor(Math.random() * counter) + 1
+			let success = this.randomChance(1, counter);
+			return success;
 		},
 		onRestart() {
 			// @ts-ignore
