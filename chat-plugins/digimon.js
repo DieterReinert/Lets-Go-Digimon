@@ -435,7 +435,7 @@ exports.commands = {
 		let type3 = mod.getType(targets[2]);
 
 		if (digimon.exists) {
-			target = digimon.species;
+			target = digimon.name;
 		} else {
 			let types = [];
 			if (type1.exists) {
