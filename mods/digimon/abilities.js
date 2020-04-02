@@ -6,7 +6,7 @@ let BattleAbilities = {
 		id: "data",
 		name: "Data",
 		desc: "1.2x against Vaccine; 0.8x against Virus. 30% chance to cure status conditions.",
-		onStart: function (pokemon) {
+		onStart(pokemon) {
 			pokemon.addVolatile('Data');
 			this.add('-start', pokemon, 'Data');
 		},
@@ -45,7 +45,7 @@ let BattleAbilities = {
 		id: "virus",
 		name: "Virus",
 		desc: "1.2x against Data; 0.8x against Vaccine. 30% chance to cure status conditions.",
-		onStart: function (pokemon) {
+		onStart(pokemon) {
 			pokemon.addVolatile('Virus');
 			this.add('-start', pokemon, 'Virus');
 		},
@@ -84,7 +84,7 @@ let BattleAbilities = {
 		id: "vaccine",
 		name: "Vaccine",
 		desc: "1.2x against Virus; 0.8x against Data. 30% chance to cure status conditions.",
-		onStart: function (pokemon) {
+		onStart(pokemon) {
 			pokemon.addVolatile('Vaccine');
 			this.add('-start', pokemon, 'Vaccine');
 		},
@@ -222,7 +222,7 @@ let BattleAbilities = {
 		desc: "Grass- and Nature-type Pokemon on this Pokemon's side cannot have their stat stages lowered by other Pokemon or have a major status condition inflicted on them by other Pokemon.",
 		shortDesc: "Allied Grass/Nature types can't have stats lowered or status inflicted by other Pokemon.",
 		onAllyBoost(boost, target, source, effect) {
-			if ((source && target === source) || (!target.hasType('Grass') && !target.hasType('Nature'))) return;
+			if ((source && target === source) || !(target.hasType('Grass') || target.hasType('Nature'))) return;
 			let showMsg = false;
 			for (let i in boost) {
 				// @ts-ignore
@@ -232,7 +232,10 @@ let BattleAbilities = {
 					showMsg = true;
 				}
 			}
-			if (showMsg && !effect.secondaries) this.add('-fail', this.effectData.target, 'unboost', '[from] ability: Flower Veil', '[of] ' + target);
+			if (showMsg && !(/** @type {ActiveMove} */(effect)).secondaries) {
+				const effectHolder = this.effectData.target;
+				this.add('-block', target, 'ability: Flower Veil', '[of] ' + effectHolder);
+			}
 		},
 		onAllySetStatus(status, target, source, effect) {
 			if (target.hasType('Grass') || target.hasType('Nature')) {
@@ -276,9 +279,9 @@ let BattleAbilities = {
 		inherit: true,
 		desc: "This Pokemon's Attack is raised by 1 stage after it is damaged by a Dark- or Evil-type move.",
 		shortDesc: "This Pokemon's Attack is raised by 1 after it is damaged by a Dark- or Evil-type move.",
-		onAfterDamage(damage, target, source, effect) {
-			if (effect && (effect.type === 'Dark' || effect.type === 'Evil')) {
-				this.boost({ atk: 1 });
+		onDamagingHit(damage, target, source, move) {
+			if (move.type === 'Dark' || move.type === 'Evil') {
+				this.boost({atk: 1});
 			}
 		},
 	},
@@ -288,7 +291,7 @@ let BattleAbilities = {
 		shortDesc: "Draws Electric and Air moves to itself to raise Sp. Atk by 1; Electric/Air immunity.",
 		onTryHit(target, source, move) {
 			if (target !== source && (move.type === 'Electric' || move.type === 'Air')) {
-				if (!this.boost({ spa: 1 })) {
+				if (!this.boost({spa: 1})) {
 					this.add('-immune', target, '[msg]', '[from] ability: Lightning Rod');
 				}
 				return null;
@@ -327,7 +330,7 @@ let BattleAbilities = {
 		shortDesc: "This Pokemon's Speed is raised 1 if hit by an Electric or Air move; Electric/Air immunity.",
 		onTryHit(target, source, move) {
 			if (target !== source && (move.type === 'Electric' || move.type === 'Air')) {
-				if (!this.boost({ spe: 1 })) {
+				if (!this.boost({spe: 1})) {
 					this.add('-immune', target, '[msg]', '[from] ability: Motor Drive');
 				}
 				return null;
@@ -357,9 +360,9 @@ let BattleAbilities = {
 		inherit: true,
 		desc: "This Pokemon's Speed is raised by 1 stage after it is damaged by a Bug-, Dark-, Ghost-, or Evil-type attack.",
 		shortDesc: "This Pokemon's Speed is raised by if hit by a Bug-, Dark-, Ghost-, or Evil-type attack.",
-		onAfterDamage(damage, target, source, effect) {
-			if (effect && (effect.type === 'Dark' || effect.type === 'Bug' || effect.type === 'Ghost' || effect.type === 'Evil')) {
-				this.boost({ spe: 1 });
+		onDamagingHit(damage, target, source, move) {
+			if (['Dark', 'Bug', 'Ghost', 'Evil'].includes(move.type)) {
+				this.boost({spe: 1});
 			}
 		},
 	},
@@ -384,7 +387,7 @@ let BattleAbilities = {
 		onTryHitPriority: 1,
 		onTryHit(target, source, move) {
 			if (target !== source && (move.type === 'Grass' || move.type === 'Nature')) {
-				if (!this.boost({ atk: 1 })) {
+				if (!this.boost({atk: 1})) {
 					this.add('-immune', target, '[msg]', '[from] ability: Sap Sipper');
 				}
 				return null;
@@ -393,7 +396,7 @@ let BattleAbilities = {
 		onAllyTryHitSide(target, source, move) {
 			if (target === this.effectData.target || target.side !== source.side) return;
 			if (move.type === 'Grass' || move.type === 'Nature') {
-				this.boost({ atk: 1 }, this.effectData.target);
+				this.boost({atk: 1}, this.effectData.target);
 			}
 		},
 	},
@@ -436,7 +439,7 @@ let BattleAbilities = {
 		shortDesc: "Draws Water and Aqua moves to itself to raise Sp. Atk by 1; Water/Aqua immunity.",
 		onTryHit(target, source, move) {
 			if (target !== source && (move.type === 'Water' || move.type === 'Aqua')) {
-				if (!this.boost({ spa: 1 })) {
+				if (!this.boost({spa: 1})) {
 					this.add('-immune', target, '[msg]', '[from] ability: Storm Drain');
 				}
 				return null;
@@ -547,9 +550,9 @@ let BattleAbilities = {
 		inherit: true,
 		desc: "This Pokemon's Defense is raised 2 stages after it is damaged by a Water- or Aqua-type move.",
 		shortDesc: "This Pokemon's Defense is raised 2 stages after it is damaged by a Water/Aqua move.",
-		onAfterDamage(damage, target, source, effect) {
-			if (effect && (effect.type === 'Water' || effect.type === 'Aqua')) {
-				this.boost({ def: 2 });
+		onDamagingHit(damage, target, source, move) {
+			if (move.type === 'Water' || move.type === 'Aqua') {
+				this.boost({def: 2});
 			}
 		},
 	},

@@ -94,8 +94,8 @@ class RandomDigimonTeams extends RandomTeams {
 			moves: [set.reservedMove].concat(randomMoves),
 			// natures[~~(Math.random() * natures.length)];
 			nature: natures[~~(Math.random() * natures.length)],
-			evs: { hp: 85, atk: 85, def: 85, spa: 85, spd: 85, spe: 85 },
-			ivs: { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 },
+			evs: {hp: 85, atk: 85, def: 85, spa: 85, spd: 85, spe: 85},
+			ivs: {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31},
 			level: level,
 		};
 	}

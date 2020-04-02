@@ -22,19 +22,19 @@ const colorTable = {
 };
 
 function getSpecies(digimon) {
-	switch (digimon.species) {
-		case 'Meicrackmon VM':
-			return 'Meicrackmon [Vicious Mode]';
-		case 'Cherubimon Evil':
-			return 'Cherubimon [Evil]';
-		case 'Cherubimon Good':
-			return 'Cherubimon [Good]';
-		case 'MetalGreymon Vaccine':
-			return 'MetalGreymon [Vaccine]';
-		case 'MetalGreymon Virus':
-			return 'MetalGreymon [Virus]';
-		default:
-			return digimon.species;
+	switch (digimon.name) {
+	case 'Meicrackmon VM':
+		return 'Meicrackmon [Vicious Mode]';
+	case 'Cherubimon Evil':
+		return 'Cherubimon [Evil]';
+	case 'Cherubimon Good':
+		return 'Cherubimon [Good]';
+	case 'MetalGreymon Vaccine':
+		return 'MetalGreymon [Vaccine]';
+	case 'MetalGreymon Virus':
+		return 'MetalGreymon [Virus]';
+	default:
+		return digimon.name;
 	}
 }
 
@@ -48,68 +48,68 @@ function getTypeChart(digimon) {
 		if (notImmune) {
 			let typeMod = dex.getEffectiveness(type, digimon);
 			switch (typeMod) {
-				case 1:
-					weaknesses.push(type);
-					break;
-				case 2:
-					weaknesses.push("<b>" + type + "</b>");
-					break;
-				case 3:
-					weaknesses.push("<b><i>" + type + "</i></b>");
-					break;
-				case -1:
-					resistances.push(type);
-					break;
-				case -2:
-					resistances.push("<b>" + type + "</b>");
-					break;
-				case -3:
-					resistances.push("<b><i>" + type + "</i></b>");
-					break;
+			case 1:
+				weaknesses.push(type);
+				break;
+			case 2:
+				weaknesses.push("<b>" + type + "</b>");
+				break;
+			case 3:
+				weaknesses.push("<b><i>" + type + "</i></b>");
+				break;
+			case -1:
+				resistances.push(type);
+				break;
+			case -2:
+				resistances.push("<b>" + type + "</b>");
+				break;
+			case -3:
+				resistances.push("<b><i>" + type + "</i></b>");
+				break;
 			}
 		} else {
 			immunities.push(type);
 		}
 	}
 
-	return { weaknesses, resistances, immunities };
+	return {weaknesses, resistances, immunities};
 }
 
 function getTypeImgSrc(type) {
 	switch (type) {
-		case 'Flame':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/flame-icon.png';
-		case 'Aqua':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/aqua-icon.png';
-		case 'Air':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/air-icon.png';
-		case 'Nature':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/nature-icon.png';
-		case 'Holy':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/holy-icon.png';
-		case 'Evil':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/evil-icon.png';
-		case 'Battle':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/battle-icon.png';
-		case 'Mech':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/mech-icon.png';
-		case 'Filth':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/filth-icon.png';
-		default:
-			return '';
+	case 'Flame':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/flame-icon.png';
+	case 'Aqua':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/aqua-icon.png';
+	case 'Air':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/air-icon.png';
+	case 'Nature':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/nature-icon.png';
+	case 'Holy':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/holy-icon.png';
+	case 'Evil':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/evil-icon.png';
+	case 'Battle':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/battle-icon.png';
+	case 'Mech':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/mech-icon.png';
+	case 'Filth':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/filth-icon.png';
+	default:
+		return '';
 	}
 }
 
 function getAbilityImgSrc(ability) {
 	switch (ability) {
-		case 'Vaccine':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/vaccine-icon.png';
-		case 'Virus':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/virus-icon.png';
-		case 'Data':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/data-icon.png';
-		default:
-			return '';
+	case 'Vaccine':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/vaccine-icon.png';
+	case 'Virus':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/virus-icon.png';
+	case 'Data':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/data-icon.png';
+	default:
+		return '';
 	}
 }
 
@@ -125,7 +125,7 @@ exports.commands = {
 	fieldguide: 'digiprofile',
 	digiprofile(target, room, user) {
 		if (!this.runBroadcast()) return;
-		target = toId(target);
+		target = toID(target);
 		let mod = Dex.mod('digimon');
 		if (!target) return this.parse(`/digipediahelp`);
 		if (!mod.dataSearch(target, ['Pokedex'], true)) return this.errorReply(`That digimon does not exist.`);
@@ -139,7 +139,7 @@ exports.commands = {
 		display += `<span style="color: #333333;"><strong><span style="font-size: small;">Type: </span></strong><span style="font-size: small;">${digimon.types.join(', ')}</span></span></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><p style="text-align: left;"><span style="color: #333333;"><strong><span style="font-size: small;">Ability:</span></strong><span style="font-size: small;"> ${digimon.abilities[0]}</span>`;
 		let templates = mod.getSpecies(target);
 		templates = mod.getSpecies(templates.baseSpecies);
-		let sigmove = Object.keys(templates.learnset);
+		let sigmove = Object.keys(mod.getLearnsetData(templates.id).learnset);
 		sigmove = sigmove.map(id => mod.getMove(id).name);
 		sigmove = sigmove[sigmove.length - 2];
 		let bstdigimon = getBst(target);
@@ -151,7 +151,7 @@ exports.commands = {
 		display += `<span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><strong><span style="font-size: small;"><span style="font-size: small;">Weight:</span></span></strong><span style="font-size: small;"> ${digimon.weightkg} kg</span></span></span></span></span></span></span></span><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><span style="font-size: small; color: #333333;">`;
 		display += `<span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><strong><span style="font-size: small;">Color:</span></strong><span style="font-size: small;"> ${digimon.color}</span>`;
 
-		let { weaknesses, immunities, resistances } = getTypeChart(digimon);
+		let {weaknesses, immunities, resistances} = getTypeChart(digimon);
 
 		display += `</span></span></span></span></span></span></span></td></tr></tbody></table><table style="height: 207px; background-color: #ffffff; border-color: ${secondcolor}; margin-left: auto; margin-right: auto;" border="1" width="466"><tbody><tr><td style="width: 456px;"><span style="color: #333333; font-size: small;"><strong>Type Interactions</strong></span><hr style="border-top: 1px solid ${secondcolor}; background: transparent;">`;
 		display += `<span style="color: #333333; font-size: small;"><strong>Weaknesses<br></strong>${(weaknesses.join(', ') || '<font color=#999999>None</font>')}<strong><br>Resistances<br></strong>${(resistances.join(', ') || '<font color=#999999>None</font>')}<strong><br>Immunities<br></strong>${(immunities.join(', ') || '<font color=#999999>None</font>')}</span></td></tr><tr><td style="text-align: center; width: 456px;"><span style="color: #333333; font-size: small;"><strong><strong><strong><strong>Move Pool</strong></strong></strong></strong></span>`;
@@ -203,9 +203,9 @@ exports.commands = {
 				}
 				menu += `</div>`;
 			}
-			if (toId(target.join(''))) {
+			if (toID(target.join(''))) {
 				// Show found digimon
-				let reqs = { alphabetical: '', stage: '', type: '', color: '', ability: '' };
+				let reqs = {alphabetical: '', stage: '', type: '', color: '', ability: ''};
 				let invalidSearch = false;
 				target.map(y => {
 					if (invalidSearch) return y;
@@ -285,7 +285,7 @@ exports.commands = {
 			menu += `<button class="button" name="send" value="${user.lastDigiSearch ? `/digipedia ${user.lastDigiSearch}` : `/digipedia`}">Back</button><br/>`;
 			let digimons = mod.dataSearch(target);
 			if (!digimons) {
-				menu += `The digimon "${toId(target)}" does not exist.</div>`;
+				menu += `The digimon "${toID(target)}" does not exist.</div>`;
 				return user.sendTo(room, `${change ? `|uhtmlchange|cs${user.id}|` : `|uhtml|cs${user.id}|`}${menu}`);
 			}
 			let newTargets = mod.dataSearch(target);
@@ -298,7 +298,7 @@ exports.commands = {
 			menu += `<span style="color: #333333;"><strong><span style="font-size: small;">Type: </span></strong><span style="font-size: small;">${digimon.types.join(', ')}</span></span></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><p style="text-align: left;"><span style="color: #333333;"><strong><span style="font-size: small;">Ability:</span></strong><span style="font-size: small;"> ${digimon.abilities[0]}</span>`;
 			let templates = mod.getSpecies(target);
 			templates = mod.getSpecies(templates.baseSpecies);
-			let sigmove = Object.keys(templates.learnset);
+			let sigmove = Object.keys(mod.getLearnsetData(templates.id).learnset);
 			sigmove = sigmove.map(id => mod.getMove(id).name);
 			sigmove = sigmove[sigmove.length - 2];
 			let bstdigimon = getBst(target);
@@ -310,13 +310,13 @@ exports.commands = {
 			menu += `<span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><strong><span style="font-size: small;"><span style="font-size: small;">Weight:</span></span></strong><span style="font-size: small;"> ${digimon.weightkg} kg</span></span></span></span></span></span></span></span><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><span style="font-size: small; color: #333333;">`;
 			menu += `<span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;"><strong><span style="font-size: small;">Color:</span></strong><span style="font-size: small;"> ${digimon.color}</span>`;
 
-			let { weaknesses, immunities, resistances } = getTypeChart(digimon);
+			let {weaknesses, immunities, resistances} = getTypeChart(digimon);
 
 			menu += `</span></span></span></span></span></span></span></td></tr></tbody></table><table style="height: 207px; background-color: #ffffff; border-color: ${secondcolor}; margin-left: auto; margin-right: auto;" border="1" width="466"><tbody><tr><td style="width: 456px;"><span style="color: #333333; font-size: small;"><strong>Type Interactions</strong></span><hr style="border-top: 1px solid ${secondcolor}; background: transparent;">`;
 			menu += `<span style="color: #333333; font-size: small;"><strong>Weaknesses<br></strong>${(weaknesses.join(', ') || '<font color=#999999>None</font>')}<strong><br>Resistances<br></strong>${(resistances.join(', ') || '<font color=#999999>None</font>')}<strong><br>Immunities<br></strong>${(immunities.join(', ') || '<font color=#999999>None</font>')}</span></td></tr><tr><td style="text-align: center; width: 456px;"><span style="color: #333333; font-size: small;"><strong><strong><strong><strong>Move Pool</strong></strong></strong></strong></span>`;
 			let template = mod.getSpecies(target);
 			template = mod.getSpecies(template.baseSpecies);
-			let move = Object.keys(template.learnset);
+			let move = Object.keys(mod.getLearnsetData(template.id).learnset);
 			move = move.map(id => mod.getMove(id).name);
 			let movestring = 0;
 			movestring = move.join(', ');
@@ -364,7 +364,7 @@ exports.commands = {
 			}
 			if (toID(target.join(''))) {
 				// Show found digimon
-				let reqs = { alphabetical: '', type: '', category: '', signature: '' };
+				let reqs = {alphabetical: '', type: '', category: '', signature: ''};
 				let invalidSearch = false;
 				target.map(y => {
 					if (invalidSearch) return y;
@@ -410,9 +410,9 @@ exports.commands = {
 			let digimonmove = mod.getMove(target);
 			let digimovetype = digimonmove.type;
 			let typeimage = getTypeImgSrc(digimovetype);
-			let signature = '';
-			if (digimonmove.signature === 'Signature') signature = 'True';
-			if (digimonmove.signature === 'Not Signature') signature = 'False';
+			// let signature = '';
+			// if (digimonmove.signature === 'Signature') signature = 'True';
+			// if (digimonmove.signature === 'Not Signature') signature = 'False';
 			menu += `<div><center><table style="width: 480px ; background-color: #011f55 ; border-color: #008dc5" border="2"><tbody><tr><td style="width: 159px ; text-align: center"><table style="width: 468px ; background-color: #f2faff ; border-color: #008dc5 ; margin-left: auto ; margin-right: auto" border="3"><tbody><tr><td style="width: 462px"><span style="color: #333333"><strong><img style="float: left" src="${typeimage}" width="21" height="20"><span style="color: black">Digimon Move Database<img style="float: right" src="${typeimage}" width="21" height="20"></span></strong></span>`;
 			menu += `</td></tr></tbody></table><table style="width: 468px ; border-color: #008dc5 ; background-color: #ffffff" border="2"><tbody><tr><td style="width: 463px"><strong><span style="color: black">${digimonmove.name}</span></strong></td></tr></tbody></table><table style="border-color: #008dc5 ; background-color: #ffffff ; width: 468px" border="1"><tbody><tr><td style="width: 457px"><strong><span style="color: #008dc5">Type</span></strong><span style="color: black">: ${digimonmove.type}</span></td><td style="width: 457px"><strong><span style="color: #008dc5">Category</span></strong>`;
 			menu += `<span style="color: black">: ${digimonmove.category}</span></td></tr><tr><td style="width: 457px"><strong><span style="color: #008dc5">Base Power</span></strong><span style="color: black">: ${digimonmove.basePower}</span></td><td style="width: 457px"><strong><span style="color: #008dc5">Accuracy</span></strong><span style="color: black">: ${digimonmove.accuracy}</span></td></tr><tr><td style="width: 457px"><strong><span style="color: #008dc5">Priority</span></strong>`;
@@ -421,8 +421,8 @@ exports.commands = {
 		return user.sendTo(room, `${change ? `|uhtmlchange|cs${user.id}|` : `|uhtml|cs${user.id}|`}${menu}`);
 	},
 	digimovesearchhelp: ['/digimovesearch - sends a display to search for a list of digimon moves.'],
-	
-digiweak(target, room, user) {
+
+	digiweak(target, room, user) {
 		if (!target) return this.parse('/help weakness');
 		if (!this.runBroadcast()) return;
 		target = target.trim();
@@ -451,7 +451,7 @@ digiweak(target, room, user) {
 			if (types.length === 0) {
 				return this.sendReplyBox(Chat.html`${target} isn't a recognized type or digimon${Dex.gen > mod.gen ? ` in Gen ${mod.gen}` : ""}.`);
 			}
-			digimon = { types: types };
+			digimon = {types: types};
 			target = types.join("/");
 		}
 
@@ -463,24 +463,24 @@ digiweak(target, room, user) {
 			if (notImmune) {
 				let typeMod = mod.getEffectiveness(type, digimon);
 				switch (typeMod) {
-					case 1:
-						weaknesses.push(type);
-						break;
-					case 2:
-						weaknesses.push("<b>" + type + "</b>");
-						break;
-					case 3:
-						weaknesses.push("<b><i>" + type + "</i></b>");
-						break;
-					case -1:
-						resistances.push(type);
-						break;
-					case -2:
-						resistances.push("<b>" + type + "</b>");
-						break;
-					case -3:
-						resistances.push("<b><i>" + type + "</i></b>");
-						break;
+				case 1:
+					weaknesses.push(type);
+					break;
+				case 2:
+					weaknesses.push("<b>" + type + "</b>");
+					break;
+				case 3:
+					weaknesses.push("<b><i>" + type + "</i></b>");
+					break;
+				case -1:
+					resistances.push(type);
+					break;
+				case -2:
+					resistances.push("<b>" + type + "</b>");
+					break;
+				case -3:
+					resistances.push("<b><i>" + type + "</i></b>");
+					break;
 				}
 			} else {
 				immunities.push(type);
@@ -499,15 +499,15 @@ digiweak(target, room, user) {
 	digimonsprite: 'dsprite',
 	dsprite(target, room, user, connection, cmd) {
 		if (!this.canBroadcast()) return;
-		if (!toId(target)) return this.sendReply('/digisprite [Digimon] - Allows you to view the sprite of a Digimon Showdown digimon');
+		if (!toID(target)) return this.sendReply('/digisprite [Digimon] - Allows you to view the sprite of a Digimon Showdown digimon');
 		target = target.toLowerCase().split(',');
 		let alt = '';
-		let type = toId(target[1]);
+		let type = toID(target[1]);
 		let sprite = target[0].trim();
 
 		let mod = Dex.mod('digimon');
-		if (mod.data.Pokedex[toId(sprite)]) {
-			sprite = mod.data.Pokedex[toId(sprite)].species.toLowerCase();
+		if (mod.data.Pokedex[toID(sprite)]) {
+			sprite = mod.data.Pokedex[toID(sprite)].name.toLowerCase();
 		} else {
 			return this.sendReply("There isn't any Digimon called '" + sprite + "'...");
 		}
@@ -540,33 +540,33 @@ digiweak(target, room, user) {
 
 	"!digicredits": true,
 	digimoncredits: "digicredits",
-	digicredits: function () {
+	digicredits() {
 		if (!this.runBroadcast()) return;
 		let popup = `<font size="4"><u><strong>Digimon Plugins Credits:</strong></u></font><br />` +
 			`<br />` +
 			`<u><strong>Contributors:</u></strong><br />` +
-			`- ${Utility.colorName('Ashley the Pikachu', true)} (Graphics Design, HTML, Coding, Development, Project Manager)<br />` +
-			`- ${Utility.colorName('AlfaStorm', true)} (Coding, HTML, Functionality, Development)<br />` +
-			`- ${Utility.colorName('Slayer95', true)} (Development, Refactor)<br />` +
-			`- ${Utility.colorName('mathfreak231', true)} (Development, Assistance)<br />` +
-			`- ${Utility.colorName('fliegenfuerst', true)} (Assistance, Ideas)<br />` +
-			`- ${Utility.colorName('C733937 123', true)} (Jr. JavaScript Coder)<br />` +
-			`- ${Utility.colorName('DJinntoTonic', true)} (Game Balance and Document Clean Uppe)<br />` +
-			`- ${Utility.colorName('Fender', true)} (Client Coder)<br />` +
-			`- ${Utility.colorName('Forrce', true)} (JavaScript Coder)<br />` +
-			`- ${Utility.colorName('HoeenHero', true)} (JavaScript Coder)<br />` +
-			`- ${Utility.colorName('Insist', true)} (Alpha Build Head Developer)<br />` +
-			`- ${Utility.colorName('Kraken Mare', true)} (Javascript Coder)<br />` +
-			`- ${Utility.colorName('Kris', true)} (Client Advice and Coder)<br />` +
-			`- ${Utility.colorName('Meicoo', true)} (Move Animation Selector)<br />` +
-			`- ${Utility.colorName('Paperlanty', true)} (Jr. Javascript and Code Reviewer)<br />` +
-			`- ${Utility.colorName('Pokemonvortex', true)} (Spread Sheet Revisions, Coder)<br />` +
-			`- ${Utility.colorName('Ruru', true)} (Jr. Javascript and Code Reviewer)<br />` +
-			`- ${Utility.colorName('SaplingArcher', true)} (Jr. Javascript and Code Reviewer)<br />` +
-			`- ${Utility.colorName('Volco', true)} (Javascript Coder, Client Code)<br />` +
-			`- ${Utility.colorName('Waffaru', true)} (Jr. Javascript coder)<br />` +
-			`- ${Utility.colorName('Alpha Ninja', true)} (Developer)<br />` +
-			`- ${Utility.colorName('Dragotic', true)} (Developer)<br />`;
+			`- <strong>Ashley the Pikachu</strong> (Graphics Design, HTML, Coding, Development, Project Manager)<br />` +
+			`- <strong>AlfaStorm</strong> (Coding, HTML, Functionality, Development)<br />` +
+			`- <strong>Slayer95</strong> (Development, Refactor)<br />` +
+			`- <strong>mathfreak231</strong> (Development, Assistance)<br />` +
+			`- <strong>fliegenfuerst</strong> (Assistance, Ideas)<br />` +
+			`- <strong>C733937 123</strong> (Jr. JavaScript Coder)<br />` +
+			`- <strong>DJinntoTonic</strong> (Game Balance and Document Clean Uppe)<br />` +
+			`- <strong>Fender</strong> (Client Coder)<br />` +
+			`- <strong>Forrce</strong> (JavaScript Coder)<br />` +
+			`- <strong>HoeenHero</strong> (JavaScript Coder)<br />` +
+			`- <strong>Insist</strong> (Alpha Build Head Developer)<br />` +
+			`- <strong>Kraken Mare</strong> (Javascript Coder)<br />` +
+			`- <strong>Kris</strong> (Client Advice and Coder)<br />` +
+			`- <strong>Meicoo</strong> (Move Animation Selector)<br />` +
+			`- <strong>Paperlanty</strong> (Jr. Javascript and Code Reviewer)<br />` +
+			`- <strong>Pokemonvortex</strong> (Spread Sheet Revisions, Coder)<br />` +
+			`- <strong>Ruru</strong> (Jr. Javascript and Code Reviewer)<br />` +
+			`- <strong>SaplingArcher</strong> (Jr. Javascript and Code Reviewer)<br />` +
+			`- <strong>Volco</strong> (Javascript Coder, Client Code)<br />` +
+			`- <strong>Waffaru</strong> (Jr. Javascript coder)<br />` +
+			`- <strong>Alpha Ninja</strong> (Developer)<br />` +
+			`- <strong>Dragotic</strong> (Developer)<br />`;
 		this.sendReplyBox(popup);
 	},
 	digicreditshelp: ['/digicredits - Shows a list of all that contributed to the creation of these commands.'],
@@ -577,11 +577,14 @@ digiweak(target, room, user) {
 	digiguide: 'playerguide',
 	playerguide(target, room, user) {
 		if (!this.runBroadcast()) return;
-		let display = `|html|<center><table style="background-color: #ffffff; border-color: #111111;" border="4"><tbody><tr><td style="text-align: center;"><table style="width: 266px; background-color: #111111; margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center; width: 264px;"><span style="color: white;">Digimon Showdown Players Guide</span></td></tr></tbody></table></td></tr><tr><td style="text-align: center;">[A Digimon Fan Game]</td></tr><tr><td style="text-align: center;"><strong><span style="font-size: small;">DIGIMON TYPES &amp;&nbsp;ABILITIES</span></strong><br /><img src="https://i.imgur.com/YoKqiC3.png" alt="" width="105" height="30" /><br />[Stat Hovering Does Not Work]</td></tr><tr><td style="text-align: center;"><table style="height: 28px; border-color: #111111; margin-left: auto; margin-right: auto;" border="0" width="267"><tbody><tr><td style="width: 94px; text-align: center;"><span style="font-size: small;"><a title="Digimon Showdown Type Chart" href="https://i.imgur.com/HnydznB.png" target="_blank" rel="noopener"><strong>Types/Ability Chart</strong></a></span></td><td style="width: 82px;"><span style="font-size: small;"><strong><a href="/digimondatabase">Database</a></strong></span></td><td style="text-align: center; width: 69px;"><span style="font-size: small;"><strong><a href="https://discord.gg/xGVJe6y" target="_blank" rel="noopener">Discord</a></strong></span></td></tr></tbody></table></td></tr><tr><td style="text-align: center;"><span style="font-size: small;"><a href="https://1drv.ms/w/s!AvoD6RnUzzMvg3NC7OWJVkWHNZ-t" target="_blank" rel="noopener">Digimon Showdown Credits</a></span></td></tr><tr><td style="text-align: center;"><table style="width: 267px; background-color: #111111; margin-left: auto; margin-right: auto;"><tbody><tr><td style="width: 259px;"><span style="color: white;">Official Digimon Media</span></td></tr></tbody></table></td></tr><tr><td style="text-align: center;"><table style="height: 26px; margin-left: auto; margin-right: auto;" border="0" width="265"><tbody><tr><td style="width: 119px;"><a href="https://wikimon.net/List_of_Video_Games" target="_blank" rel="noopener"><span style="font-size: small;">Game List</span></a></td><td style="width: 130px;"><a href="https://wikimon.net/Category:Anime" target="_blank" rel="noopener"><span style="font-size: small;">Anime List</span></a></td></tr></tbody></table></td></tr></tbody></table></center>`;
+		let display = `|html|<center><table style="background-color: #ffffff; border-color: #111111;" border="4"><tbody><tr><td style="text-align: center;"><table style="width: 266px; background-color: #111111; margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center; width: 264px;"><span style="color: white;">Digimon Showdown Players Guide</span></td></tr></tbody></table></td></tr><tr><td style="text-align: center;">[A Digimon Fan Game]</td></tr><tr><td style="text-align: center;"><strong><span style="font-size: small;">DIGIMON TYPES &amp;&nbsp;ABILITIES</span></strong><br /><img src="https://i.imgur.com/YoKqiC3.png" alt="" width="105" height="30" /><br />[Stat Hovering Does Not Work]</td></tr><tr><td style="text-align: center;"><table style="height: 28px; border-color: #111111; margin-left: auto; margin-right: auto;" border="0" width="267"><tbody><tr><td style="width: 94px; text-align: center;"><span style="font-size: small;"><a title="Digimon Showdown Type Chart" href="https://i.imgur.com/HnydznB.png" target="_blank" rel="noopener"><strong>Types/Ability Chart</strong></a></span></td><td style="width: 82px;"><span style="font-size: small;"><strong><a href="/digipedia">Database</a></strong></span></td><td style="text-align: center; width: 69px;"><span style="font-size: small;"><strong><a href="https://discord.gg/xGVJe6y" target="_blank" rel="noopener">Discord</a></strong></span></td></tr></tbody></table></td></tr><tr><td style="text-align: center;"><span style="font-size: small;"><a href="https://1drv.ms/w/s!AvoD6RnUzzMvg3NC7OWJVkWHNZ-t" target="_blank" rel="noopener">Digimon Showdown Credits</a></span></td></tr><tr><td style="text-align: center;"><table style="width: 267px; background-color: #111111; margin-left: auto; margin-right: auto;"><tbody><tr><td style="width: 259px;"><span style="color: white;">Official Digimon Media</span></td></tr></tbody></table></td></tr><tr><td style="text-align: center;"><table style="height: 26px; margin-left: auto; margin-right: auto;" border="0" width="265"><tbody><tr><td style="width: 119px;"><a href="https://wikimon.net/List_of_Video_Games" target="_blank" rel="noopener"><span style="font-size: small;">Game List</span></a></td><td style="width: 130px;"><a href="https://wikimon.net/Category:Anime" target="_blank" rel="noopener"><span style="font-size: small;">Anime List</span></a></td></tr></tbody></table></td></tr></tbody></table></center>`;
 		this.sendReply(display);
 	},
 	playerguidehelp: ['/playerguide - Shows a guide for the digimon showdown metagame.'],
 
+	digi() {
+		this.parse('/help digi');
+	},
 	digihelp: ['These are the commands for the Digimon Showdown chat-plugin:',
 		'/digiprofile [digimon] - Gives information on the digimon selected.',
 		'/digipedia - Shows a list of all selected digimon.',
