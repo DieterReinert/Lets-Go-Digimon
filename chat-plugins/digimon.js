@@ -23,18 +23,18 @@ const colorTable = {
 
 function getSpecies(digimon) {
 	switch (digimon.name) {
-	case 'Meicrackmon VM':
-		return 'Meicrackmon [Vicious Mode]';
-	case 'Cherubimon Evil':
-		return 'Cherubimon [Evil]';
-	case 'Cherubimon Good':
-		return 'Cherubimon [Good]';
-	case 'MetalGreymon Vaccine':
-		return 'MetalGreymon [Vaccine]';
-	case 'MetalGreymon Virus':
-		return 'MetalGreymon [Virus]';
-	default:
-		return digimon.name;
+		case 'Meicrackmon VM':
+			return 'Meicrackmon [Vicious Mode]';
+		case 'Cherubimon Evil':
+			return 'Cherubimon [Evil]';
+		case 'Cherubimon Good':
+			return 'Cherubimon [Good]';
+		case 'MetalGreymon Vaccine':
+			return 'MetalGreymon [Vaccine]';
+		case 'MetalGreymon Virus':
+			return 'MetalGreymon [Virus]';
+		default:
+			return digimon.name;
 	}
 }
 
@@ -48,24 +48,24 @@ function getTypeChart(digimon) {
 		if (notImmune) {
 			let typeMod = dex.getEffectiveness(type, digimon);
 			switch (typeMod) {
-			case 1:
-				weaknesses.push(type);
-				break;
-			case 2:
-				weaknesses.push("<b>" + type + "</b>");
-				break;
-			case 3:
-				weaknesses.push("<b><i>" + type + "</i></b>");
-				break;
-			case -1:
-				resistances.push(type);
-				break;
-			case -2:
-				resistances.push("<b>" + type + "</b>");
-				break;
-			case -3:
-				resistances.push("<b><i>" + type + "</i></b>");
-				break;
+				case 1:
+					weaknesses.push(type);
+					break;
+				case 2:
+					weaknesses.push("<b>" + type + "</b>");
+					break;
+				case 3:
+					weaknesses.push("<b><i>" + type + "</i></b>");
+					break;
+				case -1:
+					resistances.push(type);
+					break;
+				case -2:
+					resistances.push("<b>" + type + "</b>");
+					break;
+				case -3:
+					resistances.push("<b><i>" + type + "</i></b>");
+					break;
 			}
 		} else {
 			immunities.push(type);
@@ -77,39 +77,39 @@ function getTypeChart(digimon) {
 
 function getTypeImgSrc(type) {
 	switch (type) {
-	case 'Flame':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/flame-icon.png';
-	case 'Aqua':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/aqua-icon.png';
-	case 'Air':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/air-icon.png';
-	case 'Nature':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/nature-icon.png';
-	case 'Holy':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/holy-icon.png';
-	case 'Evil':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/evil-icon.png';
-	case 'Battle':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/battle-icon.png';
-	case 'Mech':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/mech-icon.png';
-	case 'Filth':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/filth-icon.png';
-	default:
-		return '';
+		case 'Flame':
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/flame-icon.png';
+		case 'Aqua':
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/aqua-icon.png';
+		case 'Air':
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/air-icon.png';
+		case 'Nature':
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/nature-icon.png';
+		case 'Holy':
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/holy-icon.png';
+		case 'Evil':
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/evil-icon.png';
+		case 'Battle':
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/battle-icon.png';
+		case 'Mech':
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/mech-icon.png';
+		case 'Filth':
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/filth-icon.png';
+		default:
+			return '';
 	}
 }
 
 function getAbilityImgSrc(ability) {
 	switch (ability) {
-	case 'Vaccine':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/vaccine-icon.png';
-	case 'Virus':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/virus-icon.png';
-	case 'Data':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/data-icon.png';
-	default:
-		return '';
+		case 'Vaccine':
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/vaccine-icon.png';
+		case 'Virus':
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/virus-icon.png';
+		case 'Data':
+			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/data-icon.png';
+		default:
+			return '';
 	}
 }
 
@@ -463,24 +463,24 @@ exports.commands = {
 			if (notImmune) {
 				let typeMod = mod.getEffectiveness(type, digimon);
 				switch (typeMod) {
-				case 1:
-					weaknesses.push(type);
-					break;
-				case 2:
-					weaknesses.push("<b>" + type + "</b>");
-					break;
-				case 3:
-					weaknesses.push("<b><i>" + type + "</i></b>");
-					break;
-				case -1:
-					resistances.push(type);
-					break;
-				case -2:
-					resistances.push("<b>" + type + "</b>");
-					break;
-				case -3:
-					resistances.push("<b><i>" + type + "</i></b>");
-					break;
+					case 1:
+						weaknesses.push(type);
+						break;
+					case 2:
+						weaknesses.push("<b>" + type + "</b>");
+						break;
+					case 3:
+						weaknesses.push("<b><i>" + type + "</i></b>");
+						break;
+					case -1:
+						resistances.push(type);
+						break;
+					case -2:
+						resistances.push("<b>" + type + "</b>");
+						break;
+					case -3:
+						resistances.push("<b><i>" + type + "</i></b>");
+						break;
 				}
 			} else {
 				immunities.push(type);
@@ -577,7 +577,7 @@ exports.commands = {
 	digiguide: 'playerguide',
 	playerguide(target, room, user) {
 		if (!this.runBroadcast()) return;
-		let display = `|html|<center><table style="background-color: #ffffff; border-color: #111111;" border="4"><tbody><tr><td style="text-align: center;"><table style="width: 266px; background-color: #111111; margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center; width: 264px;"><span style="color: white;">Digimon Showdown Players Guide</span></td></tr></tbody></table></td></tr><tr><td style="text-align: center;">[A Digimon Fan Game]</td></tr><tr><td style="text-align: center;"><strong><span style="font-size: small;">DIGIMON TYPES &amp;&nbsp;ABILITIES</span></strong><br /><img src="https://i.imgur.com/YoKqiC3.png" alt="" width="105" height="30" /><br />[Stat Hovering Does Not Work]</td></tr><tr><td style="text-align: center;"><table style="height: 28px; border-color: #111111; margin-left: auto; margin-right: auto;" border="0" width="267"><tbody><tr><td style="width: 94px; text-align: center;"><span style="font-size: small;"><a title="Digimon Showdown Type Chart" href="https://i.imgur.com/rltcAm3.png" target="_blank" rel="noopener"><strong>Types/Ability Chart</strong></a></span></td><td style="width: 82px;"><span style="font-size: small;"><strong><a href="https://i.imgur.com/p6V1yg5.png">Roster</a></strong></span></td><td style="text-align: center; width: 69px;"><span style="font-size: small;"><strong><a href="https://discord.gg/xGVJe6y" target="_blank" rel="noopener">Discord</a></strong></span></td></tr></tbody></table></td></tr><tr><td style="text-align: center;"><span style="font-size: small;"><a href="https://1drv.ms/w/s!AvoD6RnUzzMvg3NC7OWJVkWHNZ-t" target="_blank" rel="noopener">Digimon Showdown Credits</a></span></td></tr><tr><td style="text-align: center;"><table style="width: 267px; background-color: #111111; margin-left: auto; margin-right: auto;"><tbody><tr><td style="width: 259px;"><span style="color: white;">Official Digimon Media</span></td></tr></tbody></table></td></tr><tr><td style="text-align: center;"><table style="height: 26px; margin-left: auto; margin-right: auto;" border="0" width="265"><tbody><tr><td style="width: 119px;"><a href="https://wikimon.net/List_of_Video_Games" target="_blank" rel="noopener"><span style="font-size: small;">Game List</span></a></td><td style="width: 130px;"><a href="https://wikimon.net/Category:Anime" target="_blank" rel="noopener"><span style="font-size: small;">Anime List</span></a></td></tr></tbody></table></td></tr></tbody></table></center>`;
+		let display = `|html|<center><table style="background-color: #ffffff; border-color: #111111;" border="4"><tbody><tr><td style="text-align: center;"><table style="width: 266px; background-color: #111111; margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center; width: 264px;"><span style="color: white;">Digimon Showdown Players Guide</span></td></tr></tbody></table></td></tr><tr><td style="text-align: center;">[A Digimon Fan Game]</td></tr><tr><td style="text-align: center;"><strong><span style="font-size: small;">DIGIMON TYPES &amp;&nbsp;ABILITIES</span></strong><br /><img src="https://i.imgur.com/YoKqiC3.png" alt="" width="105" height="30" /><br />[Stat Hovering Does Not Work]</td></tr><tr><td style="text-align: center;"><table style="height: 28px; border-color: #111111; margin-left: auto; margin-right: auto;" border="0" width="267"><tbody><tr><td style="width: 94px; text-align: center;"><span style="font-size: small;"><a title="Digimon Showdown Type Chart" href="https://i.imgur.com/5P5Q8eF.png" target="_blank" rel="noopener"><strong>Types/Ability Chart</strong></a></span></td><td style="width: 82px;"><span style="font-size: small;"><strong><a href="https://i.imgur.com/TtTMfx5.png">Roster</a></strong></span></td><td style="text-align: center; width: 69px;"><span style="font-size: small;"><strong><a href="https://discord.gg/xGVJe6y" target="_blank" rel="noopener">Discord</a></strong></span></td></tr></tbody></table></td></tr><tr><td style="text-align: center;"><span style="font-size: small;"><a href="https://1drv.ms/w/s!AvoD6RnUzzMvg3NC7OWJVkWHNZ-t" target="_blank" rel="noopener">Digimon Showdown Credits</a></span></td></tr><tr><td style="text-align: center;"><table style="width: 267px; background-color: #111111; margin-left: auto; margin-right: auto;"><tbody><tr><td style="width: 259px;"><span style="color: white;">Official Digimon Media</span></td></tr></tbody></table></td></tr><tr><td style="text-align: center;"><table style="height: 26px; margin-left: auto; margin-right: auto;" border="0" width="265"><tbody><tr><td style="width: 119px;"><a href="https://wikimon.net/List_of_Video_Games" target="_blank" rel="noopener"><span style="font-size: small;">Game List</span></a></td><td style="width: 130px;"><a href="https://wikimon.net/Category:Anime" target="_blank" rel="noopener"><span style="font-size: small;">Anime List</span></a></td></tr></tbody></table></td></tr></tbody></table></center>`;
 		this.sendReply(display);
 	},
 	playerguidehelp: ['/playerguide - Shows a guide for the digimon showdown metagame.'],
