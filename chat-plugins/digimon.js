@@ -23,18 +23,18 @@ const colorTable = {
 
 function getSpecies(digimon) {
 	switch (digimon.name) {
-		case 'Meicrackmon VM':
-			return 'Meicrackmon [Vicious Mode]';
-		case 'Cherubimon Evil':
-			return 'Cherubimon [Evil]';
-		case 'Cherubimon Good':
-			return 'Cherubimon [Good]';
-		case 'MetalGreymon Vaccine':
-			return 'MetalGreymon [Vaccine]';
-		case 'MetalGreymon Virus':
-			return 'MetalGreymon [Virus]';
-		default:
-			return digimon.name;
+	case 'Meicrackmon VM':
+		return 'Meicrackmon [Vicious Mode]';
+	case 'Cherubimon Evil':
+		return 'Cherubimon [Evil]';
+	case 'Cherubimon Good':
+		return 'Cherubimon [Good]';
+	case 'MetalGreymon Vaccine':
+		return 'MetalGreymon [Vaccine]';
+	case 'MetalGreymon Virus':
+		return 'MetalGreymon [Virus]';
+	default:
+		return digimon.name;
 	}
 }
 
@@ -48,24 +48,24 @@ function getTypeChart(digimon) {
 		if (notImmune) {
 			let typeMod = dex.getEffectiveness(type, digimon);
 			switch (typeMod) {
-				case 1:
-					weaknesses.push(type);
-					break;
-				case 2:
-					weaknesses.push("<b>" + type + "</b>");
-					break;
-				case 3:
-					weaknesses.push("<b><i>" + type + "</i></b>");
-					break;
-				case -1:
-					resistances.push(type);
-					break;
-				case -2:
-					resistances.push("<b>" + type + "</b>");
-					break;
-				case -3:
-					resistances.push("<b><i>" + type + "</i></b>");
-					break;
+			case 1:
+				weaknesses.push(type);
+				break;
+			case 2:
+				weaknesses.push("<b>" + type + "</b>");
+				break;
+			case 3:
+				weaknesses.push("<b><i>" + type + "</i></b>");
+				break;
+			case -1:
+				resistances.push(type);
+				break;
+			case -2:
+				resistances.push("<b>" + type + "</b>");
+				break;
+			case -3:
+				resistances.push("<b><i>" + type + "</i></b>");
+				break;
 			}
 		} else {
 			immunities.push(type);
@@ -77,39 +77,39 @@ function getTypeChart(digimon) {
 
 function getTypeImgSrc(type) {
 	switch (type) {
-		case 'Flame':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/flame-icon.png';
-		case 'Aqua':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/aqua-icon.png';
-		case 'Air':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/air-icon.png';
-		case 'Nature':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/nature-icon.png';
-		case 'Holy':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/holy-icon.png';
-		case 'Evil':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/evil-icon.png';
-		case 'Battle':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/battle-icon.png';
-		case 'Mech':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/mech-icon.png';
-		case 'Filth':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/filth-icon.png';
-		default:
-			return '';
+	case 'Flame':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/flame-icon.png';
+	case 'Aqua':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/aqua-icon.png';
+	case 'Air':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/air-icon.png';
+	case 'Nature':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/nature-icon.png';
+	case 'Holy':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/holy-icon.png';
+	case 'Evil':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/evil-icon.png';
+	case 'Battle':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/battle-icon.png';
+	case 'Mech':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/mech-icon.png';
+	case 'Filth':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/filth-icon.png';
+	default:
+		return '';
 	}
 }
 
 function getAbilityImgSrc(ability) {
 	switch (ability) {
-		case 'Vaccine':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/vaccine-icon.png';
-		case 'Virus':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/virus-icon.png';
-		case 'Data':
-			return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/data-icon.png';
-		default:
-			return '';
+	case 'Vaccine':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/vaccine-icon.png';
+	case 'Virus':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/virus-icon.png';
+	case 'Data':
+		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/data-icon.png';
+	default:
+		return '';
 	}
 }
 
@@ -463,24 +463,24 @@ exports.commands = {
 			if (notImmune) {
 				let typeMod = mod.getEffectiveness(type, digimon);
 				switch (typeMod) {
-					case 1:
-						weaknesses.push(type);
-						break;
-					case 2:
-						weaknesses.push("<b>" + type + "</b>");
-						break;
-					case 3:
-						weaknesses.push("<b><i>" + type + "</i></b>");
-						break;
-					case -1:
-						resistances.push(type);
-						break;
-					case -2:
-						resistances.push("<b>" + type + "</b>");
-						break;
-					case -3:
-						resistances.push("<b><i>" + type + "</i></b>");
-						break;
+				case 1:
+					weaknesses.push(type);
+					break;
+				case 2:
+					weaknesses.push("<b>" + type + "</b>");
+					break;
+				case 3:
+					weaknesses.push("<b><i>" + type + "</i></b>");
+					break;
+				case -1:
+					resistances.push(type);
+					break;
+				case -2:
+					resistances.push("<b>" + type + "</b>");
+					break;
+				case -3:
+					resistances.push("<b><i>" + type + "</i></b>");
+					break;
 				}
 			} else {
 				immunities.push(type);
