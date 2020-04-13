@@ -149,7 +149,7 @@ let BattleMovedex = {
 		category: "Special",
 		desc: "50% chance to raise the user’s Speed by 2.",
 		shortDesc: "50% chance to raise the user’s Speed by 2.",
-		id: "foxifire",
+		id: "foxfire",
 		name: "Fox Fire",
 		num: -325,
 		signature: true,
