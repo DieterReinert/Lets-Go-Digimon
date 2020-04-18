@@ -14,15 +14,15 @@ const RandomLetsGo = new LetsGo(DIGI_X_POKE);
 // the typechart files and filter
 // them out, might strain
 const DIGIMON_TYPES = [
-	"Air",
-	"Aqua",
-	"Battle",
-	"Evil",
-	"Filth",
-	"Flame",
-	"Holy",
-	"Mech",
-	"Nature",
+	"DG-Electric",
+	"DG-Water",
+	"DG-Normal",
+	"DG-Dark",
+	"DG-Poison",
+	"DG-Fire",
+	"DG-Fairy",
+	"DG-Steel",
+	"DG-Grass",
 ];
 
 class RandomDigimonTeams extends RandomTeams {
