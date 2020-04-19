@@ -116,11 +116,11 @@ let BattleStatuses = {
 	raindance: {
 		inherit: true,
 		onWeatherModifyDamage(damage, attacker, defender, move) {
-			if (move.type === 'Water' || move.type === 'Aqua') {
+			if (move.type === 'Water' || move.type === 'DG-Electric') {
 				this.debug('rain water boost');
 				return this.chainModify(1.5);
 			}
-			if (move.type === 'Fire' || move.type === 'Flame') {
+			if (move.type === 'Fire' || move.type === 'DG-Fire') {
 				this.debug('rain fire suppress');
 				return this.chainModify(0.5);
 			}
@@ -129,14 +129,14 @@ let BattleStatuses = {
 	primordialsea: {
 		inherit: true,
 		onTryMove(target, source, effect) {
-			if ((effect.type === 'Fire' || effect.type === 'Flame') && effect.category !== 'Status') {
+			if ((effect.type === 'Fire' || effect.type === 'DG-Fire') && effect.category !== 'Status') {
 				this.debug('Primordial Sea fire suppress');
 				this.add('-fail', source, effect, '[from] Primordial Sea');
 				return null;
 			}
 		},
 		onWeatherModifyDamage(damage, attacker, defender, move) {
-			if (move.type === 'Water' || move.type === 'Aqua') {
+			if (move.type === 'Water' || move.type === 'DG-Electric') {
 				this.debug('Rain water boost');
 				return this.chainModify(1.5);
 			}
@@ -145,11 +145,11 @@ let BattleStatuses = {
 	sunnyday: {
 		inherit: true,
 		onWeatherModifyDamage(damage, attacker, defender, move) {
-			if (move.type === 'Fire' || move.type === 'Flame') {
+			if (move.type === 'Fire' || move.type === 'DG-Fire') {
 				this.debug('Sunny Day fire boost');
 				return this.chainModify(1.5);
 			}
-			if (move.type === 'Water' || move.type === 'Aqua') {
+			if (move.type === 'Water' || move.type === 'DG-Electric') {
 				this.debug('Sunny Day water suppress');
 				return this.chainModify(0.5);
 			}
@@ -158,14 +158,14 @@ let BattleStatuses = {
 	desolateland: {
 		inherit: true,
 		onTryMove(target, source, effect) {
-			if ((effect.type === 'Water' || effect.type === 'Aqua') && effect.category !== 'Status') {
+			if ((effect.type === 'Water' || effect.type === 'DG-Electric') && effect.category !== 'Status') {
 				this.debug('Desolate Land water suppress');
 				this.add('-fail', source, effect, '[from] Desolate Land');
 				return null;
 			}
 		},
 		onWeatherModifyDamage(damage, attacker, defender, move) {
-			if (move.type === 'Fire' || move.type === 'Flame') {
+			if (move.type === 'Fire' || move.type === 'DG-Fire') {
 				this.debug('Sunny Day fire boost');
 				return this.chainModify(1.5);
 			}

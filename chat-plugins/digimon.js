@@ -77,23 +77,23 @@ function getTypeChart(digimon) {
 
 function getTypeImgSrc(type) {
 	switch (type) {
-	case 'Flame':
+	case 'DG-Fire':
 		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/flame-icon.png';
-	case 'Aqua':
+	case 'DG-Water':
 		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/aqua-icon.png';
-	case 'Air':
+	case 'DG-Electric':
 		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/air-icon.png';
-	case 'Nature':
+	case 'DG-Grass':
 		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/nature-icon.png';
-	case 'Holy':
+	case 'DG-Fairy':
 		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/holy-icon.png';
-	case 'Evil':
+	case 'DG-Dark':
 		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/evil-icon.png';
-	case 'Battle':
+	case 'DG-Normal':
 		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/battle-icon.png';
-	case 'Mech':
+	case 'DG-Steel':
 		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/mech-icon.png';
-	case 'Filth':
+	case 'DG-Poison':
 		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/filth-icon.png';
 	default:
 		return '';
@@ -182,7 +182,7 @@ exports.commands = {
 		let choices = {
 			alphabetical: 'abcdefghijklmnopqrstuvwxyz'.split(''),
 			stage: ['Fresh', 'In-Training', 'Rookie', 'Champion', 'Ultimate', 'Mega'],
-			type: ['Flame', 'Aqua', 'Air', 'Nature', 'Holy', 'Evil', 'Battle', 'Mech', 'Filth'],
+			type: ['DG-Fire', 'DG-Water', 'DG-Electric', 'DG-Grass', 'DG-Fairy', 'DG-Dark', 'DG-Normal', 'DG-Steel', 'DG-Poison'],
 			color: ['Red', 'Blue', 'Yellow', 'Green', 'Black', 'Brown', 'Purple', 'Gray', 'White', 'Pink'],
 			ability: ['Vaccine', 'Virus', 'Data'],
 		};
@@ -341,7 +341,7 @@ exports.commands = {
 		let change = !!target || cmd === 'movesearchchange';
 		let choices = {
 			alphabetical: 'abcdefghijklmnopqrstuvwxyz'.split(''),
-			type: ['Flame', 'Aqua', 'Air', 'Nature', 'Holy', 'Evil', 'Battle', 'Mech', 'Filth'],
+			type: ['DG-Fire', 'DG-Water', 'DG-Electric', 'DG-Grass', 'DG-Fairy', 'DG-Dark', 'DG-Normal', 'DG-Steel', 'DG-Poison'],
 			category: ['Status', 'Physical', 'Special'],
 			signature: ['Signature', 'Not Signature'],
 		};
