@@ -561,7 +561,7 @@ let BattlePokedex = {
 		color: "Purple",
 		eggGroups: ["Undiscovered"],
 	},
-	DG-Electricdramon: {
+	airdramon: {
 		num: -2043,
 		name: "DG-Electricdramon",
 		stage: "Champion",
