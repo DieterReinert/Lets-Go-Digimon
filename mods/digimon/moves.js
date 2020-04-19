@@ -2591,7 +2591,7 @@ let BattleMovedex = {
 		},
 	},
 	"coldflame": {
-		name: "Cold DG-Fire",
+		name: "Cold Flame",
 		num: -195,
 		signature: true,
 		id: "coldflame",
