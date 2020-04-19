@@ -563,7 +563,7 @@ let BattlePokedex = {
 	},
 	airdramon: {
 		num: -2043,
-		name: "DG-Electricdramon",
+		name: "Airdramon",
 		stage: "Champion",
 		types: ["DG-Electric", "DG-Fire"],
 		gender: "N",
@@ -1913,9 +1913,9 @@ let BattlePokedex = {
 		color: "Green",
 		eggGroups: ["Undiscovered"],
 	},
-	cherubimonDG-Dark: {
+	cherubimonevil: {
 		num: -2147,
-		name: "Cherubimon DG-Dark",
+		name: "Cherubimonevil",
 		stage: "Mega",
 		types: ["DG-Dark"],
 		gender: "N",
