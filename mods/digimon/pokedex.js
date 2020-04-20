@@ -563,7 +563,7 @@ let BattlePokedex = {
 	},
 	airdramon: {
 		num: -2043,
-		name: "DG-Electricdramon",
+		name: "Airdramon",
 		stage: "Champion",
 		types: ["DG-Electric", "DG-Fire"],
 		gender: "N",
