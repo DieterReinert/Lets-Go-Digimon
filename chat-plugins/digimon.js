@@ -157,7 +157,7 @@ exports.commands = {
 		display += `<span style="color: #333333; font-size: small;"><strong>Weaknesses<br></strong>${(weaknesses.join(', ') || '<font color=#999999>None</font>')}<strong><br>Resistances<br></strong>${(resistances.join(', ') || '<font color=#999999>None</font>')}<strong><br>Immunities<br></strong>${(immunities.join(', ') || '<font color=#999999>None</font>')}</span></td></tr><tr><td style="text-align: center; width: 456px;"><span style="color: #333333; font-size: small;"><strong><strong><strong><strong>Move Pool</strong></strong></strong></strong></span>`;
 		let template = mod.getSpecies(target);
 		template = mod.getSpecies(template.baseSpecies);
-		let move = Object.keys(template.learnset);
+		let move = Object.keys(mod.getLearnsetData(template.id).learnset);
 		move = move.map(id => mod.getMove(id).name);
 		let movestring = 0;
 		movestring = move.join(', ');
