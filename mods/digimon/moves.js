@@ -3036,7 +3036,7 @@ let BattleMovedex = {
 		noPPBoosts: true,
 	},
 	"revengeflame": {
-		name: "Revenge DG-Fire",
+		name: "Revenge Flame",
 		num: -213,
 		signature: true,
 		id: "revengeflame",
