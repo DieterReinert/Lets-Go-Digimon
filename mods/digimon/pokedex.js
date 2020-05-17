@@ -1722,7 +1722,7 @@ let BattlePokedex = {
 		num: -2132,
 		name: "Piximon",
 		stage: "Ultimate",
-		types: ["DG-Electric"],
+		types: ["DG-Electric", "DG-Fairy"],
 		gender: "N",
 		baseStats: {hp: 118, atk: 65, def: 63, spa: 64, spd: 63, spe: 65},
 		abilities: {0: "Data"},
