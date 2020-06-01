@@ -1,7 +1,4 @@
-'use strict';
-
-/** @type {{[k: string]: ModdedSpeciesData & {stage: string}}} */
-let BattlePokedex = {
+export const BattlePokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	botamon: {
 		num: -2000,
 		name: "Botamon",
@@ -1618,7 +1615,7 @@ let BattlePokedex = {
 		num: -2124,
 		name: "Meicrackmon",
 		stage: "Ultimate",
-		types: ["DG-Fairy"],
+		types: ["DG-Fairy", "DG-Normal"],
 		gender: "N",
 		baseStats: {hp: 110, atk: 77, def: 53, spa: 75, spd: 53, spe: 68},
 		abilities: {0: "Vaccine"},
@@ -1631,7 +1628,7 @@ let BattlePokedex = {
 		num: -2125,
 		name: "Meicrackmon VM",
 		stage: "Ultimate",
-		types: ["DG-Dark"],
+		types: ["DG-Dark", "DG-Normal"],
 		gender: "N",
 		baseStats: {hp: 110, atk: 77, def: 53, spa: 75, spd: 53, spe: 68},
 		abilities: {0: "Virus"},
@@ -1722,7 +1719,7 @@ let BattlePokedex = {
 		num: -2132,
 		name: "Piximon",
 		stage: "Ultimate",
-		types: ["DG-Electric"],
+		types: ["DG-Electric", "DG-Fairy"],
 		gender: "N",
 		baseStats: {hp: 118, atk: 65, def: 63, spa: 64, spd: 63, spe: 65},
 		abilities: {0: "Data"},
@@ -2138,7 +2135,7 @@ let BattlePokedex = {
 		num: -2164,
 		name: "Raguelmon",
 		stage: "Mega",
-		types: ["DG-Dark"],
+		types: ["DG-Dark", "DG-Normal"],
 		gender: "N",
 		baseStats: {hp: 188, atk: 95, def: 66, spa: 92, spd: 101, spe: 84},
 		abilities: {0: "Virus"},
@@ -2151,7 +2148,7 @@ let BattlePokedex = {
 		num: -2165,
 		name: "Rasielmon",
 		stage: "Mega",
-		types: ["DG-Fairy"],
+		types: ["DG-Fairy", "DG-Normal"],
 		gender: "N",
 		baseStats: {hp: 189, atk: 92, def: 66, spa: 95, spd: 101, spe: 84},
 		abilities: {0: "Vaccine"},
@@ -2368,6 +2365,4 @@ let BattlePokedex = {
 		color: "Black",
 		eggGroups: ["Undiscovered"],
 	},
-};
-
-exports.BattlePokedex = BattlePokedex;
+}

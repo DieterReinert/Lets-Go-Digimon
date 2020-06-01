@@ -1,8 +1,6 @@
-'use strict';
-
 // 1 SE 2 Resist 3 immune
-/**@type {{[k: string]: ModdedTypeData}} */
-let BattleTypeChart = {
+
+export const BattleTypeChart: {[k: string]: ModdedTypeData | null} = {
 	"DG-Fire": {
 		damageTaken: {
 			brn: 3,
@@ -882,5 +880,3 @@ let BattleTypeChart = {
 		},
 	},
 };
-
-exports.BattleTypeChart = BattleTypeChart;

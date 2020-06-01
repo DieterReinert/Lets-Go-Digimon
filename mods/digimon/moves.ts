@@ -1,7 +1,4 @@
-'use strict';
-
-/** @type {{[k: string]: ModdedMoveData & {signature?: boolean}}} */
-let BattleMovedex = {
+export const BattleMovedex: {[k: string]: ModdedMoveData} = {
 	"acidbubble": {
 		accuracy: 90,
 		basePower: 60,
@@ -3036,7 +3033,7 @@ let BattleMovedex = {
 		noPPBoosts: true,
 	},
 	"revengeflame": {
-		name: "Revenge Flame",
+		name: "Revenge DG-Fire",
 		num: -213,
 		signature: true,
 		id: "revengeflame",
@@ -3057,7 +3054,7 @@ let BattleMovedex = {
 		pp: 5,
 		noPPBoosts: true,
 		basePowerCallback(pokemon, target, move) {
-			let damagedByTarget = pokemon.attackedBy.some(
+			const damagedByTarget = pokemon.attackedBy.some(
 				p => p.source === target && p.damage > 0 && p.thisTurn
 			);
 			if (damagedByTarget) {
@@ -3808,8 +3805,8 @@ let BattleMovedex = {
 		noPPBoosts: true,
 		secondary: null,
 		onHitSide(side) {
-			let didSomething = false;
-			for (let pokemon of side.active) {
+			const didSomething = false;
+			for (const pokemon of side.active) {
 				if (pokemon && this.heal(pokemon.maxhp / 2, pokemon)) didSomething = true;
 				if (pokemon && pokemon.cureStatus()) didSomething = true;
 			}
@@ -4304,7 +4301,7 @@ let BattleMovedex = {
 				}
 				this.add('-activate', target, 'move: Firewall'); //ditto ^^^^^
 				source.moveThisTurnResult = true;
-				let lockedmove = source.getVolatile('lockedmove');
+				const lockedmove = source.getVolatile('lockedmove');
 				if (lockedmove) {
 					// Outrage counter is reset
 					if (source.volatiles['lockedmove'].duration === 2) {
@@ -4576,7 +4573,7 @@ let BattleMovedex = {
 		pp: 30,
 		accuracy: true,
 		onHitSide(side) {
-			for (let pokemon of side.active) {
+			for (const pokemon of side.active) {
 				if (pokemon) this.boost({spe: 1}, pokemon);
 			}
 		},
@@ -4745,7 +4742,7 @@ let BattleMovedex = {
 		pp: 10,
 		secondary: null,
 		onHitSide(side) {
-			for (let pokemon of side.active) {
+			for (const pokemon of side.active) {
 				if (pokemon) {
 					this.boost({spd: 1}, pokemon);
 					pokemon.cureStatus();
@@ -4974,7 +4971,7 @@ let BattleMovedex = {
 		},
 		flags: {protect: 1, mirror: 1, authentic: 1},
 		onTry(source, target) {
-			let action = this.queue.willMove(target);
+			const action = this.queue.willMove(target);
 			if (!action || action.choice !== 'move' || (action.move.category === 'Status' && action.move.id !== 'mefirst') || target.volatiles.mustrecharge) {
 				this.add('-fail', source);
 				this.attrLastMove('[still]');
@@ -5982,8 +5979,8 @@ let BattleMovedex = {
 		desc: "Raises the Attack and Special Attack of all grounded Grass-type and DG-Grass-type Pokemon on the field by 1 stage.",
 		shortDesc: "Raises Atk, Sp. Atk of grounded Grass and DG-Grass types by 1.",
 		onHitField(target, source) {
-			let targets = [];
-			let anyAirborne = false;
+			const targets = [];
+			const anyAirborne = false;
 			for (const side of this.sides) {
 				for (const pokemon of side.active) {
 					if (!pokemon || !pokemon.isActive) continue;
@@ -6017,7 +6014,7 @@ let BattleMovedex = {
 				return 5;
 			},
 			onBasePower(basePower, attacker, defender, move) {
-				let weakenedMoves = ['earthquake', 'bulldoze', 'magnitude'];
+				const weakenedMoves = ['earthquake', 'bulldoze', 'magnitude'];
 				if (weakenedMoves.includes(move.id)) {
 					this.debug('move weakened by grassy terrain');
 					return this.chainModify(0.5);
@@ -6056,7 +6053,7 @@ let BattleMovedex = {
 		desc: "Raises the Defense of all Grass-type and DG-Grass-type Pokemon on the field by 1 stage.",
 		shortDesc: "Raises Defense by 1 of all active Grass and DG-Grass types.",
 		onHitField(target, source, move) {
-			let targets = [];
+			const targets = [];
 			for (const side of this.sides) {
 				for (const pokemon of side.active) {
 					if (pokemon && pokemon.isActive && (pokemon.hasType('Grass') || pokemon.hasType('DG-Grass'))) {
@@ -6065,7 +6062,7 @@ let BattleMovedex = {
 					}
 				}
 			}
-			let success = false;
+			const success = false;
 			for (const target of targets) {
 				success = this.boost({def: 1}, target, source, move) || success;
 			}
@@ -6085,5 +6082,3 @@ let BattleMovedex = {
 		shortDesc: "For 5 turns, sunlight powers Fire/DG-Fire moves.",
 	},
 };
-
-exports.BattleMovedex = BattleMovedex;

@@ -1,14 +1,10 @@
-// @ts-nocheck
-"use strict";
-
-const DIGIMON_SETS = require("./digimon-sets");
-
-const RandomTeams = require('../../../data/random-teams');
+import DIGIMON_SETS from './digimon-sets';
+import RandomTeams from '../../random-teams';
+import LetsGo from '../letsgo/random-teams';
 
 // Digimon X Pokemon
 const DIGI_X_POKE = "[Digimon] Digimon x Pokemon";
-const LetsGo = require("../letsgo/random-teams");
-const RandomLetsGo = new LetsGo(DIGI_X_POKE);
+const RandomLetsGo = new LetsGo(DIGI_X_POKE, null);
 
 // hard-coded, could import both
 // the typechart files and filter
@@ -25,9 +21,9 @@ const DIGIMON_TYPES = [
 	"DG-Grass",
 ];
 
-class RandomDigimonTeams extends RandomTeams {
-	prepareSet(set) {
-		let randomMoves = [];
+export class RandomDigimonTeams extends RandomTeams {
+	prepareSet(set: DigimonSets) {
+		let randomMoves: Array<String> = [];
 		let move = null;
 
 		while (randomMoves.length < 3) {
@@ -91,7 +87,7 @@ class RandomDigimonTeams extends RandomTeams {
 				set.ability,
 			item: "",
 			gender: "N",
-			moves: [set.reservedMove].concat(randomMoves),
+			moves: [<String>set.reservedMove].concat(randomMoves),
 			// natures[~~(Math.random() * natures.length)];
 			nature: natures[~~(Math.random() * natures.length)],
 			evs: {hp: 85, atk: 85, def: 85, spa: 85, spd: 85, spe: 85},
@@ -100,7 +96,7 @@ class RandomDigimonTeams extends RandomTeams {
 		};
 	}
 
-	randomDigimonXPokemonTeam(pool) {
+	randomDigimonXPokemonTeam(pool: DigimonSets[]) {
 		const team = [];
 		const randomPokemonTeam = RandomLetsGo.randomTeam();
 
@@ -115,7 +111,7 @@ class RandomDigimonTeams extends RandomTeams {
 		return team;
 	}
 
-	randomDigimonMonotypeTeam(pool) {
+	randomDigimonMonotypeTeam(pool: DigimonSets[]) {
 		const team = [];
 
 		// DIGIMON_TYPES[~~(Math.random() * DIGIMON_TYPES.length)];
@@ -140,7 +136,7 @@ class RandomDigimonTeams extends RandomTeams {
 	randomDigimonTeam() {
 		const team = [];
 		const pool = DIGIMON_SETS.filter(
-			i => i.moves.length > 1 || i.reservedMove !== undefined
+			(i: DigimonSets) => i.moves.length > 1 || i.reservedMove !== undefined
 		);
 
 		const FORMAT = this.format.id;
@@ -162,4 +158,11 @@ class RandomDigimonTeams extends RandomTeams {
 	}
 }
 
-module.exports = RandomDigimonTeams;
+interface DigimonSets {
+	species: string,
+	ability: string,
+	moves: Array<String>,
+	reservedMove?: string
+}
+  
+export default RandomDigimonTeams;
