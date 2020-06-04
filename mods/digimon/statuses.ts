@@ -1,11 +1,6 @@
-'use strict';
-
-/**@type {{[k: string]: ModdedPureEffectData}} */
-let BattleStatuses = {
+export const BattleStatuses: { [k: string]: ModdedPureEffectData } = {
 	panic: {
 		name: 'panic',
-		id: 'panic',
-		num: 0,
 		// this is a volatile status
 		onStart(target, source, sourceEffect) {
 			this.add('-start', target, 'panic');
@@ -29,8 +24,6 @@ let BattleStatuses = {
 	},
 	dot: {
 		name: 'dot',
-		id: 'dot',
-		num: 0,
 		// this is a volatile status
 		onStart(target, source, sourceEffect) {
 			this.add('-start', target, 'dot');
@@ -53,8 +46,6 @@ let BattleStatuses = {
 	},
 	bug: {
 		name: 'bug',
-		id: 'bug',
-		num: 0,
 		// this is a volatile status
 		onStart(target, source, sourceEffect) {
 			this.add('-start', target, 'bug');
@@ -181,5 +172,3 @@ let BattleStatuses = {
 		},
 	},
 };
-
-exports.BattleStatuses = BattleStatuses;

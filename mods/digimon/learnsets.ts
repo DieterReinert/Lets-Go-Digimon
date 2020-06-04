@@ -1,7 +1,6 @@
-'use strict';
+/* eslint-disable max-len */
 
-/**@type {{[k: string]: {learnset: {[k: string]: MoveSource[]}}}} */
-let BattleLearnsets = {
+export const BattleLearnsets: {[k: string]: ModdedLearnsetData} = {
 	//Fresh
 	botamon: {
 		learnset: {
@@ -2555,5 +2554,3 @@ let BattleLearnsets = {
 		},
 	},
 };
-
-exports.BattleLearnsets = BattleLearnsets;

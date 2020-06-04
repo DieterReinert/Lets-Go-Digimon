@@ -1,9 +1,5 @@
-'use strict';
-
-/**@type {{[k: string]: ModdedAbilityData}} */
-let BattleAbilities = {
+export const BattleAbilities: {[k: string]: ModdedAbilityData} = {
 	"data": {
-		id: "data",
 		name: "Data",
 		desc: "1.2x against Vaccine; 0.8x against Virus. 30% chance to cure status conditions.",
 		onStart(pokemon) {
@@ -42,7 +38,6 @@ let BattleAbilities = {
 		},
 	},
 	"virus": {
-		id: "virus",
 		name: "Virus",
 		desc: "1.2x against Data; 0.8x against Vaccine. 30% chance to cure status conditions.",
 		onStart(pokemon) {
@@ -81,7 +76,6 @@ let BattleAbilities = {
 		},
 	},
 	"vaccine": {
-		id: "vaccine",
 		name: "Vaccine",
 		desc: "1.2x against Virus; 0.8x against Data. 30% chance to cure status conditions.",
 		onStart(pokemon) {
@@ -232,14 +226,15 @@ let BattleAbilities = {
 					showMsg = true;
 				}
 			}
-			if (showMsg && !(/** @type {ActiveMove} */(effect)).secondaries) {
+
+			if (showMsg && !((<ActiveMove>effect).secondaries)) {
 				const effectHolder = this.effectData.target;
 				this.add('-block', target, 'ability: Flower Veil', '[of] ' + effectHolder);
 			}
 		},
 		onAllySetStatus(status, target, source, effect) {
 			if (target.hasType('Grass') || target.hasType('Nature')) {
-				if (!effect || !effect.status) return false;
+				if (!effect || !(<ActiveMove>effect).status) return false;
 				this.add('-activate', this.effectData.target, 'ability: Flower Veil', '[of] ' + target);
 				return null;
 			}
@@ -254,14 +249,6 @@ let BattleAbilities = {
 			if (move.type === 'Fire' || move.type === 'Flame') mod *= 2;
 			if (move.flags['contact']) mod /= 2;
 			return this.chainModify(mod);
-		},
-	},
-	"galewings": {
-		inherit: true,
-		desc: "If this Pokemon is at full HP, its Flying- and Air-type moves have their priority increased by 1.",
-		shortDesc: "At full HP, Flying- and Air-type moves have their priority increased by 1.",
-		onModifyPriority(priority, Pokemon, target, move) {
-			if (move && (move.type === 'Flying' || move.type === 'Air') && Pokemon.hp === Pokemon.maxhp) return priority + 1;
 		},
 	},
 	"heatproof": {
@@ -570,6 +557,4 @@ let BattleAbilities = {
 		inherit: true,
 		desc: "On switch-in, the weather becomes heavy rain that prevents damaging Fire- and Flame-type moves from executing, in addition to all the effects of Rain Dance. This weather remains in effect until this Ability is no longer active for any Pokemon, or the weather is changed by Delta Stream or Desolate Land.",
 	},
-};
-
-exports.BattleAbilities = BattleAbilities;
+}
