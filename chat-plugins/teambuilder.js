@@ -14,7 +14,7 @@ let tiersList = ['digimon'];
  * add more tiers pokedexes with this
  * const tierNameDex = require('../../data/mods/modfoldername/pokedex').BattlePokedex;
  */
-const digiDex = require('../../data/mods/digimon/pokedex').BattlePokedex;
+const digiDex = require('../../.data-dist/mods/digimon/pokedex').BattlePokedex;
 
 /*
  * add the tier id  and dex in here
