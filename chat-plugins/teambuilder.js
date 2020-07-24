@@ -48,7 +48,7 @@ function getStat(stat, set, tier, evOverride, natureOverride) {
 
 	// do this after setting set.evs because it's assumed to exist
 	// after getStat is run
-	let template = Dex.mod(tier).getSpecies(set.species);
+	let template = Dex.mod(tier).getSpecies(toID(set.species));
 	if (!template.exists) return 0;
 
 	if (!set.level) set.level = 100;
@@ -102,7 +102,7 @@ function buildMenu(userid, num, tier) {
 			ivs: TB[userid].monArray[tier][num].ivs,
 			nature: TB[userid].monArray[tier][num].nature,
 			level: TB[userid].monArray[tier][num].level,
-		});
+		}, tier);
 		let evBuf = '<em>' + (TB[userid].monArray[tier][num].evs[toID(statNames[i])] === 0 ? '' : TB[userid].monArray[tier][num].evs[toID(statNames[i])]) + '</em>';
 		if (Dex.mod(tier).getNature(TB[userid].monArray[tier][num].nature).plus === toID(statNames[i])) {
 			evBuf += '<small>+</small>';
@@ -211,11 +211,11 @@ class TeamBuilder {
 		let speciesId = toID(mon);
 		let dex = tierDexList[tier];
 		for (let p in dex) {
-			if (dex[p].num < -200 && toID(dex[p].species).includes('pokestar') || dex[p].species === 'Missingno.') continue;
+			if (dex[p].num < -200 && toID(dex[p].name).includes('pokestar') || dex[p].name === 'Missingno.') continue;
 			let pokemon = dex[p];
-			if (toID(pokemon.species) === speciesId) {
-				this.monArray[tier][monSlot].species = pokemon.species;
-				this.monArray[tier][monSlot].name = pokemon.species;
+			if (toID(pokemon.name) === speciesId) {
+				this.monArray[tier][monSlot].species = pokemon.name;
+				this.monArray[tier][monSlot].name = pokemon.name;
 			}
 		}
 		this.monArray[tier][monSlot].ability = Dex.mod(tier).getSpecies(mon).abilities['0'];
@@ -290,7 +290,7 @@ class TeamBuilder {
 		move = Dex.mod(tier).getMove(toID(move));
 		if (!move.exists) return self.errorReply('The move "' + move.name + '" does not exist.'); //Only normal moves here.
 		if (this.monArray[tier][monSlot].moves.length >= 4) return self.errorReply('You already have 4 moves.');
-		if (Object.keys(Dex.mod(tier).getSpecies(toID(this.monArray[tier][monSlot].species)).learnset).indexOf(move.id) === -1) return self.errorReply(this.monArray[tier][monSlot].species + ' cannot learn ' + move.name + '.');
+		if (Object.keys(Dex.mod(tier).getLearnsetData(toID(this.monArray[tier][monSlot].species)).learnset).indexOf(move.id) === -1) return self.errorReply(this.monArray[tier][monSlot].species + ' cannot learn ' + move.name + '.');
 		if (this.monArray[tier][monSlot].moves.indexOf(move.name) > -1) return self.errorReply(this.monArray[tier][monSlot].species + ' already knows ' + move.name + '.');
 		this.monArray[tier][monSlot].moves.push(move.name);
 		writeTB();
@@ -461,9 +461,8 @@ exports.commands = {
 			}
 			let mons = [];
 			let dex = tierDexList[tier];
-			// exclude dex numbers for this to work.
 			for (let u in dex) {
-				if (dex[u] && dex[u].species && dex[u].species !== 'Missingno.' && dex[u].num < -200 && !toID(dex[u].species).includes('pokestar') && mons.indexOf(dex[u].species) === -1) mons.push(`<td>${dex[u].species}</td><td><button name="send" class="button" value="/dt ${toID(dex[u].species)}, ${tier}">Mon data</button></td>&nbsp;<td><button name="send" class="button" value="/teambuilder addmon ${tier}, ${toID(dex[u].species)}">Add to teambuilder as new mon</button></td>&nbsp;<td><button name="send" class="button" value="/teambuilder species ${tier}, ${toID(dex[u].species)}, ${(TB[user.id].lastMonNum + 1)}">Replace current mon slot</button></td>`);
+				if (dex[u] && dex[u].name && dex[u].name 'Missingno.' && dex[u].num < -200 && !toID(dex[u].name).includes('pokestar') && mons.indexOf(dex[u].name) === -1) mons.push(`<td>${dex[u].name}</td><td><button name="send" class="button" value="/dt ${toID(dex[u].name)}, ${tier}">Mon data</button></td>&nbsp;<td><button name="send" class="button" value="/teambuilder addmon ${tier}, ${toID(dex[u].name)}">Add to teambuilder as new mon</button></td>&nbsp;<td><button name="send" class="button" value="/teambuilder species ${tier}, ${toID(dex[u].name)}, ${(TB[user.id].lastMonNum + 1)}">Replace current mon slot</button></td>`);
 			}
 			let monListDisplay = '<table><tr><td>Pokemon</td><td><center>Data</center></td><td><center>Add as new</center></td><td><center>Replace current</center></td></tr>';
 			mons = mons.sort();
@@ -498,7 +497,7 @@ exports.commands = {
 			}
 			let itemDisplay = '<table><tr><td><center>Item</center></td><td><center>Description</center></td><td><center>Add Button</center></td></tr>';
 			let items = '';
-			if (FS('../../data/mods/' + tier + '/items').readIfExistsSync()) items = require('../../data/mods/' + tier + '/items').BattleItems;
+			if (FS('../../.data-dist/mods/' + tier + '/items').readIfExistsSync()) items = require('../../.data-dist/mods/' + tier + '/items').BattleItems;
 			if (!items.length) return;
 			for (let u in items) {
 				if (!items[u].gen && !items[u].num) itemDisplay += '<tr><td>' + Dex.mod(tier).getItem(u).name + '</td><td>' + Dex.mod(tier).getItem(u).desc + '</td><td>' + (slot >= 0 ? '<button name="send" class="button" value="/teambuilder item ' + tier + ', ' + u + ', ' + parseInt(slot) + '">Add item to mon slot ' + parseInt(slot) + '</button>' : '') + '</td></tr>';
@@ -523,9 +522,8 @@ exports.commands = {
 			}
 			let mons = [];
 			let dex = tierDexList[tier];
-			// exclude dex numbers for this to work.
 			for (let u in dex) {
-				if (dex[u] && dex[u].species && dex[u].species !== 'Missingno.' && dex[u].num < -200 && !toID(dex[u].species).includes('pokestar') && mons.indexOf(dex[u].species) === -1) mons.push(toID(dex[u].species));
+				if (dex[u] && dex[u].name && dex[u].name !== 'Missingno.' && dex[u].num < -200 && !toID(dex[u].name).includes('pokestar') && mons.indexOf(dex[u].name) === -1) mons.push(toID(dex[u].name));
 			}
 			if (mons.indexOf(pkmn) === -1) return this.sendReplyBox(`That is not a mon in ${tier[0].toUpperCase() + tier.slice(1)}! Please use one of these mons: ${mons.join(', ')}`);
 			if (TB[user.id].monArray[tier].length === 6) return this.errorReply(`You already have 6 pokemon!`);
@@ -580,9 +578,8 @@ exports.commands = {
 			}
 			let mons = [];
 			let dex = tierDexList[tier];
-			// exclude dex numbers for this to work.
 			for (let u in dex) {
-				if (dex[u] && dex[u].species && dex[u].species !== 'Missingno.' && dex[u].num < -200 && !toID(dex[u].species).includes('pokestar') && mons.indexOf(dex[u].species) === -1) mons.push(toID(dex[u].species));
+				if (dex[u] && dex[u].name && dex[u].name !== 'Missingno.' && dex[u].num < -200 && !toID(dex[u].name).includes('pokestar') && mons.indexOf(dex[u].name) === -1) mons.push(toID(dex[u].name));
 			}
 			if (mons.indexOf(toID(pkmn)) === -1) return this.sendReplyBox(`That is not a mon in ${tier[0].toUpperCase() + tier.slice(1)}! Please use one of these mons: ${mons.join(', ')}`);
 			if (parseInt(slot) === 0) slot = parseInt(slot) + 1;
@@ -761,7 +758,7 @@ exports.commands = {
 			let num = TB[user.id].getMonArray(slot, user.id, tier);
 			if (isNaN(num)) return this.errorReply(num);
 			let display = '<table><tr><td>Moves</td><td><center>Description</center></td><td><center></center>Add Button</td>';
-			let learnset = Dex.mod(tier).getSpecies(toID(TB[user.id].monArray[tier][num].species)).learnset;
+			let learnset = Dex.mod(tier).getLearnsetData(toID(TB[user.id].monArray[tier][num].species)).learnset;
 			if (!learnset) return this.errorReply(`${toID(TB[user.id].monArray[tier][num].species)} does not seem to have a learnset. Make sure there is a learnset file for this format and includes every mon.`);
 			learnset = Object.keys(learnset).sort();
 			for (let u of learnset) {
@@ -795,7 +792,7 @@ exports.commands = {
 			let num = TB[user.id].getMonArray(slot, user.id, tier);
 			if (isNaN(num)) return this.errorReply(num);
 			let display = '';
-			let learnset = Dex.mod(tier).getSpecies(toID(TB[user.id].monArray[tier][num].species)).learnset;
+			let learnset = Dex.mod(tier).getLearnsetData(toID(TB[user.id].monArray[tier][num].species)).learnset;
 			learnset = Object.keys(learnset).sort();
 			for (let u of learnset) {
 				display += 'Move: ' + Dex.mod(tier).getMove(u).name + ' Description: ' + Dex.mod(tier).getMove(u).shortDesc + ' <button name="send" class="button" value="/teambuilder move ' + tier + ', ' + Dex.mod(tier).getMove(u).id + ', ' + (num + 1) + '">Add to ' + TB[user.id].monArray[tier][num].species + '</button><br /><br />';
