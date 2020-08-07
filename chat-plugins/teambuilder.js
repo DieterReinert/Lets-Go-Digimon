@@ -26,7 +26,6 @@ let tierDexList = {digimon: digiDex};
 function writeTB() {
 	FS("config/chat-plugins/teambuilder.json").write(JSON.stringify((TB ? TB : {})));
 }
-Utility.writeTB = writeTB;
 
 // Shamlessly ripped from teambuilder client.
 function getStat(stat, set, tier, evOverride, natureOverride) {
