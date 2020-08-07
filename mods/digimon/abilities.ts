@@ -1,4 +1,4 @@
-export const BattleAbilities: {[k: string]: ModdedAbilityData} = {
+export const Abilities: {[k: string]: ModdedAbilityData} = {
 	"data": {
 		name: "Data",
 		desc: "1.2x against Vaccine; 0.8x against Virus. 30% chance to cure status conditions.",
@@ -187,7 +187,7 @@ export const BattleAbilities: {[k: string]: ModdedAbilityData} = {
 				return null;
 			}
 		},
-		effect: {
+		condition: {
 			noCopy: true, // doesn't get copied by Baton Pass
 			onStart(target) {
 				this.add('-start', target, 'ability: Flash Fire');

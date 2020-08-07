@@ -1,4 +1,4 @@
-export const BattlePokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
+export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	botamon: {
 		num: -2000,
 		name: "Botamon",

@@ -1,6 +1,6 @@
 // 1 SE 2 Resist 3 immune
 
-export const BattleTypeChart: {[k: string]: ModdedTypeData | null} = {
+export const TypeChart: {[k: string]: ModdedTypeData | null} = {
 	"DG-Fire": {
 		damageTaken: {
 			brn: 3,

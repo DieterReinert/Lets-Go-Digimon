@@ -1,4 +1,4 @@
-export const BattleMovedex: {[k: string]: ModdedMoveData} = {
+export const Moves: {[k: string]: ModdedMoveData} = {
 	"acidbubble": {
 		accuracy: 90,
 		basePower: 60,
@@ -4287,7 +4287,7 @@ export const BattleMovedex: {[k: string]: ModdedMoveData} = {
 			pokemon.addVolatile('stall');
 			this.add('-message', pokemon.name + ' is hidden behind a firewall!');
 		},
-		effect: {
+		condition: {
 			duration: 1,
 			//this is a side condition
 			onStart(target, source) {
@@ -5056,7 +5056,7 @@ export const BattleMovedex: {[k: string]: ModdedMoveData} = {
 			attacker.addVolatile('twoturnmove', defender);
 			return null;
 		},
-		effect: {
+		condition: {
 			duration: 2,
 			onInvulnerability: false,
 		},
@@ -5153,7 +5153,7 @@ export const BattleMovedex: {[k: string]: ModdedMoveData} = {
 		priority: 0,
 		flags: {nonsky: 1},
 		terrain: 'holyterrain',
-		effect: {
+		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
 				if (source && source.hasItem('terrainextender')) {
@@ -5887,7 +5887,7 @@ export const BattleMovedex: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		desc: "For 5 turns, all Fire-type and DG-Fire-type attacks used by any active Pokemon have their power reduced to 0.33x. Fails if this move is already in effect.",
 		shortDesc: "For 5 turns, Fire-type and DG-Fire-type attacks have 1/3 power.",
-		effect: {
+		condition: {
 			duration: 5,
 			onStart(side, source) {
 				this.add('-fieldstart', 'move: Water Sport', '[of] ' + source);
@@ -5909,7 +5909,7 @@ export const BattleMovedex: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		desc: "For 5 turns, all Electric-type and DG-Electric-type attacks used by any active Pokemon have their power reduced to 0.33x. Fails if this move is already in effect.",
 		shortDesc: "For 5 turns, Electric-type znd DG-Electric-type attacks have 1/3 power.",
-		effect: {
+		condition: {
 			duration: 5,
 			onStart(side, source) {
 				this.add('-fieldstart', 'move: Mud Sport', '[of] ' + source);
@@ -5931,7 +5931,7 @@ export const BattleMovedex: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		desc: "For 5 turns, the terrain becomes Electric Terrain. During the effect, the power of Electric-type and DG-Electric-type attacks made by grounded Pokemon is multiplied by 1.5 and grounded Pokemon cannot fall asleep; Pokemon already asleep do not wake up. Camouflage transforms the user into an Electric type, DG-Grass Power becomes Thunderbolt, and Secret Power has a 30% chance to cause paralysis. Fails if the current terrain is Electric Terrain.",
 		shortDesc: "5 turns. Grounded: +Electric power, +DG-Electric power, can't sleep.",
-		effect: {
+		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
 				if (source && source.hasItem('terrainextender')) {
@@ -6005,7 +6005,7 @@ export const BattleMovedex: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		desc: "For 5 turns, the terrain becomes Grassy Terrain. During the effect, the power of Grass-type and DG-Grass-type attacks used by grounded Pokemon is multiplied by 1.5, the power of Bulldoze, Earthquake, and Magnitude used against grounded Pokemon is multiplied by 0.5, and grounded Pokemon have 1/16 of their maximum HP, rounded down, restored at the end of each turn, including the last turn. Camouflage transforms the user into a Grass type, DG-Grass Power becomes Energy Ball, and Secret Power has a 30% chance to cause sleep. Fails if the current terrain is Grassy Terrain.",
 		shortDesc: "5 turns. Grounded: +Grass power,+DG-Grass Power,+1/16 max HP.",
-		effect: {
+		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
 				if (source && source.hasItem('terrainextender')) {
