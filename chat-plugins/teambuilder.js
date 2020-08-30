@@ -20,10 +20,8 @@ const digiDex = require('../../.data-dist/mods/digimon/pokedex').BattlePokedex;
  * add the tier id  and dex in here
  * tier id must match the mod folder's name
  * {tierID1: dexVariable1, tierID2: dexVariable2...}
- */ 
+ */
 let tierDexList = {digimon: digiDex};
-
-let TB = {};
 
 function writeTB() {
 	FS("config/chat-plugins/teambuilder.json").write(JSON.stringify((TB ? TB : {})));
@@ -85,11 +83,11 @@ function buildMenu(userid, num, tier) {
 	}
 	let output = '';
 	for (let u = 0; u < TB[userid].monArray[tier].length; u++) {
-		output += '<button name="send" value="/teambuilder edit ' + tier + ', ' + (u + 1) + '"><img src="//play.pokemonshowdown.com/sprites/' + (tier != 'digimon' ? 'bw/' : 'digimon/sprites/digimon/') + toID(TB[userid].monArray[tier][u].species) + '.png" height="32" width="32"></button>&nbsp;';
+		output += '<button name="send" value="/teambuilder edit ' + tier + ', ' + (u + 1) + '"><img src="//play.pokemonshowdown.com/sprites/' + (tier !== 'digimon' ? 'bw/' : 'digimon/sprites/digimon/') + toID(TB[userid].monArray[tier][u].species) + '.png" height="32" width="32"></button>&nbsp;';
 	}
 	if (TB[userid].monArray[tier].length !== 6) output += '<button name="send" value="/teambuilder addmon ' + tier + ', ' + Object.keys(tierDexList[tier])[0] + '"><i class="fa fa-plus"></i></button>';
 	output += '<button name="send" class="button" value="/teambuilder export ' + tier + '">Export Team</button><button name="send" class="button" value="/teambuilder removemon ' + tier + ', ' + (num + 1) + '"><i class="fa fa-trash"></i>Delete</button><button name="send" class="button" value="/dt ' + toID(TB[userid].monArray[tier][num].species) + ', ' + tier + '">Mon data</button><div class="setchart" style="height: 155px;">';
-	output += '<div class="setcol setcol-icon"><div class="setcell-sprite"><img src="//play.pokemonshowdown.com/sprites/' + (tier != 'digimon' ? 'bw/' : 'digimon/sprites/digimon/') + speciesName + '.png" height=80 width=80></div><div class="setcell setcell-pokemon"><label>Pok&eacute;mon</label><button class="textbox chartinput" style="width:104px; height: 20px; text-align: left" name="send" value="/teambuilder monlist ' + tier + '">' + TB[userid].monArray[tier][num].species + '</button></div></div>';
+	output += '<div class="setcol setcol-icon"><div class="setcell-sprite"><img src="//play.pokemonshowdown.com/sprites/' + (tier !== 'digimon' ? 'bw/' : 'digimon/sprites/digimon/') + speciesName + '.png" height=80 width=80></div><div class="setcell setcell-pokemon"><label>Pok&eacute;mon</label><button class="textbox chartinput" style="width:104px; height: 20px; text-align: left" name="send" value="/teambuilder monlist ' + tier + '">' + TB[userid].monArray[tier][num].species + '</button></div></div>';
 	output += '<div class="setcol setcol-details"><div class="setrow"><div class="setcell setcell-details"><label>Details</label><button class="textbox setdetails" tabindex="-1" name="send" value="/teambuilder details main ' + tier + ', ' + (num + 1) + '"><span class="detailcell detailcell-first"><label>Level</label>' + TB[userid].monArray[tier][num].level + '</span><span class="detailcell"><label>Gender</label>' + (TB[userid].monArray[tier][num].gender === 'random' ? '-' : TB[userid].monArray[tier][num].gender) + '</span><span class="detailcell"><label>Happiness</label>' + TB[userid].monArray[tier][num].happiness + '</span><span class="detailcell"><label>Shiny</label>' + (TB[userid].monArray[tier][num].shiny ? 'Yes' : 'No') + '</span></button><span class="itemicon" style="background: none"></span></div></div><div class="setrow"><div class="setcell setcell-item"><label>Item</label><button class="textbox chartinput" style="width:104px; height: 20px; text-align: left" name="send" value="/teambuilder itemlist ' + tier + ', ' + (num + 1) + '">' + (TB[userid].monArray[tier][num].item ? TB[userid].monArray[tier][num].item : '') + '</button></div><div class="setcell setcell-ability"><label>Ability</label><button class="textbox chartinput" style="width:104px; height: 20px; text-align: left" name="send" value="/teambuilder ability ' + tier + ', blank, ' + (num + 1) + '">' + TB[userid].monArray[tier][num].ability + '</button></div></div></div>';
 	output += '<div class="setcol setcol-moves"><div class="setcell"><label>Moves</label><button class="textbox chartinput" style="width:129px; height: 20px; text-align: left;" name="send" value="/teambuilder move ' + tier + ', blank, ' + (num + 1) + '">' + (TB[userid].monArray[tier][num].moves[0] ? TB[userid].monArray[tier][num].moves[0] : '') + '</button></div><div class="setcell"><button class="textbox chartinput" style="width:129px; height: 20px; text-align: left;" name="send" value="/teambuilder move ' + tier + ', blank, ' + (num + 1) + '">' + (TB[userid].monArray[tier][num].moves[1] ? TB[userid].monArray[tier][num].moves[1] : '') + '</button></div><div class="setcell"><button class="textbox chartinput" style="width:129px; height: 20px; text-align: left;" name="send" value="/teambuilder move ' + tier + ', blank, ' + (num + 1) + '">' + (TB[userid].monArray[tier][num].moves[2] ? TB[userid].monArray[tier][num].moves[2] : '') + '</button></div><div class="setcell"><button class="textbox chartinput" style="width:129px; height: 20px; text-align: left; " name="send" value="/teambuilder move ' + tier + ', blank, ' + (num + 1) + '">' + (TB[userid].monArray[tier][num].moves[3] ? TB[userid].monArray[tier][num].moves[3] : '') + '</button></div></div>';
 	output += '<div class="setcol setcol-stats"><div class="setrow"><label>Stats</label><button class="textbox setstats" name="send" value="/teambuilder stats main ' + tier + ', ' + (num + 1) + '"><span class="statrow statrow-head"><label></label><span class="statgraph"></span> <em>EV</em></span>';
@@ -259,7 +257,7 @@ class TeamBuilder {
 
 	happiness(num, monSlot, tier) {
 		if (num < 0 || num > 160) return false;
-		this.monArray[tier][monSlot].happiness = lvl;
+		this.monArray[tier][monSlot].happiness = num;
 		return true;
 	}
 
@@ -353,20 +351,16 @@ class TeamBuilder {
 exports.TeamBuilder = TeamBuilder;
 
 try {
-	FS("config/chat-plugins/teambuilder.json").readSync();
+	FS("config/chat-plugins/teambuilder.json").readIfExistsSync();
 } catch (e) {
-	// Temp hack
-	console.log("config/chat-plugins/teambuilder.json is not found, making a new one");
-	FS("config/chat-plugins/teambuilder.json").writeSync("{}");
-
-	// FS("config/chat-plugins/teambuilder.json").write("{}", function (err) {
-	// 	if (err) {
-	// 		console.error('Error while loading teambuilder.json ' + err);
-	// 		TB = {};
-	// 	} else {
-	// 		console.log('config/chat-plugins/teambuilder.json is not found, making a new one');
-	// 	}
-	// });
+	FS("config/chat-plugins/teambuilder.json").write("{}", function (err) {
+		if (err) {
+			console.error('Error while loading teambuilder.json ' + err);
+			TB = {};
+		} else {
+			console.log('config/chat-plugins/teambuilder.json is not found, making a new one');
+		}
+	});
 }
 
 try {
@@ -462,7 +456,7 @@ exports.commands = {
 			let mons = [];
 			let dex = tierDexList[tier];
 			for (let u in dex) {
-				if (dex[u] && dex[u].name && dex[u].name 'Missingno.' && dex[u].num < -200 && !toID(dex[u].name).includes('pokestar') && mons.indexOf(dex[u].name) === -1) mons.push(`<td>${dex[u].name}</td><td><button name="send" class="button" value="/dt ${toID(dex[u].name)}, ${tier}">Mon data</button></td>&nbsp;<td><button name="send" class="button" value="/teambuilder addmon ${tier}, ${toID(dex[u].name)}">Add to teambuilder as new mon</button></td>&nbsp;<td><button name="send" class="button" value="/teambuilder species ${tier}, ${toID(dex[u].name)}, ${(TB[user.id].lastMonNum + 1)}">Replace current mon slot</button></td>`);
+				if (dex[u] && dex[u].name && dex[u].name !== 'Missingno.' && dex[u].num < -200 && !toID(dex[u].name).includes('pokestar') && mons.indexOf(dex[u].name) === -1) mons.push(`<td>${dex[u].name}</td><td><button name="send" class="button" value="/dt ${toID(dex[u].name)}, ${tier}">Mon data</button></td>&nbsp;<td><button name="send" class="button" value="/teambuilder addmon ${tier}, ${toID(dex[u].name)}">Add to teambuilder as new mon</button></td>&nbsp;<td><button name="send" class="button" value="/teambuilder species ${tier}, ${toID(dex[u].name)}, ${(TB[user.id].lastMonNum + 1)}">Replace current mon slot</button></td>`);
 			}
 			let monListDisplay = '<table><tr><td>Pokemon</td><td><center>Data</center></td><td><center>Add as new</center></td><td><center>Replace current</center></td></tr>';
 			mons = mons.sort();
@@ -503,7 +497,7 @@ exports.commands = {
 				if (!items[u].gen && !items[u].num) itemDisplay += '<tr><td>' + Dex.mod(tier).getItem(u).name + '</td><td>' + Dex.mod(tier).getItem(u).desc + '</td><td>' + (slot >= 0 ? '<button name="send" class="button" value="/teambuilder item ' + tier + ', ' + u + ', ' + parseInt(slot) + '">Add item to mon slot ' + parseInt(slot) + '</button>' : '') + '</td></tr>';
 			}
 			itemDisplay += '</table>';
-			return user.send(`>view-teambuilder\n|init|html\n|title|${tier[0].toUpperCase() + tier.slice(1)} Teambuilder\n|pagehtml|${buildMenu(user.id, TB[user.id].lastMonNum, tier)}<br />${tier[0].toUpperCase() + tier.slice(1)} Item list: <br />${itemList.sort().join('<br />')}`);
+			return user.send(`>view-teambuilder\n|init|html\n|title|${tier[0].toUpperCase() + tier.slice(1)} Teambuilder\n|pagehtml|${buildMenu(user.id, TB[user.id].lastMonNum, tier)}<br />${tier[0].toUpperCase() + tier.slice(1)} Item list: <br />${itemDisplay}`);
 		},
 
 		addmon(target, room, user, connection, cmd) {
@@ -555,7 +549,7 @@ exports.commands = {
 				},
 			};
 			TB[user.id].lastMonNum = TB[user.id].monArray[tier].length - 1;
-			writeTB();
+		   writeTB();
 			return user.send(`>view-teambuilder\n|init|html\n|title|${tier[0].toUpperCase() + tier.slice(1)} Teambuilder\n|pagehtml|${buildMenu(user.id, TB[user.id].monArray[tier].length - 1, tier)}`);
 		},
 		addmonhelp: [`/teambuilder addmon (tier), (pokemon), (mon slot) - adds a new mon to the teambuilder! Must be one number higher than your current amount of pokemon in the teambuilder.`],
@@ -578,6 +572,7 @@ exports.commands = {
 			}
 			let mons = [];
 			let dex = tierDexList[tier];
+			// exclude dex numbers for this to work.
 			for (let u in dex) {
 				if (dex[u] && dex[u].name && dex[u].name !== 'Missingno.' && dex[u].num < -200 && !toID(dex[u].name).includes('pokestar') && mons.indexOf(dex[u].name) === -1) mons.push(toID(dex[u].name));
 			}
@@ -942,17 +937,17 @@ exports.commands = {
 		},
 	},
 	teambuilderhelp: [
-        `|raw|Custom Meta Teambuilder created by Volco:
-        /teambuilder edit (tier), (mon slot) - Edit a mon in the teambuiler. Mon slot is 1-6
-        /teambuilder monlist (tier) - displays the list of usable pokemon for the chosen custom tier.
-        /teambuilder itemlist (tier) - displays the item list of the chosen custom tier.
-        /teambuilder addmon (tier), (mon species), (current team count plus 1) - Adds a new mon to the teambuilder. Example: /teambuilder addmon fakeMonName, 2.
-        /teambuilder removemon (tier), (mon slot) - Removes a mon from the teambuilder with the selected number. Mon slot is 1-6. Note: Cannot remove if only 1 mon left!
-        /teambuilder details main (tier), (mon slot) - Pulls up detail menu to be editted. Mon slot is 1-6.
-        /teambuilder stats main (tier), (mon slot) - Pulls up stat menu to be editted. Mon slot is 1-6.
-        /teambuilder moves (tier), (name), (mon slot) - Sets a move for the selected mon. Mon slot is 1-6.
-        /teambuilder ability (tier), (name), (mon slot) - Sets an ability for the selected mon. Mon slot is 1-6.
-        /teambuilder species (tier), (mon species), (mon slot) - Change the species of the selected mon. Mon slot is 1-6.
-        /teambuilder item (tier), (item), (mon slot)  - Set an item for the selected mon. Mon slot is 1-6.
-        /teambuilder export (tier) - Exports your team to so you can import it to the real teambuilder client`],
+		`|raw|Custom Meta Teambuilder created by Volco:
+		/teambuilder edit (tier), (mon slot) - Edit a mon in the teambuiler. Mon slot is 1-6
+		/teambuilder monlist (tier) - displays the list of usable pokemon for the chosen custom tier.
+		/teambuilder itemlist (tier) - displays the item list of the chosen custom tier.
+		/teambuilder addmon (tier), (mon species), (current team count plus 1) - Adds a new mon to the teambuilder. Example: /teambuilder addmon fakeMonName, 2.
+		/teambuilder removemon (tier), (mon slot) - Removes a mon from the teambuilder with the selected number. Mon slot is 1-6. Note: Cannot remove if only 1 mon left!
+		/teambuilder details main (tier), (mon slot) - Pulls up detail menu to be editted. Mon slot is 1-6.
+		/teambuilder stats main (tier), (mon slot) - Pulls up stat menu to be editted. Mon slot is 1-6.
+		/teambuilder moves (tier), (name), (mon slot) - Sets a move for the selected mon. Mon slot is 1-6.
+		/teambuilder ability (tier), (name), (mon slot) - Sets an ability for the selected mon. Mon slot is 1-6.
+		/teambuilder species (tier), (mon species), (mon slot) - Change the species of the selected mon. Mon slot is 1-6.
+		/teambuilder item (tier), (item), (mon slot)  - Set an item for the selected mon. Mon slot is 1-6.
+		/teambuilder export (tier) - Exports your team to so you can import it to the real teambuilder client`],
 };
