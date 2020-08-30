@@ -11,15 +11,15 @@ if (!existsSync(DS_OUTPUT_DIR)) mkdirSync(DS_OUTPUT_DIR);
 if (!existsSync(OUTPUT_DIR)) mkdirSync(OUTPUT_DIR);
 
 // DATA DIRECTORIES
-const DIGIMON_SHOWDOWN_DIR = join(__dirname, '../mods/digimon');
+const DIGIMON_SHOWDOWN_DIR = join(__dirname, '/digimonshowdown');
 const POKEMON_SHOWDOWN_DIR = join(__dirname, '/pokemonshowdown');
 
 // IMPORT DIGIMON SHOWDOWN DATA
 const digimonShowdown = {
-    moves: require(`${DIGIMON_SHOWDOWN_DIR}/moves`).BattleMovedex,
-    dex: require(`${DIGIMON_SHOWDOWN_DIR}/pokedex`).BattlePokedex,
-    sets: require(`${DIGIMON_SHOWDOWN_DIR}/digimon-sets`).Sets,
-    typechart: require(`${DIGIMON_SHOWDOWN_DIR}/typechart`).BattleTypeChart,
+    moves: require(`${DIGIMON_SHOWDOWN_DIR}/moves`).Moves,
+    dex: require(`${DIGIMON_SHOWDOWN_DIR}/pokedex`).Pokedex,
+    sets: require(`${DIGIMON_SHOWDOWN_DIR}/digimon-sets`),
+    typechart: require(`${DIGIMON_SHOWDOWN_DIR}/typechart`).TypeChart,
 };
 
 // IMPORT POKEMON SHOWDOWN DATA
@@ -79,8 +79,9 @@ Object.entries(digimonShowdown.dex).forEach(digimon => {
 
     exportable.dex[digimonName] = {
         id: digimonName,
+        universe: digimonData.universe,
+        species: digimonData.species ? '' : digimonData.name,
         name: hasFormes ? digimonData.name : null,
-        species: digimonData.species,
         hasFormes: hasFormes,
     };
 

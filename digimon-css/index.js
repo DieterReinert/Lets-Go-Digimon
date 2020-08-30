@@ -1,7 +1,12 @@
 'use strict';
 
 const execSync = require('child_process').execSync;
-const { existsSync, readdirSync, readFileSync, writeFileSync } = require('fs');
+const {
+    existsSync,
+    readdirSync,
+    readFileSync,
+    writeFileSync
+} = require('fs');
 const join = require('path').join;
 
 process.chdir(__dirname + '/..');
@@ -32,10 +37,10 @@ const graphicResources = {
 };
 
 Object.keys(digimonShowdown.types).forEach(type => {
-    type = type.toLowerCase();
+    type = type;
 
-    graphicResources.move_panels[type] = `https://play.pokemonshowdown.com/sprites/digimon/plugin-css/${type}-panel.png`;
-    graphicResources.battle_type_images[type] = `https://play.pokemonshowdown.com/sprites/digimon/sprites/types/${type}.png`; 
+    graphicResources.move_panels[type] = `https://play.pokemonshowdown.com/sprites/digimon/plugin-css/${type.toLowerCase()}-panel.png`;
+    graphicResources.battle_type_images[type] = `https://play.pokemonshowdown.com/sprites/digimon/sprites/types/${type}.png`;
 });
 
 // MOVE CATEGORIES ABBREVIATED
@@ -88,51 +93,54 @@ const main = async () => {
     CSS = CSS.replace('%digivice_sheet', graphicResources.digivice_sheet);
 
     Object.values(digimonShowdown.dex).forEach((digimonData, i) => {
-        let digimonName = digimonData.hasFormes ? `${digimonData.name} (${digimonData.species})` : digimonData.species;
-        let digimonPosition = digimonShowdown.positions[digimonData.id];
+        if (digimonData.universe !== "Pokemon") {
+            let digimonName = digimonData.hasFormes ? `${digimonData.name} (${digimonData.species})` : digimonData.species;
+            let digimonPosition = digimonShowdown.positions[digimonData.id];
 
-        let currDigimonSheet = battleSheet;
+            let currDigimonSheet = battleSheet;
 
-        currDigimonSheet = currDigimonSheet.replace('%startComment', i === 0 ? '/** DIGIMONS SPRITES & ICONS CSS **/' : '');
-        currDigimonSheet = currDigimonSheet.replace(/%species/g, digimonData.species);
-        currDigimonSheet = currDigimonSheet.replace(/%id/g, digimonData.id);
-        currDigimonSheet = currDigimonSheet.replace('%name', digimonName);
-        currDigimonSheet = currDigimonSheet.replace('%lowercaseSpecies', digimonData.species.toLowerCase());
-        currDigimonSheet = currDigimonSheet.replace('%nameORspecies', digimonData.hasFormes ? digimonData.name : digimonData.species);
-        currDigimonSheet = currDigimonSheet.replace('%icon_sheet', graphicResources.icon_sheet);
-        currDigimonSheet = currDigimonSheet.replace('%x', digimonPosition.x).replace('%y', digimonPosition.y);
+            currDigimonSheet = currDigimonSheet.replace('%startComment', i === 0 ? '/** DIGIMONS SPRITES & ICONS CSS **/' : '');
+            currDigimonSheet = currDigimonSheet.replace(/%species/g, digimonData.species);
+            currDigimonSheet = currDigimonSheet.replace(/%id/g, digimonData.id);
+            currDigimonSheet = currDigimonSheet.replace('%name', digimonName);
+            currDigimonSheet = currDigimonSheet.replace('%lowercaseSpecies', digimonData.species.toLowerCase());
+            currDigimonSheet = currDigimonSheet.replace('%nameORspecies', digimonData.hasFormes ? digimonData.name : digimonData.species);
+            currDigimonSheet = currDigimonSheet.replace('%icon_sheet', graphicResources.icon_sheet);
+            currDigimonSheet = currDigimonSheet.replace('%x', digimonPosition.x).replace('%y', digimonPosition.y);
 
-        if (digimonData.hasFormes) currDigimonSheet = currDigimonSheet.replace('%specialCaseName', `${digimonData.name} (${digimonData.species.toLowerCase()})`);
+            if (digimonData.hasFormes) currDigimonSheet = currDigimonSheet.replace('%specialCaseName', `${digimonData.name} (${digimonData.species.toLowerCase()})`);
 
-        let digimonSheetSplit = currDigimonSheet.split(':::');
-        if (!digimonData.hasFormes) {
-            currDigimonSheet = (digimonSheetSplit[0] + digimonSheetSplit[2]);
-        } else {
-            currDigimonSheet = digimonSheetSplit.join('');
+            let digimonSheetSplit = currDigimonSheet.split(':::');
+            if (!digimonData.hasFormes) {
+                currDigimonSheet = (digimonSheetSplit[0] + digimonSheetSplit[2]);
+            } else {
+                currDigimonSheet = digimonSheetSplit.join('');
+            }
+
+            CSS += `${currDigimonSheet}`;
         }
-
-        CSS += `${currDigimonSheet}`;
     });
 
     Object.values(digimonShowdown.moves).forEach((moveData, i) => {
         let currMoveSheet = moveSheet;
+        if (moveData.type) {
+            currMoveSheet = currMoveSheet.replace('%startComment', i === 0 ? '/** DIGIMON MOVES CSS **/' : '');
+            currMoveSheet = currMoveSheet.replace(/%moveName/g, moveData.name);
+            currMoveSheet = currMoveSheet.replace('%move_panel', graphicResources.move_panels[moveData.type]);
+            currMoveSheet = currMoveSheet.replace('%moveCat', moveCatAbbr[moveData.category]);
+            currMoveSheet = currMoveSheet.replace('%movePower', moveData.basePower);
+            currMoveSheet = currMoveSheet.replace('%moveAcc', moveData.accuracy);
+            currMoveSheet = currMoveSheet.replace('%moveDesc', moveData.desc);
 
-        currMoveSheet = currMoveSheet.replace('%startComment', i === 0 ? '/** DIGIMON MOVES CSS **/' : '');
-        currMoveSheet = currMoveSheet.replace(/%moveName/g, moveData.name);
-        currMoveSheet = currMoveSheet.replace('%move_panel', graphicResources.move_panels[moveData.type.toLowerCase()]);
-        currMoveSheet = currMoveSheet.replace('%moveCat', moveCatAbbr[moveData.category]);
-        currMoveSheet = currMoveSheet.replace('%movePower', moveData.basePower);
-        currMoveSheet = currMoveSheet.replace('%moveAcc', moveData.accuracy);
-        currMoveSheet = currMoveSheet.replace('%moveDesc', moveData.desc);
+            let moveSheetSplit = currMoveSheet.split(':::');
+            if (moveData.pokemonMove) {
+                currMoveSheet = (moveSheetSplit[0] + moveSheetSplit[2]);
+            } else {
+                currMoveSheet = moveSheetSplit.join('');
+            }
 
-        let moveSheetSplit = currMoveSheet.split(':::');
-        if (moveData.pokemonMove) {
-            currMoveSheet = (moveSheetSplit[0] + moveSheetSplit[2]);
-        } else {
-            currMoveSheet = moveSheetSplit.join('');
+            CSS += `${currMoveSheet}`;
         }
-
-        CSS += `${currMoveSheet}`;
     });
 
     Object.keys(digimonShowdown.types).forEach((type, i) => {
@@ -140,7 +148,7 @@ const main = async () => {
 
         currTypeSheet = currTypeSheet.replace('%startComment', i === 0 ? '/** DIGIMON TYPES CSS **/' : '');
         currTypeSheet = currTypeSheet.replace(/%type/g, type);
-        currTypeSheet = currTypeSheet.replace('%battle_type_image', graphicResources.battle_type_images[type.toLowerCase()]);
+        currTypeSheet = currTypeSheet.replace('%battle_type_image', graphicResources.battle_type_images[type]);
 
         CSS += `${currTypeSheet}`;
     });

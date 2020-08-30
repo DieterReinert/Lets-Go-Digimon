@@ -172,6 +172,7 @@ exports.commands = {
 	digimonsearch: 'digipedia',
 	searchchange: 'digipedia',
 	digipedia(target, room, user, connection, cmd) {
+		if (!room) return this.requiresRoom();
 		let mod = Dex.mod('digimon');
 		/*
 		/digimonsearch Section:value, Section:value
@@ -332,6 +333,7 @@ exports.commands = {
 	digimonmovesearch: 'movedatabase',
 	movesearchchange: 'movedatabase',
 	movedatabase(target, room, user, connection, cmd) {
+		if (!room) return this.requiresRoom();
 		let mod = Dex.mod('digimon');
 		/*
 		/digimonsearch Section:value, Section:value
@@ -384,7 +386,7 @@ exports.commands = {
 				}
 				menu += `<center><div style='max-height: 300px; overflow-y: scroll;'>`;
 				let foundDigimonMove = 0;
-				for (const digimonmove in mod.data.Movedex) {
+				for (const digimonmove in mod.data.Moves) {
 					let digimove = mod.getMove(digimonmove);
 					if (digimove.signature === true) digimove.signature = 'Signature';
 					if (digimove.signature === false) digimove.signature = 'Not Signature';
@@ -498,6 +500,7 @@ exports.commands = {
 	digisprite: 'dsprite',
 	digimonsprite: 'dsprite',
 	dsprite(target, room, user, connection, cmd) {
+		if (!room) return this.requiresRoom();
 		if (!this.canBroadcast()) return;
 		if (!toID(target)) return this.sendReply('/digisprite [Digimon] - Allows you to view the sprite of a Digimon Showdown digimon');
 		target = target.toLowerCase().split(',');
