@@ -2,7 +2,7 @@
 
 This is the official Digimon Showdown: Dimensional Rift repository.
 
-This is to be used with [Pokémon Showdown](https://github.com/Zarel/Pokemon-Showdown).
+This is to be used with [Pokémon Showdown](https://github.com/smogon/pokemon-showdown).
 
 # How to implement (the mod) on your own server
 
