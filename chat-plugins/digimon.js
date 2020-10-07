@@ -5,7 +5,6 @@
  **/
 
 'use strict';
-
 const https = require('https');
 
 const colorTable = {
@@ -172,7 +171,7 @@ exports.commands = {
 	digimonsearch: 'digipedia',
 	searchchange: 'digipedia',
 	digipedia(target, room, user, connection, cmd) {
-		if (!room) return this.requiresRoom();
+		room = this.requireRoom();
 		let mod = Dex.mod('digimon');
 		/*
 		/digimonsearch Section:value, Section:value
@@ -333,7 +332,7 @@ exports.commands = {
 	digimonmovesearch: 'movedatabase',
 	movesearchchange: 'movedatabase',
 	movedatabase(target, room, user, connection, cmd) {
-		if (!room) return this.requiresRoom();
+		room = this.requireRoom();
 		let mod = Dex.mod('digimon');
 		/*
 		/digimonsearch Section:value, Section:value
@@ -500,8 +499,8 @@ exports.commands = {
 	digisprite: 'dsprite',
 	digimonsprite: 'dsprite',
 	dsprite(target, room, user, connection, cmd) {
-		if (!room) return this.requiresRoom();
-		if (!this.canBroadcast()) return;
+		room = this.requireRoom();
+		if (!this.checkBroadcast()) return;
 		if (!toID(target)) return this.sendReply('/digisprite [Digimon] - Allows you to view the sprite of a Digimon Showdown digimon');
 		target = target.toLowerCase().split(',');
 		let alt = '';
