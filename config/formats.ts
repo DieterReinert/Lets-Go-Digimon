@@ -1,5 +1,5 @@
 /** @type {(FormatsData | {section: string, column?: number})[]} */
-const PPFormats: FormatList = [
+const DigimonFormats: FormatList = [
 	// Digimon Metas
 	{
 		section: "Digimon Metas",
