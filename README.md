@@ -9,7 +9,7 @@ This is to be used with [Pokémon Showdown](https://github.com/Zarel/Pokemon-Sho
 - Copy all files that are in the mods folder into data/mods
 - Copy all files that are in the chat-plugins folder into server/chat-plugins
 - Copy whatever is in custom.css into config/custom.css
-- Copy whatever is in config/formats.js into config/formats.js wherever you want that section of formats. (Make sure you copy it under the last tier of a section.)
+- Copy whatever is in config/formats.ts into config/formats.ts wherever you want that section of formats. (Make sure you copy it under the last tier of a section.)
 - The steps for generating the CSS are listed below
 
 # Digimon-Showdown: Dimensional Rift (DSDR) - CSS
