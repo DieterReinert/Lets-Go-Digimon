@@ -2,7 +2,7 @@
 
 This is the official Digimon Showdown: Dimensional Rift repository.
 
-This is to be used with [Pokémon Showdown](https://github.com/smogon/pokemon-showdown).
+This is to be used with [Pokémon Showdown](https://github.com/smogon/Pokemon-Showdown).
 
 # How to implement (the mod) on your own server
 
@@ -17,8 +17,8 @@ Generates a basic CSS template for DSDR.
 
 # (DSDR-CSS) Usage
 (NOTE: Node.js is required)
-- Open `Command Prompt` in the `Digimon-Showdown` directory.
-- Type `npm run start` or `node index.js`.
+- Open `Command Prompt` in the `Digimon-Showdown-Dimensional-Rift` directory.
+- Type `npm run build` to build your digimon-showdown css.
 - Enjoy Digimon-Showdown on your server.
 
 # Credits
