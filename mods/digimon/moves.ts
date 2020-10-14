@@ -1,5 +1,5 @@
 export const Moves: {[k: string]: ModdedMoveData} = {
-	// DG-Normal Moves //
+	// Normal Moves //
 	"machjab": {
 		num: -100,
 		accuracy: 90,
@@ -19,7 +19,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: { contact: 1, protect: 1, mirror: 1 },
 		secondary: null,
 		target: "normal",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"sonicjab": {
 		num: -101,
@@ -39,28 +39,23 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: { contact: 1, protect: 1, mirror: 1 },
 		secondary: null,
 		target: "normal",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"tremor": {
 		num: -102,
-		accuracy: 85,
-		basePower: 25,
+		accuracy: 90,
+		basePower: 75,
 		category: "Physical",
-		desc: "Hits two to five times. Has a 1/3 chance to hit two or three times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
-		shortDesc: "Hits adjacent foe(s) 2-3 times in one turn.",
-		id: "tremor",
-		name: "Tremor",
-		pp: 20,
+		name: "Rock Slide",
+		pp: 10,
 		priority: 0,
-		onPrepareHit(target, source, move) {
-			this.attrLastMove('[still]');
-			this.add('-anim', source, "ancientpower", target);
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
 		},
-		flags: { protect: 1, mirror: 1 },
-		multihit: [2, 3],
-		secondary: null,
-		target: "alladjacentfoes",
-		type: "DG-Normal",
+		target: "allAdjacentFoes",
+		type: "Rock",
 	},
 	"dynamitekick": {
 		num: -103,
@@ -84,7 +79,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "normal",
-		type: "DG-Normal",
+		type: "Fighting",
 	},
 	"spinattack": {
 		num: -104,
@@ -103,7 +98,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: { contact: 1, protect: 1, mirror: 1 },
 		secondary: null,
 		target: "normal",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"megatonpunch": {
 		num: -105,
@@ -125,7 +120,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			volatileStatus: 'flinch',
 		},
 		target: "normal",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	sprialdriver: {
 		num: -106,
@@ -149,7 +144,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "normal",
-		type: "DG-Normal",
+		type: "Fighting",
 	},
 	fightingaura: {
 		num: -107,
@@ -179,7 +174,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 		target: "normal",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	busterdive: {
 		num: -108,
@@ -211,7 +206,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "normal",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 
 	// DG-Fire Moves //
@@ -237,7 +232,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			status: 'brn',
 		},
 		target: "normal",
-		type: "DG-Fire",
+		type: "Fire",
 	},
 	"heatlaser": {
 		num: -110,
@@ -260,7 +255,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			status: 'brn',
 		},
 		target: "alladjacentfoes",
-		type: "DG-Fire",
+		type: "Fire",
 	},
 	"heatbreath": {
 		num: -111,
@@ -287,7 +282,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		],
 		target: "normal",
-		type: "DG-Fire",
+		type: "Dragon",
 	},
 	"firetower": {
 		num: -112,
@@ -314,7 +309,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		],
 		target: "normal",
-		type: "DG-Fire",
+		type: "Fire",
 	},
 	"redinferno": {
 		num: -113,
@@ -336,7 +331,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			status: 'brn',
 		},
 		target: "allAdjacentFoes",
-		type: "DG-Fire",
+		type: "Fire",
 	},
 	"magmabomb": {
 		num: -114,
@@ -363,7 +358,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		],
 		target: "normal",
-		type: "DG-Fire",
+		type: "Dragon",
 	},
 	"flamestorm": {
 		num: -115,
@@ -382,8 +377,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: { protect: 1, mirror: 1 },
 		volatileStatus: 'partiallytrapped',
 		secondary: null,
-		target: "alladjacentfoes",
-		type: "DG-Fire",
+		target: "normal",
+		type: "Fire",
 	},
 	"prominencebeam": {
 		num: -116,
@@ -410,7 +405,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		],
 		target: "normal",
-		type: "DG-Fire",
+		type: "Fire",
 	},
 	"infinityburn": {
 		num: -117,
@@ -438,7 +433,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		],
 		target: "normal",
-		type: "DG-Fire",
+		type: "Fire",
 	},
 
 	// DG-Water Moves //
@@ -465,7 +460,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 		target: "alladjacentfoes",
-		type: "DG-Water",
+		type: "Water",
 	},
 	"teardrop": {
 		num: -119,
@@ -487,53 +482,36 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			volatileStatus: 'bug',
 		},
 		target: "normal",
-		type: "DG-Water",
+		type: "Water",
 	},
 	"winterblast": {
 		num: -120,
 		accuracy: 100,
 		basePower: 75,
 		category: "Physical",
-		desc: "10% chance to Freeze adjacent foe(s) + Ice DMG.",
-		shortDesc: "10% chance to FRZ adjacent foe(s) + Ice DMG.",
+		desc: "10% chance to Freeze adjacent foe(s).",
+		shortDesc: "10% chance to FRZ adjacent foe(s).",
 		name: "Winter Blast",
 		pp: 10,
-		flags: { protect: 1, mirror: 1, distance: 1, nonsky: 1 },
-		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Ice', type);
-		},
-		priority: 0,
-		onPrepareHit(target, source, move) {
-			this.attrLastMove('[still]');
-			this.add('-anim', source, "avalanche", target);
-		},
+		flags: { protect: 1, mirror: 1, distance: 1},
 		secondary: {
 			chance: 10,
 			status: 'frz',
 		},
 		target: "allAdjacentFoes",
-		type: "DG-Water",
+		type: "Ice",
 	},
 	"hailspear": {
 		num: -121,
 		accuracy: 100,
 		basePower: 70,
 		category: "Physical",
-		desc: "10% Freeze the target, 30% chance to lower the targets SPE + Ice DMG.",
-		shortDesc: "10% FRZ target, 30% chance to lower target SPE + Ice DMG.",
+		desc: "10% Freeze the target, 30% chance to lower the targets SPE.",
+		shortDesc: "10% FRZ target, 30% chance to lower target SPE.",
 		name: "Hail Spear",
 		pp: 10,
-		flags: { protect: 1, mirror: 1, distance: 1, nonsky: 1 },
-		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Ice', type);
-		},
-		priority: 0,
-		onPrepareHit(target, source, move) {
-			this.attrLastMove('[still]');
-			this.add('-anim', source, "iceshard", target);
-		},
+		flags: { protect: 1, mirror: 1, distance: 1},
 		secondaries: [
-			{
 				chance: 10,
 				status: 'frz',
 			}, {
@@ -544,18 +522,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		],
 		target: "normal",
-		type: "DG-Water",
+		type: "Ice",
 	},
 	"gigafreeze": {
 		num: -122,
 		accuracy: 100,
 		basePower: 80,
 		category: "Special",
-		desc: "10% Freeze the target + Ice DMG.",
-		shortDesc: "10% Freeze the target + Ice DMG.",
-		name: "Hail Spear",
+		desc: "10% Freeze the target.",
+		shortDesc: "10% Freeze the target.",
+		name: "Giga Freeze",
 		pp: 15,
-		flags: { protect: 1, mirror: 1, distance: 1, nonsky: 1 },
+		flags: { protect: 1, mirror: 1, distance: 1},
 		onEffectiveness(typeMod, target, type, move) {
 			return typeMod + this.dex.getEffectiveness('Ice', type);
 		},
@@ -570,7 +548,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			status: 'frz',
 		},
 		target: "normal",
-		type: "DG-Water",
+		type: "Ice",
 	},
 	"waterblitz": {
 		num: -123,
@@ -589,7 +567,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
 		target: "normal",
-		type: "DG-Water",
+		type: "Water",
 	},
 	"dgwaterfall": {
 		num: -124,
@@ -611,7 +589,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			volatileStatus: 'flinch',
 		},
 		target: "allAdjacentFoes",
-		type: "DG-Water",
+		type: "Water",
 	},
 	"heavyrain": {
 		num: -125,
@@ -633,15 +611,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			volatileStatus: 'confuse',
 		},
 		target: "foe(s)",
-		type: "DG-Water",
+		type: "Water",
 	},
 	"aurorafreeze": {
 		num: -126,
 		accuracy: 90,
 		basePower: 130,
 		category: "Special",
-		desc: "10% chance to freeze the taget. If this move is successful, the user must recharge on the following turn and cannot select a move + Ice Type DMG.",
-		shortDesc: "10% FRZ, User cannot move next turn + Ice DMG.",
+		desc: "10% chance to freeze the taget. If this move is successful, the user must recharge on the following turn and cannot select a move.",
+		shortDesc: "10% FRZ, User cannot move next turn.",
 		name: "Aurora Freeze",
 		pp: 5,
 		priority: 0,
@@ -649,10 +627,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "blizzard", target);
 		},
-		flags: { protect: 1, mirror: 1, distance: 1, nonsky: 1, recharge: 1 },
-		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Ice', type);
-		},
+		flags: { protect: 1, mirror: 1, distance: 1, recharge: 1 },
 		self: {
 			volatileStatus: 'mustrecharge',
 		},
@@ -661,7 +636,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			status: 'frz',
 		},
 		target: "normal",
-		type: "DG-Water",
+		type: "Ice",
 	},
 
 	// DG-Grass Moves //
@@ -686,7 +661,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			status: 'psn',
 		},
 		target: "normal",
-		type: "DG-Grass",
+		type: "Bug",
 	},
 	"poisonclaw": {
 		num: -128,
@@ -708,14 +683,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			status: 'psn',
 		},
 		target: "normal",
-		type: "DG-Grass",
+		type: "Poison",
 	},
 	"dgpoisonpowder": {
 		num: -129,
 		accuracy: 75,
 		basePower: 70,
 		category: "Special",
-		desc: "Poisons adjacent targets. Grass and DG-Grass are immune",
+		desc: "Poisons adjacent targets. Grass is immune",
 		shortDesc: "Poisons adjacent targets. Grass is immune.",
 		name: "DG Poison Powder",
 		pp: 35,
@@ -730,14 +705,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			status: 'psn',
 		},
 		target: "alladjacentfoes",
-		type: "DG-Grass",
+		type: "Poison",
 	},
 	"charmperfume": {
 		num: -130,
 		accuracy: 75,
 		basePower: 70,
 		category: "Special",
-		desc: "Confuses adjacent targets. Grass and DG-Grass are immune.",
+		desc: "Confuses adjacent targets. Grass is immune.",
 		shortDesc: "Confuses adjacent targets. Grass is immune.",
 		name: "Charm Perfume",
 		pp: 35,
@@ -774,7 +749,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			volatileStatus: 'bug',
 		},
 		target: "normal",
-		type: "DG-Grass",
+		type: "Bug",
 	},
 	biofield: {
 		num: -132,
@@ -796,7 +771,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			status: 'psn',
 		},
 		target: "allAdjacentFoes",
-		type: "DG-Grass",
+		type: "Grass",
 	},
 	"greentrap": {
 		num: -133,
@@ -820,7 +795,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 		target: "normal",
-		type: "DG-Grass",
+		type: "Bug",
 	},
 	"rootbind": {
 		num: -134,
@@ -844,7 +819,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 		target: "normal",
-		type: "DG-Grass",
+		type: "Grass",
 	},
 	"venomdisaster": {
 		num: -135,
@@ -869,7 +844,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			status: 'psn',
 		},
 		target: "alladjacentfoes",
-		type: "DG-Grass",
+		type: "Grass",
 	},
 
 	// DG-Electric Moves //
@@ -895,7 +870,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			status: 'par',
 		},
 		target: "normal",
-		type: "DG-Electric",
+		type: "Electric",
 	},
 	"electricchute": {
 		num: -137,
@@ -918,15 +893,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			status: 'par',
 		},
 		target: "normal",
-		type: "DG-Electric",
+		type: "Electric",
 	},
 	"windcutter": {
 		num: -138,
 		accuracy: 100,
 		basePower: 75,
 		category: "Special",
-		desc: "Any target. Combines Flying in its type effectiveness.",
-		shortDesc: "Any target. Combines Flying in its type effectiveness.",
+		desc: "Any target.",
+		shortDesc: "Any target.",
 		id: "windcutter",
 		name: "Wind Cutter",
 		pp: 15,
@@ -935,12 +910,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "airslash", target);
 		},
-		flags: { protect: 1, mirror: 1, distance: 1, nonsky: 1 },
-		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Flying', type);
-		},
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		secondary: null,
 		target: "any",
-		type: "DG-Electric",
+		type: "Flying",
 	},
 	"thunderstorm": {
 		num: -139,
@@ -963,15 +936,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			status: 'par',
 		},
 		target: "normal",
-		type: "DG-Electric",
+		type: "Electric",
 	},
 	"confusedstorm": {
 		num: -140,
 		accuracy: 100,
 		basePower: 95,
 		category: "Special",
-		desc: "30% chance to Confuse adjacent foe(s), + Flying DMG.",
-		shortDesc: "30% chance to Confuse adjacent foe(s), + Flying DMG.",
+		desc: "30% chance to Confuse adjacent foe(s), + Electric DMG.",
+		shortDesc: "30% chance to Confuse adjacent foe(s), + Electric DMG.",
 		id: "confusedstorm",
 		name: "Confused Storm",
 		pp: 10,
@@ -983,21 +956,21 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				this.attrLastMove('[still]');
 				this.add('-anim', source, "hurricane", target);
 			},
-			flags: { protect: 1, mirror: 1, distance: 1, nonsky: 1 },
+			flags: { protect: 1, mirror: 1, distance: 1},
 			onEffectiveness(typeMod, target, type, move) {
-				return typeMod + this.dex.getEffectiveness('Flying', type);
+				return typeMod + this.dex.getEffectiveness('Electric', type);
 			},
 		},
 		target: "normal",
-		type: "DG-Electric",
+		type: "Flying",
 	},
 	"spinningshot": {
 		num: -141,
 		accuracy: 80,
 		basePower: 120,
 		category: "Physical",
-		desc: "Aims for foe(s) + Flying DMG.",
-		shortDesc: "Aims for foe(s) + Flying DMG.",
+		desc: "Aims for foe(s).",
+		shortDesc: "Aims for foe(s).",
 		id: "spinningshot",
 		name: "Spinning Shot",
 		pp: 15,
@@ -1006,12 +979,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "aircutter", target);
 		},
-		flags: { protect: 1, mirror: 1, distance: 1, nonsky: 1 },
-		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Flying', type);
-		},
+		flags: { protect: 1, mirror: 1, distance: 1},
 		target: "allAdjacentFoes",
-		type: "DG-Electric",
+		type: "Flying",
 	},
 	"megalospark": {
 		num: -142,
@@ -1034,15 +1004,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			status: 'par',
 		},
 		target: "normal",
-		type: "DG-Electric",
+		type: "Electric",
 	},
 	"thunderjustice": {
 		num: -143,
 		accuracy: 90,
 		basePower: 150,
 		category: "Special",
-		desc: "20% Paralyze the target + DG-Fairy DMG.",
-		shortDesc: "20% PAR target + DG-Fairy DMG.",
+		desc: "20% Paralyze the target + Fairy DMG.",
+		shortDesc: "20% PAR target + Fairy DMG.",
 		id: "thunderjustice",
 		name: "Thunder Justice",
 		pp: 5,
@@ -1051,9 +1021,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "thunder", target);
 		},
-		flags: { protect: 1, mirror: 1, distance: 1, nonsky: 1 },
+		flags: { protect: 1, mirror: 1, distance: 1},
 		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('DG-Fairy', type);
+			return typeMod + this.dex.getEffectiveness('Fairy', type);
 		},
 		secondary: {
 			chance: 20,
@@ -1081,7 +1051,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: { contact: 1, protect: 1, mirror: 1 },
 		secondary: null,
 		target: "normal",
-		type: "DG-Steel",
+		type: "Steel",
 	},
 	"metalsprinter": {
 		num: -145,
@@ -1099,7 +1069,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
 		target: "alladjacentfoes",
-		type: "DG-Steel",
+		type: "Steel",
 	},
 	"reverseprogram": {
 		num: -146,
@@ -1121,7 +1091,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			volatileStatus: 'bug',
 		},
 		target: "normal",
-		type: "DG-Steel",
+		type: "Steel",
 	},
 	"dgdimensionv3": {
 		num: -147,
@@ -1145,7 +1115,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 20,
 			volatileStatus: 'bug',
 			target: "normal",
-			type: "DG-Steel",
+			type: "Steel",
 		},
 	},
 
@@ -1171,7 +1141,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			volatileStatus: 'flinch',
 		},
 		target: "normal",
-		type: "DG-Poison",
+		type: "Poison",
 		contestType: "Tough",
 	},
 	"cootieskick": {
@@ -1194,7 +1164,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			volatileStatus: 'confuse',
 		},
 		target: "normal",
-		type: "DG-Poison",
+		type: "Poison",
 	},
 	"bigpooptoss": {
 		num: -150,
@@ -1216,29 +1186,20 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			volatileStatus: 'flinch',
 		},
 		target: "normal",
-		type: "DG-Poison",
+		type: "Poison",
 	},
-	"bigrandomtoss": {
+	"grandrock": {
 		num: -151,
 		accuracy: 100,
 		basePower: 95,
 		category: "Physical",
-		desc: "Has a 10% chance to confuse the all adjcacent targets.",
-		shortDesc: "10% chance to confuse the all adjcacent targets.",
-		name: "Big Random Toss",
-		pp: 15,
+		name: "Grand Rock",
+		pp: 10,
 		priority: 0,
-		onPrepareHit(target, source, move) {
-			this.attrLastMove('[still]');
-			this.add('-anim', source, "sludgewave", target);
-		},
-		flags: { protect: 1, mirror: 1 },
-		secondary: {
-			chance: 10,
-			volatileStatus: 'confuse',
-		},
-		target: "alladjacentfoes",
-		type: "DG-Poison",
+		flags: {protect: 1, mirror: 1, nonsky: 1},
+		secondary: null,
+		target: "allAdjacent",
+		type: "Ground",
 	},
 	"ultimatepoophell": {
 		num: -152,
@@ -1260,16 +1221,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			volatileStatus: 'bug',
 		},
 		target: "allAdjacentfoes",
-		type: "DG-Poison",
+		type: "Poison",
 	},
-	"pooptoss": {
+	"awesomequake": {
 		num: -153,
 		accuracy: 100,
 		basePower: 70,
 		category: "Physical",
 		desc: "Has a higher chance for a critical hit.",
 		shortDesc: "High critical hit ratio.",
-		name: "Poop Toss",
+		name: "Awesome Quake",
 		pp: 15,
 		priority: 0,
 		onPrepareHit(target, source, move) {
@@ -1280,31 +1241,20 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
-		type: "DG-Poison",
+		type: "Ground",
 	},
-	"guerillapoop": {
+	"comethammer": {
 		num: -154,
 		accuracy: 85,
 		basePower: 120,
 		category: "Physical",
-		desc: "Has a 10% chance to lower adjacent foe(s) Speed by 1 stage.",
-		shortDesc: "10% chance to lower adjacent foe(s) SPE by 1.",
-		name: "Guerilla Poop",
+		name: "Comet Hammer",
 		pp: 10,
 		priority: 0,
-		onPrepareHit(target, source, move) {
-			this.attrLastMove('[still]');
-			this.add('-anim', source, "venoshock", target);
-		},
-		flags: { protect: 1, mirror: 1 },
-		secondary: {
-			chance: 10,
-			boosts: {
-				spe: -1,
-			},
-		},
-		target: "alladjacentfoes",
-		type: "DG-Poison",
+		flags: {protect: 1, mirror: 1, nonsky: 1},
+		secondary: null,
+		target: "allAdjacent",
+		type: "Ground",
 	},
 
 	// DG-Fairy Moves //
@@ -1329,7 +1279,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			volatileStatus: 'confusion',
 		},
 		target: "allAdjacentFoes",
-		type: "DG-Fairy",
+		type: "Fairy",
 	},
 
 	"saintray": {
@@ -1352,7 +1302,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			volatileStatus: 'confusion',
 		},
 		target: "allAdjacentFoes",
-		type: "DG-Fairy",
+		type: "Fairy",
 	},
 	"dgflash": {
 		num: -157,
@@ -1371,7 +1321,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
 		target: "allAdjacentFoes",
-		type: "DG-Fairy",
+		type: "Fairy",
 	},
 	"saintshield": {
 		num: -158,
@@ -1390,7 +1340,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: { contact: 1, protect: 1, mirror: 1 },
 		secondary: null,
 		target: "alladjacentfoes",
-		type: "DG-Fairy",
+		type: "Fairy",
 	},
 	"shiningnova": {
 		num: -159,
@@ -1412,7 +1362,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "allAdjacentFoes",
-		type: "DG-Fairy",
+		type: "Fairy",
 	},
 	"dgjudgment": {
 		num: -160,
@@ -1431,7 +1381,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
 		target: "alladjacentfoes",
-		type: "DG-Fairy",
+		type: "Fairy",
 	},
 
 	// DG-Dark Moves //
@@ -1453,7 +1403,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: { contact: 1, protect: 1, mirror: 1 },
 		secondary: null,
 		target: "normal",
-		type: "DG-Dark",
+		type: "Ghost",
 	},
 	"blackout": {
 		num: -162,
@@ -1471,7 +1421,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			volatileStatus: 'confusion',
 		},
 		target: "normal",
-		type: "DG-Dark",
+		type: "Dark",
 	},
 	"dgnightmare": {
 		num: -163,
@@ -1490,7 +1440,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
 		target: "alladjacentfoes",
-		type: "DG-Dark",
+		type: "Dark",
 	},
 	"chaoscloud": {
 		num: -164,
@@ -1508,7 +1458,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			volatileStatus: 'confusion',
 		},
 		target: "normal",
-		type: "DG-Dark",
+		type: "Ghost",
 	},
 	"shadowfall": {
 		num: -165,
@@ -1527,7 +1477,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
 		target: "allAdjacentFoes",
-		type: "DG-Dark",
+		type: "Dark",
 	},
 
 	// DG Status Moves //
@@ -1548,7 +1498,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"attackbreak": {
 		num: -167,
@@ -1566,7 +1516,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "Normal",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"attackbreakfield": {
 		num: -168,
@@ -1584,7 +1534,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "allAdjacentFoes",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"attackchargefield": {
 		num: -169,
@@ -1602,7 +1552,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "allySide",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"mentalcharge": {
 		num: -170,
@@ -1621,7 +1571,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"mentalchargefield": {
 		num: -171,
@@ -1640,7 +1590,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "allySide",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"guardcharge": {
 		num: -172,
@@ -1658,7 +1608,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"guardchargefield": {
 		num: -173,
@@ -1676,7 +1626,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "allySide",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"guardbreakfield": {
 		num: -174,
@@ -1694,7 +1644,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "allAdjacentFoes",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"speedchargefield": {
 		num: -175,
@@ -1712,7 +1662,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "allySide",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"speedbreakfield": {
 		num: -176,
@@ -1730,7 +1680,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "allAdjacentFoes",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"agilitycharge": {
 		num: -177,
@@ -1748,7 +1698,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"finalheal": {
 		num: -178,
@@ -1764,7 +1714,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		heal: [1, 2],
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"restore": {
 		num: -179,
@@ -1783,7 +1733,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"statusbarrier": {
 		num: -180,
@@ -1837,7 +1787,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "allySide",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"safetyguard": {
 		num: -181,
@@ -1873,7 +1823,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"critcharge": {
 		num: -182,
@@ -1903,7 +1853,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 		zMove: { boost: { accuracy: 1 } },
 	},
 	"dispel": {
@@ -1926,7 +1876,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"crosscounter": {
 		num: -184,
@@ -1971,7 +1921,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "scripted",
-		type: "DG-Normal",
+		type: "Normal",
 		maxMove: { basePower: 75 },
 	},
 	"mirrorreflection": {
@@ -2017,7 +1967,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "scripted",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"antisleep": {
 		num: -186,
@@ -2036,7 +1986,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"antipoison": {
 		num: -187,
@@ -2055,7 +2005,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"antiparalysis": {
 		num: -188,
@@ -2074,7 +2024,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"antipanic": {
 		num: -189,
@@ -2093,7 +2043,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"antibug": {
 		num: -190,
@@ -2112,7 +2062,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"accelerationboost": {
 		num: -191,
@@ -2148,7 +2098,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "self",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"dgfacade": {
 		num: -192,
@@ -2168,7 +2118,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "normal",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	lgpeabsorb: {
 		num: 71,
