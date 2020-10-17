@@ -46,7 +46,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		accuracy: 90,
 		basePower: 75,
 		category: "Physical",
-		name: "Rock Slide",
+		id: "tremor",
+		name: "Tremor",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
@@ -122,15 +123,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		target: "normal",
 		type: "Normal",
 	},
-	sprialdriver: {
+	spiraldriver: {
 		num: -106,
 		accuracy: 90,
 		basePower: 130,
 		category: "Physical",
 		desc: "If this attack is not successful, the user loses half of its maximum HP, rounded down, as crash damage. Pokemon with the Magic Guard Ability are unaffected by crash damage. Contact move.",
 		shortDesc: "User is hurt by 50% of its max HP if it misses. Contact move.",
-		id: "sprialdriver",
-		name: "Sprial Driver",
+		id: "spiraldriver",
+		name: "Spiral Driver",
 		pp: 10,
 		priority: 0,
 		onPrepareHit(target, source, move) {
@@ -2098,26 +2099,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		secondary: null,
 		target: "self",
-		type: "Normal",
-	},
-	"dgfacade": {
-		num: -192,
-		accuracy: 100,
-		basePower: 70,
-		category: "Physical",
-		desc: "Power doubles if the user is burned, paralyzed, or poisoned. The physical damage halving effect from the user's burn is ignored.",
-		shortDesc: "Power doubles if user is burn/poison/paralyzed.",
-		name: "DG Facade",
-		pp: 20,
-		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1 },
-		onBasePower(basePower, pokemon) {
-			if (pokemon.status && pokemon.status !== 'slp') {
-				return this.chainModify(2);
-			}
-		},
-		secondary: null,
-		target: "normal",
 		type: "Normal",
 	},
 	lgpeabsorb: {
