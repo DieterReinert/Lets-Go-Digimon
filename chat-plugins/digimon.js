@@ -38,7 +38,7 @@ function getSpecies(digimon) {
 }
 
 function getTypeChart(digimon) {
-	const dex = Dex.mod('digimon');
+	const dex = Dex;
 	let weaknesses = [];
 	let resistances = [];
 	let immunities = [];
@@ -75,28 +75,7 @@ function getTypeChart(digimon) {
 }
 
 function getTypeImgSrc(type) {
-	switch (type) {
-	case 'DG-Fire':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/flame-icon.png';
-	case 'DG-Water':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/aqua-icon.png';
-	case 'DG-Electric':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/air-icon.png';
-	case 'DG-Grass':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/nature-icon.png';
-	case 'DG-Fairy':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/holy-icon.png';
-	case 'DG-Dark':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/evil-icon.png';
-	case 'DG-Normal':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/battle-icon.png';
-	case 'DG-Steel':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/mech-icon.png';
-	case 'DG-Poison':
-		return 'https://play.pokemonshowdown.com/sprites/digimon/plugin-css/filth-icon.png';
-	default:
-		return '';
-	}
+	return `https://play.pokemonshowdown.com/sprites/types/${type}.png`
 }
 
 function getAbilityImgSrc(ability) {
@@ -182,7 +161,7 @@ exports.commands = {
 		let choices = {
 			alphabetical: 'abcdefghijklmnopqrstuvwxyz'.split(''),
 			stage: ['Fresh', 'In-Training', 'Rookie', 'Champion', 'Ultimate', 'Mega'],
-			type: ['DG-Fire', 'DG-Water', 'DG-Electric', 'DG-Grass', 'DG-Fairy', 'DG-Dark', 'DG-Normal', 'DG-Steel', 'DG-Poison'],
+			type: ['Fire', 'Water', 'Electric', 'Grass', 'Fairy', 'Dark', 'Normal', 'Steel', 'Poison'],
 			color: ['Red', 'Blue', 'Yellow', 'Green', 'Black', 'Brown', 'Purple', 'Gray', 'White', 'Pink'],
 			ability: ['Vaccine', 'Virus', 'Data'],
 		};
@@ -342,7 +321,7 @@ exports.commands = {
 		let change = !!target || cmd === 'movesearchchange';
 		let choices = {
 			alphabetical: 'abcdefghijklmnopqrstuvwxyz'.split(''),
-			type: ['DG-Fire', 'DG-Water', 'DG-Electric', 'DG-Grass', 'DG-Fairy', 'DG-Dark', 'DG-Normal', 'DG-Steel', 'DG-Poison'],
+			type: ['Fire', 'Water', 'Electric', 'Grass', 'Fairy', 'Dark', 'Normal', 'Steel', 'Poison'],
 			category: ['Status', 'Physical', 'Special'],
 			signature: ['Signature', 'Not Signature'],
 		};
