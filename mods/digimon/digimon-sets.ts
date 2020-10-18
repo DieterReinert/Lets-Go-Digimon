@@ -429,7 +429,7 @@ export default [
     {
         "species": "Goburimon",
 		"universe":"Digimon",
-        "moves": ["Dynamite Kick", "Awesome Quake", "Facade", "Spiral Driver", "Mach Jab", "Headbutt", "Heat Breath", "Fire Tower", "Fighting Aura", "Agility", "Focus Energy", "Growl", "Leer", "Mirror Move", "Protect", "Rest", "Roost" "Substitute", Toxic"],    
+        "moves": ["Dynamite Kick", "Awesome Quake", "Facade", "Spiral Driver", "Mach Jab", "Headbutt", "Heat Breath", "Fire Tower", "Fighting Aura", "Agility", "Focus Energy", "Growl", "Leer", "Mirror Move", "Protect", "Rest", "Roost", "Substitute", "Toxic"],    
 	},
     {
         "species": "Gotsumon",
