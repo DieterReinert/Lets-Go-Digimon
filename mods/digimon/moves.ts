@@ -512,16 +512,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		name: "Hail Spear",
 		pp: 10,
 		flags: { protect: 1, mirror: 1, distance: 1},
-		secondaries: [
-				chance: 10,
-				status: 'frz',
-			}, {
+		secondary: {
 				chance: 30,
 				boosts: {
 					spe: -1,
 				},
 			},
-		],
 		target: "normal",
 		type: "Ice",
 	},
