@@ -161,7 +161,7 @@ exports.commands = {
 		let choices = {
 			alphabetical: 'abcdefghijklmnopqrstuvwxyz'.split(''),
 			stage: ['Fresh', 'In-Training', 'Rookie', 'Champion', 'Ultimate', 'Mega'],
-			type: ['Fire', 'Water', 'Electric', 'Grass', 'Fairy', 'Dark', 'Normal', 'Steel', 'Poison'],
+			type: Object.keys(Dex.data.TypeChart),
 			color: ['Red', 'Blue', 'Yellow', 'Green', 'Black', 'Brown', 'Purple', 'Gray', 'White', 'Pink'],
 			ability: ['Vaccine', 'Virus', 'Data'],
 		};
@@ -321,7 +321,7 @@ exports.commands = {
 		let change = !!target || cmd === 'movesearchchange';
 		let choices = {
 			alphabetical: 'abcdefghijklmnopqrstuvwxyz'.split(''),
-			type: ['Fire', 'Water', 'Electric', 'Grass', 'Fairy', 'Dark', 'Normal', 'Steel', 'Poison'],
+			type: Object.keys(Dex.data.TypeChart),
 			category: ['Status', 'Physical', 'Special'],
 			signature: ['Signature', 'Not Signature'],
 		};
