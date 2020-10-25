@@ -19,7 +19,7 @@ const digimonShowdown = {
     moves: require(`${DIGIMON_SHOWDOWN_DIR}/moves`).Moves,
     dex: require(`${DIGIMON_SHOWDOWN_DIR}/pokedex`).Pokedex,
     sets: require(`${DIGIMON_SHOWDOWN_DIR}/digimon-sets`),
-    typechart: require(`${DIGIMON_SHOWDOWN_DIR}/typechart`).TypeChart,
+    typechart: require(`${POKEMON_SHOWDOWN_DIR}/typechart`).TypeChart,
 };
 
 // IMPORT POKEMON SHOWDOWN DATA
@@ -109,8 +109,8 @@ console.log(`"${DS_OUTPUT_DIR}/positions.json" has been written.`);
 
 // DIGIMON TYPES
 
-Object.keys(digimonShowdown.typechart).filter(type => {
-    if (!pokemonShowdown.typechart[type]) exportable.typechart[type] = true;
+Object.keys(pokemonShowdown.typechart).filter(type => {
+    exportable.typechart[type] = true;
 });
 
 writeFileSync(`${DS_OUTPUT_DIR}/types.json`, JSON.stringify(exportable.typechart, null, 4));

@@ -1,5 +1,5 @@
 "use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _optionalChain(ops) { let lastAccessLHS = undefined; let value = ops[0]; let i = 1; while (i < ops.length) { const op = ops[i]; const fn = ops[i + 1]; i += 2; if ((op === 'optionalAccess' || op === 'optionalCall') && value == null) { return undefined; } if (op === 'access' || op === 'optionalAccess') { lastAccessLHS = value; value = fn(value); } else if (op === 'call' || op === 'optionalCall') { value = fn((...args) => value.call(lastAccessLHS, ...args)); lastAccessLHS = undefined; } } return value; } const Moves = {
-	// DG-Normal Moves //
+	// Normal Moves //
 	"machjab": {
 		num: -100,
 		accuracy: 90,
@@ -19,7 +19,7 @@
 		flags: { contact: 1, protect: 1, mirror: 1 },
 		secondary: null,
 		target: "normal",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"sonicjab": {
 		num: -101,
@@ -39,28 +39,24 @@
 		flags: { contact: 1, protect: 1, mirror: 1 },
 		secondary: null,
 		target: "normal",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"tremor": {
 		num: -102,
-		accuracy: 85,
-		basePower: 25,
+		accuracy: 90,
+		basePower: 75,
 		category: "Physical",
-		desc: "Hits two to five times. Has a 1/3 chance to hit two or three times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
-		shortDesc: "Hits adjacent foe(s) 2-3 times in one turn.",
 		id: "tremor",
 		name: "Tremor",
-		pp: 20,
+		pp: 10,
 		priority: 0,
-		onPrepareHit(target, source, move) {
-			this.attrLastMove('[still]');
-			this.add('-anim', source, "ancientpower", target);
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
 		},
-		flags: { protect: 1, mirror: 1 },
-		multihit: [2, 3],
-		secondary: null,
-		target: "alladjacentfoes",
-		type: "DG-Normal",
+		target: "allAdjacentFoes",
+		type: "Rock",
 	},
 	"dynamitekick": {
 		num: -103,
@@ -84,7 +80,7 @@
 		},
 		secondary: null,
 		target: "normal",
-		type: "DG-Normal",
+		type: "Fighting",
 	},
 	"spinattack": {
 		num: -104,
@@ -103,7 +99,7 @@
 		flags: { contact: 1, protect: 1, mirror: 1 },
 		secondary: null,
 		target: "normal",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"megatonpunch": {
 		num: -105,
@@ -125,17 +121,17 @@
 			volatileStatus: 'flinch',
 		},
 		target: "normal",
-		type: "DG-Normal",
+		type: "Normal",
 	},
-	sprialdriver: {
+	spiraldriver: {
 		num: -106,
 		accuracy: 90,
 		basePower: 130,
 		category: "Physical",
 		desc: "If this attack is not successful, the user loses half of its maximum HP, rounded down, as crash damage. Pokemon with the Magic Guard Ability are unaffected by crash damage. Contact move.",
 		shortDesc: "User is hurt by 50% of its max HP if it misses. Contact move.",
-		id: "sprialdriver",
-		name: "Sprial Driver",
+		id: "spiraldriver",
+		name: "Spiral Driver",
 		pp: 10,
 		priority: 0,
 		onPrepareHit(target, source, move) {
@@ -149,7 +145,7 @@
 		},
 		secondary: null,
 		target: "normal",
-		type: "DG-Normal",
+		type: "Fighting",
 	},
 	fightingaura: {
 		num: -107,
@@ -179,7 +175,7 @@
 			},
 		},
 		target: "normal",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	busterdive: {
 		num: -108,
@@ -211,7 +207,7 @@
 		},
 		secondary: null,
 		target: "normal",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 
 	// DG-Fire Moves //
@@ -237,7 +233,7 @@
 			status: 'brn',
 		},
 		target: "normal",
-		type: "DG-Fire",
+		type: "Fire",
 	},
 	"heatlaser": {
 		num: -110,
@@ -260,7 +256,7 @@
 			status: 'brn',
 		},
 		target: "alladjacentfoes",
-		type: "DG-Fire",
+		type: "Fire",
 	},
 	"heatbreath": {
 		num: -111,
@@ -287,7 +283,7 @@
 			},
 		],
 		target: "normal",
-		type: "DG-Fire",
+		type: "Dragon",
 	},
 	"firetower": {
 		num: -112,
@@ -314,7 +310,7 @@
 			},
 		],
 		target: "normal",
-		type: "DG-Fire",
+		type: "Fire",
 	},
 	"redinferno": {
 		num: -113,
@@ -336,7 +332,7 @@
 			status: 'brn',
 		},
 		target: "allAdjacentFoes",
-		type: "DG-Fire",
+		type: "Fire",
 	},
 	"magmabomb": {
 		num: -114,
@@ -363,7 +359,7 @@
 			},
 		],
 		target: "normal",
-		type: "DG-Fire",
+		type: "Dragon",
 	},
 	"flamestorm": {
 		num: -115,
@@ -382,8 +378,8 @@
 		flags: { protect: 1, mirror: 1 },
 		volatileStatus: 'partiallytrapped',
 		secondary: null,
-		target: "alladjacentfoes",
-		type: "DG-Fire",
+		target: "normal",
+		type: "Fire",
 	},
 	"prominencebeam": {
 		num: -116,
@@ -410,7 +406,7 @@
 			},
 		],
 		target: "normal",
-		type: "DG-Fire",
+		type: "Fire",
 	},
 	"infinityburn": {
 		num: -117,
@@ -438,7 +434,7 @@
 			},
 		],
 		target: "normal",
-		type: "DG-Fire",
+		type: "Fire",
 	},
 
 	// DG-Water Moves //
@@ -465,7 +461,7 @@
 			},
 		},
 		target: "alladjacentfoes",
-		type: "DG-Water",
+		type: "Water",
 	},
 	"teardrop": {
 		num: -119,
@@ -487,75 +483,54 @@
 			volatileStatus: 'bug',
 		},
 		target: "normal",
-		type: "DG-Water",
+		type: "Water",
 	},
 	"winterblast": {
 		num: -120,
 		accuracy: 100,
 		basePower: 75,
 		category: "Physical",
-		desc: "10% chance to Freeze adjacent foe(s) + Ice DMG.",
-		shortDesc: "10% chance to FRZ adjacent foe(s) + Ice DMG.",
+		desc: "10% chance to Freeze adjacent foe(s).",
+		shortDesc: "10% chance to FRZ adjacent foe(s).",
 		name: "Winter Blast",
 		pp: 10,
-		flags: { protect: 1, mirror: 1, distance: 1, nonsky: 1 },
-		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Ice', type);
-		},
-		priority: 0,
-		onPrepareHit(target, source, move) {
-			this.attrLastMove('[still]');
-			this.add('-anim', source, "avalanche", target);
-		},
+		flags: { protect: 1, mirror: 1, distance: 1},
 		secondary: {
 			chance: 10,
 			status: 'frz',
 		},
 		target: "allAdjacentFoes",
-		type: "DG-Water",
+		type: "Ice",
 	},
 	"hailspear": {
 		num: -121,
 		accuracy: 100,
 		basePower: 70,
 		category: "Physical",
-		desc: "10% Freeze the target, 30% chance to lower the targets SPE + Ice DMG.",
-		shortDesc: "10% FRZ target, 30% chance to lower target SPE + Ice DMG.",
+		desc: "10% Freeze the target, 30% chance to lower the targets SPE.",
+		shortDesc: "10% FRZ target, 30% chance to lower target SPE.",
 		name: "Hail Spear",
 		pp: 10,
-		flags: { protect: 1, mirror: 1, distance: 1, nonsky: 1 },
-		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Ice', type);
-		},
-		priority: 0,
-		onPrepareHit(target, source, move) {
-			this.attrLastMove('[still]');
-			this.add('-anim', source, "iceshard", target);
-		},
-		secondaries: [
-			{
-				chance: 10,
-				status: 'frz',
-			}, {
+		flags: { protect: 1, mirror: 1, distance: 1},
+		secondary: {
 				chance: 30,
 				boosts: {
 					spe: -1,
 				},
 			},
-		],
 		target: "normal",
-		type: "DG-Water",
+		type: "Ice",
 	},
 	"gigafreeze": {
 		num: -122,
 		accuracy: 100,
 		basePower: 80,
 		category: "Special",
-		desc: "10% Freeze the target + Ice DMG.",
-		shortDesc: "10% Freeze the target + Ice DMG.",
-		name: "Hail Spear",
+		desc: "10% Freeze the target.",
+		shortDesc: "10% Freeze the target.",
+		name: "Giga Freeze",
 		pp: 15,
-		flags: { protect: 1, mirror: 1, distance: 1, nonsky: 1 },
+		flags: { protect: 1, mirror: 1, distance: 1},
 		onEffectiveness(typeMod, target, type, move) {
 			return typeMod + this.dex.getEffectiveness('Ice', type);
 		},
@@ -570,7 +545,7 @@
 			status: 'frz',
 		},
 		target: "normal",
-		type: "DG-Water",
+		type: "Ice",
 	},
 	"waterblitz": {
 		num: -123,
@@ -589,7 +564,7 @@
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
 		target: "normal",
-		type: "DG-Water",
+		type: "Water",
 	},
 	"dgwaterfall": {
 		num: -124,
@@ -611,7 +586,7 @@
 			volatileStatus: 'flinch',
 		},
 		target: "allAdjacentFoes",
-		type: "DG-Water",
+		type: "Water",
 	},
 	"heavyrain": {
 		num: -125,
@@ -633,15 +608,15 @@
 			volatileStatus: 'confuse',
 		},
 		target: "foe(s)",
-		type: "DG-Water",
+		type: "Water",
 	},
 	"aurorafreeze": {
 		num: -126,
 		accuracy: 90,
 		basePower: 130,
 		category: "Special",
-		desc: "10% chance to freeze the taget. If this move is successful, the user must recharge on the following turn and cannot select a move + Ice Type DMG.",
-		shortDesc: "10% FRZ, User cannot move next turn + Ice DMG.",
+		desc: "10% chance to freeze the taget. If this move is successful, the user must recharge on the following turn and cannot select a move.",
+		shortDesc: "10% FRZ, User cannot move next turn.",
 		name: "Aurora Freeze",
 		pp: 5,
 		priority: 0,
@@ -649,10 +624,7 @@
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "blizzard", target);
 		},
-		flags: { protect: 1, mirror: 1, distance: 1, nonsky: 1, recharge: 1 },
-		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Ice', type);
-		},
+		flags: { protect: 1, mirror: 1, distance: 1, recharge: 1 },
 		self: {
 			volatileStatus: 'mustrecharge',
 		},
@@ -661,7 +633,7 @@
 			status: 'frz',
 		},
 		target: "normal",
-		type: "DG-Water",
+		type: "Ice",
 	},
 
 	// DG-Grass Moves //
@@ -686,7 +658,7 @@
 			status: 'psn',
 		},
 		target: "normal",
-		type: "DG-Grass",
+		type: "Bug",
 	},
 	"poisonclaw": {
 		num: -128,
@@ -708,14 +680,14 @@
 			status: 'psn',
 		},
 		target: "normal",
-		type: "DG-Grass",
+		type: "Poison",
 	},
 	"dgpoisonpowder": {
 		num: -129,
 		accuracy: 75,
 		basePower: 70,
 		category: "Special",
-		desc: "Poisons adjacent targets. Grass and DG-Grass are immune",
+		desc: "Poisons adjacent targets. Grass is immune",
 		shortDesc: "Poisons adjacent targets. Grass is immune.",
 		name: "DG Poison Powder",
 		pp: 35,
@@ -730,14 +702,14 @@
 			status: 'psn',
 		},
 		target: "alladjacentfoes",
-		type: "DG-Grass",
+		type: "Poison",
 	},
 	"charmperfume": {
 		num: -130,
 		accuracy: 75,
 		basePower: 70,
 		category: "Special",
-		desc: "Confuses adjacent targets. Grass and DG-Grass are immune.",
+		desc: "Confuses adjacent targets. Grass is immune.",
 		shortDesc: "Confuses adjacent targets. Grass is immune.",
 		name: "Charm Perfume",
 		pp: 35,
@@ -774,7 +746,7 @@
 			volatileStatus: 'bug',
 		},
 		target: "normal",
-		type: "DG-Grass",
+		type: "Bug",
 	},
 	biofield: {
 		num: -132,
@@ -796,7 +768,7 @@
 			status: 'psn',
 		},
 		target: "allAdjacentFoes",
-		type: "DG-Grass",
+		type: "Grass",
 	},
 	"greentrap": {
 		num: -133,
@@ -820,7 +792,7 @@
 			},
 		},
 		target: "normal",
-		type: "DG-Grass",
+		type: "Bug",
 	},
 	"rootbind": {
 		num: -134,
@@ -844,7 +816,7 @@
 			},
 		},
 		target: "normal",
-		type: "DG-Grass",
+		type: "Grass",
 	},
 	"venomdisaster": {
 		num: -135,
@@ -869,7 +841,7 @@
 			status: 'psn',
 		},
 		target: "alladjacentfoes",
-		type: "DG-Grass",
+		type: "Grass",
 	},
 
 	// DG-Electric Moves //
@@ -895,7 +867,7 @@
 			status: 'par',
 		},
 		target: "normal",
-		type: "DG-Electric",
+		type: "Electric",
 	},
 	"electricchute": {
 		num: -137,
@@ -918,15 +890,15 @@
 			status: 'par',
 		},
 		target: "normal",
-		type: "DG-Electric",
+		type: "Electric",
 	},
 	"windcutter": {
 		num: -138,
 		accuracy: 100,
 		basePower: 75,
 		category: "Special",
-		desc: "Any target. Combines Flying in its type effectiveness.",
-		shortDesc: "Any target. Combines Flying in its type effectiveness.",
+		desc: "Any target.",
+		shortDesc: "Any target.",
 		id: "windcutter",
 		name: "Wind Cutter",
 		pp: 15,
@@ -935,12 +907,10 @@
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "airslash", target);
 		},
-		flags: { protect: 1, mirror: 1, distance: 1, nonsky: 1 },
-		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Flying', type);
-		},
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		secondary: null,
 		target: "any",
-		type: "DG-Electric",
+		type: "Flying",
 	},
 	"thunderstorm": {
 		num: -139,
@@ -963,15 +933,15 @@
 			status: 'par',
 		},
 		target: "normal",
-		type: "DG-Electric",
+		type: "Electric",
 	},
 	"confusedstorm": {
 		num: -140,
 		accuracy: 100,
 		basePower: 95,
 		category: "Special",
-		desc: "30% chance to Confuse adjacent foe(s), + Flying DMG.",
-		shortDesc: "30% chance to Confuse adjacent foe(s), + Flying DMG.",
+		desc: "30% chance to Confuse adjacent foe(s), + Electric DMG.",
+		shortDesc: "30% chance to Confuse adjacent foe(s), + Electric DMG.",
 		id: "confusedstorm",
 		name: "Confused Storm",
 		pp: 10,
@@ -983,21 +953,21 @@
 				this.attrLastMove('[still]');
 				this.add('-anim', source, "hurricane", target);
 			},
-			flags: { protect: 1, mirror: 1, distance: 1, nonsky: 1 },
+			flags: { protect: 1, mirror: 1, distance: 1},
 			onEffectiveness(typeMod, target, type, move) {
-				return typeMod + this.dex.getEffectiveness('Flying', type);
+				return typeMod + this.dex.getEffectiveness('Electric', type);
 			},
 		},
 		target: "normal",
-		type: "DG-Electric",
+		type: "Flying",
 	},
 	"spinningshot": {
 		num: -141,
 		accuracy: 80,
 		basePower: 120,
 		category: "Physical",
-		desc: "Aims for foe(s) + Flying DMG.",
-		shortDesc: "Aims for foe(s) + Flying DMG.",
+		desc: "Aims for foe(s).",
+		shortDesc: "Aims for foe(s).",
 		id: "spinningshot",
 		name: "Spinning Shot",
 		pp: 15,
@@ -1006,12 +976,9 @@
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "aircutter", target);
 		},
-		flags: { protect: 1, mirror: 1, distance: 1, nonsky: 1 },
-		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Flying', type);
-		},
+		flags: { protect: 1, mirror: 1, distance: 1},
 		target: "allAdjacentFoes",
-		type: "DG-Electric",
+		type: "Flying",
 	},
 	"megalospark": {
 		num: -142,
@@ -1034,15 +1001,15 @@
 			status: 'par',
 		},
 		target: "normal",
-		type: "DG-Electric",
+		type: "Electric",
 	},
 	"thunderjustice": {
 		num: -143,
 		accuracy: 90,
 		basePower: 150,
 		category: "Special",
-		desc: "20% Paralyze the target + DG-Fairy DMG.",
-		shortDesc: "20% PAR target + DG-Fairy DMG.",
+		desc: "20% Paralyze the target + Fairy DMG.",
+		shortDesc: "20% PAR target + Fairy DMG.",
 		id: "thunderjustice",
 		name: "Thunder Justice",
 		pp: 5,
@@ -1051,9 +1018,9 @@
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "thunder", target);
 		},
-		flags: { protect: 1, mirror: 1, distance: 1, nonsky: 1 },
+		flags: { protect: 1, mirror: 1, distance: 1},
 		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('DG-Fairy', type);
+			return typeMod + this.dex.getEffectiveness('Fairy', type);
 		},
 		secondary: {
 			chance: 20,
@@ -1081,7 +1048,7 @@
 		flags: { contact: 1, protect: 1, mirror: 1 },
 		secondary: null,
 		target: "normal",
-		type: "DG-Steel",
+		type: "Steel",
 	},
 	"metalsprinter": {
 		num: -145,
@@ -1099,7 +1066,7 @@
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
 		target: "alladjacentfoes",
-		type: "DG-Steel",
+		type: "Steel",
 	},
 	"reverseprogram": {
 		num: -146,
@@ -1121,7 +1088,7 @@
 			volatileStatus: 'bug',
 		},
 		target: "normal",
-		type: "DG-Steel",
+		type: "Steel",
 	},
 	"dgdimensionv3": {
 		num: -147,
@@ -1145,7 +1112,7 @@
 			chance: 20,
 			volatileStatus: 'bug',
 			target: "normal",
-			type: "DG-Steel",
+			type: "Steel",
 		},
 	},
 
@@ -1171,7 +1138,7 @@
 			volatileStatus: 'flinch',
 		},
 		target: "normal",
-		type: "DG-Poison",
+		type: "Poison",
 		contestType: "Tough",
 	},
 	"cootieskick": {
@@ -1194,7 +1161,7 @@
 			volatileStatus: 'confuse',
 		},
 		target: "normal",
-		type: "DG-Poison",
+		type: "Poison",
 	},
 	"bigpooptoss": {
 		num: -150,
@@ -1216,29 +1183,20 @@
 			volatileStatus: 'flinch',
 		},
 		target: "normal",
-		type: "DG-Poison",
+		type: "Poison",
 	},
-	"bigrandomtoss": {
+	"grandrock": {
 		num: -151,
 		accuracy: 100,
 		basePower: 95,
 		category: "Physical",
-		desc: "Has a 10% chance to confuse the all adjcacent targets.",
-		shortDesc: "10% chance to confuse the all adjcacent targets.",
-		name: "Big Random Toss",
-		pp: 15,
+		name: "Grand Rock",
+		pp: 10,
 		priority: 0,
-		onPrepareHit(target, source, move) {
-			this.attrLastMove('[still]');
-			this.add('-anim', source, "sludgewave", target);
-		},
-		flags: { protect: 1, mirror: 1 },
-		secondary: {
-			chance: 10,
-			volatileStatus: 'confuse',
-		},
-		target: "alladjacentfoes",
-		type: "DG-Poison",
+		flags: {protect: 1, mirror: 1, nonsky: 1},
+		secondary: null,
+		target: "allAdjacent",
+		type: "Ground",
 	},
 	"ultimatepoophell": {
 		num: -152,
@@ -1260,16 +1218,16 @@
 			volatileStatus: 'bug',
 		},
 		target: "allAdjacentfoes",
-		type: "DG-Poison",
+		type: "Poison",
 	},
-	"pooptoss": {
+	"awesomequake": {
 		num: -153,
 		accuracy: 100,
 		basePower: 70,
 		category: "Physical",
 		desc: "Has a higher chance for a critical hit.",
 		shortDesc: "High critical hit ratio.",
-		name: "Poop Toss",
+		name: "Awesome Quake",
 		pp: 15,
 		priority: 0,
 		onPrepareHit(target, source, move) {
@@ -1280,31 +1238,20 @@
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
-		type: "DG-Poison",
+		type: "Ground",
 	},
-	"guerillapoop": {
+	"comethammer": {
 		num: -154,
 		accuracy: 85,
 		basePower: 120,
 		category: "Physical",
-		desc: "Has a 10% chance to lower adjacent foe(s) Speed by 1 stage.",
-		shortDesc: "10% chance to lower adjacent foe(s) SPE by 1.",
-		name: "Guerilla Poop",
+		name: "Comet Hammer",
 		pp: 10,
 		priority: 0,
-		onPrepareHit(target, source, move) {
-			this.attrLastMove('[still]');
-			this.add('-anim', source, "venoshock", target);
-		},
-		flags: { protect: 1, mirror: 1 },
-		secondary: {
-			chance: 10,
-			boosts: {
-				spe: -1,
-			},
-		},
-		target: "alladjacentfoes",
-		type: "DG-Poison",
+		flags: {protect: 1, mirror: 1, nonsky: 1},
+		secondary: null,
+		target: "allAdjacent",
+		type: "Ground",
 	},
 
 	// DG-Fairy Moves //
@@ -1329,7 +1276,7 @@
 			volatileStatus: 'confusion',
 		},
 		target: "allAdjacentFoes",
-		type: "DG-Fairy",
+		type: "Fairy",
 	},
 
 	"saintray": {
@@ -1352,7 +1299,7 @@
 			volatileStatus: 'confusion',
 		},
 		target: "allAdjacentFoes",
-		type: "DG-Fairy",
+		type: "Fairy",
 	},
 	"dgflash": {
 		num: -157,
@@ -1371,7 +1318,7 @@
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
 		target: "allAdjacentFoes",
-		type: "DG-Fairy",
+		type: "Fairy",
 	},
 	"saintshield": {
 		num: -158,
@@ -1390,7 +1337,7 @@
 		flags: { contact: 1, protect: 1, mirror: 1 },
 		secondary: null,
 		target: "alladjacentfoes",
-		type: "DG-Fairy",
+		type: "Fairy",
 	},
 	"shiningnova": {
 		num: -159,
@@ -1412,7 +1359,7 @@
 		},
 		secondary: null,
 		target: "allAdjacentFoes",
-		type: "DG-Fairy",
+		type: "Fairy",
 	},
 	"dgjudgment": {
 		num: -160,
@@ -1431,7 +1378,7 @@
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
 		target: "alladjacentfoes",
-		type: "DG-Fairy",
+		type: "Fairy",
 	},
 
 	// DG-Dark Moves //
@@ -1453,7 +1400,7 @@
 		flags: { contact: 1, protect: 1, mirror: 1 },
 		secondary: null,
 		target: "normal",
-		type: "DG-Dark",
+		type: "Ghost",
 	},
 	"blackout": {
 		num: -162,
@@ -1471,7 +1418,7 @@
 			volatileStatus: 'confusion',
 		},
 		target: "normal",
-		type: "DG-Dark",
+		type: "Dark",
 	},
 	"dgnightmare": {
 		num: -163,
@@ -1490,7 +1437,7 @@
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
 		target: "alladjacentfoes",
-		type: "DG-Dark",
+		type: "Dark",
 	},
 	"chaoscloud": {
 		num: -164,
@@ -1508,7 +1455,7 @@
 			volatileStatus: 'confusion',
 		},
 		target: "normal",
-		type: "DG-Dark",
+		type: "Ghost",
 	},
 	"shadowfall": {
 		num: -165,
@@ -1527,7 +1474,7 @@
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
 		target: "allAdjacentFoes",
-		type: "DG-Dark",
+		type: "Dark",
 	},
 
 	// DG Status Moves //
@@ -1548,7 +1495,7 @@
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"attackbreak": {
 		num: -167,
@@ -1566,7 +1513,7 @@
 		},
 		secondary: null,
 		target: "Normal",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"attackbreakfield": {
 		num: -168,
@@ -1584,7 +1531,7 @@
 		},
 		secondary: null,
 		target: "allAdjacentFoes",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"attackchargefield": {
 		num: -169,
@@ -1602,7 +1549,7 @@
 		},
 		secondary: null,
 		target: "allySide",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"mentalcharge": {
 		num: -170,
@@ -1621,7 +1568,7 @@
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"mentalchargefield": {
 		num: -171,
@@ -1640,7 +1587,7 @@
 		},
 		secondary: null,
 		target: "allySide",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"guardcharge": {
 		num: -172,
@@ -1658,7 +1605,7 @@
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"guardchargefield": {
 		num: -173,
@@ -1676,7 +1623,7 @@
 		},
 		secondary: null,
 		target: "allySide",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"guardbreakfield": {
 		num: -174,
@@ -1694,7 +1641,7 @@
 		},
 		secondary: null,
 		target: "allAdjacentFoes",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"speedchargefield": {
 		num: -175,
@@ -1712,7 +1659,7 @@
 		},
 		secondary: null,
 		target: "allySide",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"speedbreakfield": {
 		num: -176,
@@ -1730,7 +1677,7 @@
 		},
 		secondary: null,
 		target: "allAdjacentFoes",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"agilitycharge": {
 		num: -177,
@@ -1748,7 +1695,7 @@
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"finalheal": {
 		num: -178,
@@ -1764,7 +1711,7 @@
 		heal: [1, 2],
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"restore": {
 		num: -179,
@@ -1783,7 +1730,7 @@
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"statusbarrier": {
 		num: -180,
@@ -1837,7 +1784,7 @@
 		},
 		secondary: null,
 		target: "allySide",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"safetyguard": {
 		num: -181,
@@ -1873,7 +1820,7 @@
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"critcharge": {
 		num: -182,
@@ -1903,7 +1850,7 @@
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 		zMove: { boost: { accuracy: 1 } },
 	},
 	"dispel": {
@@ -1926,7 +1873,7 @@
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"crosscounter": {
 		num: -184,
@@ -1971,7 +1918,7 @@
 		},
 		secondary: null,
 		target: "scripted",
-		type: "DG-Normal",
+		type: "Normal",
 		maxMove: { basePower: 75 },
 	},
 	"mirrorreflection": {
@@ -2017,7 +1964,7 @@
 		},
 		secondary: null,
 		target: "scripted",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"antisleep": {
 		num: -186,
@@ -2036,7 +1983,7 @@
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"antipoison": {
 		num: -187,
@@ -2055,7 +2002,7 @@
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"antiparalysis": {
 		num: -188,
@@ -2074,7 +2021,7 @@
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"antipanic": {
 		num: -189,
@@ -2093,7 +2040,7 @@
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"antibug": {
 		num: -190,
@@ -2112,7 +2059,7 @@
 		},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	"accelerationboost": {
 		num: -191,
@@ -2148,27 +2095,7 @@
 		},
 		secondary: null,
 		target: "self",
-		type: "DG-Normal",
-	},
-	"dgfacade": {
-		num: -192,
-		accuracy: 100,
-		basePower: 70,
-		category: "Physical",
-		desc: "Power doubles if the user is burned, paralyzed, or poisoned. The physical damage halving effect from the user's burn is ignored.",
-		shortDesc: "Power doubles if user is burn/poison/paralyzed.",
-		name: "DG Facade",
-		pp: 20,
-		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1 },
-		onBasePower(basePower, pokemon) {
-			if (pokemon.status && pokemon.status !== 'slp') {
-				return this.chainModify(2);
-			}
-		},
-		secondary: null,
-		target: "normal",
-		type: "DG-Normal",
+		type: "Normal",
 	},
 	lgpeabsorb: {
 		num: 71,

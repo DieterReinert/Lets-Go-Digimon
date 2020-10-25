@@ -1,6 +1,7 @@
 "use strict";Object.defineProperty(exports, "__esModule", {value: true});var _digimonsets = require('./digimon-sets');
 var _randomteams = require('../../random-teams');
 var _randomteams2 = require('../letsgo/random-teams');
+var _dex = require('../../../.sim-dist/dex');
 
 // Digimon X Pokemon
 const DIGI_X_POKE = "[Digimon] Digimon x Pokemon";
@@ -99,7 +100,7 @@ const DIGIMON_TYPES = [
 	randomDigimonXPokemonTeam(pool) {
 		const team = [];
 		const pokemonPool = _digimonsets.default.filter(
-			(i) => i.moves.length > 1 && toID(this.dex.getSpecies(i.species).universe) === 'pokemon'
+			(i) => i.moves.length > 1 && _dex.toID.call(void 0, this.dex.getSpecies(i.species).universe) === 'pokemon'
 		);
 		
 		let hasXEvo = false;
@@ -108,13 +109,13 @@ const DIGIMON_TYPES = [
 			let toPush = team.length < 3 ? pokemonPool : pool;
 			let randomToPush = this.sampleNoReplace(toPush);
 			
-			if (hasXEvo === true) continue;
-			if (randomToPush.Item === "X-Antibody") hasXEvo = true;
+			if (hasXEvo === true && randomToPush.item === "X-Antibody") continue;
+			if (randomToPush.item === "X-Antibody") hasXEvo = true;
 
 			if (randomToPush.universe === 'pokemon') {
 					randomToPush.ability = this.dex.getAbility('noability');
 			} else {
-					randomToPush.ability = this.dex.getSpecies(toID(randomToPush.species)).abilities[0];
+					randomToPush.ability = this.dex.getSpecies(_dex.toID.call(void 0, randomToPush.species)).abilities[0];
 			}
 			randomToPush = this.prepareSet(randomToPush);
 
@@ -142,9 +143,9 @@ const DIGIMON_TYPES = [
 
 		while (team.length !== 6) {
 			let randomDigimon = this.sampleNoReplace(pool);
-			if (hasXEvo === true) continue;
-			if (randomDigimon.Item === "X-Antibody") hasXEvo = true;
-			randomDigimon.ability = this.dex.getSpecies(toID(randomToPush.species)).abilities[0];
+			if (hasXEvo === true && randomDigimon.item === "X-Antibody") continue;
+			if (randomDigimon.item === "X-Antibody") hasXEvo = true;
+			randomDigimon.ability = this.dex.getSpecies(_dex.toID.call(void 0, randomDigimon.species)).abilities[0];
 			team.push(this.prepareSet(randomDigimon));
 		}
 
@@ -154,13 +155,13 @@ const DIGIMON_TYPES = [
 	randomDigimonTeam() {
 		const team = [];
 		const pool = _digimonsets.default.filter(
-			(i) => (i.moves.length > 1 || i.reservedMove !== undefined) && toID(this.dex.getSpecies(i.species).universe) === 'digimon'
+			(i) => (i.moves.length > 1 || i.reservedMove !== undefined) && _dex.toID.call(void 0, this.dex.getSpecies(i.species).universe) === 'digimon'
     );
 
 		const FORMAT = this.format.id;
 
 		// toID(DIGI_X_POKE)
-		const DigiXPoke = FORMAT.includes(toID(DIGI_X_POKE));
+		const DigiXPoke = FORMAT.includes(_dex.toID.call(void 0, DIGI_X_POKE));
 		const Monotype = FORMAT.includes("monotype");
 
 		if (DigiXPoke) return this.randomDigimonXPokemonTeam(pool);
@@ -170,9 +171,9 @@ const DIGIMON_TYPES = [
 
 		while (team.length !== 6) {
 			const set = this.sampleNoReplace(pool);
-			if (hasXEvo === true) continue;
-			if (set.Item === "X-Antibody") hasXEvo = true;
-			set.ability = this.dex.getSpecies(toID(set.species)).abilities[0];
+			if (hasXEvo === true && set.item === "X-Antibody") continue;
+			if (set.item === "X-Antibody") hasXEvo = true;
+			set.ability = this.dex.getSpecies(_dex.toID.call(void 0, set.species)).abilities[0];
 			team.push(this.prepareSet(set));
 		}
 

@@ -3797,7 +3797,7 @@ button[value^="WarGreymon-X"] .picon {
 /** Mach Jab CSS **/
 .movemenu button[data-move="Mach Jab"],
 .movemenu button[data-move="Mach Jab"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Mach Jab"] .type:after {
@@ -3810,7 +3810,7 @@ div[id*="digimon"] .movemenu button[data-move="Mach Jab"] .pp:before {
 /** Sonic Jab CSS **/
 .movemenu button[data-move="Sonic Jab"],
 .movemenu button[data-move="Sonic Jab"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Sonic Jab"] .type:after {
@@ -3823,20 +3823,20 @@ div[id*="digimon"] .movemenu button[data-move="Sonic Jab"] .pp:before {
 /** Tremor CSS **/
 .movemenu button[data-move="Tremor"],
 .movemenu button[data-move="Tremor"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/rock-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Tremor"] .type:after {
   font-weight: bold;
-  content: "[PHY] [BP: 25] [Acc: 85]"
+  content: "[PHY] [BP: 75] [Acc: 90]"
 }
 div[id*="digimon"] .movemenu button[data-move="Tremor"] .pp:before {
-  content: "(Hits adjacent foe(s) 2-3 times in one turn.) "
+  content: "(undefined) "
 }
 /** Dynamite Kick CSS **/
 .movemenu button[data-move="Dynamite Kick"],
 .movemenu button[data-move="Dynamite Kick"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/fighting-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Dynamite Kick"] .type:after {
@@ -3849,7 +3849,7 @@ div[id*="digimon"] .movemenu button[data-move="Dynamite Kick"] .pp:before {
 /** Spin Attack CSS **/
 .movemenu button[data-move="Spin Attack"],
 .movemenu button[data-move="Spin Attack"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Spin Attack"] .type:after {
@@ -3862,7 +3862,7 @@ div[id*="digimon"] .movemenu button[data-move="Spin Attack"] .pp:before {
 /** Megaton Punch CSS **/
 .movemenu button[data-move="Megaton Punch"],
 .movemenu button[data-move="Megaton Punch"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Megaton Punch"] .type:after {
@@ -3872,23 +3872,23 @@ div[id*="digimon"] .movemenu button[data-move="Spin Attack"] .pp:before {
 div[id*="digimon"] .movemenu button[data-move="Megaton Punch"] .pp:before {
   content: "(10% chance to flinch the target. Contact move.) "
 }
-/** Sprial Driver CSS **/
-.movemenu button[data-move="Sprial Driver"],
-.movemenu button[data-move="Sprial Driver"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+/** Spiral Driver CSS **/
+.movemenu button[data-move="Spiral Driver"],
+.movemenu button[data-move="Spiral Driver"]:hover {
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/fighting-panel.png') no-repeat;
   background-size: cover
 }
-.movemenu button[data-move="Sprial Driver"] .type:after {
+.movemenu button[data-move="Spiral Driver"] .type:after {
   font-weight: bold;
   content: "[PHY] [BP: 130] [Acc: 90]"
 }
-div[id*="digimon"] .movemenu button[data-move="Sprial Driver"] .pp:before {
+div[id*="digimon"] .movemenu button[data-move="Spiral Driver"] .pp:before {
   content: "(User is hurt by 50% of its max HP if it misses. Contact move.) "
 }
 /** Fighting Aura CSS **/
 .movemenu button[data-move="Fighting Aura"],
 .movemenu button[data-move="Fighting Aura"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Fighting Aura"] .type:after {
@@ -3901,7 +3901,7 @@ div[id*="digimon"] .movemenu button[data-move="Fighting Aura"] .pp:before {
 /** Buster Dive CSS **/
 .movemenu button[data-move="Buster Dive"],
 .movemenu button[data-move="Buster Dive"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Buster Dive"] .type:after {
@@ -3914,7 +3914,7 @@ div[id*="digimon"] .movemenu button[data-move="Buster Dive"] .pp:before {
 /** Spit Fire CSS **/
 .movemenu button[data-move="Spit Fire"],
 .movemenu button[data-move="Spit Fire"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-fire-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/fire-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Spit Fire"] .type:after {
@@ -3927,7 +3927,7 @@ div[id*="digimon"] .movemenu button[data-move="Spit Fire"] .pp:before {
 /** Heat Laser CSS **/
 .movemenu button[data-move="Heat Laser"],
 .movemenu button[data-move="Heat Laser"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-fire-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/fire-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Heat Laser"] .type:after {
@@ -3940,7 +3940,7 @@ div[id*="digimon"] .movemenu button[data-move="Heat Laser"] .pp:before {
 /** Heat Breath CSS **/
 .movemenu button[data-move="Heat Breath"],
 .movemenu button[data-move="Heat Breath"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-fire-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dragon-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Heat Breath"] .type:after {
@@ -3953,7 +3953,7 @@ div[id*="digimon"] .movemenu button[data-move="Heat Breath"] .pp:before {
 /** Fire Tower CSS **/
 .movemenu button[data-move="Fire Tower"],
 .movemenu button[data-move="Fire Tower"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-fire-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/fire-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Fire Tower"] .type:after {
@@ -3966,7 +3966,7 @@ div[id*="digimon"] .movemenu button[data-move="Fire Tower"] .pp:before {
 /** Red Inferno CSS **/
 .movemenu button[data-move="Red Inferno"],
 .movemenu button[data-move="Red Inferno"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-fire-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/fire-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Red Inferno"] .type:after {
@@ -3979,7 +3979,7 @@ div[id*="digimon"] .movemenu button[data-move="Red Inferno"] .pp:before {
 /** Magma Bomb CSS **/
 .movemenu button[data-move="Magma Bomb"],
 .movemenu button[data-move="Magma Bomb"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-fire-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dragon-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Magma Bomb"] .type:after {
@@ -3992,7 +3992,7 @@ div[id*="digimon"] .movemenu button[data-move="Magma Bomb"] .pp:before {
 /** Flame Storm CSS **/
 .movemenu button[data-move="Flame Storm"],
 .movemenu button[data-move="Flame Storm"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-fire-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/fire-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Flame Storm"] .type:after {
@@ -4005,7 +4005,7 @@ div[id*="digimon"] .movemenu button[data-move="Flame Storm"] .pp:before {
 /** Prominence Beam CSS **/
 .movemenu button[data-move="Prominence Beam"],
 .movemenu button[data-move="Prominence Beam"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-fire-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/fire-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Prominence Beam"] .type:after {
@@ -4018,7 +4018,7 @@ div[id*="digimon"] .movemenu button[data-move="Prominence Beam"] .pp:before {
 /** Infinity Burn CSS **/
 .movemenu button[data-move="Infinity Burn"],
 .movemenu button[data-move="Infinity Burn"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-fire-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/fire-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Infinity Burn"] .type:after {
@@ -4031,7 +4031,7 @@ div[id*="digimon"] .movemenu button[data-move="Infinity Burn"] .pp:before {
 /** Bubble Breath CSS **/
 .movemenu button[data-move="Bubble Breath"],
 .movemenu button[data-move="Bubble Breath"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-water-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/water-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Bubble Breath"] .type:after {
@@ -4044,7 +4044,7 @@ div[id*="digimon"] .movemenu button[data-move="Bubble Breath"] .pp:before {
 /** Tear Drop CSS **/
 .movemenu button[data-move="Tear Drop"],
 .movemenu button[data-move="Tear Drop"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-water-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/water-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Tear Drop"] .type:after {
@@ -4057,7 +4057,7 @@ div[id*="digimon"] .movemenu button[data-move="Tear Drop"] .pp:before {
 /** Winter Blast CSS **/
 .movemenu button[data-move="Winter Blast"],
 .movemenu button[data-move="Winter Blast"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-water-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/ice-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Winter Blast"] .type:after {
@@ -4065,12 +4065,12 @@ div[id*="digimon"] .movemenu button[data-move="Tear Drop"] .pp:before {
   content: "[PHY] [BP: 75] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Winter Blast"] .pp:before {
-  content: "(10% chance to FRZ adjacent foe(s) + Ice DMG.) "
+  content: "(10% chance to FRZ adjacent foe(s).) "
 }
 /** Hail Spear CSS **/
 .movemenu button[data-move="Hail Spear"],
 .movemenu button[data-move="Hail Spear"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-water-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/ice-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Hail Spear"] .type:after {
@@ -4078,25 +4078,25 @@ div[id*="digimon"] .movemenu button[data-move="Winter Blast"] .pp:before {
   content: "[PHY] [BP: 70] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Hail Spear"] .pp:before {
-  content: "(10% FRZ target, 30% chance to lower target SPE + Ice DMG.) "
+  content: "(10% FRZ target, 30% chance to lower target SPE.) "
 }
-/** Hail Spear CSS **/
-.movemenu button[data-move="Hail Spear"],
-.movemenu button[data-move="Hail Spear"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-water-panel.png') no-repeat;
+/** Giga Freeze CSS **/
+.movemenu button[data-move="Giga Freeze"],
+.movemenu button[data-move="Giga Freeze"]:hover {
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/ice-panel.png') no-repeat;
   background-size: cover
 }
-.movemenu button[data-move="Hail Spear"] .type:after {
+.movemenu button[data-move="Giga Freeze"] .type:after {
   font-weight: bold;
   content: "[SPA] [BP: 80] [Acc: 100]"
 }
-div[id*="digimon"] .movemenu button[data-move="Hail Spear"] .pp:before {
-  content: "(10% Freeze the target + Ice DMG.) "
+div[id*="digimon"] .movemenu button[data-move="Giga Freeze"] .pp:before {
+  content: "(10% Freeze the target.) "
 }
 /** Water Blitz CSS **/
 .movemenu button[data-move="Water Blitz"],
 .movemenu button[data-move="Water Blitz"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-water-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/water-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Water Blitz"] .type:after {
@@ -4109,7 +4109,7 @@ div[id*="digimon"] .movemenu button[data-move="Water Blitz"] .pp:before {
 /** DG Waterfall CSS **/
 .movemenu button[data-move="DG Waterfall"],
 .movemenu button[data-move="DG Waterfall"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-water-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/water-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="DG Waterfall"] .type:after {
@@ -4122,7 +4122,7 @@ div[id*="digimon"] .movemenu button[data-move="DG Waterfall"] .pp:before {
 /** Heavy Rain CSS **/
 .movemenu button[data-move="Heavy Rain"],
 .movemenu button[data-move="Heavy Rain"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-water-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/water-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Heavy Rain"] .type:after {
@@ -4135,7 +4135,7 @@ div[id*="digimon"] .movemenu button[data-move="Heavy Rain"] .pp:before {
 /** Aurora Freeze CSS **/
 .movemenu button[data-move="Aurora Freeze"],
 .movemenu button[data-move="Aurora Freeze"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-water-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/ice-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Aurora Freeze"] .type:after {
@@ -4143,12 +4143,12 @@ div[id*="digimon"] .movemenu button[data-move="Heavy Rain"] .pp:before {
   content: "[SPA] [BP: 130] [Acc: 90]"
 }
 div[id*="digimon"] .movemenu button[data-move="Aurora Freeze"] .pp:before {
-  content: "(10% FRZ, User cannot move next turn + Ice DMG.) "
+  content: "(10% FRZ, User cannot move next turn.) "
 }
 /** Insect Plague CSS **/
 .movemenu button[data-move="Insect Plague"],
 .movemenu button[data-move="Insect Plague"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-grass-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/bug-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Insect Plague"] .type:after {
@@ -4161,7 +4161,7 @@ div[id*="digimon"] .movemenu button[data-move="Insect Plague"] .pp:before {
 /** Poison Claw CSS **/
 .movemenu button[data-move="Poison Claw"],
 .movemenu button[data-move="Poison Claw"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-grass-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/poison-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Poison Claw"] .type:after {
@@ -4174,7 +4174,7 @@ div[id*="digimon"] .movemenu button[data-move="Poison Claw"] .pp:before {
 /** DG Poison Powder CSS **/
 .movemenu button[data-move="DG Poison Powder"],
 .movemenu button[data-move="DG Poison Powder"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-grass-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/poison-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="DG Poison Powder"] .type:after {
@@ -4187,7 +4187,7 @@ div[id*="digimon"] .movemenu button[data-move="DG Poison Powder"] .pp:before {
 /** Charm Perfume CSS **/
 .movemenu button[data-move="Charm Perfume"],
 .movemenu button[data-move="Charm Perfume"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-grass-panel.png') no-repeat;
+  background: #e3e3e3 url('undefined') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Charm Perfume"] .type:after {
@@ -4200,7 +4200,7 @@ div[id*="digimon"] .movemenu button[data-move="Charm Perfume"] .pp:before {
 /** Danger Sting CSS **/
 .movemenu button[data-move="Danger Sting"],
 .movemenu button[data-move="Danger Sting"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-grass-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/bug-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Danger Sting"] .type:after {
@@ -4213,7 +4213,7 @@ div[id*="digimon"] .movemenu button[data-move="Danger Sting"] .pp:before {
 /** Bio Field CSS **/
 .movemenu button[data-move="Bio Field"],
 .movemenu button[data-move="Bio Field"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-grass-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/grass-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Bio Field"] .type:after {
@@ -4226,7 +4226,7 @@ div[id*="digimon"] .movemenu button[data-move="Bio Field"] .pp:before {
 /** Green Trap CSS **/
 .movemenu button[data-move="Green Trap"],
 .movemenu button[data-move="Green Trap"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-grass-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/bug-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Green Trap"] .type:after {
@@ -4239,7 +4239,7 @@ div[id*="digimon"] .movemenu button[data-move="Green Trap"] .pp:before {
 /** Root Bind CSS **/
 .movemenu button[data-move="Root Bind"],
 .movemenu button[data-move="Root Bind"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-grass-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/grass-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Root Bind"] .type:after {
@@ -4252,7 +4252,7 @@ div[id*="digimon"] .movemenu button[data-move="Root Bind"] .pp:before {
 /** Venom Disaster CSS **/
 .movemenu button[data-move="Venom Disaster"],
 .movemenu button[data-move="Venom Disaster"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-grass-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/grass-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Venom Disaster"] .type:after {
@@ -4265,7 +4265,7 @@ div[id*="digimon"] .movemenu button[data-move="Venom Disaster"] .pp:before {
 /** Static Electricity CSS **/
 .movemenu button[data-move="Static Electricity"],
 .movemenu button[data-move="Static Electricity"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-electric-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/electric-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Static Electricity"] .type:after {
@@ -4278,7 +4278,7 @@ div[id*="digimon"] .movemenu button[data-move="Static Electricity"] .pp:before {
 /** Electric Chute CSS **/
 .movemenu button[data-move="Electric Chute"],
 .movemenu button[data-move="Electric Chute"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-electric-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/electric-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Electric Chute"] .type:after {
@@ -4291,7 +4291,7 @@ div[id*="digimon"] .movemenu button[data-move="Electric Chute"] .pp:before {
 /** Wind Cutter CSS **/
 .movemenu button[data-move="Wind Cutter"],
 .movemenu button[data-move="Wind Cutter"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-electric-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/flying-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Wind Cutter"] .type:after {
@@ -4299,12 +4299,12 @@ div[id*="digimon"] .movemenu button[data-move="Electric Chute"] .pp:before {
   content: "[SPA] [BP: 75] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Wind Cutter"] .pp:before {
-  content: "(Any target. Combines Flying in its type effectiveness.) "
+  content: "(Any target.) "
 }
 /** Thunderstorm CSS **/
 .movemenu button[data-move="Thunderstorm"],
 .movemenu button[data-move="Thunderstorm"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-electric-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/electric-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Thunderstorm"] .type:after {
@@ -4317,7 +4317,7 @@ div[id*="digimon"] .movemenu button[data-move="Thunderstorm"] .pp:before {
 /** Confused Storm CSS **/
 .movemenu button[data-move="Confused Storm"],
 .movemenu button[data-move="Confused Storm"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-electric-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/flying-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Confused Storm"] .type:after {
@@ -4325,12 +4325,12 @@ div[id*="digimon"] .movemenu button[data-move="Thunderstorm"] .pp:before {
   content: "[SPA] [BP: 95] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Confused Storm"] .pp:before {
-  content: "(30% chance to Confuse adjacent foe(s), + Flying DMG.) "
+  content: "(30% chance to Confuse adjacent foe(s), + Electric DMG.) "
 }
 /** Spinning Shot CSS **/
 .movemenu button[data-move="Spinning Shot"],
 .movemenu button[data-move="Spinning Shot"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-electric-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/flying-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Spinning Shot"] .type:after {
@@ -4338,12 +4338,12 @@ div[id*="digimon"] .movemenu button[data-move="Confused Storm"] .pp:before {
   content: "[PHY] [BP: 120] [Acc: 80]"
 }
 div[id*="digimon"] .movemenu button[data-move="Spinning Shot"] .pp:before {
-  content: "(Aims for foe(s) + Flying DMG.) "
+  content: "(Aims for foe(s).) "
 }
 /** Megalo Spark CSS **/
 .movemenu button[data-move="Megalo Spark"],
 .movemenu button[data-move="Megalo Spark"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-electric-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/electric-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Megalo Spark"] .type:after {
@@ -4356,7 +4356,7 @@ div[id*="digimon"] .movemenu button[data-move="Megalo Spark"] .pp:before {
 /** Thunder Justice CSS **/
 .movemenu button[data-move="Thunder Justice"],
 .movemenu button[data-move="Thunder Justice"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-electric-panel.png') no-repeat;
+  background: #e3e3e3 url('undefined') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Thunder Justice"] .type:after {
@@ -4364,12 +4364,12 @@ div[id*="digimon"] .movemenu button[data-move="Megalo Spark"] .pp:before {
   content: "[SPA] [BP: 150] [Acc: 90]"
 }
 div[id*="digimon"] .movemenu button[data-move="Thunder Justice"] .pp:before {
-  content: "(20% PAR target + DG-Fairy DMG.) "
+  content: "(20% PAR target + Fairy DMG.) "
 }
 /** Mechanical Claw CSS **/
 .movemenu button[data-move="Mechanical Claw"],
 .movemenu button[data-move="Mechanical Claw"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-steel-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/steel-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Mechanical Claw"] .type:after {
@@ -4382,7 +4382,7 @@ div[id*="digimon"] .movemenu button[data-move="Mechanical Claw"] .pp:before {
 /** Metal Sprinter CSS **/
 .movemenu button[data-move="Metal Sprinter"],
 .movemenu button[data-move="Metal Sprinter"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-steel-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/steel-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Metal Sprinter"] .type:after {
@@ -4395,7 +4395,7 @@ div[id*="digimon"] .movemenu button[data-move="Metal Sprinter"] .pp:before {
 /** Reverse Program CSS **/
 .movemenu button[data-move="Reverse Program"],
 .movemenu button[data-move="Reverse Program"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-steel-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/steel-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Reverse Program"] .type:after {
@@ -4408,7 +4408,7 @@ div[id*="digimon"] .movemenu button[data-move="Reverse Program"] .pp:before {
 /** Odor Spray CSS **/
 .movemenu button[data-move="Odor Spray"],
 .movemenu button[data-move="Odor Spray"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-poison-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/poison-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Odor Spray"] .type:after {
@@ -4421,7 +4421,7 @@ div[id*="digimon"] .movemenu button[data-move="Odor Spray"] .pp:before {
 /** Cooties Kick CSS **/
 .movemenu button[data-move="Cooties Kick"],
 .movemenu button[data-move="Cooties Kick"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-poison-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/poison-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Cooties Kick"] .type:after {
@@ -4434,7 +4434,7 @@ div[id*="digimon"] .movemenu button[data-move="Cooties Kick"] .pp:before {
 /** Big Poop Toss CSS **/
 .movemenu button[data-move="Big Poop Toss"],
 .movemenu button[data-move="Big Poop Toss"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-poison-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/poison-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Big Poop Toss"] .type:after {
@@ -4444,23 +4444,23 @@ div[id*="digimon"] .movemenu button[data-move="Cooties Kick"] .pp:before {
 div[id*="digimon"] .movemenu button[data-move="Big Poop Toss"] .pp:before {
   content: "(20% chance to flinch the target.) "
 }
-/** Big Random Toss CSS **/
-.movemenu button[data-move="Big Random Toss"],
-.movemenu button[data-move="Big Random Toss"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-poison-panel.png') no-repeat;
+/** Grand Rock CSS **/
+.movemenu button[data-move="Grand Rock"],
+.movemenu button[data-move="Grand Rock"]:hover {
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/ground-panel.png') no-repeat;
   background-size: cover
 }
-.movemenu button[data-move="Big Random Toss"] .type:after {
+.movemenu button[data-move="Grand Rock"] .type:after {
   font-weight: bold;
   content: "[PHY] [BP: 95] [Acc: 100]"
 }
-div[id*="digimon"] .movemenu button[data-move="Big Random Toss"] .pp:before {
-  content: "(10% chance to confuse the all adjcacent targets.) "
+div[id*="digimon"] .movemenu button[data-move="Grand Rock"] .pp:before {
+  content: "(undefined) "
 }
 /** Ultimate Poop Hell CSS **/
 .movemenu button[data-move="Ultimate Poop Hell"],
 .movemenu button[data-move="Ultimate Poop Hell"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-poison-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/poison-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Ultimate Poop Hell"] .type:after {
@@ -4470,36 +4470,36 @@ div[id*="digimon"] .movemenu button[data-move="Big Random Toss"] .pp:before {
 div[id*="digimon"] .movemenu button[data-move="Ultimate Poop Hell"] .pp:before {
   content: "(10% chance to poison adjacent Pokemon.) "
 }
-/** Poop Toss CSS **/
-.movemenu button[data-move="Poop Toss"],
-.movemenu button[data-move="Poop Toss"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-poison-panel.png') no-repeat;
+/** Awesome Quake CSS **/
+.movemenu button[data-move="Awesome Quake"],
+.movemenu button[data-move="Awesome Quake"]:hover {
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/ground-panel.png') no-repeat;
   background-size: cover
 }
-.movemenu button[data-move="Poop Toss"] .type:after {
+.movemenu button[data-move="Awesome Quake"] .type:after {
   font-weight: bold;
   content: "[PHY] [BP: 70] [Acc: 100]"
 }
-div[id*="digimon"] .movemenu button[data-move="Poop Toss"] .pp:before {
+div[id*="digimon"] .movemenu button[data-move="Awesome Quake"] .pp:before {
   content: "(High critical hit ratio.) "
 }
-/** Guerilla Poop CSS **/
-.movemenu button[data-move="Guerilla Poop"],
-.movemenu button[data-move="Guerilla Poop"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-poison-panel.png') no-repeat;
+/** Comet Hammer CSS **/
+.movemenu button[data-move="Comet Hammer"],
+.movemenu button[data-move="Comet Hammer"]:hover {
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/ground-panel.png') no-repeat;
   background-size: cover
 }
-.movemenu button[data-move="Guerilla Poop"] .type:after {
+.movemenu button[data-move="Comet Hammer"] .type:after {
   font-weight: bold;
   content: "[PHY] [BP: 120] [Acc: 85]"
 }
-div[id*="digimon"] .movemenu button[data-move="Guerilla Poop"] .pp:before {
-  content: "(10% chance to lower adjacent foe(s) SPE by 1.) "
+div[id*="digimon"] .movemenu button[data-move="Comet Hammer"] .pp:before {
+  content: "(undefined) "
 }
 /** Light Soul CSS **/
 .movemenu button[data-move="Light Soul"],
 .movemenu button[data-move="Light Soul"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-fairy-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/fairy-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Light Soul"] .type:after {
@@ -4512,7 +4512,7 @@ div[id*="digimon"] .movemenu button[data-move="Light Soul"] .pp:before {
 /** Saint Ray CSS **/
 .movemenu button[data-move="Saint Ray"],
 .movemenu button[data-move="Saint Ray"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-fairy-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/fairy-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Saint Ray"] .type:after {
@@ -4525,7 +4525,7 @@ div[id*="digimon"] .movemenu button[data-move="Saint Ray"] .pp:before {
 /** DG Flash CSS **/
 .movemenu button[data-move="DG Flash"],
 .movemenu button[data-move="DG Flash"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-fairy-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/fairy-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="DG Flash"] .type:after {
@@ -4538,7 +4538,7 @@ div[id*="digimon"] .movemenu button[data-move="DG Flash"] .pp:before {
 /** Saint Shield CSS **/
 .movemenu button[data-move="Saint Shield"],
 .movemenu button[data-move="Saint Shield"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-fairy-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/fairy-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Saint Shield"] .type:after {
@@ -4551,7 +4551,7 @@ div[id*="digimon"] .movemenu button[data-move="Saint Shield"] .pp:before {
 /** Shining Nova CSS **/
 .movemenu button[data-move="Shining Nova"],
 .movemenu button[data-move="Shining Nova"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-fairy-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/fairy-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Shining Nova"] .type:after {
@@ -4564,7 +4564,7 @@ div[id*="digimon"] .movemenu button[data-move="Shining Nova"] .pp:before {
 /** DG Judgment CSS **/
 .movemenu button[data-move="DG Judgment"],
 .movemenu button[data-move="DG Judgment"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-fairy-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/fairy-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="DG Judgment"] .type:after {
@@ -4577,7 +4577,7 @@ div[id*="digimon"] .movemenu button[data-move="DG Judgment"] .pp:before {
 /** Dark Spirit CSS **/
 .movemenu button[data-move="Dark Spirit"],
 .movemenu button[data-move="Dark Spirit"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-dark-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/ghost-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Dark Spirit"] .type:after {
@@ -4590,7 +4590,7 @@ div[id*="digimon"] .movemenu button[data-move="Dark Spirit"] .pp:before {
 /** Blackout CSS **/
 .movemenu button[data-move="Blackout"],
 .movemenu button[data-move="Blackout"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-dark-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dark-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Blackout"] .type:after {
@@ -4603,7 +4603,7 @@ div[id*="digimon"] .movemenu button[data-move="Blackout"] .pp:before {
 /** DG Nightmare CSS **/
 .movemenu button[data-move="DG Nightmare"],
 .movemenu button[data-move="DG Nightmare"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-dark-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dark-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="DG Nightmare"] .type:after {
@@ -4616,7 +4616,7 @@ div[id*="digimon"] .movemenu button[data-move="DG Nightmare"] .pp:before {
 /** Chaos Cloud CSS **/
 .movemenu button[data-move="Chaos Cloud"],
 .movemenu button[data-move="Chaos Cloud"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-dark-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/ghost-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Chaos Cloud"] .type:after {
@@ -4629,7 +4629,7 @@ div[id*="digimon"] .movemenu button[data-move="Chaos Cloud"] .pp:before {
 /** Shadow Fall CSS **/
 .movemenu button[data-move="Shadow Fall"],
 .movemenu button[data-move="Shadow Fall"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-dark-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dark-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Shadow Fall"] .type:after {
@@ -4642,7 +4642,7 @@ div[id*="digimon"] .movemenu button[data-move="Shadow Fall"] .pp:before {
 /** Attack Charge CSS **/
 .movemenu button[data-move="Attack Charge"],
 .movemenu button[data-move="Attack Charge"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Attack Charge"] .type:after {
@@ -4655,7 +4655,7 @@ div[id*="digimon"] .movemenu button[data-move="Attack Charge"] .pp:before {
 /** Attack Break CSS **/
 .movemenu button[data-move="Attack Break"],
 .movemenu button[data-move="Attack Break"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Attack Break"] .type:after {
@@ -4668,7 +4668,7 @@ div[id*="digimon"] .movemenu button[data-move="Attack Break"] .pp:before {
 /** Attack Break Field CSS **/
 .movemenu button[data-move="Attack Break Field"],
 .movemenu button[data-move="Attack Break Field"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Attack Break Field"] .type:after {
@@ -4681,7 +4681,7 @@ div[id*="digimon"] .movemenu button[data-move="Attack Break Field"] .pp:before {
 /** Attack Charge Field CSS **/
 .movemenu button[data-move="Attack Charge Field"],
 .movemenu button[data-move="Attack Charge Field"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Attack Charge Field"] .type:after {
@@ -4694,7 +4694,7 @@ div[id*="digimon"] .movemenu button[data-move="Attack Charge Field"] .pp:before 
 /** Mental Charge CSS **/
 .movemenu button[data-move="Mental Charge"],
 .movemenu button[data-move="Mental Charge"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Mental Charge"] .type:after {
@@ -4707,7 +4707,7 @@ div[id*="digimon"] .movemenu button[data-move="Mental Charge"] .pp:before {
 /** Mental Charge Field CSS **/
 .movemenu button[data-move="Mental Charge Field"],
 .movemenu button[data-move="Mental Charge Field"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Mental Charge Field"] .type:after {
@@ -4720,7 +4720,7 @@ div[id*="digimon"] .movemenu button[data-move="Mental Charge Field"] .pp:before 
 /** Guard Charge CSS **/
 .movemenu button[data-move="Guard Charge"],
 .movemenu button[data-move="Guard Charge"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Guard Charge"] .type:after {
@@ -4733,7 +4733,7 @@ div[id*="digimon"] .movemenu button[data-move="Guard Charge"] .pp:before {
 /** Guard Charge Field CSS **/
 .movemenu button[data-move="Guard Charge Field"],
 .movemenu button[data-move="Guard Charge Field"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Guard Charge Field"] .type:after {
@@ -4746,7 +4746,7 @@ div[id*="digimon"] .movemenu button[data-move="Guard Charge Field"] .pp:before {
 /** Guard Charge Field CSS **/
 .movemenu button[data-move="Guard Charge Field"],
 .movemenu button[data-move="Guard Charge Field"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Guard Charge Field"] .type:after {
@@ -4759,7 +4759,7 @@ div[id*="digimon"] .movemenu button[data-move="Guard Charge Field"] .pp:before {
 /** Speed Charge Field CSS **/
 .movemenu button[data-move="Speed Charge Field"],
 .movemenu button[data-move="Speed Charge Field"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Speed Charge Field"] .type:after {
@@ -4772,7 +4772,7 @@ div[id*="digimon"] .movemenu button[data-move="Speed Charge Field"] .pp:before {
 /** Speed Break Field CSS **/
 .movemenu button[data-move="Speed Break Field"],
 .movemenu button[data-move="Speed Break Field"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Speed Break Field"] .type:after {
@@ -4785,7 +4785,7 @@ div[id*="digimon"] .movemenu button[data-move="Speed Break Field"] .pp:before {
 /** Attack Charge CSS **/
 .movemenu button[data-move="Attack Charge"],
 .movemenu button[data-move="Attack Charge"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Attack Charge"] .type:after {
@@ -4798,7 +4798,7 @@ div[id*="digimon"] .movemenu button[data-move="Attack Charge"] .pp:before {
 /** Final Heal CSS **/
 .movemenu button[data-move="Final Heal"],
 .movemenu button[data-move="Final Heal"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Final Heal"] .type:after {
@@ -4811,7 +4811,7 @@ div[id*="digimon"] .movemenu button[data-move="Final Heal"] .pp:before {
 /** Restore CSS **/
 .movemenu button[data-move="Restore"],
 .movemenu button[data-move="Restore"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Restore"] .type:after {
@@ -4824,7 +4824,7 @@ div[id*="digimon"] .movemenu button[data-move="Restore"] .pp:before {
 /** Status Barrier CSS **/
 .movemenu button[data-move="Status Barrier"],
 .movemenu button[data-move="Status Barrier"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Status Barrier"] .type:after {
@@ -4837,7 +4837,7 @@ div[id*="digimon"] .movemenu button[data-move="Status Barrier"] .pp:before {
 /** Safety Guard CSS **/
 .movemenu button[data-move="Safety Guard"],
 .movemenu button[data-move="Safety Guard"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Safety Guard"] .type:after {
@@ -4850,7 +4850,7 @@ div[id*="digimon"] .movemenu button[data-move="Safety Guard"] .pp:before {
 /** Crit Charge CSS **/
 .movemenu button[data-move="Crit Charge"],
 .movemenu button[data-move="Crit Charge"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Crit Charge"] .type:after {
@@ -4863,7 +4863,7 @@ div[id*="digimon"] .movemenu button[data-move="Crit Charge"] .pp:before {
 /** Dispel CSS **/
 .movemenu button[data-move="Dispel"],
 .movemenu button[data-move="Dispel"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Dispel"] .type:after {
@@ -4876,7 +4876,7 @@ div[id*="digimon"] .movemenu button[data-move="Dispel"] .pp:before {
 /** Cross Counter CSS **/
 .movemenu button[data-move="Cross Counter"],
 .movemenu button[data-move="Cross Counter"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Cross Counter"] .type:after {
@@ -4889,7 +4889,7 @@ div[id*="digimon"] .movemenu button[data-move="Cross Counter"] .pp:before {
 /** Mirror Reflection CSS **/
 .movemenu button[data-move="Mirror Reflection"],
 .movemenu button[data-move="Mirror Reflection"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Mirror Reflection"] .type:after {
@@ -4902,7 +4902,7 @@ div[id*="digimon"] .movemenu button[data-move="Mirror Reflection"] .pp:before {
 /** Anti-Sleep CSS **/
 .movemenu button[data-move="Anti-Sleep"],
 .movemenu button[data-move="Anti-Sleep"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Anti-Sleep"] .type:after {
@@ -4915,7 +4915,7 @@ div[id*="digimon"] .movemenu button[data-move="Anti-Sleep"] .pp:before {
 /** Anti-Poison CSS **/
 .movemenu button[data-move="Anti-Poison"],
 .movemenu button[data-move="Anti-Poison"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Anti-Poison"] .type:after {
@@ -4928,7 +4928,7 @@ div[id*="digimon"] .movemenu button[data-move="Anti-Poison"] .pp:before {
 /** Anti-Paralysis CSS **/
 .movemenu button[data-move="Anti-Paralysis"],
 .movemenu button[data-move="Anti-Paralysis"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Anti-Paralysis"] .type:after {
@@ -4941,7 +4941,7 @@ div[id*="digimon"] .movemenu button[data-move="Anti-Paralysis"] .pp:before {
 /** Anti-Panic CSS **/
 .movemenu button[data-move="Anti-Panic"],
 .movemenu button[data-move="Anti-Panic"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Anti-Panic"] .type:after {
@@ -4954,7 +4954,7 @@ div[id*="digimon"] .movemenu button[data-move="Anti-Panic"] .pp:before {
 /** Anti-Bug CSS **/
 .movemenu button[data-move="Anti-Bug"],
 .movemenu button[data-move="Anti-Bug"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Anti-Bug"] .type:after {
@@ -4967,7 +4967,7 @@ div[id*="digimon"] .movemenu button[data-move="Anti-Bug"] .pp:before {
 /** Acceleration Boost CSS **/
 .movemenu button[data-move="Acceleration Boost"],
 .movemenu button[data-move="Acceleration Boost"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Acceleration Boost"] .type:after {
@@ -4977,23 +4977,10 @@ div[id*="digimon"] .movemenu button[data-move="Anti-Bug"] .pp:before {
 div[id*="digimon"] .movemenu button[data-move="Acceleration Boost"] .pp:before {
   content: "(Until the end of the next turn, user's moves crit.) "
 }
-/** DG Facade CSS **/
-.movemenu button[data-move="DG Facade"],
-.movemenu button[data-move="DG Facade"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/dg-normal-panel.png') no-repeat;
-  background-size: cover
-}
-.movemenu button[data-move="DG Facade"] .type:after {
-  font-weight: bold;
-  content: "[PHY] [BP: 70] [Acc: 100]"
-}
-div[id*="digimon"] .movemenu button[data-move="DG Facade"] .pp:before {
-  content: "(Power doubles if user is burn/poison/paralyzed.) "
-}
 /** LGPE Absorb CSS **/
 .movemenu button[data-move="LGPE Absorb"],
 .movemenu button[data-move="LGPE Absorb"]:hover {
-  background: #e3e3e3 url('undefined') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/grass-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="LGPE Absorb"] .type:after {
@@ -5006,7 +4993,7 @@ div[id*="digimon"] .movemenu button[data-move="LGPE Absorb"] .pp:before {
 /** LGPE Mega Drain CSS **/
 .movemenu button[data-move="LGPE Mega Drain"],
 .movemenu button[data-move="LGPE Mega Drain"]:hover {
-  background: #e3e3e3 url('undefined') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/grass-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="LGPE Mega Drain"] .type:after {
@@ -5019,7 +5006,7 @@ div[id*="digimon"] .movemenu button[data-move="LGPE Mega Drain"] .pp:before {
 /** LGPE Teleport CSS **/
 .movemenu button[data-move="LGPE Teleport"],
 .movemenu button[data-move="LGPE Teleport"]:hover {
-  background: #e3e3e3 url('undefined') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/psychic-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="LGPE Teleport"] .type:after {
@@ -5032,7 +5019,7 @@ div[id*="digimon"] .movemenu button[data-move="LGPE Teleport"] .pp:before {
 /** LGPE Sky Attack CSS **/
 .movemenu button[data-move="LGPE Sky Attack"],
 .movemenu button[data-move="LGPE Sky Attack"]:hover {
-  background: #e3e3e3 url('undefined') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/flying-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="LGPE Sky Attack"] .type:after {
@@ -5045,7 +5032,7 @@ div[id*="digimon"] .movemenu button[data-move="LGPE Sky Attack"] .pp:before {
 /** LGPE Solar Beam CSS **/
 .movemenu button[data-move="LGPE Solar Beam"],
 .movemenu button[data-move="LGPE Solar Beam"]:hover {
-  background: #e3e3e3 url('undefined') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/grass-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="LGPE Solar Beam"] .type:after {
@@ -5056,66 +5043,129 @@ div[id*="digimon"] .movemenu button[data-move="LGPE Solar Beam"] .pp:before {
   content: "(Charges turn 1. Hits turn 2. No charge in sunlight.) "
 }
 /** DIGIMON TYPES CSS **/
-/** TYPE: DG-Fire CSS **/
-div[id*="digimon"] .innerbattle img[src*="DG-Fire.png"],
-.tooltipinner img[src*="DG-Fire.png"] {
-  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/DG-Fire.png');
+/** TYPE: Bug CSS **/
+div[id*="digimon"] .innerbattle img[src*="Bug.png"],
+.tooltipinner img[src*="Bug.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Bug.png');
   width: auto;
   height: auto
 }
-/** TYPE: DG-Water CSS **/
-div[id*="digimon"] .innerbattle img[src*="DG-Water.png"],
-.tooltipinner img[src*="DG-Water.png"] {
-  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/DG-Water.png');
+/** TYPE: Dark CSS **/
+div[id*="digimon"] .innerbattle img[src*="Dark.png"],
+.tooltipinner img[src*="Dark.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Dark.png');
   width: auto;
   height: auto
 }
-/** TYPE: DG-Electric CSS **/
-div[id*="digimon"] .innerbattle img[src*="DG-Electric.png"],
-.tooltipinner img[src*="DG-Electric.png"] {
-  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/DG-Electric.png');
+/** TYPE: Dragon CSS **/
+div[id*="digimon"] .innerbattle img[src*="Dragon.png"],
+.tooltipinner img[src*="Dragon.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Dragon.png');
   width: auto;
   height: auto
 }
-/** TYPE: DG-Grass CSS **/
-div[id*="digimon"] .innerbattle img[src*="DG-Grass.png"],
-.tooltipinner img[src*="DG-Grass.png"] {
-  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/DG-Grass.png');
+/** TYPE: Electric CSS **/
+div[id*="digimon"] .innerbattle img[src*="Electric.png"],
+.tooltipinner img[src*="Electric.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Electric.png');
   width: auto;
   height: auto
 }
-/** TYPE: DG-Fairy CSS **/
-div[id*="digimon"] .innerbattle img[src*="DG-Fairy.png"],
-.tooltipinner img[src*="DG-Fairy.png"] {
-  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/DG-Fairy.png');
+/** TYPE: Fairy CSS **/
+div[id*="digimon"] .innerbattle img[src*="Fairy.png"],
+.tooltipinner img[src*="Fairy.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Fairy.png');
   width: auto;
   height: auto
 }
-/** TYPE: DG-Dark CSS **/
-div[id*="digimon"] .innerbattle img[src*="DG-Dark.png"],
-.tooltipinner img[src*="DG-Dark.png"] {
-  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/DG-Dark.png');
+/** TYPE: Fighting CSS **/
+div[id*="digimon"] .innerbattle img[src*="Fighting.png"],
+.tooltipinner img[src*="Fighting.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Fighting.png');
   width: auto;
   height: auto
 }
-/** TYPE: DG-Normal CSS **/
-div[id*="digimon"] .innerbattle img[src*="DG-Normal.png"],
-.tooltipinner img[src*="DG-Normal.png"] {
-  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/DG-Normal.png');
+/** TYPE: Fire CSS **/
+div[id*="digimon"] .innerbattle img[src*="Fire.png"],
+.tooltipinner img[src*="Fire.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Fire.png');
   width: auto;
   height: auto
 }
-/** TYPE: DG-Steel CSS **/
-div[id*="digimon"] .innerbattle img[src*="DG-Steel.png"],
-.tooltipinner img[src*="DG-Steel.png"] {
-  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/DG-Steel.png');
+/** TYPE: Flying CSS **/
+div[id*="digimon"] .innerbattle img[src*="Flying.png"],
+.tooltipinner img[src*="Flying.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Flying.png');
   width: auto;
   height: auto
 }
-/** TYPE: DG-Poison CSS **/
-div[id*="digimon"] .innerbattle img[src*="DG-Poison.png"],
-.tooltipinner img[src*="DG-Poison.png"] {
-  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/DG-Poison.png');
+/** TYPE: Ghost CSS **/
+div[id*="digimon"] .innerbattle img[src*="Ghost.png"],
+.tooltipinner img[src*="Ghost.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Ghost.png');
+  width: auto;
+  height: auto
+}
+/** TYPE: Grass CSS **/
+div[id*="digimon"] .innerbattle img[src*="Grass.png"],
+.tooltipinner img[src*="Grass.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Grass.png');
+  width: auto;
+  height: auto
+}
+/** TYPE: Ground CSS **/
+div[id*="digimon"] .innerbattle img[src*="Ground.png"],
+.tooltipinner img[src*="Ground.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Ground.png');
+  width: auto;
+  height: auto
+}
+/** TYPE: Ice CSS **/
+div[id*="digimon"] .innerbattle img[src*="Ice.png"],
+.tooltipinner img[src*="Ice.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Ice.png');
+  width: auto;
+  height: auto
+}
+/** TYPE: Normal CSS **/
+div[id*="digimon"] .innerbattle img[src*="Normal.png"],
+.tooltipinner img[src*="Normal.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Normal.png');
+  width: auto;
+  height: auto
+}
+/** TYPE: Poison CSS **/
+div[id*="digimon"] .innerbattle img[src*="Poison.png"],
+.tooltipinner img[src*="Poison.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Poison.png');
+  width: auto;
+  height: auto
+}
+/** TYPE: Psychic CSS **/
+div[id*="digimon"] .innerbattle img[src*="Psychic.png"],
+.tooltipinner img[src*="Psychic.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Psychic.png');
+  width: auto;
+  height: auto
+}
+/** TYPE: Rock CSS **/
+div[id*="digimon"] .innerbattle img[src*="Rock.png"],
+.tooltipinner img[src*="Rock.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Rock.png');
+  width: auto;
+  height: auto
+}
+/** TYPE: Steel CSS **/
+div[id*="digimon"] .innerbattle img[src*="Steel.png"],
+.tooltipinner img[src*="Steel.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Steel.png');
+  width: auto;
+  height: auto
+}
+/** TYPE: Water CSS **/
+div[id*="digimon"] .innerbattle img[src*="Water.png"],
+.tooltipinner img[src*="Water.png"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/types/Water.png');
   width: auto;
   height: auto
 }
