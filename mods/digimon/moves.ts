@@ -57,7 +57,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 30,
 			volatileStatus: 'flinch',
 		},
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Rock",
 	},
 	"dynamitekick": {
@@ -259,7 +259,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 10,
 			status: 'brn',
 		},
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Fire",
 	},
 	"heatbreath": {
@@ -335,7 +335,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 10,
 			status: 'brn',
 		},
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Fire",
 	},
 	"magmabomb": {
@@ -464,7 +464,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				spe: -1,
 			},
 		},
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Water",
 	},
 	"teardrop": {
@@ -503,7 +503,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 10,
 			status: 'frz',
 		},
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Ice",
 	},
 	"hailspear": {
@@ -589,7 +589,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 10,
 			volatileStatus: 'flinch',
 		},
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Water",
 	},
 	"heavyrain": {
@@ -705,7 +705,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 100,
 			status: 'psn',
 		},
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Poison",
 	},
 	"charmperfume": {
@@ -727,7 +727,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 100,
 			volatileStatus: 'confusion',
 		},
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Grass",
 	},
 	"dangersting": {
@@ -771,7 +771,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 15,
 			status: 'psn',
 		},
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Grass",
 	},
 	"greentrap": {
@@ -844,7 +844,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 20,
 			status: 'psn',
 		},
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Grass",
 	},
 
@@ -962,7 +962,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				return typeMod + this.dex.getEffectiveness('Electric', type);
 			},
 		},
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Flying",
 	},
 	"spinningshot": {
@@ -981,7 +981,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.add('-anim', source, "aircutter", target);
 		},
 		flags: { protect: 1, mirror: 1, distance: 1},
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Flying",
 	},
 	"megalospark": {
@@ -1070,7 +1070,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Steel",
 	},
 	"reverseprogram": {
@@ -1228,7 +1228,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 20,
 			volatileStatus: 'bug',
 		},
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Poison",
 	},
 	"awesomequake": {
@@ -1292,7 +1292,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 20,
 			volatileStatus: 'confusion',
 		},
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Fairy",
 	},
 
@@ -1315,7 +1315,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 10,
 			volatileStatus: 'confusion',
 		},
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Fairy",
 	},
 	"dgflash": {
@@ -1334,7 +1334,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Fairy",
 	},
 	"saintshield": {
@@ -1353,7 +1353,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		flags: { contact: 1, protect: 1, mirror: 1 },
 		secondary: null,
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Fairy",
 	},
 	"shiningnova": {
@@ -1375,7 +1375,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			volatileStatus: 'mustrecharge',
 		},
 		secondary: null,
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Fairy",
 	},
 	"dgjudgment": {
@@ -1394,7 +1394,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Fairy",
 	},
 
@@ -1453,7 +1453,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Dark",
 	},
 	"chaoscloud": {
@@ -1490,7 +1490,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		flags: { protect: 1, mirror: 1 },
 		secondary: null,
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Dark",
 	},
 
@@ -1547,7 +1547,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			atk: -1,
 		},
 		secondary: null,
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Normal",
 	},
 	"attackchargefield": {
@@ -1657,7 +1657,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			def: -1,
 		},
 		secondary: null,
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Normal",
 	},
 	"speedchargefield": {
@@ -1693,7 +1693,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			spe: -1,
 		},
 		secondary: null,
-		target: "alladjacentfoes",
+		target: "allAdjacentFoes",
 		type: "Normal",
 	},
 	"agilitycharge": {
