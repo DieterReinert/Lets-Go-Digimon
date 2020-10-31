@@ -7,20 +7,7 @@ var _dex = require('../../../.sim-dist/dex');
 const DIGI_X_POKE = "[Digimon] Digimon x Pokemon";
 const RandomLetsGo = new (0, _randomteams2.default)(DIGI_X_POKE, null);
 
-// hard-coded, could import both
-// the typechart files and filter
-// them out, might strain
-const DIGIMON_TYPES = [
-	"DG-Electric",
-	"DG-Water",
-	"DG-Normal",
-	"DG-Dark",
-	"DG-Poison",
-	"DG-Fire",
-	"DG-Fairy",
-	"DG-Steel",
-	"DG-Grass",
-];
+const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart)
 
  class RandomDigimonTeams extends _randomteams.default {
 	prepareSet(set) {

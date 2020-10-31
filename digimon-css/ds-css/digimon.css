@@ -3649,22 +3649,6 @@ button[value^="Ebemon-X"] .picon {
 button[value^="HerculesKabuterimon-X"] .picon {
   background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -280px -540px !important
 }
-/** Phoenixmon-X CSS **/
-.innerbattle div > div > img[src*="gen5/phoenixmonx"] {
-  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani/phoenixmonx.gif');
-  width: 56px !important;
-  height: 56px !important
-}
-.innerbattle div > div > img[src*="gen5-back/phoenixmonx"] {
-  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani-back/phoenixmonx.gif');
-  width: 56px !important;
-  height: 56px !important
-}
-.innerbattle .picon[aria-label^="Phoenixmon-X"],
-.innerbattle .picon[aria-label^="phoenixmon-x"],
-button[value^="Phoenixmon-X"] .picon {
-  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -320px -540px !important
-}
 /** Lilithmon-X CSS **/
 .innerbattle div > div > img[src*="gen5/lilithmonx"] {
   content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani/lilithmonx.gif');
@@ -3679,7 +3663,7 @@ button[value^="Phoenixmon-X"] .picon {
 .innerbattle .picon[aria-label^="Lilithmon-X"],
 .innerbattle .picon[aria-label^="lilithmon-x"],
 button[value^="Lilithmon-X"] .picon {
-  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -360px -540px !important
+  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -320px -540px !important
 }
 /** Magnadramon-X CSS **/
 .innerbattle div > div > img[src*="gen5/magnadramonx"] {
@@ -3695,7 +3679,7 @@ button[value^="Lilithmon-X"] .picon {
 .innerbattle .picon[aria-label^="Magnadramon-X"],
 .innerbattle .picon[aria-label^="magnadramon-x"],
 button[value^="Magnadramon-X"] .picon {
-  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -400px -540px !important
+  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -360px -540px !important
 }
 /** MetalGarurumon-X CSS **/
 .innerbattle div > div > img[src*="gen5/metalgarurumonx"] {
@@ -3711,7 +3695,7 @@ button[value^="Magnadramon-X"] .picon {
 .innerbattle .picon[aria-label^="MetalGarurumon-X"],
 .innerbattle .picon[aria-label^="metalgarurumon-x"],
 button[value^="MetalGarurumon-X"] .picon {
-  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -440px -540px !important
+  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -400px -540px !important
 }
 /** Omnimon-X CSS **/
 .innerbattle div > div > img[src*="gen5/omnimonx"] {
@@ -3727,7 +3711,7 @@ button[value^="MetalGarurumon-X"] .picon {
 .innerbattle .picon[aria-label^="Omnimon-X"],
 .innerbattle .picon[aria-label^="omnimon-x"],
 button[value^="Omnimon-X"] .picon {
-  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll 0px -570px !important
+  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -440px -540px !important
 }
 /** Ophanimon-X CSS **/
 .innerbattle div > div > img[src*="gen5/ophanimonx"] {
@@ -3743,6 +3727,22 @@ button[value^="Omnimon-X"] .picon {
 .innerbattle .picon[aria-label^="Ophanimon-X"],
 .innerbattle .picon[aria-label^="ophanimon-x"],
 button[value^="Ophanimon-X"] .picon {
+  background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll 0px -570px !important
+}
+/** Phoenixmon-X CSS **/
+.innerbattle div > div > img[src*="gen5/phoenixmonx"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani/phoenixmonx.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle div > div > img[src*="gen5-back/phoenixmonx"] {
+  content: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani-back/phoenixmonx.gif');
+  width: 56px !important;
+  height: 56px !important
+}
+.innerbattle .picon[aria-label^="Phoenixmon-X"],
+.innerbattle .picon[aria-label^="phoenixmon-x"],
+button[value^="Phoenixmon-X"] .picon {
   background: url('https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png') no-repeat scroll -40px -570px !important
 }
 /** PrinceMamemon-X CSS **/
@@ -3805,7 +3805,7 @@ button[value^="WarGreymon-X"] .picon {
   content: "[PHY] [BP: 0] [Acc: 90]"
 }
 div[id*="digimon"] .movemenu button[data-move="Mach Jab"] .pp:before {
-  content: "(Always does 20 HP of damage. Contact move.) "
+  content: "(20 HP of DMG to Target, Contact Move.) "
 }
 /** Sonic Jab CSS **/
 .movemenu button[data-move="Sonic Jab"],
@@ -3818,7 +3818,7 @@ div[id*="digimon"] .movemenu button[data-move="Mach Jab"] .pp:before {
   content: "[PHY] [BP: 40] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Sonic Jab"] .pp:before {
-  content: "(Priority +1. Contact move.) "
+  content: "(Priority +1, Contact move.) "
 }
 /** Tremor CSS **/
 .movemenu button[data-move="Tremor"],
@@ -3831,7 +3831,7 @@ div[id*="digimon"] .movemenu button[data-move="Sonic Jab"] .pp:before {
   content: "[PHY] [BP: 75] [Acc: 90]"
 }
 div[id*="digimon"] .movemenu button[data-move="Tremor"] .pp:before {
-  content: "(undefined) "
+  content: "(30% chance to Flinch adjacent foe(s).) "
 }
 /** Dynamite Kick CSS **/
 .movemenu button[data-move="Dynamite Kick"],
@@ -3844,7 +3844,7 @@ div[id*="digimon"] .movemenu button[data-move="Tremor"] .pp:before {
   content: "[PHY] [BP: 75] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Dynamite Kick"] .pp:before {
-  content: "(Destroys screens, unless the target is immune.) "
+  content: "(Destroys screens, Contact Move.) "
 }
 /** Spin Attack CSS **/
 .movemenu button[data-move="Spin Attack"],
@@ -3857,7 +3857,7 @@ div[id*="digimon"] .movemenu button[data-move="Dynamite Kick"] .pp:before {
   content: "[PHY] [BP: 80] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Spin Attack"] .pp:before {
-  content: "(No additional effect. Contact move.) "
+  content: "(No additional effect, Contact move.) "
 }
 /** Megaton Punch CSS **/
 .movemenu button[data-move="Megaton Punch"],
@@ -3870,7 +3870,7 @@ div[id*="digimon"] .movemenu button[data-move="Spin Attack"] .pp:before {
   content: "[PHY] [BP: 120] [Acc: 85]"
 }
 div[id*="digimon"] .movemenu button[data-move="Megaton Punch"] .pp:before {
-  content: "(10% chance to flinch the target. Contact move.) "
+  content: "(10% to Flinch the target, Contact move.) "
 }
 /** Spiral Driver CSS **/
 .movemenu button[data-move="Spiral Driver"],
@@ -3883,7 +3883,7 @@ div[id*="digimon"] .movemenu button[data-move="Megaton Punch"] .pp:before {
   content: "[PHY] [BP: 130] [Acc: 90]"
 }
 div[id*="digimon"] .movemenu button[data-move="Spiral Driver"] .pp:before {
-  content: "(User is hurt by 50% of its max HP if it misses. Contact move.) "
+  content: "(User -1/2 Max HP if missed, Contact Atk.) "
 }
 /** Fighting Aura CSS **/
 .movemenu button[data-move="Fighting Aura"],
@@ -3909,7 +3909,7 @@ div[id*="digimon"] .movemenu button[data-move="Fighting Aura"] .pp:before {
   content: "[PHY] [BP: 200] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Buster Dive"] .pp:before {
-  content: "(Raises user's Defense by 1 on turn 1. Hits turn 2. Contact move.) "
+  content: "(DEF+1 turn 1, hits turn 2. Contact move.) "
 }
 /** Spit Fire CSS **/
 .movemenu button[data-move="Spit Fire"],
@@ -3922,7 +3922,7 @@ div[id*="digimon"] .movemenu button[data-move="Buster Dive"] .pp:before {
   content: "[SPA] [BP: 40] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Spit Fire"] .pp:before {
-  content: "(10% chance to burn the target.) "
+  content: "(10% chance to BRN the target.) "
 }
 /** Heat Laser CSS **/
 .movemenu button[data-move="Heat Laser"],
@@ -3935,7 +3935,7 @@ div[id*="digimon"] .movemenu button[data-move="Spit Fire"] .pp:before {
   content: "[SPA] [BP: 65] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Heat Laser"] .pp:before {
-  content: "(10% chance to burn adjacent foe(s).) "
+  content: "(10% chance to BRN adjacent foe(s).) "
 }
 /** Heat Breath CSS **/
 .movemenu button[data-move="Heat Breath"],
@@ -3948,7 +3948,7 @@ div[id*="digimon"] .movemenu button[data-move="Heat Laser"] .pp:before {
   content: "[PHY] [BP: 65] [Acc: 95]"
 }
 div[id*="digimon"] .movemenu button[data-move="Heat Breath"] .pp:before {
-  content: "(10% chance to burn / flinch. Fangs and Contact move.) "
+  content: "(10% BRN/Flinch target, Fang/Contact Atk.) "
 }
 /** Fire Tower CSS **/
 .movemenu button[data-move="Fire Tower"],
@@ -3961,7 +3961,7 @@ div[id*="digimon"] .movemenu button[data-move="Heat Breath"] .pp:before {
   content: "[PHY] [BP: 75] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Fire Tower"] .pp:before {
-  content: "(10% chance to burn and flinch the target.) "
+  content: "(10% chance to BRN/Flinch the target.) "
 }
 /** Red Inferno CSS **/
 .movemenu button[data-move="Red Inferno"],
@@ -3974,7 +3974,7 @@ div[id*="digimon"] .movemenu button[data-move="Fire Tower"] .pp:before {
   content: "[SPA] [BP: 95] [Acc: 90]"
 }
 div[id*="digimon"] .movemenu button[data-move="Red Inferno"] .pp:before {
-  content: "(10% chance to burn the foe(s).) "
+  content: "(10% chance to BRN the adjacent foe(s).) "
 }
 /** Magma Bomb CSS **/
 .movemenu button[data-move="Magma Bomb"],
@@ -3987,7 +3987,7 @@ div[id*="digimon"] .movemenu button[data-move="Red Inferno"] .pp:before {
   content: "[SPA] [BP: 80] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Magma Bomb"] .pp:before {
-  content: "(Has a 10% chance to burn the target.) "
+  content: "(Has a 10% chance to BRN the target.) "
 }
 /** Flame Storm CSS **/
 .movemenu button[data-move="Flame Storm"],
@@ -4000,7 +4000,7 @@ div[id*="digimon"] .movemenu button[data-move="Magma Bomb"] .pp:before {
   content: "[SPA] [BP: 95] [Acc: 60]"
 }
 div[id*="digimon"] .movemenu button[data-move="Flame Storm"] .pp:before {
-  content: "(Traps and damages adjacent foe(s) for 4-5 turns.) "
+  content: "(Traps/DMGs the Target for 4-5 turns.) "
 }
 /** Prominence Beam CSS **/
 .movemenu button[data-move="Prominence Beam"],
@@ -4013,7 +4013,7 @@ div[id*="digimon"] .movemenu button[data-move="Flame Storm"] .pp:before {
   content: "[SPA] [BP: 130] [Acc: 85]"
 }
 div[id*="digimon"] .movemenu button[data-move="Prominence Beam"] .pp:before {
-  content: "(10% chance to burn and bug the target.) "
+  content: "(10% chance to BRN/BUG the target.) "
 }
 /** Infinity Burn CSS **/
 .movemenu button[data-move="Infinity Burn"],
@@ -4026,7 +4026,7 @@ div[id*="digimon"] .movemenu button[data-move="Prominence Beam"] .pp:before {
   content: "[PHY] [BP: 130] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Infinity Burn"] .pp:before {
-  content: "(Has 33% recoil. 10% chance to burn. Thaws user.) "
+  content: "(33% recoil, 10% BRN Chance. Thaws User.) "
 }
 /** Bubble Breath CSS **/
 .movemenu button[data-move="Bubble Breath"],
@@ -4039,7 +4039,7 @@ div[id*="digimon"] .movemenu button[data-move="Infinity Burn"] .pp:before {
   content: "[SPA] [BP: 65] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Bubble Breath"] .pp:before {
-  content: "(10% chance to lower adjacent foe(s) SPE by 1.) "
+  content: "(10% to lower adjacent foe(s) SPE by 1.) "
 }
 /** Tear Drop CSS **/
 .movemenu button[data-move="Tear Drop"],
@@ -4052,7 +4052,7 @@ div[id*="digimon"] .movemenu button[data-move="Bubble Breath"] .pp:before {
   content: "[SPA] [BP: 65] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Tear Drop"] .pp:before {
-  content: "(10% chance to bug the target.) "
+  content: "(10% chance to BUG the target.) "
 }
 /** Winter Blast CSS **/
 .movemenu button[data-move="Winter Blast"],
@@ -4078,7 +4078,7 @@ div[id*="digimon"] .movemenu button[data-move="Winter Blast"] .pp:before {
   content: "[PHY] [BP: 70] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Hail Spear"] .pp:before {
-  content: "(10% FRZ target, 30% chance to lower target SPE.) "
+  content: "(10% FRZ target, 30% lower target SPE.) "
 }
 /** Giga Freeze CSS **/
 .movemenu button[data-move="Giga Freeze"],
@@ -4091,7 +4091,7 @@ div[id*="digimon"] .movemenu button[data-move="Hail Spear"] .pp:before {
   content: "[SPA] [BP: 80] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Giga Freeze"] .pp:before {
-  content: "(10% Freeze the target.) "
+  content: "(10% chance to FRZ the target.) "
 }
 /** Water Blitz CSS **/
 .movemenu button[data-move="Water Blitz"],
@@ -4117,7 +4117,7 @@ div[id*="digimon"] .movemenu button[data-move="Water Blitz"] .pp:before {
   content: "[PHY] [BP: 100] [Acc: 85]"
 }
 div[id*="digimon"] .movemenu button[data-move="DG Waterfall"] .pp:before {
-  content: "(10% chance to flinch the foe(s). Contact move.) "
+  content: "(10% Flinch adjacent foe(s), Contact Atk.) "
 }
 /** Heavy Rain CSS **/
 .movemenu button[data-move="Heavy Rain"],
@@ -4130,7 +4130,7 @@ div[id*="digimon"] .movemenu button[data-move="DG Waterfall"] .pp:before {
   content: "[SPA] [BP: 110] [Acc: 85]"
 }
 div[id*="digimon"] .movemenu button[data-move="Heavy Rain"] .pp:before {
-  content: "(10% chance to confuse the foe(s).) "
+  content: "(10% chance to Confuse the foe(s).) "
 }
 /** Aurora Freeze CSS **/
 .movemenu button[data-move="Aurora Freeze"],
@@ -4143,7 +4143,7 @@ div[id*="digimon"] .movemenu button[data-move="Heavy Rain"] .pp:before {
   content: "[SPA] [BP: 130] [Acc: 90]"
 }
 div[id*="digimon"] .movemenu button[data-move="Aurora Freeze"] .pp:before {
-  content: "(10% FRZ, User cannot move next turn.) "
+  content: "(10% FRZ Target, User can't go next turn.) "
 }
 /** Insect Plague CSS **/
 .movemenu button[data-move="Insect Plague"],
@@ -4156,7 +4156,7 @@ div[id*="digimon"] .movemenu button[data-move="Aurora Freeze"] .pp:before {
   content: "[SPA] [BP: 65] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Insect Plague"] .pp:before {
-  content: "(40% chance to poison the target.) "
+  content: "(40% chance to PSN the target.) "
 }
 /** Poison Claw CSS **/
 .movemenu button[data-move="Poison Claw"],
@@ -4169,7 +4169,7 @@ div[id*="digimon"] .movemenu button[data-move="Insect Plague"] .pp:before {
   content: "[PHY] [BP: 50] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Poison Claw"] .pp:before {
-  content: "(50% chance to poison the target. Contact move.) "
+  content: "(50% PSN the target, Contact move.) "
 }
 /** DG Poison Powder CSS **/
 .movemenu button[data-move="DG Poison Powder"],
@@ -4182,12 +4182,12 @@ div[id*="digimon"] .movemenu button[data-move="Poison Claw"] .pp:before {
   content: "[SPA] [BP: 70] [Acc: 75]"
 }
 div[id*="digimon"] .movemenu button[data-move="DG Poison Powder"] .pp:before {
-  content: "(Poisons adjacent targets. Grass is immune.) "
+  content: "(PSN adjacent foe(s), Grass is immune.) "
 }
 /** Charm Perfume CSS **/
 .movemenu button[data-move="Charm Perfume"],
 .movemenu button[data-move="Charm Perfume"]:hover {
-  background: #e3e3e3 url('undefined') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/grass-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Charm Perfume"] .type:after {
@@ -4195,7 +4195,7 @@ div[id*="digimon"] .movemenu button[data-move="DG Poison Powder"] .pp:before {
   content: "[SPA] [BP: 70] [Acc: 75]"
 }
 div[id*="digimon"] .movemenu button[data-move="Charm Perfume"] .pp:before {
-  content: "(Confuses adjacent targets. Grass is immune.) "
+  content: "(Confuses adjacent foes, Grass is immune.) "
 }
 /** Danger Sting CSS **/
 .movemenu button[data-move="Danger Sting"],
@@ -4208,7 +4208,7 @@ div[id*="digimon"] .movemenu button[data-move="Charm Perfume"] .pp:before {
   content: "[PHY] [BP: 75] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Danger Sting"] .pp:before {
-  content: "(30% chance to bug the target. Contact move.) "
+  content: "(30% chance to BUG target, Contact Move.) "
 }
 /** Bio Field CSS **/
 .movemenu button[data-move="Bio Field"],
@@ -4221,7 +4221,7 @@ div[id*="digimon"] .movemenu button[data-move="Danger Sting"] .pp:before {
   content: "[SPA] [BP: 95] [Acc: 90]"
 }
 div[id*="digimon"] .movemenu button[data-move="Bio Field"] .pp:before {
-  content: "(15% chance to poison the foe(s).) "
+  content: "(15% chance to PSN adjacent foe(s).) "
 }
 /** Green Trap CSS **/
 .movemenu button[data-move="Green Trap"],
@@ -4234,7 +4234,7 @@ div[id*="digimon"] .movemenu button[data-move="Bio Field"] .pp:before {
   content: "[PHY] [BP: 110] [Acc: 85]"
 }
 div[id*="digimon"] .movemenu button[data-move="Green Trap"] .pp:before {
-  content: "(Prevents the target from switching out.) "
+  content: "(Prevents the Target from switching out.) "
 }
 /** Root Bind CSS **/
 .movemenu button[data-move="Root Bind"],
@@ -4247,7 +4247,7 @@ div[id*="digimon"] .movemenu button[data-move="Green Trap"] .pp:before {
   content: "[SPA] [BP: 100] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Root Bind"] .pp:before {
-  content: "(10% chance to lower the target's Speed by 1.) "
+  content: "(10% chance to lower target's SPE by 1.) "
 }
 /** Venom Disaster CSS **/
 .movemenu button[data-move="Venom Disaster"],
@@ -4260,7 +4260,7 @@ div[id*="digimon"] .movemenu button[data-move="Root Bind"] .pp:before {
   content: "[SPA] [BP: 200] [Acc: 90]"
 }
 div[id*="digimon"] .movemenu button[data-move="Venom Disaster"] .pp:before {
-  content: "(Targets adjacent foe(s), user cannot move next turn.) "
+  content: "(Adjacent foes, user can't go next turn.) "
 }
 /** Static Electricity CSS **/
 .movemenu button[data-move="Static Electricity"],
@@ -4273,7 +4273,7 @@ div[id*="digimon"] .movemenu button[data-move="Venom Disaster"] .pp:before {
   content: "[PHY] [BP: 40] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Static Electricity"] .pp:before {
-  content: "(50% chance to paralyze the target. Contact move.) "
+  content: "(50% chance to PAR target. Contact move.) "
 }
 /** Electric Chute CSS **/
 .movemenu button[data-move="Electric Chute"],
@@ -4286,7 +4286,7 @@ div[id*="digimon"] .movemenu button[data-move="Static Electricity"] .pp:before {
   content: "[SPA] [BP: 20] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Electric Chute"] .pp:before {
-  content: "(100% chance to paralyze the target.) "
+  content: "(100% chance to PAR the target.) "
 }
 /** Wind Cutter CSS **/
 .movemenu button[data-move="Wind Cutter"],
@@ -4312,7 +4312,7 @@ div[id*="digimon"] .movemenu button[data-move="Wind Cutter"] .pp:before {
   content: "[SPA] [BP: 90] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Thunderstorm"] .pp:before {
-  content: "(10% chance to paralyze the target.) "
+  content: "(10% chance to PAR the target.) "
 }
 /** Confused Storm CSS **/
 .movemenu button[data-move="Confused Storm"],
@@ -4325,7 +4325,7 @@ div[id*="digimon"] .movemenu button[data-move="Thunderstorm"] .pp:before {
   content: "[SPA] [BP: 95] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Confused Storm"] .pp:before {
-  content: "(30% chance to Confuse adjacent foe(s), + Electric DMG.) "
+  content: "(30% Confuse adjacent foes + Electric DMG.) "
 }
 /** Spinning Shot CSS **/
 .movemenu button[data-move="Spinning Shot"],
@@ -4338,7 +4338,7 @@ div[id*="digimon"] .movemenu button[data-move="Confused Storm"] .pp:before {
   content: "[PHY] [BP: 120] [Acc: 80]"
 }
 div[id*="digimon"] .movemenu button[data-move="Spinning Shot"] .pp:before {
-  content: "(Aims for foe(s).) "
+  content: "(Targets All Adjacent foe(s).) "
 }
 /** Megalo Spark CSS **/
 .movemenu button[data-move="Megalo Spark"],
@@ -4351,12 +4351,12 @@ div[id*="digimon"] .movemenu button[data-move="Spinning Shot"] .pp:before {
   content: "[PHY] [BP: 100] [Acc: 90]"
 }
 div[id*="digimon"] .movemenu button[data-move="Megalo Spark"] .pp:before {
-  content: "(10% chance to paralyze the target. Contact move.) "
+  content: "(10% chance to PAR target, Contact move.) "
 }
 /** Thunder Justice CSS **/
 .movemenu button[data-move="Thunder Justice"],
 .movemenu button[data-move="Thunder Justice"]:hover {
-  background: #e3e3e3 url('undefined') no-repeat;
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/electric-panel.png') no-repeat;
   background-size: cover
 }
 .movemenu button[data-move="Thunder Justice"] .type:after {
@@ -4364,7 +4364,7 @@ div[id*="digimon"] .movemenu button[data-move="Megalo Spark"] .pp:before {
   content: "[SPA] [BP: 150] [Acc: 90]"
 }
 div[id*="digimon"] .movemenu button[data-move="Thunder Justice"] .pp:before {
-  content: "(20% PAR target + Fairy DMG.) "
+  content: "(20% PAR the Target + Fairy DMG.) "
 }
 /** Mechanical Claw CSS **/
 .movemenu button[data-move="Mechanical Claw"],
@@ -4377,7 +4377,7 @@ div[id*="digimon"] .movemenu button[data-move="Thunder Justice"] .pp:before {
   content: "[PHY] [BP: 65] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Mechanical Claw"] .pp:before {
-  content: "(No additional effect. Contact move.) "
+  content: "(No additional effect, Contact move.) "
 }
 /** Metal Sprinter CSS **/
 .movemenu button[data-move="Metal Sprinter"],
@@ -4403,7 +4403,7 @@ div[id*="digimon"] .movemenu button[data-move="Metal Sprinter"] .pp:before {
   content: "[SPA] [BP: 80] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Reverse Program"] .pp:before {
-  content: "(30% chance to bug the target.) "
+  content: "(30% chance to BUG the target.) "
 }
 /** Odor Spray CSS **/
 .movemenu button[data-move="Odor Spray"],
@@ -4416,7 +4416,7 @@ div[id*="digimon"] .movemenu button[data-move="Reverse Program"] .pp:before {
   content: "[SPA] [BP: 65] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Odor Spray"] .pp:before {
-  content: "(30% chance to flinch the target.) "
+  content: "(30% chance to Flinch the target.) "
 }
 /** Cooties Kick CSS **/
 .movemenu button[data-move="Cooties Kick"],
@@ -4429,7 +4429,7 @@ div[id*="digimon"] .movemenu button[data-move="Odor Spray"] .pp:before {
   content: "[PHY] [BP: 65] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Cooties Kick"] .pp:before {
-  content: "(30% chance to confuse the target. Contact move.) "
+  content: "(30% Confuse target. Contact Move.) "
 }
 /** Big Poop Toss CSS **/
 .movemenu button[data-move="Big Poop Toss"],
@@ -4442,7 +4442,7 @@ div[id*="digimon"] .movemenu button[data-move="Cooties Kick"] .pp:before {
   content: "[PHY] [BP: 80] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Big Poop Toss"] .pp:before {
-  content: "(20% chance to flinch the target.) "
+  content: "(20% chance to Flinch the target.) "
 }
 /** Grand Rock CSS **/
 .movemenu button[data-move="Grand Rock"],
@@ -4455,7 +4455,7 @@ div[id*="digimon"] .movemenu button[data-move="Big Poop Toss"] .pp:before {
   content: "[PHY] [BP: 95] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Grand Rock"] .pp:before {
-  content: "(undefined) "
+  content: "(Hits all adjacent targets.) "
 }
 /** Ultimate Poop Hell CSS **/
 .movemenu button[data-move="Ultimate Poop Hell"],
@@ -4468,7 +4468,7 @@ div[id*="digimon"] .movemenu button[data-move="Grand Rock"] .pp:before {
   content: "[SPA] [BP: 95] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Ultimate Poop Hell"] .pp:before {
-  content: "(10% chance to poison adjacent Pokemon.) "
+  content: "(10% chance to PSN adjacent Foe(s).) "
 }
 /** Awesome Quake CSS **/
 .movemenu button[data-move="Awesome Quake"],
@@ -4494,7 +4494,7 @@ div[id*="digimon"] .movemenu button[data-move="Awesome Quake"] .pp:before {
   content: "[PHY] [BP: 120] [Acc: 85]"
 }
 div[id*="digimon"] .movemenu button[data-move="Comet Hammer"] .pp:before {
-  content: "(undefined) "
+  content: "(Hits all adjacent targets.) "
 }
 /** Light Soul CSS **/
 .movemenu button[data-move="Light Soul"],
@@ -4507,7 +4507,7 @@ div[id*="digimon"] .movemenu button[data-move="Comet Hammer"] .pp:before {
   content: "[SPA] [BP: 50] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Light Soul"] .pp:before {
-  content: "(20% chance to confuse the foe(s).) "
+  content: "(20% chance to Confuse adjacent foe(s).) "
 }
 /** Saint Ray CSS **/
 .movemenu button[data-move="Saint Ray"],
@@ -4520,7 +4520,7 @@ div[id*="digimon"] .movemenu button[data-move="Light Soul"] .pp:before {
   content: "[SPA] [BP: 75] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Saint Ray"] .pp:before {
-  content: "(10% chance to confuse the foe(s).) "
+  content: "(10% chance to Confuse adjacent foe(s).) "
 }
 /** DG Flash CSS **/
 .movemenu button[data-move="DG Flash"],
@@ -4533,7 +4533,7 @@ div[id*="digimon"] .movemenu button[data-move="Saint Ray"] .pp:before {
   content: "[SPA] [BP: 95] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="DG Flash"] .pp:before {
-  content: "(Targets the foe(s).) "
+  content: "(Targets the adjacent foe(s).) "
 }
 /** Saint Shield CSS **/
 .movemenu button[data-move="Saint Shield"],
@@ -4546,7 +4546,7 @@ div[id*="digimon"] .movemenu button[data-move="DG Flash"] .pp:before {
   content: "[PHY] [BP: 110] [Acc: 85]"
 }
 div[id*="digimon"] .movemenu button[data-move="Saint Shield"] .pp:before {
-  content: "(No additional effect, contact move.) "
+  content: "(Targets adjacent foe(s), Contact Move.) "
 }
 /** Shining Nova CSS **/
 .movemenu button[data-move="Shining Nova"],
@@ -4559,7 +4559,7 @@ div[id*="digimon"] .movemenu button[data-move="Saint Shield"] .pp:before {
   content: "[SPA] [BP: 150] [Acc: 90]"
 }
 div[id*="digimon"] .movemenu button[data-move="Shining Nova"] .pp:before {
-  content: "(User cannot move next turn.) "
+  content: "(User can't go next turn, adjacent foes.) "
 }
 /** DG Judgment CSS **/
 .movemenu button[data-move="DG Judgment"],
@@ -4585,7 +4585,7 @@ div[id*="digimon"] .movemenu button[data-move="DG Judgment"] .pp:before {
   content: "[PHY] [BP: 65] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Dark Spirit"] .pp:before {
-  content: "(No additional effect. Contact move.) "
+  content: "(No additional effect. Contact Move.) "
 }
 /** Blackout CSS **/
 .movemenu button[data-move="Blackout"],
@@ -4598,7 +4598,7 @@ div[id*="digimon"] .movemenu button[data-move="Dark Spirit"] .pp:before {
   content: "[PHY] [BP: 75] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Blackout"] .pp:before {
-  content: "(Has a 30% chance to confuse the target. Contact move.) "
+  content: "(30% Confuse target, Contact Move.) "
 }
 /** DG Nightmare CSS **/
 .movemenu button[data-move="DG Nightmare"],
@@ -4611,7 +4611,7 @@ div[id*="digimon"] .movemenu button[data-move="Blackout"] .pp:before {
   content: "[SPA] [BP: 80] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="DG Nightmare"] .pp:before {
-  content: "(No additional effect.) "
+  content: "(Targets all adjacent foe(s).) "
 }
 /** Chaos Cloud CSS **/
 .movemenu button[data-move="Chaos Cloud"],
@@ -4624,7 +4624,7 @@ div[id*="digimon"] .movemenu button[data-move="DG Nightmare"] .pp:before {
   content: "[PHY] [BP: 110] [Acc: 85]"
 }
 div[id*="digimon"] .movemenu button[data-move="Chaos Cloud"] .pp:before {
-  content: "(Has a 10% chance to confuse the target.) "
+  content: "(Has a 10% chance to Confuse the target.) "
 }
 /** Shadow Fall CSS **/
 .movemenu button[data-move="Shadow Fall"],
@@ -4637,7 +4637,7 @@ div[id*="digimon"] .movemenu button[data-move="Chaos Cloud"] .pp:before {
   content: "[PHY] [BP: 100] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Shadow Fall"] .pp:before {
-  content: "(Targets adjacent foe(s).) "
+  content: "(Targets all adjacent foe(s).) "
 }
 /** Attack Charge CSS **/
 .movemenu button[data-move="Attack Charge"],
@@ -4650,7 +4650,7 @@ div[id*="digimon"] .movemenu button[data-move="Shadow Fall"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Attack Charge"] .pp:before {
-  content: "(Raises ATK of the chosen ally or user by 1.) "
+  content: "(Raises ATK of chosen ally or user by 1.) "
 }
 /** Attack Break CSS **/
 .movemenu button[data-move="Attack Break"],
@@ -4676,7 +4676,7 @@ div[id*="digimon"] .movemenu button[data-move="Attack Break"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Attack Break Field"] .pp:before {
-  content: "(Lowers ATK of the foe(s) by 1.) "
+  content: "(Lowers ATK of adjacent foe(s) by 1.) "
 }
 /** Attack Charge Field CSS **/
 .movemenu button[data-move="Attack Charge Field"],
@@ -4702,7 +4702,7 @@ div[id*="digimon"] .movemenu button[data-move="Attack Charge Field"] .pp:before 
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Mental Charge"] .pp:before {
-  content: "(Raises SPA & SPD of the chosen ally or user by 1.) "
+  content: "(+1 SPA & SPD to chosen ally or user.) "
 }
 /** Mental Charge Field CSS **/
 .movemenu button[data-move="Mental Charge Field"],
@@ -4728,7 +4728,7 @@ div[id*="digimon"] .movemenu button[data-move="Mental Charge Field"] .pp:before 
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Guard Charge"] .pp:before {
-  content: "(Raises DEF of the chosen ally or user by 1.) "
+  content: "(Raises DEF of chosen ally or user by 1.) "
 }
 /** Guard Charge Field CSS **/
 .movemenu button[data-move="Guard Charge Field"],
@@ -4754,7 +4754,7 @@ div[id*="digimon"] .movemenu button[data-move="Guard Charge Field"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Guard Charge Field"] .pp:before {
-  content: "(Lowers DEF of foe(s) by 1.) "
+  content: "(Lowers DEF of adjacent foe(s) by 1.) "
 }
 /** Speed Charge Field CSS **/
 .movemenu button[data-move="Speed Charge Field"],
@@ -4780,7 +4780,7 @@ div[id*="digimon"] .movemenu button[data-move="Speed Charge Field"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Speed Break Field"] .pp:before {
-  content: "(Raises SPE of foe(s) by 1.) "
+  content: "(Lowers SPE of adjacent foe(s) by 1.) "
 }
 /** Attack Charge CSS **/
 .movemenu button[data-move="Attack Charge"],
@@ -4793,7 +4793,7 @@ div[id*="digimon"] .movemenu button[data-move="Speed Break Field"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Attack Charge"] .pp:before {
-  content: "(Raises EVA of the chosen ally or user by 1.) "
+  content: "(Raises EVA of chosen ally or user by 1.) "
 }
 /** Final Heal CSS **/
 .movemenu button[data-move="Final Heal"],
@@ -4819,7 +4819,7 @@ div[id*="digimon"] .movemenu button[data-move="Final Heal"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Restore"] .pp:before {
-  content: "(Cures target's status; heals user 10% max HP if so.) "
+  content: "(Ally/Self cured, target recovers 10% HP.) "
 }
 /** Status Barrier CSS **/
 .movemenu button[data-move="Status Barrier"],
@@ -4832,7 +4832,7 @@ div[id*="digimon"] .movemenu button[data-move="Restore"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Status Barrier"] .pp:before {
-  content: "(For 5 turns, protects user's party from status.) "
+  content: "(For 5 turns, protects party from status.) "
 }
 /** Safety Guard CSS **/
 .movemenu button[data-move="Safety Guard"],
@@ -4845,7 +4845,7 @@ div[id*="digimon"] .movemenu button[data-move="Status Barrier"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Safety Guard"] .pp:before {
-  content: "(The chosen ally or user survives attacks this turn with at least 1 HP.) "
+  content: "(Ally/User survives with at least 1 HP.) "
 }
 /** Crit Charge CSS **/
 .movemenu button[data-move="Crit Charge"],
@@ -4858,7 +4858,7 @@ div[id*="digimon"] .movemenu button[data-move="Safety Guard"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Crit Charge"] .pp:before {
-  content: "(Raises the chosen ally or user critical hit ratio by 2.) "
+  content: "(Raises the Ally/User crit ratio by 2.) "
 }
 /** Dispel CSS **/
 .movemenu button[data-move="Dispel"],
@@ -4871,7 +4871,7 @@ div[id*="digimon"] .movemenu button[data-move="Crit Charge"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Dispel"] .pp:before {
-  content: "(Eliminates all stat changes of the chosen ally or user.) "
+  content: "(Removes stat changes of the Ally/User.) "
 }
 /** Cross Counter CSS **/
 .movemenu button[data-move="Cross Counter"],
@@ -4884,7 +4884,7 @@ div[id*="digimon"] .movemenu button[data-move="Dispel"] .pp:before {
   content: "[PHY] [BP: 0] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Cross Counter"] .pp:before {
-  content: "(If hit by physical attack, returns double damage.) "
+  content: "(If hit by physical Atk, return 2x DMG.) "
 }
 /** Mirror Reflection CSS **/
 .movemenu button[data-move="Mirror Reflection"],
@@ -4897,7 +4897,7 @@ div[id*="digimon"] .movemenu button[data-move="Cross Counter"] .pp:before {
   content: "[SPA] [BP: 0] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="Mirror Reflection"] .pp:before {
-  content: "(If hit by special attack, returns double damage.) "
+  content: "(If hit by special Atk, returns 2x DMG.) "
 }
 /** Anti-Sleep CSS **/
 .movemenu button[data-move="Anti-Sleep"],
@@ -4910,7 +4910,7 @@ div[id*="digimon"] .movemenu button[data-move="Mirror Reflection"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Anti-Sleep"] .pp:before {
-  content: "(Cures the user or allies SLP; heals 10% max HP.) "
+  content: "(Cures User/Ally SLP, heals 10% max HP.) "
 }
 /** Anti-Poison CSS **/
 .movemenu button[data-move="Anti-Poison"],
@@ -4923,7 +4923,7 @@ div[id*="digimon"] .movemenu button[data-move="Anti-Sleep"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Anti-Poison"] .pp:before {
-  content: "(Cures the user or allies PSN; heals 10% max HP.) "
+  content: "(Cures User/Ally PSN, heals 10% max HP.) "
 }
 /** Anti-Paralysis CSS **/
 .movemenu button[data-move="Anti-Paralysis"],
@@ -4936,7 +4936,7 @@ div[id*="digimon"] .movemenu button[data-move="Anti-Poison"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Anti-Paralysis"] .pp:before {
-  content: "(Cures the user or allies PAR; heals 10% max HP.) "
+  content: "(Cures User/Ally PAR, heals 10% max HP.) "
 }
 /** Anti-Panic CSS **/
 .movemenu button[data-move="Anti-Panic"],
@@ -4949,20 +4949,20 @@ div[id*="digimon"] .movemenu button[data-move="Anti-Paralysis"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Anti-Panic"] .pp:before {
-  content: "(Removes user or allies confusion; heals 10% max HP.) "
+  content: "(Cures User/Ally Confusion, heals 10% HP.) "
 }
-/** Anti-Bug CSS **/
-.movemenu button[data-move="Anti-Bug"],
-.movemenu button[data-move="Anti-Bug"]:hover {
+/** Anti-BUG CSS **/
+.movemenu button[data-move="Anti-BUG"],
+.movemenu button[data-move="Anti-BUG"]:hover {
   background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
   background-size: cover
 }
-.movemenu button[data-move="Anti-Bug"] .type:after {
+.movemenu button[data-move="Anti-BUG"] .type:after {
   font-weight: bold;
   content: "[STA] [BP: 0] [Acc: -]"
 }
-div[id*="digimon"] .movemenu button[data-move="Anti-Bug"] .pp:before {
-  content: "(Removes user or allies bug status; heals 10% max HP.) "
+div[id*="digimon"] .movemenu button[data-move="Anti-BUG"] .pp:before {
+  content: "(Cures User/Ally BUG, heals 10% max HP.) "
 }
 /** Acceleration Boost CSS **/
 .movemenu button[data-move="Acceleration Boost"],
@@ -4975,7 +4975,7 @@ div[id*="digimon"] .movemenu button[data-move="Anti-Bug"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Acceleration Boost"] .pp:before {
-  content: "(Until the end of the next turn, user's moves crit.) "
+  content: "(Users crits until end of the next turn.) "
 }
 /** LGPE Absorb CSS **/
 .movemenu button[data-move="LGPE Absorb"],
@@ -5027,7 +5027,7 @@ div[id*="digimon"] .movemenu button[data-move="LGPE Teleport"] .pp:before {
   content: "[PHY] [BP: 200] [Acc: 90]"
 }
 div[id*="digimon"] .movemenu button[data-move="LGPE Sky Attack"] .pp:before {
-  content: "(Charges, then hits turn 2. 30% flinch. High crit.) "
+  content: "(Hits turn 2. 30% flinch. High crit.) "
 }
 /** LGPE Solar Beam CSS **/
 .movemenu button[data-move="LGPE Solar Beam"],
@@ -5040,7 +5040,7 @@ div[id*="digimon"] .movemenu button[data-move="LGPE Sky Attack"] .pp:before {
   content: "[SPA] [BP: 200] [Acc: 100]"
 }
 div[id*="digimon"] .movemenu button[data-move="LGPE Solar Beam"] .pp:before {
-  content: "(Charges turn 1. Hits turn 2. No charge in sunlight.) "
+  content: "(Hits turn 2. No charge in sunlight.) "
 }
 /** DIGIMON TYPES CSS **/
 /** TYPE: Bug CSS **/
