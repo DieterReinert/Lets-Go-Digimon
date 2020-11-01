@@ -276,7 +276,7 @@ exports.commands = {
 			menu += `</td></tr><tr><td style="width: 198px;"><p><strong><img src="https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonani/${target}.gif" title="${target}" width="56" height="56"></strong></p><p><strong><span style="color: #333333;">${getSpecies(digimon)} </span></strong></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><p style="text-align: left;">`;
 			menu += `<span style="color: #333333;"><strong><span style="font-size: small;">Type: </span></strong><span style="font-size: small;">${digimon.types.join(', ')}</span></span></p><hr style="border-top: 1px solid ${secondcolor}; background: transparent;"><p style="text-align: left;"><span style="color: #333333;"><strong><span style="font-size: small;">Ability:</span></strong><span style="font-size: small;"> ${digimon.abilities[0]}</span>`;
 			let templates = mod.getSpecies(target);
-			templates = mod.getSpecies(templates.baseSpecies);
+			if (templates.basename) templates = mod.getSpecies(templates.basename);
 			let sigmove = Object.keys(mod.getLearnsetData(templates.id).learnset);
 			sigmove = sigmove.map(id => mod.getMove(id).name);
 			sigmove = sigmove[sigmove.length - 2];
@@ -294,7 +294,7 @@ exports.commands = {
 			menu += `</span></span></span></span></span></span></span></td></tr></tbody></table><table style="height: 207px; background-color: #ffffff; border-color: ${secondcolor}; margin-left: auto; margin-right: auto;" border="1" width="466"><tbody><tr><td style="width: 456px;"><span style="color: #333333; font-size: small;"><strong>Type Interactions</strong></span><hr style="border-top: 1px solid ${secondcolor}; background: transparent;">`;
 			menu += `<span style="color: #333333; font-size: small;"><strong>Weaknesses<br></strong>${(weaknesses.join(', ') || '<font color=#999999>None</font>')}<strong><br>Resistances<br></strong>${(resistances.join(', ') || '<font color=#999999>None</font>')}<strong><br>Immunities<br></strong>${(immunities.join(', ') || '<font color=#999999>None</font>')}</span></td></tr><tr><td style="text-align: center; width: 456px;"><span style="color: #333333; font-size: small;"><strong><strong><strong><strong>Move Pool</strong></strong></strong></strong></span>`;
 			let template = mod.getSpecies(target);
-			template = mod.getSpecies(template.baseSpecies);
+			if (template.basename) template = mod.getSpecies(template.basename);
 			let move = Object.keys(mod.getLearnsetData(template.id).learnset);
 			move = move.map(id => mod.getMove(id).name);
 			let movestring = 0;
