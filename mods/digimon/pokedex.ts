@@ -2652,6 +2652,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	tokomonx: {
 		num: -3000,
+		id: "tokomonx",
 		name: "Tokomon-X",
 		basename: "Tokomon",
 		stage: "In-Training",
@@ -2669,6 +2670,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	agumonx: {
 		num: -3001,
+		id: "agumonx",
 		name: "Agumon-X",
 		basename: "Agumon",
 		stage: "Rookie",
@@ -2686,6 +2688,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	betamonx: {
 		num: -3002,
+		id: "betamonx",
 		name: "Betamon-X",
 		basename: "Betamon",
 		stage: "Rookie",
@@ -2703,6 +2706,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	blackagumonx: {
 		num: -3003,
+		id: "blackagumonx",
 		name: "BlackAgumon-X",
 		basename: "BlackAgumon",
 		stage: "Rookie",
@@ -2720,6 +2724,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	gabumonx: {
 		num: -3004,
+		id: "gabumonx",
 		name: "Gabumon-X",
 		basename: "Gabumon",
 		stage: "Rookie",
@@ -2737,6 +2742,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	gomamonx: {
 		num: -3005,
+		id: "gomamonx",
 		name: "Gomamon-X",
 		basename: "Gomamon",
 		stage: "Rookie",
@@ -2754,6 +2760,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	gotsumonx: {
 		num: -3006,
+		id: "gotsumonx",
 		name: "Gotsumon-X",
 		basename: "Gotsumon",
 		stage: "Rookie",
@@ -2771,6 +2778,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	keramonx: {
 		num: -3007,
+		id: "keramonx",
 		name: "Keramon-X",
 		basename: "Keramon",
 		stage: "Rookie",
@@ -2788,6 +2796,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	otamamonx: {
 		num: -3008,
+		id: "otamamonx",
 		name: "Otamamon-X",
 		basename: "Otamamon",
 		stage: "Rookie",
@@ -2805,6 +2814,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	palmonx: {
 		num: -3009,
+		id: "palmonx",
 		name: "Palmon-X",
 		basename: "Palmon",
 		stage: "Rookie",
@@ -2822,6 +2832,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	salamonx: {
 		num: -3010,
+		id: "salamonx",
 		name: "Salamon-X",
 		basename: "Salamon",
 		stage: "Rookie",
@@ -2839,6 +2850,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	garurumonx: {
 		num: -3011,
+		id: "garurumonx",
 		name: "Garurumon-X",
 		basename: "Garurumon",
 		stage: "Champion",
@@ -2856,6 +2868,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	gatomonx: {
 		num: -3012,
+		id: "gatomonx",
 		name: "Gatomon-X",
 		basename: "Gatomon",
 		stage: "Champion",
@@ -2873,6 +2886,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	greymonx: {
 		num: -3013,
+		id: "greymonx",
 		name: "Greymon-X",
 		basename: "Greymon",
 		stage: "Champion",
@@ -2890,6 +2904,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	kuwagamonx: {
 		num: -3014,
+		id: "kuwagamonx",
 		name: "Kuwagamon-X",
 		basename: "Kuwagamon",
 		stage: "Champion",
@@ -2907,6 +2922,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	leomonx: {
 		num: -3015,
+		id: "leomonx",
 		name: "Leomon-X",
 		basename: "Leomon",
 		stage: "Champion",
@@ -2924,6 +2940,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	meramonx: {
 		num: -3016,
+		id: "meramonx",
 		name: "Meramon-X",
 		basename: "Meramon",
 		stage: "Champion",
@@ -2941,6 +2958,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	monochromonx: {
 		num: -3017,
+		id: "monochromonx",
 		name: "Monochromon-X",
 		basename: "Monochromon",
 		stage: "Champion",
@@ -2958,6 +2976,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	numemonx: {
 		num: -3018,
+		id: "numemonx",
 		name: "Numemon-X",
 		basename: "Numemon",
 		stage: "Champion",
@@ -2975,6 +2994,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	ogremonx: {
 		num: -3019,
+		id: "ogremonx",
 		name: "Ogremon-X",
 		basename: "Ogremon",
 		stage: "Champion",
@@ -2992,6 +3012,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	seadramonx: {
 		num: -3020,
+		id: "seadramonx",
 		name: "Seadramon-X",
 		basename: "Seadramon",
 		stage: "Champion",
@@ -3009,6 +3030,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	togemonx: {
 		num: -3021,
+		id: "togemonx",
 		name: "Togemon-X",
 		basename: "Togemon",
 		stage: "Champion",
@@ -3026,6 +3048,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	tyrannomonx: {
 		num: -3022,
+		id: "tyrannomonx",
 		name: "Tyrannomon-X",
 		basename: "Tyrannomon",
 		stage: "Champion",
@@ -3043,6 +3066,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	angewomonx: {
 		num: -3023,
+		id: "angewomonx",
 		name: "Angewomon-X",
 		basename: "Angewomon",
 		stage: "Ultimate",
@@ -3060,6 +3084,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	garudamonx: {
 		num: -3024,
+		id: "garudamonx",
 		name: "Garudamon-X",
 		basename: "Garudamon",
 		stage: "Ultimate",
@@ -3077,6 +3102,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	iceleomonx: {
 		num: -3025,
+		id: "iceleomonx",
 		name: "IceLeomon-X",
 		basename: "IceLeomon",
 		stage: "Ultimate",
@@ -3094,6 +3120,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	ladydevimonx: {
 		num: -3026,
+		id: "ladydevimonx",
 		name: "LadyDevimon-X",
 		basename: "LadyDevimon",
 		stage: "Ultimate",
@@ -3111,6 +3138,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	lillymonx: {
 		num: -3027,
+		id: "lillymonx",
 		name: "Lillymon-X",
 		basename: "Lillymon",
 		stage: "Ultimate",
@@ -3128,6 +3156,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	mamemonx: {
 		num: -3028,
+		id: "mamemonx",
 		name: "Mamemon-X",
 		basename: "Mamemon",
 		stage: "Ultimate",
@@ -3145,6 +3174,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	megaseadramonx: {
 		num: -3029,
+		id: "megaseadramonx",
 		name: "MegaSeadramon-X",
 		basename: "MegaSeadramon",
 		stage: "Ultimate",
@@ -3162,6 +3192,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	metalgreymonvaccinex: {
 		num: -3030,
+		id: "metalgreymonvaccinex",
 		name: "MetalGreymon Vaccine-X",
 		basename: "MetalGreymon Vaccine",
 		stage: "Ultimate",
@@ -3179,6 +3210,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	metalgreymonvirusx: {
 		num: -3031,
+		id: "metalgreymonvirusx",
 		name: "MetalGreymon Virus-X",
 		basename: "MetalGreymon Virus",
 		stage: "Ultimate",
@@ -3196,6 +3228,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	metalmamemonx: {
 		num: -3032,
+		id: "metalmamemonx",
 		name: "MetalMamemon-X",
 		basename: "MetalMamemon",
 		stage: "Ultimate",
@@ -3213,6 +3246,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	monzaemonx: {
 		num: -3033,
+		id: "monzaemonx",
 		name: "Monzaemon-X",
 		basename: "Monzaemon",
 		stage: "Ultimate",
@@ -3230,6 +3264,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	myotismonx: {
 		num: -3034,
+		id: "myotismonx",
 		name: "Myotismon-X",
 		basename: "Myotismon",
 		stage: "Ultimate",
@@ -3247,6 +3282,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	vademonx: {
 		num: -3035,
+		id: "vademonx",
 		name: "Vademon-X",
 		basename: "Vademon",
 		stage: "Ultimate",
@@ -3264,6 +3300,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	blackwargreymonx: {
 		num: -3036,
+		id: "blackwargreymonx",
 		name: "BlackWarGreymon-X",
 		basename: "BlackWarGreymon",
 		stage: "Mega",
@@ -3281,6 +3318,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	cherubimonevilx: {
 		num: -3037,
+		id: "cherubimonevilx",
 		name: "Cherubimon Evil-X",
 		basename: "Cherubimon Evil",
 		stage: "Mega",
@@ -3298,6 +3336,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	cherubimongoodx: {
 		num: -3038,
+		id: "cherubimongoodx",
 		name: "Cherubimon Good-X",
 		basename: "Cherubimon Good",
 		stage: "Mega",
@@ -3315,6 +3354,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	diaboromonx: {
 		num: -3039,
+		id: "diaboromonx",
 		name: "Diaboromon-X",
 		basename: "Diaboromon",
 		stage: "Mega",
@@ -3332,6 +3372,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	ebemonx: {
 		num: -3040,
+		id: "ebemonx",
 		name: "Ebemon-X",
 		basename: "Ebemon",
 		stage: "Mega",
@@ -3349,6 +3390,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	herculeskabuterimonx: {
 		num: -3041,
+		id: "herculeskabuterimonx",
 		name: "HerculesKabuterimon-X",
 		basename: "HerculesKabuterimon",
 		stage: "Mega",
@@ -3366,6 +3408,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	lilithmonx: {
 		num: -3042,
+		id: "lilithmonx",
 		name: "Lilithmon-X",
 		basename: "Lilithmon",
 		stage: "Mega",
@@ -3383,6 +3426,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	magnadramonx: {
 		num: -3043,
+		id: "magnadramonx",
 		name: "Magnadramon-X",
 		basename: "Magnadramon",
 		stage: "Mega",
@@ -3400,6 +3444,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	metalgarurumonx: {
 		num: -3044,
+		id: "metalgarurumonx",
 		name: "MetalGarurumon-X",
 		basename: "MetalGarurumon",
 		stage: "Mega",
@@ -3417,6 +3462,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	omnimonx: {
 		num: -3045,
+		id: "omnimonx",
 		name: "Omnimon-X",
 		basename: "Omnimon",
 		stage: "Mega",
@@ -3434,6 +3480,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	ophanimonx: {
 		num: -3046,
+		id: "ophanimonx",
 		name: "Ophanimon-X",
 		basename: "Ophanimon",
 		stage: "Mega",
@@ -3451,6 +3498,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	phoenixmonx: {
 		num: -3047,
+		id: "phoenixmonx",
 		name: "Phoenixmon-X",
 		basename: "Phoenixmon",
 		stage: "Mega",
@@ -3468,6 +3516,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	princemamemonx: {
 		num: -3048,
+		id: "princemamemonx",
 		name: "PrinceMamemon-X",
 		basename: "PrinceMamemon",
 		stage: "Mega",
@@ -3485,6 +3534,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	rosemonx: {
 		num: -3049,
+		id: "rosemonx",
 		name: "Rosemon-X",
 		basename: "Rosemon",
 		stage: "Mega",
@@ -3502,6 +3552,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 	},
 	wargreymonx: {
 		num: -3050,
+		id: "wargreymonx",
 		name: "WarGreymon-X",
 		basename: "WarGreymon",
 		stage: "Mega",
