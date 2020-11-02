@@ -3198,7 +3198,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 		stage: "Ultimate",
 		universe: "Digimon",
 		forme: "Mega",
-		types: ["Fire"],
+		types: ["Fire", "Steel"],
 		gender: "N",
 		baseStats: {hp: 78, atk: 109, def: 85, spa: 84, spd: 78, spe: 100},
 		abilities: {0: "X-Vaccine"},
