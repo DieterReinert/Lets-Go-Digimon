@@ -1016,7 +1016,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "20% PAR the Target + Fairy DMG.",
 		id: "thunderjustice",
 		name: "Thunder Justice",
-		pp: 5,
+		pp: 10,
 		priority: 0,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
