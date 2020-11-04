@@ -1009,8 +1009,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	"thunderjustice": {
 		num: -143,
-		accuracy: 90,
-		basePower: 150,
+		accuracy: 70,
+		basePower: 110,
 		category: "Special",
 		desc: "20% Paralyze the target, plus Fairy Damage in calculation.",
 		shortDesc: "20% PAR the Target + Fairy DMG.",
