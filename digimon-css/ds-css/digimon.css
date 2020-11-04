@@ -4743,19 +4743,6 @@ div[id*="digimon"] .movemenu button[data-move="Guard Charge"] .pp:before {
 div[id*="digimon"] .movemenu button[data-move="Guard Charge Field"] .pp:before {
   content: "(Raises DEF of the chosen allies by 1.) "
 }
-/** Guard Charge Field CSS **/
-.movemenu button[data-move="Guard Charge Field"],
-.movemenu button[data-move="Guard Charge Field"]:hover {
-  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/normal-panel.png') no-repeat;
-  background-size: cover
-}
-.movemenu button[data-move="Guard Charge Field"] .type:after {
-  font-weight: bold;
-  content: "[STA] [BP: 0] [Acc: -]"
-}
-div[id*="digimon"] .movemenu button[data-move="Guard Charge Field"] .pp:before {
-  content: "(Lowers DEF of adjacent foe(s) by 1.) "
-}
 /** Speed Charge Field CSS **/
 .movemenu button[data-move="Speed Charge Field"],
 .movemenu button[data-move="Speed Charge Field"]:hover {
