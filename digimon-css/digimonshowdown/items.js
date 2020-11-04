@@ -2,9 +2,9 @@
 	xantibody: {
 		name:"X-Antibody", 
 		spritenum:599, 
-		megaStone:"BlackWarGreymon-X", 
-		megaEvolves:"BlackWarGreymon", 
-		itemUser:["BlackWarGreymon"], 
+		megaStone:"", 
+		megaEvolves:"", 
+		itemUser:[""], 
 		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies)return false; 
 			return true; 
