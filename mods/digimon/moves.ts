@@ -1649,7 +1649,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		category: "Status",
 		desc: "Lowers defense of foe(s) by 1.",
 		shortDesc: "Lowers DEF of adjacent foe(s) by 1.",
-		name: "Guard Charge Field",
+		name: "Guard Break Field",
 		pp: 30,
 		priority: 0,
 		flags: { snatch: 1 },
