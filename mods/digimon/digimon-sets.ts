@@ -587,11 +587,6 @@ export default [
         "moves": ["Facade", "Headbutt", "Sonic Jab", "Mach Jab", "Wind Cutter", "Static Electricity", "Danger Sting", "Confused Storm", "Electric Chute", "Fighting Aura", "Protect", "Substitute", "Crit Charge", "Speed Charge Field", "Guard Charge Field", "Rest", "Agility Charge", "Toxic", "Mirror Reflection", "Final Heal"],
     },
     {
-        "species": "Bukamon",
-		"universe":"Digimon",
-        "moves": ["Facade", "Headbutt", "Sonic Jab", "Mach Jab", "Hail Spear", "Winter Blast", "Danger Sting", "Water Blitz", "Bubble Breath", "Fighting Aura", "Protect", "Substitute", "Crit Charge", "Speed Charge Field", "Guard Charge Field", "Rest", "Agility Charge", "Toxic", "Mirror Reflection", "Final Heal"],
-    },
-    {
         "species": "Tsunomon",
 		"universe":"Digimon",
         "moves": ["Facade", "Headbutt", "Sonic Jab", "Mach Jab", "Winter Blast", "Heat Breath", "Danger Sting", "Water Blitz", "Spit Fire", "Fighting Aura", "Protect", "Substitute", "Crit Charge", "Speed Charge Field", "Guard Charge Field", "Rest", "Agility Charge", "Toxic", "Mirror Reflection", "Final Heal"],
@@ -688,6 +683,11 @@ export default [
         "species": "Dorumon",
 		"universe":"Digimon",
         "moves": ["Grand Rock", "Saint Shield", "Facade", "Fighting Aura", "Fire Tower", "Headbutt", "Metal Sprinter", "Mechanical Claw", "Megaton Punch", "Blackout", "Reverse Program", "Flame Storm", "Speed Charge Field", "Attack Break Field", "Protect", "Rest", "Agility Charge", "Safety Guard", "Substitute", "Toxic"],
+    },
+	{
+        "species": "Dodomon",
+		"universe":"Digimon",
+        "moves": ["Grand Rock", "Saint Shield", "Facade", "Fighting Aura", "Fire Tower", "Headbutt", "Metal Sprinter", "Mechanical Claw", "Megaton Punch", "Blackout", "Reverse Program", "Ultimate Poop Hell", "Speed Charge Field", "Attack Break Field", "Protect", "Rest", "Agility Charge", "Safety Guard", "Substitute", "Toxic"],
     },
     {
         "species": "Dorugamon",
@@ -891,7 +891,7 @@ export default [
         "moves": ["Static Electricity", "Sonic Jab", "Facade", "Headbutt", "Winter Blast", "Mechanical Claw", "DG Waterfall", "Aurora Freeze", "Heavy Rain", "Giga Freeze", "Water Blitz", "Tear Drop", "Guard Break Field", "Protect", "Guard Charge Field", "Rest", "Attack Charge", "Safety Guard", "Substitute", "Toxic", "Guard Charge"],
     },
     {
-        "species": "Drimogemon ",
+        "species": "Drimogemon",
 		"universe":"Digimon",
         "moves": ["Dark Spirit", "Sonic Jab", "Facade", "Headbutt", "Metal Sprinter", "Mechanical Claw", "Comet Hammer", "Venom Disaster", "Prominence Beam", "Bio Field", "Reverse Program", "Heat Laser", "Guard Break Field", "Protect", "Guard Charge Field", "Rest", "Attack Charge", "Safety Guard", "Substitute", "Toxic", "Guard Charge"],
     },
