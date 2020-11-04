@@ -684,7 +684,7 @@ export default [
 		"universe":"Digimon",
         "moves": ["Grand Rock", "Saint Shield", "Facade", "Fighting Aura", "Fire Tower", "Headbutt", "Metal Sprinter", "Mechanical Claw", "Megaton Punch", "Blackout", "Reverse Program", "Flame Storm", "Speed Charge Field", "Attack Break Field", "Protect", "Rest", "Agility Charge", "Safety Guard", "Substitute", "Toxic"],
     },
-	{
+    {
         "species": "Dodomon",
 		"universe":"Digimon",
         "moves": ["Grand Rock", "Saint Shield", "Facade", "Fighting Aura", "Fire Tower", "Headbutt", "Metal Sprinter", "Mechanical Claw", "Megaton Punch", "Blackout", "Reverse Program", "Ultimate Poop Hell", "Speed Charge Field", "Attack Break Field", "Protect", "Rest", "Agility Charge", "Safety Guard", "Substitute", "Toxic"],
