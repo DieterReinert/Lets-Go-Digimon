@@ -32,7 +32,7 @@ const graphicResources = {
     move_panels: {},
     battle_type_images: {},
     icon_sheet: 'https://play.pokemonshowdown.com/sprites/digimon/sprites/digimonicons-sheet.png',
-    battle_background: 'https://sig.grumpybumpers.com/host/DragoticPS.gif',
+    battle_background: 'https://sig.grumpybumpers.com/host/DragoticPS2.gif',
     digivice_sheet: 'https://res.cloudinary.com/dragotic/image/upload/v1560757847/digivice_sheet.png',
 };
 
