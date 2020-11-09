@@ -115,10 +115,12 @@ export class RandomDigimonTeams extends RandomTeams {
 	randomDigimonMonotypeTeam(pool: DigimonSets[]) {
 		const team = [];
 
-		// DIGIMON_TYPES[~~(Math.random() * DIGIMON_TYPES.length)];
-		const selectedType =
+		const invalidTypes = ["Dragon", "Ground", "Ghost", "Psychic", "Rock"];
+		let selectedType =
 			DIGIMON_TYPES[~~(Math.random() * DIGIMON_TYPES.length)];
-
+		while (invalidTypes.includes(selectedType)) {
+			selectedType = DIGIMON_TYPES[~~(Math.random() * DIGIMON_TYPES.length)];
+		}
 		pool = pool.filter(i => {
 			const template = this.dex.getSpecies(i.species);
 			const types = template.types;
