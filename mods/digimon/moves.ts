@@ -167,7 +167,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "aurasphere", target);
 		},
-		flags: {recharge: 1, bullet: 1, protect: 1, mirror: 1, distance: 1},
+		flags: {recharge: 1, bullet: 1, protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type, move) {
 			return typeMod + this.dex.getEffectiveness('Fighting', type);
 		},
