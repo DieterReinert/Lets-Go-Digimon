@@ -16,7 +16,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "sonicboom", target);
 		},
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -36,7 +36,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "quickattack", target);
 		},
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -52,6 +52,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		name: "Tremor",
 		pp: 10,
 		priority: 0,
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "rockslide", target);
+		},
 		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 30,
@@ -71,7 +75,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		name: "Dynamite Kick",
 		pp: 15,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "brickbreak", target);
+		},
+		flags: {contact: 1, protect: 1, mirror: 1},
 		onTryHit(pokemon) {
 			// will shatter screens through sub, before you hit
 			if (pokemon.runImmunity('Fighting')) {
@@ -99,7 +107,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "rapidspin", target);
 		},
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -119,7 +127,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "megapunch", target);
 		},
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
 			chance: 10,
 			volatileStatus: 'flinch',
@@ -142,7 +150,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "crosschop", target);
 		},
-		flags: { contact: 1, protect: 1, mirror: 1, gravity: 1 },
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
 		hasCustomRecoil: true,
 		onMoveFail(target, source, move) {
 			this.damage(source.baseMaxhp / 2, source, source, this.dex.getEffect('High Jump Kick'));
@@ -156,8 +164,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		accuracy: 90,
 		basePower: 150,
 		category: "Special",
-		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
-		shortDesc: "User cannot move next turn.",
+		desc: "Combines Fighting in its type effectiveness and it is a Bullet Move. If this move is successful, the user must recharge on the following turn and cannot select a move.",
+		shortDesc: "User Recharges, Bullet + Fighting DMG.",
 		id: "fightingaura",
 		name: "Fighting Aura",
 		pp: 5,
@@ -166,25 +174,21 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "aurasphere", target);
 		},
-		flags: { recharge: 1, protect: 1, mirror: 1 },
+		flags: {recharge: 1, bullet: 1, protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Fighting', type);
+		},
 		self: {
 			volatileStatus: 'mustrecharge',
 		},
-		secondary: {
-			chance: 10,
-			self: {
-				boosts: {
-					spa: 1,
-				},
-			},
-		},
+		secondary: null,
 		target: "normal",
 		type: "Normal",
 	},
 	busterdive: {
 		num: -108,
 		accuracy: 100,
-		basePower: 200,
+		basePower: 120,
 		category: "Physical",
 		desc: "This attack charges on the first turn and executes on the second. Raises the user's Defense by 1 stage on the first turn. If the user is holding a Power Herb, the move completes in one turn. Contact move.",
 		shortDesc: "DEF+1 turn 1, hits turn 2. Contact move.",
@@ -196,13 +200,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "skullbash", target);
 		},
-		flags: { contact: 1, charge: 1, protect: 1, mirror: 1 },
+		flags: {contact: 1, charge: 1, protect: 1, mirror: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
 			}
 			this.add('-prepare', attacker, move.name, defender);
-			this.boost({ def: 1 }, attacker, attacker, move);
+			this.boost({def: 1}, attacker, attacker, move);
 			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
 				return;
 			}
@@ -231,7 +235,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "ember", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 10,
 			status: 'brn',
@@ -254,7 +258,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "heatwave", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 10,
 			status: 'brn',
@@ -276,7 +280,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "firefang", target);
 		},
-		flags: { bite: 1, contact: 1, protect: 1, mirror: 1 },
+		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 		secondaries: [
 			{
 				chance: 10,
@@ -301,9 +305,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		priority: 0,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
-			this.add('-anim', source, "firepunch", target);
+			this.add('-anim', source, "firelash", target);
 		},
-		flags: { protect: 1, mirror: 1, punch: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondaries: [
 			{
 				chance: 10,
@@ -330,7 +334,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "inferno", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 10,
 			status: 'brn',
@@ -341,23 +345,19 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	"magmabomb": {
 		num: -114,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 85,
 		category: "Special",
-		desc: "Has a 10% chance to burn the target.",
-		shortDesc: "Has a 10% chance to BRN the target.",
+		desc: "Has a 10% chance to confuse the target. Bullet Move.",
+		shortDesc: "Bullet, 10% chance to Confuse target.",
 		name: "Magma Bomb",
 		pp: 15,
 		priority: 0,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
-			this.add('-anim', source, "ember", target);
+			this.add('-anim', source, "dragonrage", target);
 		},
-		flags: { bullet: 1, protect: 1, mirror: 1 },
-		secondaries: [
-			{
-				chance: 10,
-				status: 'brn',
-			}, {
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: {
 				chance: 10,
 				volatileStatus: 'confusion',
 			},
@@ -367,19 +367,19 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	"flamestorm": {
 		num: -115,
-		accuracy: 60,
-		basePower: 95,
+		accuracy: 100,
+		basePower: 80,
 		category: "Special",
 		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Parting Shot, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
 		shortDesc: "Traps/DMGs the Target for 4-5 turns.",
 		name: "Flame Storm",
-		pp: 15,
+		pp: 10,
 		priority: 0,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "magmastorm", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		volatileStatus: 'partiallytrapped',
 		secondary: null,
 		target: "normal",
@@ -388,7 +388,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	"prominencebeam": {
 		num: -116,
 		accuracy: 85,
-		basePower: 130,
+		basePower: 110,
 		category: "Special",
 		desc: "Has a 10% chance to burn the target. 10% chance to BUG the target",
 		shortDesc: "10% chance to BRN/BUG the target.",
@@ -399,7 +399,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "fireblast", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondaries: [
 			{
 				chance: 10,
@@ -415,24 +415,20 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	"infinityburn": {
 		num: -117,
 		accuracy: 100,
-		basePower: 130,
+		basePower: 120,
 		category: "Physical",
-		desc: "Has a 10% chance to burn the target. If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
-		shortDesc: "33% recoil, 10% BRN Chance. Thaws User.",
+		desc: "Has a 10% chance to flinch the target. If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "33% Recoil/Thaw User. 10% Flinch Target.",
 		name: "Infinity Burn",
-		pp: 5,
+		pp: 15,
 		priority: 0,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "flareblitz", target);
 		},
-		flags: { protect: 1, mirror: 1, defrost: 1 },
+		flags: {protect: 1, mirror: 1, defrost: 1},
 		recoil: [33, 100],
-		secondaries: [
-			{
-				chance: 10,
-				status: 'brn',
-			}, {
+		secondary: {
 				chance: 10,
 				volatileStatus: 'flinch',
 			},
@@ -457,7 +453,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "bubblebeam", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 10,
 			boosts: {
@@ -481,7 +477,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "faketears", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 10,
 			volatileStatus: 'bug',
@@ -495,10 +491,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 75,
 		category: "Physical",
 		desc: "10% chance to Freeze adjacent foe(s).",
-		shortDesc: "10% chance to FRZ adjacent foe(s).",
+		shortDesc: "10% FRZ adjacent foe(s).",
 		name: "Winter Blast",
 		pp: 10,
-		flags: { protect: 1, mirror: 1, distance: 1},
+		priority: 0,
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "avalance", target);
+		},
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 10,
 			status: 'frz',
@@ -511,17 +512,21 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		accuracy: 100,
 		basePower: 70,
 		category: "Physical",
-		desc: "10% Freeze the target, 30% chance to lower the targets SPE.",
-		shortDesc: "10% FRZ target, 30% lower target SPE.",
+		desc: "30% chance to lower the targets Speed.",
+		shortDesc: "30% chance to lower the targets SPE.",
 		name: "Hail Spear",
 		pp: 10,
-		flags: { protect: 1, mirror: 1, distance: 1},
+		priority: 0,
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "iciclespear", target);
+		},
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 				chance: 30,
 				boosts: {
 					spe: -1,
 				},
-			},
 		target: "normal",
 		type: "Ice",
 	},
@@ -534,16 +539,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "10% chance to FRZ the target.",
 		name: "Giga Freeze",
 		pp: 15,
-		flags: { protect: 1, mirror: 1, distance: 1},
-		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Ice', type);
-		},
 		priority: 0,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
-			this.add('-anim', source, "freezeshock", target);
+			this.add('-anim', source, "blizzard", target);
 		},
-		thawsTarget: true,
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 10,
 			status: 'frz',
@@ -565,7 +566,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "scald", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -584,7 +585,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "waterfall", target);
 		},
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
 			chance: 10,
 			volatileStatus: 'flinch',
@@ -606,21 +607,21 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "waterspout", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 10,
 			volatileStatus: 'confuse',
 		},
-		target: "foe(s)",
+		target: "allAdjacentFoes",
 		type: "Water",
 	},
 	"aurorafreeze": {
 		num: -126,
 		accuracy: 90,
-		basePower: 130,
+		basePower: 110,
 		category: "Special",
-		desc: "10% chance to freeze the taget. If this move is successful, the user must recharge on the following turn and cannot select a move.",
-		shortDesc: "10% FRZ Target, User can't go next turn.",
+		desc: "Charges turn 1. Hits turn 2. 10% freeze. Hit's Adjacent Foes.",
+		shortDesc: "10% FRZ Adjacent Foes, User Charges Atk.",
 		name: "Aurora Freeze",
 		pp: 5,
 		priority: 0,
@@ -628,15 +629,23 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "blizzard", target);
 		},
-		flags: { protect: 1, mirror: 1, distance: 1, recharge: 1 },
-		self: {
-			volatileStatus: 'mustrecharge',
+		flags: {charge: 1, protect: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
 		},
 		secondary: {
 			chance: 10,
 			status: 'frz',
 		},
-		target: "normal",
+		target: "allAdjacentFoes",
 		type: "Ice",
 	},
 
@@ -656,7 +665,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "attackorder", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 40,
 			status: 'psn',
@@ -678,7 +687,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "crushclaw", target);
 		},
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
 			chance: 50,
 			status: 'psn',
@@ -691,8 +700,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		accuracy: 75,
 		basePower: 70,
 		category: "Special",
-		desc: "Poisons all adjacent foe(s). Grass is immune",
-		shortDesc: "PSN adjacent foe(s), Grass is immune.",
+		desc: "Poisons all adjacent. Grass is immune",
+		shortDesc: "PSN all adjacent, Grass is immune.",
 		name: "DG Poison Powder",
 		pp: 35,
 		priority: 0,
@@ -700,12 +709,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "poisonpowder", target);
 		},
-		flags: { powder: 1, protect: 1, reflectable: 1, mirror: 1 },
+		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
 		secondary: {
 			chance: 100,
 			status: 'psn',
 		},
-		target: "allAdjacentFoes",
+		target: "allAdjacent",
 		type: "Poison",
 	},
 	"charmperfume": {
@@ -713,8 +722,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		accuracy: 75,
 		basePower: 70,
 		category: "Special",
-		desc: "Confuses adjacent targets. Grass is immune.",
-		shortDesc: "Confuses adjacent foes, Grass is immune.",
+		desc: "Confuses all adjacent. Grass is immune to this reflectable Powder Move.",
+		shortDesc: "Confuses all adjacent, Grass is immune.",
 		name: "Charm Perfume",
 		pp: 35,
 		priority: 0,
@@ -722,12 +731,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "ragepowder", target);
 		},
-		flags: { powder: 1, protect: 1, reflectable: 1, mirror: 1 },
+		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
 		secondary: {
 			chance: 100,
 			volatileStatus: 'confusion',
 		},
-		target: "allAdjacentFoes",
+		target: "allAdjacent",
 		type: "Grass",
 	},
 	"dangersting": {
@@ -744,7 +753,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		pp: 15,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
 			chance: 30,
 			volatileStatus: 'bug',
@@ -766,7 +775,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "frenzyplant", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 15,
 			status: 'psn',
@@ -779,8 +788,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		accuracy: 85,
 		basePower: 110,
 		category: "Physical",
-		desc: "Prevents the target from switching out. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Parting Shot, U-turn, or Volt Switch. If the target leaves the field using Baton Pass, the replacement will remain trapped. The effect ends if the user leaves the field.",
-		shortDesc: "Prevents the Target from switching out.",
+		desc: "Prevents the target from switching out. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Parting Shot, U-turn, or Volt Switch. If the target leaves the field using Baton Pass, the replacement will remain trapped. The effect ends if the user leaves the field. Contact Move.",
+		shortDesc: "Contact, Prevents the Target switching.",
 		name: "Green Trap",
 		pp: 5,
 		priority: 0,
@@ -788,7 +797,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "leafage", target);
 		},
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
 			onHit(target, source, move) {
@@ -802,7 +811,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		num: -134,
 		accuracy: 100,
 		basePower: 100,
-		category: "Special",
+		category: "Physical",
 		desc: "Has a 10% chance to lower the target's Speed by 1 stage.",
 		shortDesc: "10% chance to lower target's SPE by 1.",
 		name: "Root Bind",
@@ -812,7 +821,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "grassknot", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 10,
 			boosts: {
@@ -824,11 +833,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	"venomdisaster": {
 		num: -135,
-		accuracy: 90,
+		accuracy: 100,
 		basePower: 200,
 		category: "Special",
-		desc: "Targets adjacent foe(s). If this move is successful, the user must recharge on the following turn and cannot select a move.",
-		shortDesc: "Adjacent foes, user can't go next turn.",
+		desc: "30% Chance to Poison the target. If this move is successful, the user must recharge on the following turn and cannot select a move.",
+		shortDesc: "30% PSN the target. User Recharges.",
 		name: "Venom Disaster",
 		pp: 5,
 		priority: 0,
@@ -836,15 +845,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "sludgewave", target);
 		},
-		flags: { recharge: 1, protect: 1, mirror: 1 },
+		flags: {recharge: 1, protect: 1, mirror: 1},
 		self: {
 			volatileStatus: 'mustrecharge',
 		},
 		secondary: {
-			chance: 20,
+			chance: 30,
 			status: 'psn',
 		},
-		target: "allAdjacentFoes",
+		target: "normal",
 		type: "Grass",
 	},
 
@@ -865,7 +874,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "thundershock", target);
 		},
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
 			chance: 50,
 			status: 'par',
@@ -888,7 +897,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "nuzzle", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
 			status: 'par',
@@ -911,7 +920,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "airslash", target);
 		},
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1, distance: 1},
 		secondary: null,
 		target: "any",
 		type: "Flying",
@@ -931,7 +940,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "thunderbolt", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 10,
 			status: 'par',
@@ -941,8 +950,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	"confusedstorm": {
 		num: -140,
-		accuracy: 100,
-		basePower: 95,
+		accuracy: 90,
+		basePower: 80,
 		category: "Special",
 		desc: "30% chance to Confuse adjacent foe(s), plus Electric Damage in calculation.",
 		shortDesc: "30% Confuse adjacent foes + Electric DMG.",
@@ -957,7 +966,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				this.attrLastMove('[still]');
 				this.add('-anim', source, "hurricane", target);
 			},
-			flags: { protect: 1, mirror: 1, distance: 1},
+			flags: {protect: 1, mirror: 1, distance: 1},
 			onEffectiveness(typeMod, target, type, move) {
 				return typeMod + this.dex.getEffectiveness('Electric', type);
 			},
@@ -967,21 +976,21 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	"spinningshot": {
 		num: -141,
-		accuracy: 80,
-		basePower: 120,
+		accuracy: 70,
+		basePower: 110,
 		category: "Physical",
-		desc: "Targets All Adjacent foe(s).",
-		shortDesc: "Targets All Adjacent foe(s).",
+		desc: "Any Target.",
+		shortDesc: "Any Target.",
 		id: "spinningshot",
 		name: "Spinning Shot",
-		pp: 15,
+		pp: 10,
 		priority: 0,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "aircutter", target);
 		},
-		flags: { protect: 1, mirror: 1, distance: 1},
-		target: "allAdjacentFoes",
+		flags: {protect: 1, mirror: 1, distance: 1},
+		target: "any",
 		type: "Flying",
 	},
 	"megalospark": {
@@ -989,8 +998,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		accuracy: 90,
 		basePower: 100,
 		category: "Physical",
-		desc: "Has a 10% chance to paralyze the target. Contact move.",
-		shortDesc: "10% chance to PAR target, Contact move.",
+		desc: "Has a 10% chance to paralyze the target. Punch and contact move.",
+		shortDesc: "10% PAR target, Punch and Contact move.",
 		id: "megalospark",
 		name: "Megalo Spark",
 		pp: 10,
@@ -999,7 +1008,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "thunderpunch", target);
 		},
-		flags: { contact: 1, protect: 1, mirror: 1, punch: 1 },
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		secondary: {
 			chance: 10,
 			status: 'par',
@@ -1009,25 +1018,25 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	"thunderjustice": {
 		num: -143,
-		accuracy: 90,
-		basePower: 150,
+		accuracy: 70,
+		basePower: 110,
 		category: "Special",
-		desc: "20% Paralyze the target, plus Fairy Damage in calculation.",
-		shortDesc: "20% PAR the Target + Fairy DMG.",
+		desc: "10% Paralyze the target, plus Fairy Damage in calculation.",
+		shortDesc: "10% PAR the Target + Fairy DMG.",
 		id: "thunderjustice",
 		name: "Thunder Justice",
-		pp: 5,
+		pp: 10,
 		priority: 0,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "thunder", target);
 		},
-		flags: { protect: 1, mirror: 1, distance: 1},
+		flags: {protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type, move) {
 			return typeMod + this.dex.getEffectiveness('Fairy', type);
 		},
 		secondary: {
-			chance: 20,
+			chance: 10,
 			status: 'par',
 		},
 		target: "normal",
@@ -1041,6 +1050,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		accuracy: 100,
 		basePower: 65,
 		category: "Physical",
+		Desc: "No additional effect, Contact move.",
 		shortDesc: "No additional effect, Contact move.",
 		name: "Mechanical Claw",
 		pp: 35,
@@ -1049,7 +1059,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "metalclaw", target);
 		},
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -1068,7 +1078,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "metalburst", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Steel",
@@ -1087,7 +1097,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "smartstrike", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 30,
 			volatileStatus: 'bug',
@@ -1109,7 +1119,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "hyperspacehole", target);
 		},
-		flags: { recharge: 1, protect: 1, mirror: 1 },
+		flags: {recharge: 1, protect: 1, mirror: 1},
 		self: {
 			volatileStatus: 'mustrecharge',
 		},
@@ -1137,14 +1147,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "poisongas", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 30,
 			volatileStatus: 'flinch',
 		},
 		target: "normal",
 		type: "Poison",
-		contestType: "Tough",
 	},
 	"cootieskick": {
 		num: -149,
@@ -1160,7 +1169,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "lowkick", target);
 		},
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
 			chance: 30,
 			volatileStatus: 'confuse',
@@ -1182,7 +1191,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "sludgebomb", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 20,
 			volatileStatus: 'flinch',
@@ -1190,14 +1199,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		target: "normal",
 		type: "Poison",
 	},
-	"grandrock": {
+	"comethammer": {
 		num: -151,
 		accuracy: 100,
-		basePower: 95,
+		basePower: 100,
 		category: "Physical",
-		desc: "Hits all adjacent targets.",
-		shortDesc: "Hits all adjacent targets.",
-		name: "Grand Rock",
+		desc: "Hits NonSky. Hits all adjacent targets.",
+		shortDesc: "Hits NonSky. Hits all adjacent targets.",
+		name: "Comet Hammer",
 		pp: 10,
 		priority: 0,
 		onPrepareHit(target, source, move) {
@@ -1214,8 +1223,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		accuracy: 100,
 		basePower: 95,
 		category: "Special",
-		desc: "Has a 10% chance to all PSN adjacent Foe(s).",
-		shortDesc: "10% chance to PSN adjacent Foe(s).",
+		desc: "Has a 20% chance to all BUG adjacent Foe(s).",
+		shortDesc: "20% chance to BUG adjacent Foe(s).",
 		name: "Ultimate Poop Hell",
 		pp: 10,
 		priority: 0,
@@ -1223,7 +1232,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "brutalswing", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 20,
 			volatileStatus: 'bug',
@@ -1234,7 +1243,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	"awesomequake": {
 		num: -153,
 		accuracy: 100,
-		basePower: 70,
+		basePower: 65,
 		category: "Physical",
 		desc: "Has a higher chance for a critical hit.",
 		shortDesc: "High critical hit ratio.",
@@ -1245,29 +1254,29 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "drillrun", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
 		type: "Ground",
 	},
-	"comethammer": {
+	"grandrock": {
 		num: -154,
-		accuracy: 85,
-		basePower: 120,
+		accuracy: 90,
+		basePower: 80,
 		category: "Physical",
-		desc: "Hits all adjacent targets.",
-		shortDesc: "Hits all adjacent targets.",
-		name: "Comet Hammer",
+		desc: "No Additional Effect.",
+		shortDesc: "No Additional Effect.",
+		name: "Grand Rock",
 		pp: 10,
 		priority: 0,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "earthquake", target);
 		},
-		flags: {protect: 1, mirror: 1, nonsky: 1},
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
-		target: "alladjacent",
+		target: "normal",
 		type: "Ground",
 	},
 
@@ -1278,8 +1287,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		accuracy: 100,
 		basePower: 50,
 		category: "Special",
-		desc: "20% chance to confuse the adjacent foe(s).",
-		shortDesc: "20% chance to Confuse adjacent foe(s).",
+		desc: "20% chance to confuse the target.",
+		shortDesc: "20% chance to Confuse target.",
 		name: "Light Soul",
 		pp: 25,
 		priority: 0,
@@ -1287,12 +1296,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "fairywind", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 20,
 			volatileStatus: 'confusion',
 		},
-		target: "allAdjacentFoes",
+		target: "normal",
 		type: "Fairy",
 	},
 
@@ -1310,7 +1319,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "moonblast", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 10,
 			volatileStatus: 'confusion',
@@ -1321,7 +1330,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	"dgflash": {
 		num: -157,
 		accuracy: 100,
-		basePower: 95,
+		basePower: 85,
 		category: "Special",
 		desc: "Targets the adjacent foe(s).",
 		shortDesc: "Targets the adjacent foe(s).",
@@ -1332,18 +1341,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "dazzlinggleam", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Fairy",
 	},
 	"saintshield": {
 		num: -158,
-		accuracy: 85,
-		basePower: 110,
+		accuracy: 100,
+		basePower: 100,
 		category: "Physical",
-		desc: "Targets adjacent foe(s), contact move.",
-		shortDesc: "Targets adjacent foe(s), Contact Move.",
+		desc: "Targets all adjacent. Contact Move.",
+		shortDesc: "Targets all adjacent. Contact Move.",
 		name: "Saint Shield",
 		pp: 10,
 		priority: 0,
@@ -1351,18 +1360,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "gigaimpact", target);
 		},
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
-		target: "allAdjacentFoes",
+		target: "alladjacent",
 		type: "Fairy",
 	},
 	"shiningnova": {
 		num: -159,
 		accuracy: 90,
-		basePower: 150,
+		basePower: 120,
 		category: "Special",
-		desc: "Targets adjacent foe(s). If this move is successful, the user must recharge on the following turn and cannot select a move.",
-		shortDesc: "User can't go next turn, adjacent foes.",
+		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
+		shortDesc: "User can't go next turn.",
 		name: "Shining Nova",
 		pp: 5,
 		priority: 0,
@@ -1370,31 +1379,31 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "hypervoice", target);
 		},
-		flags: { recharge: 1, protect: 1, mirror: 1 },
+		flags: {recharge: 1, protect: 1, mirror: 1},
 		self: {
 			volatileStatus: 'mustrecharge',
 		},
 		secondary: null,
-		target: "allAdjacentFoes",
+		target: "normal",
 		type: "Fairy",
 	},
 	"dgjudgment": {
 		num: -160,
-		accuracy: 70,
-		basePower: 130,
+		accuracy: 85,
+		basePower: 110,
 		category: "Physical",
-		desc: "Targets adjacent foe(s).",
-		shortDesc: "Targets adjacent foe(s).",
+		desc: "No Additional Effect.",
+		shortDesc: "No Additional Effect.",
 		name: "DG Judgment",
-		pp: 5,
+		pp: 10,
 		priority: 0,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "judgment", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
-		target: "allAdjacentFoes",
+		target: "normal",
 		type: "Fairy",
 	},
 
@@ -1414,7 +1423,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "shadowsneak", target);
 		},
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
@@ -1429,7 +1438,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		name: "Blackout",
 		pp: 20,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "nightshade", target);
+		},
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
 			chance: 30,
 			volatileStatus: 'confusion',
@@ -1440,10 +1453,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	"dgnightmare": {
 		num: -163,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 85,
 		category: "Special",
-		desc: "Targets all adjacent foe(s).",
-		shortDesc: "Targets all adjacent foe(s).",
+		desc: "No Additional Effect.",
+		shortDesc: "No Additional Effect.",
 		name: "DG Nightmare",
 		pp: 10,
 		priority: 0,
@@ -1451,22 +1464,26 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "nightmare", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
-		target: "allAdjacentFoes",
+		target: "normal",
 		type: "Dark",
 	},
 	"chaoscloud": {
 		num: -164,
 		accuracy: 85,
 		basePower: 110,
-		category: "Physical",
-		desc: "Has a 10% chance to confuse the target.",
-		shortDesc: "Has a 10% chance to Confuse the target.",
+		category: "Special",
+		desc: "Has a 20% chance to confuse the target.",
+		shortDesc: "Has a 20% chance to Confuse the target.",
 		name: "Chaos Cloud",
 		pp: 5,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "omninouswind", target);
+		},
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 20,
 			volatileStatus: 'confusion',
@@ -1476,19 +1493,19 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	"shadowfall": {
 		num: -165,
-		accuracy: 100,
-		basePower: 100,
+		accuracy: 90,
+		basePower: 95,
 		category: "Physical",
 		desc: "Targets all adjacent foe(s).",
 		shortDesc: "Targets all adjacent foe(s).",
 		name: "Shadow Fall",
-		pp: 5,
+		pp: 10,
 		priority: 0,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
-			this.add('-anim', source, "dazzlinggleam", target);
+			this.add('-anim', source, "darkpulse", target);
 		},
-		flags: { protect: 1, mirror: 1 },
+		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Dark",
@@ -1504,9 +1521,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		desc: "Raises attack of the chosen ally or user by 1.",
 		shortDesc: "Raises ATK of chosen ally or user by 1.",
 		name: "Attack Charge",
-		pp: 30,
+		pp: 15,
 		priority: 0,
-		flags: { snatch: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "sharpen", target);
+		},
+		flags: {snatch: 1},
 		boosts: {
 			atk: 1,
 		},
@@ -1522,9 +1543,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		desc: "Lowers attack of the target by 1.",
 		shortDesc: "Lowers ATK of the target by 1.",
 		name: "Attack Break",
-		pp: 40,
+		pp: 35,
 		priority: 0,
-		flags: { snatch: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "curse", target);
+		},
+		flags: {snatch: 1},
 		boosts: {
 			atk: -1,
 		},
@@ -1542,7 +1567,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		name: "Attack Break Field",
 		pp: 40,
 		priority: 0,
-		flags: { snatch: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "curse", target);
+		},
+		flags: {snatch: 1},
 		boosts: {
 			atk: -1,
 		},
@@ -1558,9 +1587,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		desc: "Raises attack of the allies by 1.",
 		shortDesc: "Raises ATK of the allies side by 1.",
 		name: "Attack Charge Field",
-		pp: 20,
+		pp: 10,
 		priority: 0,
-		flags: { snatch: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "sharpen", target);
+		},
+		flags: {snatch: 1},
 		boosts: {
 			atk: 1,
 		},
@@ -1576,9 +1609,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		desc: "Raises Special Attack & Special Defense of the chosen ally or user by 1.",
 		shortDesc: "+1 SPA & SPD to chosen ally or user.",
 		name: "Mental Charge",
-		pp: 20,
+		pp: 10,
 		priority: 0,
-		flags: { snatch: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "calmmind", target);
+		},
+		flags: {snatch: 1},
 		boosts: {
 			spa: 1,
 			spd: 1,
@@ -1595,9 +1632,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		desc: "Raises special attack and special defense of allies by 1.",
 		shortDesc: "Raises SPA & SPD of allies by 1.",
 		name: "Mental Charge Field",
-		pp: 20,
+		pp: 5,
 		priority: 0,
-		flags: { snatch: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "calmmind", target);
+		},
+		flags: {snatch: 1},
 		boosts: {
 			spa: 1,
 			spd: 1,
@@ -1614,9 +1655,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		desc: "Raises defense of the chosen ally or user by 1.",
 		shortDesc: "Raises DEF of chosen ally or user by 1.",
 		name: "Guard Charge",
-		pp: 40,
+		pp: 15,
 		priority: 0,
-		flags: { snatch: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "harden", target);
+		},
+		flags: {snatch: 1},
 		boosts: {
 			def: 1,
 		},
@@ -1632,9 +1677,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		desc: "Raises defense of the chosen allies by 1.",
 		shortDesc: "Raises DEF of the chosen allies by 1.",
 		name: "Guard Charge Field",
-		pp: 20,
+		pp: 10,
 		priority: 0,
-		flags: { snatch: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "harden", target);
+		},
+		flags: {snatch: 1},
 		boosts: {
 			def: 1,
 		},
@@ -1652,7 +1701,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		name: "Guard Break Field",
 		pp: 30,
 		priority: 0,
-		flags: { snatch: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "scaryface", target);
+		},
+		flags: {snatch: 1},
 		boosts: {
 			def: -1,
 		},
@@ -1668,9 +1721,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		desc: "Raises speed of the chosen allies by 1.",
 		shortDesc: "Raises SPE of the chosen allies by 1.",
 		name: "Speed Charge Field",
-		pp: 30,
+		pp: 10,
 		priority: 0,
-		flags: { snatch: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "agility", target);
+		},
+		flags: {snatch: 1},
 		boosts: {
 			spe: 1,
 		},
@@ -1688,7 +1745,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		name: "Speed Break Field",
 		pp: 40,
 		priority: 0,
-		flags: { snatch: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "stringshot", target);
+		},
+		flags: {snatch: 1},
 		boosts: {
 			spe: -1,
 		},
@@ -1706,7 +1767,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		name: "Attack Charge",
 		pp: 15,
 		priority: 0,
-		flags: { snatch: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "agility", target);
+		},
+		flags: {snatch: 1},
 		boosts: {
 			evasion: 1,
 		},
@@ -1722,9 +1787,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		desc: "The user restores 1/2 of its maximum HP, rounded half up.",
 		shortDesc: "Heals the user by 50% of its max HP.",
 		name: "Final Heal",
-		pp: 10,
+		pp: 5,
 		priority: 0,
-		flags: { snatch: 1, heal: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "recover", target);
+		},
+		flags: {snatch: 1, heal: 1},
 		heal: [1, 2],
 		secondary: null,
 		target: "adjacentAllyOrSelf",
@@ -1740,7 +1809,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		name: "Restore",
 		pp: 10,
 		priority: 0,
-		flags: { protect: 1, reflectable: 1, heal: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "healbell", target);
+		},
+		flags: {protect: 1, reflectable: 1, heal: 1},
 		onHit(target, source) {
 			if (!target.cureStatus()) return false;
 			this.heal(Math.ceil(source.maxhp * 0.1), source);
@@ -1759,7 +1832,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		name: "Status Barrier",
 		pp: 25,
 		priority: 0,
-		flags: { snatch: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "safeguard", target);
+		},
+		flags: {snatch: 1},
 		sideCondition: 'safeguard',
 		condition: {
 			duration: 5,
@@ -1811,7 +1888,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		desc: "The chosen ally or user will survive attacks made by other Pokemon during this turn with at least 1 HP. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Obstruct, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
 		shortDesc: "Ally/User survives with at least 1 HP.",
 		name: "Safety Guard",
-		pp: 10,
+		pp: 5,
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "endure", target);
+		},
 		priority: 4,
 		flags: {},
 		stallingMove: true,
@@ -1847,9 +1928,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		desc: "Raises the chosen ally or user chance for a critical hit by 2 stages. Fails if the user already has the effect. Baton Pass can be used to transfer this effect to an ally.",
 		shortDesc: "Raises the Ally/User crit ratio by 2.",
 		name: "Crit Charge",
-		pp: 30,
+		pp: 15,
 		priority: 0,
-		flags: { snatch: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "focusenergy", target);
+		},
+		flags: {snatch: 1},
 		volatileStatus: 'focusenergy',
 		condition: {
 			onStart(target, source, effect) {
@@ -1868,7 +1953,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: null,
 		target: "adjacentAllyOrSelf",
 		type: "Normal",
-		zMove: { boost: { accuracy: 1 } },
+		zMove: {boost: {accuracy: 1}},
 	},
 	"dispel": {
 		num: -183,
@@ -1879,9 +1964,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "Removes stat changes of the Ally/User.",
 		isViable: true,
 		name: "Dispel",
-		pp: 30,
+		pp: 15,
 		priority: 0,
-		flags: { authentic: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "haze", target);
+		},
+		flags: {authentic: 1},
 		onHitField() {
 			this.add('-clearallboost');
 			for (const pokemon of this.getAllActive()) {
@@ -1905,8 +1994,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "If hit by physical Atk, return 2x DMG.",
 		name: "Cross Counter",
 		pp: 20,
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "counter", target);
+		},
 		priority: -5,
-		flags: { contact: 1, protect: 1 },
+		flags: {contact: 1, protect: 1},
 		beforeTurnCallback(pokemon) {
 			pokemon.addVolatile('counter');
 		},
@@ -1936,7 +2029,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: null,
 		target: "scripted",
 		type: "Normal",
-		maxMove: { basePower: 75 },
+		maxMove: {basePower: 75},
 	},
 	"mirrorreflection": {
 		num: -185,
@@ -1951,8 +2044,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "If hit by special Atk, returns 2x DMG.",
 		name: "Mirror Reflection",
 		pp: 20,
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "mirrorcoat", target);
+		},
 		priority: -5,
-		flags: { protect: 1 },
+		flags: {protect: 1},
 		beforeTurnCallback(pokemon) {
 			pokemon.addVolatile('mirrorcoat');
 		},
@@ -1991,9 +2088,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		desc: "Cures the user or allies SLP, heals 10% max HP. Rounded half up.",
 		shortDesc: "Cures User/Ally SLP, heals 10% max HP.",
 		name: "Anti-Sleep",
-		pp: 40,
+		pp: 15,
 		priority: 0,
-		flags: { protect: 1, reflectable: 1, heal: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "healbell", target);
+		},
+		flags: {protect: 1, reflectable: 1, heal: 1},
 		onHit(target, source) {
 			if (target.status === 'slp') target.cureStatus();
 			this.heal(Math.ceil(source.maxhp * 0.1), source);
@@ -2010,9 +2111,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		desc: "Cures the user or allies PSN, heals 10% max HP. Rounded half up.",
 		shortDesc: "Cures User/Ally PSN, heals 10% max HP.",
 		name: "Anti-Poison",
-		pp: 40,
+		pp: 15,
 		priority: 0,
-		flags: { protect: 1, reflectable: 1, heal: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "healbell", target);
+		},
+		flags: {protect: 1, reflectable: 1, heal: 1},
 		onHit(target, source) {
 			if (target.status === 'psn') target.cureStatus();
 			this.heal(Math.ceil(source.maxhp * 0.1), source);
@@ -2029,9 +2134,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		desc: "Cures the user or allies PAR, heals 10% max HP. Rounded half up.",
 		shortDesc: "Cures User/Ally PAR, heals 10% max HP.",
 		name: "Anti-Paralysis",
-		pp: 40,
+		pp: 15,
 		priority: 0,
-		flags: { protect: 1, reflectable: 1, heal: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "healbell", target);
+		},
+		flags: {protect: 1, reflectable: 1, heal: 1},
 		onHit(target, source) {
 			if (target.status === 'par') target.cureStatus();
 			this.heal(Math.ceil(source.maxhp * 0.1), source);
@@ -2048,9 +2157,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		desc: "Cures the user or allies Confusion, heals 10% max HP. Rounded half up.",
 		shortDesc: "Cures User/Ally Confusion, heals 10% HP.",
 		name: "Anti-Panic",
-		pp: 40,
+		pp: 15,
 		priority: 0,
-		flags: { protect: 1, reflectable: 1, heal: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "healbell", target);
+		},
+		flags: {protect: 1, reflectable: 1, heal: 1},
 		onHit(target, source) {
 			if (target.status === 'confusion') target.cureStatus();
 			this.heal(Math.ceil(source.maxhp * 0.1), source);
@@ -2067,9 +2180,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		desc: "Cures the user or allies BUG Status, heals 10% max HP. Rounded half up.",
 		shortDesc: "Cures User/Ally BUG, heals 10% max HP.",
 		name: "Anti-BUG",
-		pp: 40,
+		pp: 15,
 		priority: 0,
-		flags: { protect: 1, reflectable: 1, heal: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "healbell", target);
+		},
+		flags: {protect: 1, reflectable: 1, heal: 1},
 		onHit(target, source) {
 			if (target.status === 'bug') target.cureStatus();
 			this.heal(Math.ceil(source.maxhp * 0.1), source);
@@ -2086,9 +2203,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		desc: "Until the end of the next turn, the user's attacks will be critical hits.",
 		shortDesc: "Users crits until end of the next turn.",
 		name: "Acceleration Boost",
-		pp: 30,
+		pp: 48,
 		priority: 0,
-		flags: { snatch: 1 },
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "laserfocus", target);
+		},
+		flags: {snatch: 1},
 		volatileStatus: 'laserfocus',
 		condition: {
 			duration: 2,
@@ -2124,6 +2245,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		name: "LGPE Absorb",
 		pp: 25,
 		priority: 0,
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "absorb", target);
+		},
 		flags: {protect: 1, mirror: 1, heal: 1},
 		drain: [1, 2],
 		secondary: null,
@@ -2141,6 +2266,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		name: "LGPE Mega Drain",
 		pp: 15,
 		priority: 0,
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "megadrain", target);
+		},
 		flags: {protect: 1, mirror: 1, heal: 1},
 		drain: [1, 2],
 		secondary: null,
@@ -2158,6 +2287,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "User switches out.",
 		name: "LGPE Teleport",
 		pp: 20,
+		priority: 0,
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "teleport", target);
+		},
 		priority: -6,
 		flags: {},
 		selfSwitch: true,
@@ -2178,6 +2312,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		name: "LGPE Sky Attack",
 		pp: 5,
 		priority: 0,
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "skyattack", target);
+		},
 		flags: {charge: 1, protect: 1, mirror: 1, distance: 1},
 		critRatio: 2,
 		onTryMove(attacker, defender, move) {
@@ -2209,6 +2347,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		name: "LGPE Solar Beam",
 		pp: 10,
 		priority: 0,
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "solarbeam", target);
+		},
 		flags: {charge: 1, protect: 1, mirror: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
