@@ -360,8 +360,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: {
 				chance: 10,
 				volatileStatus: 'confusion',
-			},
-		],
+		},
 		target: "normal",
 		type: "Dragon",
 	},
@@ -431,8 +430,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: {
 				chance: 10,
 				volatileStatus: 'flinch',
-			},
-		],
+		},
 		target: "normal",
 		type: "Fire",
 	},
@@ -2379,4 +2377,5 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		type: "Grass",
 		contestType: "Cool",
 	},
+},
 };
