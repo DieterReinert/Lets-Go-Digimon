@@ -143,16 +143,6 @@ const main = async () => {
         }
     });
 
-    Object.keys(digimonShowdown.types).forEach((type, i) => {
-        let currTypeSheet = typeSheet;
-
-        currTypeSheet = currTypeSheet.replace('%startComment', i === 0 ? '/** DIGIMON TYPES CSS **/' : '');
-        currTypeSheet = currTypeSheet.replace(/%type/g, type);
-        currTypeSheet = currTypeSheet.replace('%battle_type_image', graphicResources.battle_type_images[type]);
-
-        CSS += `${currTypeSheet}`;
-    });
-
     // Write CSS
     const CSSfull = new cleanCSS({
         level: 0,
