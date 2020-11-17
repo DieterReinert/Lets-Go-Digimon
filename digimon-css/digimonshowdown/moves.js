@@ -525,6 +525,7 @@
 				boosts: {
 					spe: -1,
 				},
+		},
 		target: "normal",
 		type: "Ice",
 	},
@@ -2377,5 +2378,4 @@
 		type: "Grass",
 		contestType: "Cool",
 	},
-},
 }; exports.Moves = Moves;
