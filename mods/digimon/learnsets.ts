@@ -395,7 +395,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			restore: ["7M"],
 		},
 	},
-	dioboromon: {
+	diaboromon: {
 		learnset: {
 			dynamitekick: ["7M"],
 			facade: ["7M"],
