@@ -206,7 +206,7 @@ exports.commands = {
 				let foundDigimon = 0;
 				for (const digimon in mod.data.Pokedex) {
 					let template = mod.getSpecies(digimon);
-					if (template.num > -2000 || template.num < -3000) continue;
+					if (template.num > -2000 || template.num < -3100) continue;
 					if (reqs.alphabetical && !template.id.startsWith(reqs.alphabetical)) continue;
 					if (reqs.stage && reqs.stage !== template.stage) continue;
 					if (reqs.type && !template.types.includes(reqs.type)) continue;
