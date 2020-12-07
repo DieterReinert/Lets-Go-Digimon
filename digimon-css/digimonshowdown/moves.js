@@ -205,7 +205,7 @@
 			if (attacker.removeVolatile(move.id)) {
 				return;
 			}
-			this.add('-prepare', attacker, move.name, defender);
+			this.add('-prepare', attacker, "Skull Bash");
 			this.boost({def: 1}, attacker, attacker, move);
 			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
 				return;
@@ -633,7 +633,7 @@
 			if (attacker.removeVolatile(move.id)) {
 				return;
 			}
-			this.add('-prepare', attacker, move.name);
+			this.add('-prepare', attacker, "Blizzard");
 			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
 				return;
 			}
@@ -1108,7 +1108,7 @@
 		num: -147,
 		accuracy: 90,
 		basePower: 150,
-		category: "Physcial",
+		category: "Physical",
 		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move. 20% chance to BUG the target.",
 		shortDesc: "User can't go next turn. 20% BUG target.",
 		name: "DG Dimension V3",
@@ -1125,9 +1125,9 @@
 		secondary: {
 			chance: 20,
 			volatileStatus: 'bug',
-			target: "normal",
-			type: "Steel",
 		},
+		target: "normal",
+		type: "Steel",
 	},
 
 	// Poison (2) & Ground Moves //
@@ -1386,14 +1386,14 @@
 		target: "normal",
 		type: "Fairy",
 	},
-	"dgjudgment": {
+	"dgjudgement": {
 		num: -160,
 		accuracy: 85,
 		basePower: 110,
 		category: "Physical",
 		desc: "No Additional Effect.",
 		shortDesc: "No Additional Effect.",
-		name: "DG Judgment",
+		name: "DG Judgement",
 		pp: 10,
 		priority: 0,
 		onPrepareHit(target, source, move) {
@@ -2321,7 +2321,7 @@
 			if (attacker.removeVolatile(move.id)) {
 				return;
 			}
-			this.add('-prepare', attacker, move.name, defender);
+			this.add('-prepare', attacker, "Sky Attack");
 			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
 				return;
 			}
@@ -2355,7 +2355,7 @@
 			if (attacker.removeVolatile(move.id)) {
 				return;
 			}
-			this.add('-prepare', attacker, move.name, defender);
+			this.add('-prepare', attacker, "Solar Beam");
 			if (['sunnyday', 'desolateland'].includes(attacker.effectiveWeather())) {
 				this.attrLastMove('[still]');
 				this.addMove('-anim', attacker, move.name, defender);

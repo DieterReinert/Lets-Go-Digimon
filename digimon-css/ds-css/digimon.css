@@ -4405,6 +4405,19 @@ div[id*="digimon"] .movemenu button[data-move="Metal Sprinter"] .pp:before {
 div[id*="digimon"] .movemenu button[data-move="Reverse Program"] .pp:before {
   content: "(30% chance to BUG the target.) "
 }
+/** DG Dimension V3 CSS **/
+.movemenu button[data-move="DG Dimension V3"],
+.movemenu button[data-move="DG Dimension V3"]:hover {
+  background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/steel-panel.png') no-repeat;
+  background-size: cover
+}
+.movemenu button[data-move="DG Dimension V3"] .type:after {
+  font-weight: bold;
+  content: "[PHY] [BP: 150] [Acc: 90]"
+}
+div[id*="digimon"] .movemenu button[data-move="DG Dimension V3"] .pp:before {
+  content: "(User can't go next turn. 20% BUG target.) "
+}
 /** Odor Spray CSS **/
 .movemenu button[data-move="Odor Spray"],
 .movemenu button[data-move="Odor Spray"]:hover {
@@ -4561,17 +4574,17 @@ div[id*="digimon"] .movemenu button[data-move="Saint Shield"] .pp:before {
 div[id*="digimon"] .movemenu button[data-move="Shining Nova"] .pp:before {
   content: "(User can't go next turn.) "
 }
-/** DG Judgment CSS **/
-.movemenu button[data-move="DG Judgment"],
-.movemenu button[data-move="DG Judgment"]:hover {
+/** DG Judgement CSS **/
+.movemenu button[data-move="DG Judgement"],
+.movemenu button[data-move="DG Judgement"]:hover {
   background: #e3e3e3 url('https://play.pokemonshowdown.com/sprites/digimon/plugin-css/fairy-panel.png') no-repeat;
   background-size: cover
 }
-.movemenu button[data-move="DG Judgment"] .type:after {
+.movemenu button[data-move="DG Judgement"] .type:after {
   font-weight: bold;
   content: "[PHY] [BP: 110] [Acc: 85]"
 }
-div[id*="digimon"] .movemenu button[data-move="DG Judgment"] .pp:before {
+div[id*="digimon"] .movemenu button[data-move="DG Judgement"] .pp:before {
   content: "(No Additional Effect.) "
 }
 /** Dark Spirit CSS **/
