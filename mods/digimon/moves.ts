@@ -1386,14 +1386,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		target: "normal",
 		type: "Fairy",
 	},
-	"dgjudgment": {
+	"dgjudgement": {
 		num: -160,
 		accuracy: 85,
 		basePower: 110,
 		category: "Physical",
 		desc: "No Additional Effect.",
 		shortDesc: "No Additional Effect.",
-		name: "DG Judgment",
+		name: "DG Judgement",
 		pp: 10,
 		priority: 0,
 		onPrepareHit(target, source, move) {
