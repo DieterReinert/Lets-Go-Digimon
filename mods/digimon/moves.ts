@@ -1108,7 +1108,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		num: -147,
 		accuracy: 90,
 		basePower: 150,
-		category: "Physcial",
+		category: "Physical",
 		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move. 20% chance to BUG the target.",
 		shortDesc: "User can't go next turn. 20% BUG target.",
 		name: "DG Dimension V3",
@@ -1125,9 +1125,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: {
 			chance: 20,
 			volatileStatus: 'bug',
-			target: "normal",
-			type: "Steel",
 		},
+		target: "normal",
+		type: "Steel",
 	},
 
 	// Poison (2) & Ground Moves //
