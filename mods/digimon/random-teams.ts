@@ -12,21 +12,25 @@ const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart)
 export class RandomDigimonTeams extends RandomTeams {
 	prepareSet(set: DigimonSets) {
 		let randomMoves: Array<String> = [];
-		let move = null;
+
+		const template = this.dex.getSpecies(set.species);
+		const mbstmin = 1381;
 
 		while (randomMoves.length < 4) {
-			move = this.sample(set.moves);
-
-			if (randomMoves.includes(move)) continue;
-			randomMoves.push(move);
+    			const moveid = this.sample(set.moves);
+    			const move = this.dex.getMove(moveid);
+    			if (randomMoves.length < 1 && !template.types.includes(move.type)) continue;
+    			if (randomMoves.length < 2 && move.category == 'Status') continue;
+			if (randomMoves.includes(move.name)) continue; 
+			randomMoves.push(move.name);
 		}
 
 		// CPed over
 
 		//- Inherit how pokemon does it with Kuramon instead of sunkern
-		const mbstmin = 1381;
 
-		const template = this.dex.getSpecies(set.species);
+
+
 		const stats = template.baseStats;
 
 		// Modified base stat total assumes 31 IVs, 85 EVs in every stat
