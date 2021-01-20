@@ -103,7 +103,7 @@ export class RandomDigimonTeams extends RandomTeams {
 			if (hasXEvo === true && randomToPush.item === "X-Antibody") continue;
 			if (randomToPush.item === "X-Antibody") hasXEvo = true;
 
-			if (randomToPush.universe === 'pokemon') {
+			if (randomToPush.universe === 'Pokemon') {
 					randomToPush.ability = this.dex.getAbility('noability');
 			} else {
 					randomToPush.ability = this.dex.getSpecies(toID(randomToPush.species)).abilities[0];
