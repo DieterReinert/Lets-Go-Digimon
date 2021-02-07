@@ -358,8 +358,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		flags: {bullet: 1, protect: 1, mirror: 1},
 		secondary: {
-				chance: 10,
-				volatileStatus: 'confusion',
+			chance: 10,
+			volatileStatus: 'confusion',
 		},
 		target: "normal",
 		type: "Dragon",
@@ -428,8 +428,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: {protect: 1, mirror: 1, defrost: 1},
 		recoil: [33, 100],
 		secondary: {
-				chance: 10,
-				volatileStatus: 'flinch',
+			chance: 10,
+			volatileStatus: 'flinch',
 		},
 		target: "normal",
 		type: "Fire",
@@ -521,10 +521,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		flags: {protect: 1, mirror: 1},
 		secondary: {
-				chance: 30,
-				boosts: {
-					spe: -1,
-				},
+			chance: 30,
+			boosts: {
+				spe: -1,
+			},
 		},
 		target: "normal",
 		type: "Ice",
@@ -1683,11 +1683,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.add('-anim', source, "harden", target);
 		},
 		flags: {snatch: 1},
-		boosts: {
-			def: 1,
+		onHit(target) {
+			this.boost({def: 1}, target);
 		},
 		secondary: null,
-		target: "allySide",
+		target: "adjacentAllyOrSelf",
 		type: "Normal",
 	},
 	"guardbreakfield": {
