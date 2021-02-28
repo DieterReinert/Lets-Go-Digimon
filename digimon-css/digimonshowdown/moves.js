@@ -358,8 +358,8 @@
 		},
 		flags: {bullet: 1, protect: 1, mirror: 1},
 		secondary: {
-				chance: 10,
-				volatileStatus: 'confusion',
+			chance: 10,
+			volatileStatus: 'confusion',
 		},
 		target: "normal",
 		type: "Dragon",
@@ -428,8 +428,8 @@
 		flags: {protect: 1, mirror: 1, defrost: 1},
 		recoil: [33, 100],
 		secondary: {
-				chance: 10,
-				volatileStatus: 'flinch',
+			chance: 10,
+			volatileStatus: 'flinch',
 		},
 		target: "normal",
 		type: "Fire",
@@ -521,10 +521,10 @@
 		},
 		flags: {protect: 1, mirror: 1},
 		secondary: {
-				chance: 30,
-				boosts: {
-					spe: -1,
-				},
+			chance: 30,
+			boosts: {
+				spe: -1,
+			},
 		},
 		target: "normal",
 		type: "Ice",
@@ -1583,8 +1583,8 @@
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		desc: "Raises attack of the allies by 1.",
-		shortDesc: "Raises ATK of the allies side by 1.",
+		desc: "Raises attack of user and allies by 1.",
+		shortDesc: "Raises ATK of user and allies by 1.",
 		name: "Attack Charge Field",
 		pp: 10,
 		priority: 0,
@@ -1597,7 +1597,7 @@
 			atk: 1,
 		},
 		secondary: null,
-		target: "allySide",
+		target: "allies",
 		type: "Normal",
 	},
 	"mentalcharge": {
@@ -1628,8 +1628,8 @@
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		desc: "Raises special attack and special defense of allies by 1.",
-		shortDesc: "Raises SPA & SPD of allies by 1.",
+		desc: "Raises special attack / special defense of user and allies by 1.",
+		shortDesc: "Raises SPA/SPD of user and allies by 1.",
 		name: "Mental Charge Field",
 		pp: 5,
 		priority: 0,
@@ -1643,7 +1643,7 @@
 			spd: 1,
 		},
 		secondary: null,
-		target: "allySide",
+		target: "allies",
 		type: "Normal",
 	},
 	"guardcharge": {
@@ -1673,8 +1673,8 @@
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		desc: "Raises defense of the chosen allies by 1.",
-		shortDesc: "Raises DEF of the chosen allies by 1.",
+		desc: "Raises defense of user and allies by 1.",
+		shortDesc: "Raises DEF of user and allies by 1.",
 		name: "Guard Charge Field",
 		pp: 10,
 		priority: 0,
@@ -1687,7 +1687,7 @@
 			def: 1,
 		},
 		secondary: null,
-		target: "allySide",
+		target: "allies",
 		type: "Normal",
 	},
 	"guardbreakfield": {
@@ -1717,8 +1717,8 @@
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		desc: "Raises speed of the chosen allies by 1.",
-		shortDesc: "Raises SPE of the chosen allies by 1.",
+		desc: "Raises speed of user and allies by 1.",
+		shortDesc: "Raises SPE of user and allies by 1.",
 		name: "Speed Charge Field",
 		pp: 10,
 		priority: 0,
@@ -1731,7 +1731,7 @@
 			spe: 1,
 		},
 		secondary: null,
-		target: "allySide",
+		target: "allies",
 		type: "Normal",
 	},
 	"speedbreakfield": {
@@ -2379,3 +2379,5 @@
 		contestType: "Cool",
 	},
 }; exports.Moves = Moves;
+
+ //# sourceMappingURL=sourceMaps/moves.js.map

@@ -764,7 +764,7 @@
 		color: "Black",
 		eggGroups: ["Undiscovered"],
 	},
-		blackgreymon: {
+	blackgreymon: {
 		num: -2053,
 		name: "BlackGreymon",
 		stage: "Champion",
@@ -2892,7 +2892,7 @@
 		stage: "X-Evolution",
 		universe: "Digimon",
 		forme: "Mega",
-		types: ["Fire",],
+		types: ["Fire"],
 		gender: "N",
 		baseStats: {hp: 58, atk: 80, def: 65, spa: 64, spd: 58, spe: 80},
 		abilities: {0: "X-Vaccine"},
@@ -4313,11 +4313,13 @@
 		universe: "Pokemon",
 	},
 	meltan: {
-			inherit: true,
-			universe: "Pokemon",
+		inherit: true,
+		universe: "Pokemon",
 	},
 	melmetal: {
 		inherit: true,
 		universe: "Pokemon",
 	},
 }; exports.Pokedex = Pokedex;
+
+ //# sourceMappingURL=sourceMaps/pokedex.js.map

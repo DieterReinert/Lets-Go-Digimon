@@ -4702,7 +4702,7 @@ div[id*="digimon"] .movemenu button[data-move="Attack Break Field"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Attack Charge Field"] .pp:before {
-  content: "(Raises ATK of the allies side by 1.) "
+  content: "(Raises ATK of user and allies by 1.) "
 }
 /** Mental Charge CSS **/
 .movemenu button[data-move="Mental Charge"],
@@ -4728,7 +4728,7 @@ div[id*="digimon"] .movemenu button[data-move="Mental Charge"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Mental Charge Field"] .pp:before {
-  content: "(Raises SPA & SPD of allies by 1.) "
+  content: "(Raises SPA/SPD of user and allies by 1.) "
 }
 /** Guard Charge CSS **/
 .movemenu button[data-move="Guard Charge"],
@@ -4754,7 +4754,7 @@ div[id*="digimon"] .movemenu button[data-move="Guard Charge"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Guard Charge Field"] .pp:before {
-  content: "(Raises DEF of the chosen allies by 1.) "
+  content: "(Raises DEF of user and allies by 1.) "
 }
 /** Guard Break Field CSS **/
 .movemenu button[data-move="Guard Break Field"],
@@ -4780,7 +4780,7 @@ div[id*="digimon"] .movemenu button[data-move="Guard Break Field"] .pp:before {
   content: "[STA] [BP: 0] [Acc: -]"
 }
 div[id*="digimon"] .movemenu button[data-move="Speed Charge Field"] .pp:before {
-  content: "(Raises SPE of the chosen allies by 1.) "
+  content: "(Raises SPE of user and allies by 1.) "
 }
 /** Speed Break Field CSS **/
 .movemenu button[data-move="Speed Break Field"],

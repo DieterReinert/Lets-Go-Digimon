@@ -5335,7 +5335,7 @@
 			toxic: ["7M"],
 		},
 	},
-		bulbasaur: {
+	bulbasaur: {
 		learnset: {
 			doubleedge: ["7L32"],
 			facade: ["7M"],
@@ -10730,3 +10730,5 @@
 		},
 	},
 }; exports.Learnsets = Learnsets;
+
+ //# sourceMappingURL=sourceMaps/learnsets.js.map

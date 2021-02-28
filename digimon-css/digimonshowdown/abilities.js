@@ -1,6 +1,6 @@
 "use strict";Object.defineProperty(exports, "__esModule", {value: true}); const Abilities = {
 	"noability": {
-		inherit: true
+		inherit: true,
 	},
 	"data": {
 		name: "Data",
@@ -41,7 +41,7 @@
 			if (pokemon.item !== 'xantibody' || pokemon.hp > pokemon.maxhp / 2) return;
 			this.add('-activate', pokemon, 'ability: Data');
 			pokemon.formeChange(`${pokemon.name}-X`, this.effect, true);
-			let ability = this.dex.getAbility("xdata");
+			const ability = this.dex.getAbility("xdata");
 			this.add('-ability', pokemon, ability, '[from] ability: Data', '[of] ' + pokemon);
 			pokemon.setAbility(this.dex.getAbility("xdata"));
 		},
@@ -85,7 +85,7 @@
 			if (pokemon.item !== 'xantibody' || pokemon.hp > pokemon.maxhp / 2) return;
 			this.add('-activate', pokemon, 'ability: Virus');
 			pokemon.formeChange(`${pokemon.name}-X`, this.effect, true);
-			let ability = this.dex.getAbility("xvirus");
+			const ability = this.dex.getAbility("xvirus");
 			this.add('-ability', pokemon, ability, '[from] ability: Virus', '[of] ' + pokemon);
 			pokemon.setAbility(this.dex.getAbility("xvirus"));
 		},
@@ -129,7 +129,7 @@
 			if (pokemon.item !== 'xantibody' || pokemon.hp > pokemon.maxhp / 2) return;
 			this.add('-activate', pokemon, 'ability: Vaccine');
 			pokemon.formeChange(`${pokemon.name}-X`, this.effect, true);
-			let ability = this.dex.getAbility("xvaccine");
+			const ability = this.dex.getAbility("xvaccine");
 			this.add('-ability', pokemon, ability, '[from] ability: Vaccine', '[of] ' + pokemon);
 			pokemon.setAbility(this.dex.getAbility("xvaccine"));
 		},
@@ -275,4 +275,6 @@
 			}
 		},
 	},
-}; exports.Abilities = Abilities
+}; exports.Abilities = Abilities;
+
+ //# sourceMappingURL=sourceMaps/abilities.js.map

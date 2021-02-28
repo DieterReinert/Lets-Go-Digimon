@@ -880,3 +880,5 @@
 		},
 	},
 }; exports.TypeChart = TypeChart;
+
+ //# sourceMappingURL=sourceMaps/typechart.js.map

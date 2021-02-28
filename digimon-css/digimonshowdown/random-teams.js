@@ -5,28 +5,32 @@ var _dex = require('../../../.sim-dist/dex');
 
 // Digimon X Pokemon
 const DIGI_X_POKE = "[Digimon] Digimon x Pokemon";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const RandomLetsGo = new (0, _randomteams2.default)(DIGI_X_POKE, null);
 
-const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart)
+const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart);
 
  class RandomDigimonTeams extends _randomteams.default {
 	prepareSet(set) {
-		let randomMoves = [];
-		let move = null;
+		const randomMoves = [];
+
+		const template = this.dex.getSpecies(set.species);
+		const mbstmin = 1381;
 
 		while (randomMoves.length < 4) {
-			move = this.sample(set.moves);
-
-			if (randomMoves.includes(move)) continue;
-			randomMoves.push(move);
+			const moveid = this.sample(set.moves);
+			const move = this.dex.getMove(moveid);
+			if (randomMoves.length < 1 && !template.types.includes(move.type)) continue;
+			if (randomMoves.length < 2 && move.category === 'Status') continue;
+			if (randomMoves.includes(move.name)) continue;
+			randomMoves.push(move.name);
 		}
 
 		// CPed over
 
-		//- Inherit how pokemon does it with Kuramon instead of sunkern
-		const mbstmin = 1381;
+		// - Inherit how pokemon does it with Kuramon instead of sunkern
 
-		const template = this.dex.getSpecies(set.species);
+
 		const stats = template.baseStats;
 
 		// Modified base stat total assumes 31 IVs, 85 EVs in every stat
@@ -75,11 +79,12 @@ const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart)
 				set.ability,
 			item: set.item ? set.item : "",
 			gender: "N",
+			// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 			moves: [set.reservedMove].concat(randomMoves),
 			// natures[~~(Math.random() * natures.length)];
 			nature: natures[~~(Math.random() * natures.length)],
-			evs: { hp: 85, atk: 85, def: 85, spa: 85, spd: 85, spe: 85 },
-			ivs: { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 },
+			evs: {hp: 85, atk: 85, def: 85, spa: 85, spd: 85, spe: 85},
+			ivs: {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31},
 			level: level,
 		};
 	}
@@ -89,20 +94,20 @@ const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart)
 		const pokemonPool = _digimonsets.default.filter(
 			(i) => i.moves.length > 1 && _dex.toID.call(void 0, this.dex.getSpecies(i.species).universe) === 'pokemon'
 		);
-		
+
 		let hasXEvo = false;
 
 		while (team.length < 6) {
-			let toPush = team.length < 3 ? pokemonPool : pool;
+			const toPush = team.length < 3 ? pokemonPool : pool;
 			let randomToPush = this.sampleNoReplace(toPush);
-			
+
 			if (hasXEvo === true && randomToPush.item === "X-Antibody") continue;
 			if (randomToPush.item === "X-Antibody") hasXEvo = true;
 
-			if (randomToPush.universe === 'pokemon') {
-					randomToPush.ability = this.dex.getAbility('noability');
+			if (randomToPush.universe === 'Pokemon') {
+				randomToPush.ability = this.dex.getAbility('noability');
 			} else {
-					randomToPush.ability = this.dex.getSpecies(_dex.toID.call(void 0, randomToPush.species)).abilities[0];
+				randomToPush.ability = this.dex.getSpecies(_dex.toID.call(void 0, randomToPush.species)).abilities[0];
 			}
 			randomToPush = this.prepareSet(randomToPush);
 
@@ -127,11 +132,11 @@ const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart)
 
 			return types.includes(selectedType);
 		});
-		
+
 		let hasXEvo = false;
 
 		while (team.length !== 6) {
-			let randomDigimon = this.sampleNoReplace(pool);
+			const randomDigimon = this.sampleNoReplace(pool);
 			if (hasXEvo === true && randomDigimon.item === "X-Antibody") continue;
 			if (randomDigimon.item === "X-Antibody") hasXEvo = true;
 			randomDigimon.ability = this.dex.getSpecies(_dex.toID.call(void 0, randomDigimon.species)).abilities[0];
@@ -139,13 +144,14 @@ const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart)
 		}
 
 		return team;
-  }
+	}
 
 	randomDigimonTeam() {
 		const team = [];
 		const pool = _digimonsets.default.filter(
+			// eslint-disable-next-line max-len
 			(i) => (i.moves.length > 1 || i.reservedMove !== undefined) && _dex.toID.call(void 0, this.dex.getSpecies(i.species).universe) === 'digimon'
-    );
+		);
 
 		const FORMAT = this.format.id;
 
@@ -155,7 +161,7 @@ const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart)
 
 		if (DigiXPoke) return this.randomDigimonXPokemonTeam(pool);
 		if (Monotype) return this.randomDigimonMonotypeTeam(pool);
-		
+
 		let hasXEvo = false;
 
 		while (team.length !== 6) {
@@ -179,3 +185,5 @@ const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart)
 
 
 exports. default = RandomDigimonTeams;
+
+ //# sourceMappingURL=sourceMaps/random-teams.js.map
