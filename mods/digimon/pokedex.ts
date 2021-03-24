@@ -764,7 +764,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 		color: "Black",
 		eggGroups: ["Undiscovered"],
 	},
-		blackgreymon: {
+	blackgreymon: {
 		num: -2053,
 		name: "BlackGreymon",
 		stage: "Champion",
@@ -2892,7 +2892,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 		stage: "X-Evolution",
 		universe: "Digimon",
 		forme: "Mega",
-		types: ["Fire",],
+		types: ["Fire"],
 		gender: "N",
 		baseStats: {hp: 58, atk: 80, def: 65, spa: 64, spd: 58, spe: 80},
 		abilities: {0: "X-Vaccine"},
@@ -4313,8 +4313,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 		universe: "Pokemon",
 	},
 	meltan: {
-			inherit: true,
-			universe: "Pokemon",
+		inherit: true,
+		universe: "Pokemon",
 	},
 	melmetal: {
 		inherit: true,

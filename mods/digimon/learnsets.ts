@@ -5335,7 +5335,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			toxic: ["7M"],
 		},
 	},
-		bulbasaur: {
+	bulbasaur: {
 		learnset: {
 			doubleedge: ["7L32"],
 			facade: ["7M"],

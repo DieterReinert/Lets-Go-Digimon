@@ -17,7 +17,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 				return;
 			}
 			this.add('-activate', pokemon, 'panic');
-			let tar = this.p1.active.concat(this.p2.active);
+			const tar = this.p1.active.concat(this.p2.active);
 			this.useMove('panicattack', pokemon, tar[this.random(tar.length)]);
 			return false;
 		},
@@ -76,7 +76,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 		},
 	},
 	sidestall: {
-		//this is a side condition
+		// this is a side condition
 		duration: 2,
 		counterMax: 729,
 		onStart(side) {
@@ -90,9 +90,9 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			this.effectData.counter = counter;
 		},
 		onStallMove(target) {
-			let counter = this.effectData.counter || 1;
+			const counter = this.effectData.counter || 1;
 			this.debug("Success chance: " + Math.round(100 / counter) + "%");
-			let success = this.randomChance(1, counter);
+			const success = this.randomChance(1, counter);
 			return success;
 		},
 		onRestart() {
