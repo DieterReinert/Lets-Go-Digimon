@@ -1,6 +1,6 @@
 import DIGIMON_SETS from './digimon-sets';
 import RandomTeams from '../../random-teams';
-import LetsGo from '../letsgo/random-teams';
+import LetsGo from '../gen7letsgo/random-teams';
 import {toID} from '../../../sim/dex';
 
 // Digimon X Pokemon
@@ -14,12 +14,12 @@ export class RandomDigimonTeams extends RandomTeams {
 	prepareSet(set: DigimonSets) {
 		const randomMoves: string[] = [];
 
-		const template = this.dex.getSpecies(set.species);
+		const template = this.dex.species.get(set.species);
 		const mbstmin = 1381;
 
 		while (randomMoves.length < 4) {
 			const moveid = this.sample(set.moves);
-			const move = this.dex.getMove(moveid);
+			const move = this.dex.moves.get(moveid);
 			if (randomMoves.length < 1 && !template.types.includes(move.type)) continue;
 			if (randomMoves.length < 2 && move.category === 'Status') continue;
 			if (randomMoves.includes(move.name)) continue;
@@ -92,7 +92,7 @@ export class RandomDigimonTeams extends RandomTeams {
 	randomDigimonXPokemonTeam(pool: DigimonSets[]) {
 		const team = [];
 		const pokemonPool = DIGIMON_SETS.filter(
-			(i: DigimonSets) => i.moves.length > 1 && toID(this.dex.getSpecies(i.species).universe) === 'pokemon'
+			(i: DigimonSets) => i.moves.length > 1 && toID(this.dex.species.get(i.species).universe) === 'pokemon'
 		);
 
 		let hasXEvo = false;
@@ -105,9 +105,9 @@ export class RandomDigimonTeams extends RandomTeams {
 			if (randomToPush.item === "X-Antibody") hasXEvo = true;
 
 			if (randomToPush.universe === 'Pokemon') {
-				randomToPush.ability = this.dex.getAbility('noability');
+				randomToPush.ability = this.dex.abilities.get('noability');
 			} else {
-				randomToPush.ability = this.dex.getSpecies(toID(randomToPush.species)).abilities[0];
+				randomToPush.ability = this.dex.species.get(toID(randomToPush.species)).abilities[0];
 			}
 			randomToPush = this.prepareSet(randomToPush);
 
@@ -127,7 +127,7 @@ export class RandomDigimonTeams extends RandomTeams {
 			selectedType = DIGIMON_TYPES[~~(Math.random() * DIGIMON_TYPES.length)];
 		}
 		pool = pool.filter(i => {
-			const template = this.dex.getSpecies(i.species);
+			const template = this.dex.species.get(i.species);
 			const types = template.types;
 
 			return types.includes(selectedType);
@@ -139,7 +139,7 @@ export class RandomDigimonTeams extends RandomTeams {
 			const randomDigimon = this.sampleNoReplace(pool);
 			if (hasXEvo === true && randomDigimon.item === "X-Antibody") continue;
 			if (randomDigimon.item === "X-Antibody") hasXEvo = true;
-			randomDigimon.ability = this.dex.getSpecies(toID(randomDigimon.species)).abilities[0];
+			randomDigimon.ability = this.dex.species.get(toID(randomDigimon.species)).abilities[0];
 			team.push(this.prepareSet(randomDigimon));
 		}
 
@@ -150,7 +150,7 @@ export class RandomDigimonTeams extends RandomTeams {
 		const team = [];
 		const pool = DIGIMON_SETS.filter(
 			// eslint-disable-next-line max-len
-			(i: DigimonSets) => (i.moves.length > 1 || i.reservedMove !== undefined) && toID(this.dex.getSpecies(i.species).universe) === 'digimon'
+			(i: DigimonSets) => (i.moves.length > 1 || i.reservedMove !== undefined) && toID(this.dex.species.get(i.species).universe) === 'digimon'
 		);
 
 		const FORMAT = this.format.id;
@@ -168,7 +168,7 @@ export class RandomDigimonTeams extends RandomTeams {
 			const set = this.sampleNoReplace(pool);
 			if (hasXEvo === true && set.item === "X-Antibody") continue;
 			if (set.item === "X-Antibody") hasXEvo = true;
-			set.ability = this.dex.getSpecies(toID(set.species)).abilities[0];
+			set.ability = this.dex.species.get(toID(set.species)).abilities[0];
 			team.push(this.prepareSet(set));
 		}
 

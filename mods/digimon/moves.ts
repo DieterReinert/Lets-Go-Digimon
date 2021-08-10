@@ -153,7 +153,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
 		hasCustomRecoil: true,
 		onMoveFail(target, source, move) {
-			this.damage(source.baseMaxhp / 2, source, source, this.dex.getEffect('High Jump Kick'));
+			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
 		},
 		secondary: null,
 		target: "normal",
@@ -2010,18 +2010,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			duration: 1,
 			noCopy: true,
 			onStart(target, source, move) {
-				this.effectData.position = null;
-				this.effectData.damage = 0;
+				this.effectState.position = null;
+				this.effectState.damage = 0;
 			},
 			onRedirectTargetPriority: -1,
 			onRedirectTarget(target, source, source2) {
-				if (source !== this.effectData.target) return;
-				return source.side.foe.active[this.effectData.position];
+				if (source !== this.effectState.target) return;
+				return source.side.foe.active[this.effectState.position];
 			},
 			onDamagingHit(damage, target, source, move) {
 				if (source.side !== target.side && this.getCategory(move) === 'Physical') {
-					this.effectData.position = source.position;
-					this.effectData.damage = 2 * damage;
+					this.effectState.position = source.position;
+					this.effectState.damage = 2 * damage;
 				}
 			},
 		},
@@ -2060,18 +2060,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			duration: 1,
 			noCopy: true,
 			onStart(target, source, move) {
-				this.effectData.position = null;
-				this.effectData.damage = 0;
+				this.effectState.position = null;
+				this.effectState.damage = 0;
 			},
 			onRedirectTargetPriority: -1,
 			onRedirectTarget(target, source, source2) {
-				if (source !== this.effectData.target) return;
-				return source.side.foe.active[this.effectData.position];
+				if (source !== this.effectState.target) return;
+				return source.side.foe.active[this.effectState.position];
 			},
 			onDamagingHit(damage, target, source, move) {
 				if (source.side !== target.side && this.getCategory(move) === 'Special') {
-					this.effectData.position = source.position;
-					this.effectData.damage = 2 * damage;
+					this.effectState.position = source.position;
+					this.effectState.damage = 2 * damage;
 				}
 			},
 		},
@@ -2220,7 +2220,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				}
 			},
 			onRestart(pokemon) {
-				this.effectData.duration = 2;
+				this.effectState.duration = 2;
 				this.add('-start', pokemon, 'move: Laser Focus');
 			},
 			onModifyCritRatio(critRatio) {
