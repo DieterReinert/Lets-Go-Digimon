@@ -41,9 +41,9 @@
 			if (pokemon.item !== 'xantibody' || pokemon.hp > pokemon.maxhp / 2) return;
 			this.add('-activate', pokemon, 'ability: Data');
 			pokemon.formeChange(`${pokemon.name}-X`, this.effect, true);
-			const ability = this.dex.getAbility("xdata");
+			const ability = this.dex.abilities.get("xdata");
 			this.add('-ability', pokemon, ability, '[from] ability: Data', '[of] ' + pokemon);
-			pokemon.setAbility(this.dex.getAbility("xdata"));
+			pokemon.setAbility(this.dex.abilities.get("xdata"));
 		},
 	},
 	"virus": {
@@ -85,9 +85,9 @@
 			if (pokemon.item !== 'xantibody' || pokemon.hp > pokemon.maxhp / 2) return;
 			this.add('-activate', pokemon, 'ability: Virus');
 			pokemon.formeChange(`${pokemon.name}-X`, this.effect, true);
-			const ability = this.dex.getAbility("xvirus");
+			const ability = this.dex.abilities.get("xvirus");
 			this.add('-ability', pokemon, ability, '[from] ability: Virus', '[of] ' + pokemon);
-			pokemon.setAbility(this.dex.getAbility("xvirus"));
+			pokemon.setAbility(this.dex.abilities.get("xvirus"));
 		},
 	},
 	"vaccine": {
@@ -129,9 +129,9 @@
 			if (pokemon.item !== 'xantibody' || pokemon.hp > pokemon.maxhp / 2) return;
 			this.add('-activate', pokemon, 'ability: Vaccine');
 			pokemon.formeChange(`${pokemon.name}-X`, this.effect, true);
-			const ability = this.dex.getAbility("xvaccine");
+			const ability = this.dex.abilities.get("xvaccine");
 			this.add('-ability', pokemon, ability, '[from] ability: Vaccine', '[of] ' + pokemon);
-			pokemon.setAbility(this.dex.getAbility("xvaccine"));
+			pokemon.setAbility(this.dex.abilities.get("xvaccine"));
 		},
 	},
 	"xdata": {
@@ -175,7 +175,7 @@
 		},
 		onBasePowerPriority: 22,
 		onBasePower(basePower, attacker, defender, move) {
-			if (attacker !== this.effectData.target) {
+			if (attacker !== this.effectState.target) {
 				this.debug('Power Spot boost');
 				return this.chainModify([0x14CD, 0x1000]);
 			}
@@ -222,7 +222,7 @@
 		},
 		onBasePowerPriority: 22,
 		onBasePower(basePower, attacker, defender, move) {
-			if (attacker !== this.effectData.target) {
+			if (attacker !== this.effectState.target) {
 				this.debug('Power Spot boost');
 				return this.chainModify([0x14CD, 0x1000]);
 			}
@@ -269,7 +269,7 @@
 		},
 		onBasePowerPriority: 22,
 		onBasePower(basePower, attacker, defender, move) {
-			if (attacker !== this.effectData.target) {
+			if (attacker !== this.effectState.target) {
 				this.debug('Power Spot boost');
 				return this.chainModify([0x14CD, 0x1000]);
 			}

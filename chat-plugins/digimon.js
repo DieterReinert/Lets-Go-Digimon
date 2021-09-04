@@ -161,7 +161,7 @@ exports.commands = {
 		const choices = {
 			alphabetical: 'abcdefghijklmnopqrstuvwxyz'.split(''),
 			stage: ['Fresh', 'In-Training', 'Rookie', 'Champion', 'Ultimate', 'Mega', 'X-Evolution'],
-			type: Object.keys(Dex.data.TypeChart),
+			type: Object.keys(Dex.data.TypeChart).map(item => item.charAt(0).toUpperCase() + item.substr(1).toLowerCase()),
 			color: ['Red', 'Blue', 'Yellow', 'Green', 'Black', 'Brown', 'Purple', 'Gray', 'White', 'Pink'],
 			ability: ['Vaccine', 'Virus', 'Data'],
 		};
@@ -319,7 +319,7 @@ exports.commands = {
 		const change = !!target || cmd === 'movesearchchange';
 		const choices = {
 			alphabetical: 'abcdefghijklmnopqrstuvwxyz'.split(''),
-			type: Object.keys(Dex.data.TypeChart),
+			type: Object.keys(Dex.data.TypeChart).map(item => item.charAt(0).toUpperCase() + item.substr(1).toLowerCase()),
 			category: ['Status', 'Physical', 'Special'],
 			signature: ['Signature', 'Not Signature'],
 		};
@@ -389,7 +389,7 @@ exports.commands = {
 			// let signature = '';
 			// if (digimonmove.signature === 'Signature') signature = 'True';
 			// if (digimonmove.signature === 'Not Signature') signature = 'False';
-			menu += `<div><center><table style="width: 480px ; background-color: #011f55 ; border-color: #008dc5" border="2"><tbody><tr><td style="width: 159px ; text-align: center"><table style="width: 468px ; background-color: #f2faff ; border-color: #008dc5 ; margin-left: auto ; margin-right: auto" border="3"><tbody><tr><td style="width: 462px"><span style="color: #333333"><strong><img style="float: left" src="${typeimage}" width="21" height="20"><span style="color: black">Digimon Move Database<img style="float: right" src="${typeimage}" width="21" height="20"></span></strong></span>`;
+			menu += `<div><center><table style="width: 480px ; background-color: #011f55 ; border-color: #008dc5" border="2"><tbody><tr><td style="width: 159px ; text-align: center"><table style="width: 468px ; background-color: #f2faff ; border-color: #008dc5 ; margin-left: auto ; margin-right: auto" border="3"><tbody><tr><td style="width: 462px"><span style="color: #333333"><strong><img style="float: left" src="${typeimage}" width="32" height="14"><span style="color: black">Digimon Move Database<img style="float: right" src="${typeimage}" width="32" height="14"></span></strong></span>`;
 			menu += `</td></tr></tbody></table><table style="width: 468px ; border-color: #008dc5 ; background-color: #ffffff" border="2"><tbody><tr><td style="width: 463px"><strong><span style="color: black">${digimonmove.name}</span></strong></td></tr></tbody></table><table style="border-color: #008dc5 ; background-color: #ffffff ; width: 468px" border="1"><tbody><tr><td style="width: 457px"><strong><span style="color: #008dc5">Type</span></strong><span style="color: black">: ${digimonmove.type}</span></td><td style="width: 457px"><strong><span style="color: #008dc5">Category</span></strong>`;
 			menu += `<span style="color: black">: ${digimonmove.category}</span></td></tr><tr><td style="width: 457px"><strong><span style="color: #008dc5">Base Power</span></strong><span style="color: black">: ${digimonmove.basePower}</span></td><td style="width: 457px"><strong><span style="color: #008dc5">Accuracy</span></strong><span style="color: black">: ${digimonmove.accuracy}</span></td></tr><tr><td style="width: 457px"><strong><span style="color: #008dc5">Priority</span></strong>`;
 			menu += `<span style="color: black">: ${digimonmove.priority}</span></td><td style="width: 457px"><strong><span style="color: #008dc5">Power Points</span></strong><span style="color: black">: ${digimonmove.pp}</span></td></tr></tbody></table><table style="width: 468px ; background-color: #edf8ff ; border-color: #008dc5" border="3"><tbody><tr><td style="width: 465px"><strong><span style="color: black">${digimonmove.desc}</span></strong></td></tr></tbody></table></td></tr></tbody></table></center></div>`;

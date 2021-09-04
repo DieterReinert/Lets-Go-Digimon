@@ -4,7 +4,7 @@
 		// this is a volatile status
 		onStart(target, source, sourceEffect) {
 			this.add('-start', target, 'panic');
-			this.effectData.time = 3;
+			this.effectState.time = 3;
 		},
 		onEnd(target) {
 			this.add('-end', target, 'panic');
@@ -27,7 +27,7 @@
 		// this is a volatile status
 		onStart(target, source, sourceEffect) {
 			this.add('-start', target, 'dot');
-			this.effectData.time = 3;
+			this.effectState.time = 3;
 		},
 		onEnd(target) {
 			this.add('-end', target, 'dot');
@@ -49,7 +49,7 @@
 		// this is a volatile status
 		onStart(target, source, sourceEffect) {
 			this.add('-start', target, 'bug');
-			this.effectData.time = 3;
+			this.effectState.time = 3;
 		},
 		onEnd(target) {
 			this.add('-end', target, 'bug');
@@ -69,9 +69,9 @@
 		inherit: true,
 		onStart(target) {
 			if (target.side.sideConditions['sidestall']) {
-				this.effectData.counter = target.side.sideConditions['sidestall'].counter * 3;
+				this.effectState.counter = target.side.sideConditions['sidestall'].counter * 3;
 			} else {
-				this.effectData.counter = 3;
+				this.effectState.counter = 3;
 			}
 		},
 	},
@@ -87,20 +87,20 @@
 					counter = pokemon.volatiles['stall'].counter * 3;
 				}
 			}
-			this.effectData.counter = counter;
+			this.effectState.counter = counter;
 		},
 		onStallMove(target) {
-			const counter = this.effectData.counter || 1;
+			const counter = this.effectState.counter || 1;
 			this.debug("Success chance: " + Math.round(100 / counter) + "%");
 			const success = this.randomChance(1, counter);
 			return success;
 		},
 		onRestart() {
 			// @ts-ignore
-			if (this.effectData.counter < this.effect.counterMax) {
-				this.effectData.counter *= 3;
+			if (this.effectState.counter < this.effect.counterMax) {
+				this.effectState.counter *= 3;
 			}
-			this.effectData.duration = 2;
+			this.effectState.duration = 2;
 		},
 	},
 

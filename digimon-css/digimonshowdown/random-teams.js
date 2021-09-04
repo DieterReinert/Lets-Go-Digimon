@@ -1,6 +1,6 @@
 "use strict";Object.defineProperty(exports, "__esModule", {value: true});var _digimonsets = require('./digimon-sets');
 var _randomteams = require('../../random-teams');
-var _randomteams2 = require('../letsgo/random-teams');
+var _randomteams2 = require('../gen7letsgo/random-teams');
 var _dex = require('../../../.sim-dist/dex');
 
 // Digimon X Pokemon
@@ -14,12 +14,12 @@ const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart);
 	prepareSet(set) {
 		const randomMoves = [];
 
-		const template = this.dex.getSpecies(set.species);
+		const template = this.dex.species.get(set.species);
 		const mbstmin = 1381;
 
 		while (randomMoves.length < 4) {
 			const moveid = this.sample(set.moves);
-			const move = this.dex.getMove(moveid);
+			const move = this.dex.moves.get(moveid);
 			if (randomMoves.length < 1 && !template.types.includes(move.type)) continue;
 			if (randomMoves.length < 2 && move.category === 'Status') continue;
 			if (randomMoves.includes(move.name)) continue;
@@ -92,7 +92,7 @@ const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart);
 	randomDigimonXPokemonTeam(pool) {
 		const team = [];
 		const pokemonPool = _digimonsets.default.filter(
-			(i) => i.moves.length > 1 && _dex.toID.call(void 0, this.dex.getSpecies(i.species).universe) === 'pokemon'
+			(i) => i.moves.length > 1 && _dex.toID.call(void 0, this.dex.species.get(i.species).universe) === 'pokemon'
 		);
 
 		let hasXEvo = false;
@@ -105,9 +105,9 @@ const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart);
 			if (randomToPush.item === "X-Antibody") hasXEvo = true;
 
 			if (randomToPush.universe === 'Pokemon') {
-				randomToPush.ability = this.dex.getAbility('noability');
+				randomToPush.ability = this.dex.abilities.get('noability');
 			} else {
-				randomToPush.ability = this.dex.getSpecies(_dex.toID.call(void 0, randomToPush.species)).abilities[0];
+				randomToPush.ability = this.dex.species.get(_dex.toID.call(void 0, randomToPush.species)).abilities[0];
 			}
 			randomToPush = this.prepareSet(randomToPush);
 
@@ -127,7 +127,7 @@ const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart);
 			selectedType = DIGIMON_TYPES[~~(Math.random() * DIGIMON_TYPES.length)];
 		}
 		pool = pool.filter(i => {
-			const template = this.dex.getSpecies(i.species);
+			const template = this.dex.species.get(i.species);
 			const types = template.types;
 
 			return types.includes(selectedType);
@@ -139,7 +139,7 @@ const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart);
 			const randomDigimon = this.sampleNoReplace(pool);
 			if (hasXEvo === true && randomDigimon.item === "X-Antibody") continue;
 			if (randomDigimon.item === "X-Antibody") hasXEvo = true;
-			randomDigimon.ability = this.dex.getSpecies(_dex.toID.call(void 0, randomDigimon.species)).abilities[0];
+			randomDigimon.ability = this.dex.species.get(_dex.toID.call(void 0, randomDigimon.species)).abilities[0];
 			team.push(this.prepareSet(randomDigimon));
 		}
 
@@ -150,7 +150,7 @@ const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart);
 		const team = [];
 		const pool = _digimonsets.default.filter(
 			// eslint-disable-next-line max-len
-			(i) => (i.moves.length > 1 || i.reservedMove !== undefined) && _dex.toID.call(void 0, this.dex.getSpecies(i.species).universe) === 'digimon'
+			(i) => (i.moves.length > 1 || i.reservedMove !== undefined) && _dex.toID.call(void 0, this.dex.species.get(i.species).universe) === 'digimon'
 		);
 
 		const FORMAT = this.format.id;
@@ -168,7 +168,7 @@ const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart);
 			const set = this.sampleNoReplace(pool);
 			if (hasXEvo === true && set.item === "X-Antibody") continue;
 			if (set.item === "X-Antibody") hasXEvo = true;
-			set.ability = this.dex.getSpecies(_dex.toID.call(void 0, set.species)).abilities[0];
+			set.ability = this.dex.species.get(_dex.toID.call(void 0, set.species)).abilities[0];
 			team.push(this.prepareSet(set));
 		}
 

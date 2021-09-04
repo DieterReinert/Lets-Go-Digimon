@@ -8,7 +8,7 @@ const DIGI_X_POKE = "[Digimon] Digimon x Pokemon";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const RandomLetsGo = new LetsGo(DIGI_X_POKE, null);
 
-const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart);
+const DIGIMON_TYPES = Object.keys(Dex.data.TypeChart).map(item => item.charAt(0).toUpperCase() + item.substr(1).toLowerCase());
 
 export class RandomDigimonTeams extends RandomTeams {
 	prepareSet(set: DigimonSets) {
