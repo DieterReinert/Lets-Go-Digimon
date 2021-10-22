@@ -1,6 +1,6 @@
-# Digimon Showdown: Dimensional Rift
+# Let's Go Digimon!
 
-This is the official Digimon Showdown: Dimensional Rift repository.
+This is the official Let's Go Digimon repository.
 
 This is to be used with [Pokémon Showdown](https://github.com/smogon/Pokemon-Showdown).
 
@@ -12,12 +12,12 @@ This is to be used with [Pokémon Showdown](https://github.com/smogon/Pokemon-Sh
 - Copy whatever is in config/formats.ts into config/formats.ts wherever you want that section of formats. (Make sure you copy it under the last tier of a section.)
 - The steps for generating the CSS are listed below
 
-# Digimon-Showdown: Dimensional Rift (DSDR) - CSS
-Generates a basic CSS template for DSDR.
+# Let's Go Digimon (LGD) - CSS
+Generates a basic CSS template for LGD.
 
 # (DSDR-CSS) Usage
 (NOTE: Node.js is required)
-- Open `Command Prompt` in the `Digimon-Showdown-Dimensional-Rift` directory.
+- Open `Command Prompt` in the `Lets-Go-Digimon` directory.
 - Type `npm run build` to build your digimon-showdown css.
 - Enjoy Digimon-Showdown on your server.
 
