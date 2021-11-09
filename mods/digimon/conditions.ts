@@ -18,7 +18,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			}
 			this.add('-activate', pokemon, 'panic');
 			const tar = this.p1.active.concat(this.p2.active);
-			this.useMove('panicattack', pokemon, tar[this.random(tar.length)]);
+			this.actions.useMove('panicattack', pokemon, tar[this.random(tar.length)]);
 			return false;
 		},
 	},
@@ -40,7 +40,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 				return;
 			}
 			this.add('-activate', pokemon, 'dot');
-			this.useMove('dotbeam', pokemon);
+			this.actions.useMove('dotbeam', pokemon);
 			return false;
 		},
 	},
