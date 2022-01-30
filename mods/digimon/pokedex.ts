@@ -2311,7 +2311,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData & {stage: string}} = {
 		name: "Ebemon",
 		stage: "Mega",
 		universe: "Digimon",
-		types: ["Posion", "Steel"],
+		types: ["Poison", "Steel"],
 		gender: "N",
 		baseStats: {hp: 95, atk: 60, def: 79, spa: 125, spd: 100, spe: 81},
 		abilities: {0: "Virus"},
