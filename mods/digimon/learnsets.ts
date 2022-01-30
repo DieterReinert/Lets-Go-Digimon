@@ -1370,7 +1370,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			toxic: ["7M"],
 		},
 	},
-	cherubimon: {
+	cherubimongood: {
 		learnset: {
 			saintshield: ["7M"],
 			facade: ["7M"],
@@ -4083,7 +4083,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			toxic: ["7M"],
 		},
 	},
-	nisedrimeogemon: {
+	nisedrimogemon: {
 		learnset: {
 			grandrock: ["7M"],
 			awesomequake: ["7M"],
