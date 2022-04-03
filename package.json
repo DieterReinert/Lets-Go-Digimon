@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/DieterReinert/Digimon-Showdown#readme",
   "dependencies": {
-    "clean-css": "^4.2.3"
+    "clean-css": "^4.2.3",
+    "probe-image-size": "^7.2.3"
   }
 }
