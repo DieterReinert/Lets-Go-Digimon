@@ -1,23 +1,8 @@
+const https = require('https');
 const Pokedex = require('./digimonshowdown/pokedex').Pokedex;
 
 const pokemon = Object.keys(Pokedex).filter(key => Pokedex[key].universe === 'Pokemon');
-let css = '';
-css += `div[id*=digimonxpokemon] .innerbattle div>div:nth-child(4) > img:nth-child(1) {
-  position: absolute !important;
-  top: 240px !important;
-  left: 120px!important;
-}
-div[id*=digimonxpokemon] .innerbattle div>div:nth-child(4)>img:nth-child(2) {
-  position: absolute !important;
-  top: 240px !important;
-  left: 160px!important;
-}
-div[id*=digimonxpokemon] .innerbattle div>div:nth-child(4)>img:nth-child(3) {
-  position: absolute !important;
-  top: 240px !important;
-  left: 200px!important;
-}
-`;
+let missingImages = [];
 for (let i = 0; i < pokemon.length; i++) {
   let name = pokemon[i];
   if (name === 'mrmime') name = 'mr. mime';
@@ -54,6 +39,15 @@ for (let i = 0; i < pokemon.length; i++) {
     if (name === 'nidoran%20f') name = "nidoran-f";
     back = `https://play.pokemonshowdown.com/sprites/digimon/sprites/pokemon-back/${name}.png`;
   }
- css += `div[id*=digimonxpokemon] .innerbattle div > div > img[src*="ani/${name}"] {  content: url('${front}');  width: 56px !important;  height: 56px !important;  top: 90px !important} div[id*=digimonxpokemon] .innerbattle div > div > img[src*="ani-back/${name}"] {  content: url('${back}');  width: 56px !important;  height: 56px !important;  top: 245px !important; } div[id*=digimonxpokemon] .innerbattle div > div > img[src*="ani-back/${name}"]:only-child { left: 140px !important; position: fixed !important}`;
+  // do a http get to front & back, if 404, add to missingImages
+  https.get(front, res => {
+    if (res.statusCode === 404) {
+      console.log(front);
+    }
+  });
+  https.get(back, res => {
+    if (res.statusCode === 404) {
+      console.log(back);
+    }
+  });
 }
-console.log(css);
