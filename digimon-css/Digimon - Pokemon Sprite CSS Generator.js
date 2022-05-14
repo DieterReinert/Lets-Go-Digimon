@@ -17,9 +17,15 @@ div[id*=digimonxpokemon] .innerbattle div>div:nth-child(4)>img:nth-child(3) {
   top: 240px !important;
   left: 200px!important;
 }
+div[id*=digimonxpokemon] .innerbattle .statbar .status img.pixelated {
+	position: relative !important;
+	top: 2px !important;
+	left: 0px !important;
+}
 `;
 for (let i = 0; i < pokemon.length; i++) {
   let name = pokemon[i];
+  let originalName = pokemon[i];
   if (name === 'mrmime') name = 'mr. mime';
   if (name === 'farfetchd') name = "farfetch'd";
   if (name === 'nidoranm') name = "nidoran%20m";
@@ -54,6 +60,6 @@ for (let i = 0; i < pokemon.length; i++) {
     if (name === 'nidoran%20f') name = "nidoran-f";
     back = `https://play.pokemonshowdown.com/sprites/digimon/sprites/pokemon-back/${name}.png`;
   }
- css += `div[id*=digimonxpokemon] .innerbattle div > div > img[src*="ani/${name}"] {  content: url('${front}');  width: 56px !important;  height: 56px !important;  top: 90px !important} div[id*=digimonxpokemon] .innerbattle div > div > img[src*="ani-back/${name}"] {  content: url('${back}');  width: 56px !important;  height: 56px !important;  top: 245px !important; } div[id*=digimonxpokemon] .innerbattle div > div > img[src*="ani-back/${name}"]:only-child { left: 140px !important; position: fixed !important}`;
+ css += `div[id*=digimonxpokemon] .innerbattle div > div > img[src*="ani/${originalName}"] {  content: url('${front}');  width: 56px !important;  height: 56px !important;  top: 90px !important} div[id*=digimonxpokemon] .innerbattle div > div > img[src*="ani-back/${originalName}"] {  content: url('${back}');  width: 56px !important;  height: 56px !important;  top: 245px !important; } div[id*=digimonxpokemon] .innerbattle div > div > img[src*="ani-back/${originalName}"]:only-child { left: 140px !important; position: fixed !important}`;
 }
 console.log(css);
