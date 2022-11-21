@@ -1214,7 +1214,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		flags: {protect: 1, mirror: 1, nonsky: 1},
 		secondary: null,
-		target: "alladjacent",
+		target: "allAdjacent",
 		type: "Ground",
 	},
 	"ultimatepoophell": {
@@ -1361,7 +1361,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
-		target: "alladjacent",
+		target: "allAdjacent",
 		type: "Fairy",
 	},
 	"shiningnova": {
