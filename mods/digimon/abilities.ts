@@ -274,5 +274,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				return this.chainModify([0x14CD, 0x1000]);
 			}
 		},
+	    shedskin: {
+        onResidual(pokemon) {
+            if (pokemon.hp && pokemon.status && this.randomChance(1, 10)) {
+                this.debug('shed skin');
+                this.add('-activate', pokemon, 'ability: Shed Skin');
+                pokemon.cureStatus();
+            }
+        },
+        inherit: true,
+    },
 	},
 };
