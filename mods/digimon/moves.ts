@@ -1763,7 +1763,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		category: "Status",
 		desc: "Raises evasion of the chosen ally or user by 1.",
 		shortDesc: "Raises EVA of chosen ally or user by 1.",
-		name: "Attack Charge",
+		name: "Agility Charge",
 		pp: 15,
 		priority: 0,
 		onPrepareHit(target, source, move) {
