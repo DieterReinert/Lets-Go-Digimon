@@ -2286,7 +2286,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "User switches out.",
 		name: "LGPE Teleport",
 		pp: 20,
-		priority: 0,
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "teleport", target);
