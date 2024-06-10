@@ -53,7 +53,7 @@ export default [
 	{
 		"species": "BlackMetalGarurumon",
 		"universe": "Digimon",
-		"moves": ["Dynamite Kick", "Facade", "Wind Cutter", "Shadow Fall", "Headbutt", "Winter Blast", "Dark Spirit", "Big Poop Toss", "Mechanical Claw", "DG Dimension V3", "Blackout", "Megalo Spark", "DG Nightmare", "Reverse Program", "Aurora Freeze", "Fighting Aura", "Giga Freeze", "Chaos Cloud", "Ultimate Poop Hell", "Electric Chute", "Thunder Justice", "Thunderstorm", "Anti-Panic", "Status Barrier", "Dispel", "Anti-Sleep", "Anti-Poison", "Protect", "Rest", "Substitute", "Toxic", "Restore"],
+		"moves": ["Dynamite Kick", "Facade", "Wind Cutter", "Shadow Fall", "Headbutt", "Winter Blast", "Dark Spirit", "Big Poop Toss", "Mechanical Claw", "DG Dimension V3", "Blackout", "Megalo Spark", "DG Nightmare", "Reverse Program", "Aurora Freeze", "Fighting Aura", "Giga Freeze", "Chaos Cloud", "Ultimate Poop Hell", "Electric Chute", "Thunder Justice", "Thunderstorm", "Anti-Panic", "Status Barrier", "Dispel", "Anti-Sleep", "Anti-Poison", "Protect", "Rest", "Substitute", "Toxic", "Speed Break Field", "Restore"],
 	},
 	{
 		"species": "BlackWarGreymon",
@@ -282,7 +282,7 @@ export default [
 	{
 		"species": "Alphamon",
 		"universe": "Digimon",
-		"moves": ["Dynamite Kick", "DG Judgement", "Facade", "Wind Cutter", "Shadow Fall", "Headbutt", "Winter Blast", "DG Dimension V3", "Mechanical Claw", "Saint Shield", "Metal Sprinter", "Buster Dive", "Megalo Spark", "Aurora Freeze", "Light Soul", "Shining Nova", "Prominence Beam", "Reverse Program", "Fighting Aura", "Giga Freeze", "Saint Ray", "DG Flash", "DG Judgement", "DG Nightmare", "Venom Disaster", "Thunder Justice", "Thunderstorm", "Speed Charge Field", "Mental Charge Field", "Guard Charge Field", "Attack Break", "Mental Charge", "Anti-Panic", "Status Barrier", "Mental Charge Field", "Dispel", "Protect", "Final Heal", "Rest", "Substitute", "Status Barrier", "Crit Charge", "Anti-Paralysis", "Toxic", "Restore"],
+		"moves": ["Dynamite Kick", "DG Judgement", "Facade", "Wind Cutter", "Shadow Fall", "Headbutt", "Winter Blast", "DG Dimension V3", "Mechanical Claw", "Saint Shield", "Metal Sprinter", "Buster Dive", "Megalo Spark", "Aurora Freeze", "Light Soul", "Shining Nova", "Prominence Beam", "Reverse Program", "Fighting Aura", "Giga Freeze", "Saint Ray", "DG Flash", "DG Judgement", "DG Nightmare", "Venom Disaster", "Thunder Justice", "Thunderstorm", "Speed Charge Field", "Mental Charge Field", "Guard Charge Field", "Attack Break", "Mental Charge", "Anti-Panic", "Status Barrier", "Mental Charge Field", "Dispel", "Protect", "Final Heal", "Rest", "Substitute", "Status Barrier", "Crit Charge", "Anti-Paralysis", "Toxic", "Speed Break Field", "Restore"],
 	},
 	{
 		"species": "Omnimon",
@@ -768,7 +768,7 @@ export default [
 	{
 		"species": "Machinedramon ",
 		"universe": "Digimon",
-		"moves": ["Dynamite Kick", "DG Dimension V3", "Spinning Shot", "Facade", "Headbutt", "Wind Cutter", "Blackout", "Metal Sprinter", "Buster Dive", "Infinity Burn", "Megalo Spark", "Reverse Program", "Fighting Aura", "DG Nightmare", "Prominence Beam", "Thunder Justice", "Thunderstorm", "Electric Chute", "Guard Charge Field", "Guard Charge", "Protect", "Rest", "Substitute", "Guard Break Field", "Anti-Paralysis", "Toxic"],
+		"moves": ["Dynamite Kick", "DG Dimension V3", "Spinning Shot", "Facade", "Headbutt", "Wind Cutter", "Blackout", "Metal Sprinter", "Buster Dive", "Infinity Burn", "Megalo Spark", "Reverse Program", "Fighting Aura", "DG Nightmare", "Prominence Beam", "Thunder Justice", "Thunderstorm", "Electric Chute", "Guard Charge Field", "Guard Charge", "Protect", "Rest", "Substitute", "Guard Break Field", "Anti-Paralysis", "Speed Break Field", "Toxic"],
 	},
 	{
 		"species": "Bukamon",
