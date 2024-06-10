@@ -28,3 +28,10 @@ Generates a basic CSS template for LGD.
 - [AlfaStorm](https://github.com/AlphaWind) (Developer - Digimon Showdown)
 - [Dragotic-PS](https://github.com/Dragotic-PS) (Dragotic - CSS Generator)
 - Digimon-Showdown Contributors
+
+# Other Credits
+- [Ashley The Pikachu](https://github.com/AshleyPikachu) (Artist)
+- [Ashley The Pikachu](https://github.com/AshleyPikachu) (Sound Editing)
+- Ashley the Pikachu, Ace, BobJonsey, DJinntoTonic, Lucifer Morningstar, Milk, Nidoking48, Seth (Game Balance)
+- Alfastorm, Alpha Ninja, Ashley the Pikachu, Dragotic (HTML / CSS)
+- Alfastorm, Alpha Ninja, Ashley the Pikachu, C733937 123, Dragotic, Fender, Fliegenfuerst, HoeenHero, Insist, Instruct, Kraken Mare, Kris, Kyra, Mathfreak231, Meicoo, Paperlanty, Pokemonvortex, Ruru, Sappling Archer, Slayer59, The Heart, TriggerHappy948, urkerab, Volco, Waffaru, Zarel (Code / Testing)
