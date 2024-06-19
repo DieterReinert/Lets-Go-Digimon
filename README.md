@@ -26,6 +26,13 @@ Generates a basic CSS template for LGD.
 - [DieterReinert](https://github.com/DieterReinert) (Alpha Ninja - Repository Owner)
 - [Zarel](https://github.com/Zarel/) (Owner of [Pokemon-Showdown](https://github.com/Zarel/Pokemon-Showdown))
 - [Ashley the Pikachu](https://github.com/AshleyPikachu) (Project Head)
+- [Ashley the Pikachu](https://github.com/AshleyPikachu) (Artist)
+- [Ashley the Pikachu](https://github.com/AshleyPikachu) (Sound Editing)
 - [AlfaStorm](https://github.com/AlphaWind) (Developer - Digimon Showdown)
 - [Dragotic-PS](https://github.com/Dragotic-PS) (Dragotic - CSS Generator)
 - Digimon-Showdown Contributors
+
+# Other Credits
+- Ashley the Pikachu, Ace, BobJonsey, DJinntoTonic, Lucifer Morningstar, Milk, Nidoking48, Seth (Balance)
+- Alfastorm, Alpha Ninja, Ashley the Pikachu, Dragotic  (HTML / CSS)
+- Alfastorm, Alpha Ninja, Ashley the Pikachu, C733937 123, Dragotic, Fender, Fliegenfuerst, HoeenHero, Insist, Instruct, Kraken Mare, Kris, Kyra, Mathfreak231, Meicoo, Paperlanty, Pokemonvortex, Ruru, Sappling Archer, Slayer59, The Heart, TriggerHappy948, urkerab, Volco, Waffaru, Zarel  (Various Coding & Testing)
