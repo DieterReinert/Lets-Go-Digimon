@@ -150,17 +150,17 @@ export default [
 		"species": "Cherubimon Evil",
 		"item": "X-Antibody",
 		"universe": "Digimon",
-		"moves": ["Quick Attack", "Astonish", "Bite", "Spark", "Foul Play", "Facade", "Headbutt", "Iron Head", "Air Cutter", "Fury Attack", "Force Palm", "Thunder Punch", "Blizzard", "Dark Pulse", "Flash Cannon", "Leaf Storm", "Energy Ball", "Shadow Ball", "Aura Sphere", "Ice Beam", "Hurricane", "Thunder", "Thunderbolt", "Tail Whip", "Protect", "Mirror Reflection", "Rest", "Substitute", "Safeguard", "Purify", "Toxic"],
+		"moves": ["Quick Attack", "Astonish", "Bite", "Spark", "Foul Play", "Facade", "Headbutt", "Iron Head", "Air Cutter", "Fury Attack", "Force Palm", "Thunder Punch", "Blizzard", "Dark Pulse", "Flash Cannon", "Leaf Storm", "Energy Ball", "Shadow Ball", "Aura Sphere", "Ice Beam", "Hurricane", "Thunder", "Thunderbolt", "Tail Whip", "Protect", "Mirror Coat", "Rest", "Substitute", "Safeguard", "Purify", "Toxic"],
 	},
 	{
 		"species": "Raguelmon",
 		"universe": "Digimon",
-		"moves": ["Quick Attack", "Astonish", "Bite", "Spark", "Foul Play", "Facade", "Headbutt", "Iron Head", "Flare Blitz", "Metal Claw", "Force Palm", "Thunder Punch", "Blizzard", "Dark Pulse", "Flash Cannon", "Leaf Storm", "Energy Ball", "Water Spout", "Aura Sphere", "Ice Beam", "Hurricane", "Thunder", "Thunderbolt", "Tail Whip", "Protect", "Mirror Reflection", "Rest", "Substitute", "Safeguard", "Purify", "Toxic"],
+		"moves": ["Quick Attack", "Astonish", "Bite", "Spark", "Foul Play", "Facade", "Headbutt", "Iron Head", "Flare Blitz", "Metal Claw", "Force Palm", "Thunder Punch", "Blizzard", "Dark Pulse", "Flash Cannon", "Leaf Storm", "Energy Ball", "Water Spout", "Aura Sphere", "Ice Beam", "Hurricane", "Thunder", "Thunderbolt", "Tail Whip", "Protect", "Mirror Coat", "Rest", "Substitute", "Safeguard", "Purify", "Toxic"],
 	},
 	{
 		"species": "Omnimon Zwart",
 		"universe": "Digimon",
-		"moves": ["Quick Attack", "Astonish", "Bite", "Dragon Breath", "Foul Play", "Facade", "Headbutt", "Iron Head", "Flare Blitz", "Metal Claw", "Force Palm", "Waterfall", "Blizzard", "Dark Pulse", "Dragon Pulse", "Fire Blast", "Flamethrower", "Water Spout", "Aura Sphere", "Ice Beam", "Hydro Pump", "Thunder", "Disarming Voice", "Tail Whip", "Protect", "Mirror Reflection", "Rest", "Substitute", "Safeguard", "Purify", "Toxic"],
+		"moves": ["Quick Attack", "Astonish", "Bite", "Dragon Breath", "Foul Play", "Facade", "Headbutt", "Iron Head", "Flare Blitz", "Metal Claw", "Force Palm", "Waterfall", "Blizzard", "Dark Pulse", "Dragon Pulse", "Fire Blast", "Flamethrower", "Water Spout", "Aura Sphere", "Ice Beam", "Hydro Pump", "Thunder", "Disarming Voice", "Tail Whip", "Protect", "Mirror Coat", "Rest", "Substitute", "Safeguard", "Purify", "Toxic"],
 	},
 	{
 		"species": "Poyomon",
@@ -196,17 +196,17 @@ export default [
 	{
 		"species": "Birdramon",
 		"universe": "Digimon",
-		"moves": ["Flare Blitz", "Facade", "Foul Play", "Headbutt", "Spark", "Mirror Reflection", "Fire Blast", "Thunder", "Hurricane", "Flame Burst", "Light Screen", "Protect", "Reflect", "Rest", "Tail Whip", "Substitute", "Safeguard", "Focus Energy", "Purify", "Toxic"],
+		"moves": ["Flare Blitz", "Facade", "Foul Play", "Headbutt", "Spark", "Mirror Coat", "Fire Blast", "Thunder", "Hurricane", "Flame Burst", "Light Screen", "Protect", "Reflect", "Rest", "Tail Whip", "Substitute", "Safeguard", "Focus Energy", "Purify", "Toxic"],
 	},
 	{
 		"species": "Yanmamon",
 		"universe": "Digimon",
-		"moves": ["Air Cutter", "Facade", "Foul Play", "Headbutt", "X-Scissor", "Mirror Reflection", "Leaf Storm", "Thunder", "Thunderbolt", "Thunder Shock", "Light Screen", "Protect", "Reflect", "Rest", "Tail Whip", "Substitute", "Safeguard", "Focus Energy", "Purify", "Toxic"],
+		"moves": ["Air Cutter", "Facade", "Foul Play", "Headbutt", "X-Scissor", "Mirror Coat", "Leaf Storm", "Thunder", "Thunderbolt", "Thunder Shock", "Light Screen", "Protect", "Reflect", "Rest", "Tail Whip", "Substitute", "Safeguard", "Focus Energy", "Purify", "Toxic"],
 	},
 	{
 		"species": "Kokatorimon",
 		"universe": "Digimon",
-		"moves": ["Air Cutter", "Facade", "Rock Tomb", "Headbutt", "Dragon Breath", "Mirror Reflection", "Fire Blast", "Thunder", "Hurricane", "Flame Burst", "Light Screen", "Protect", "Reflect", "Rest", "Tail Whip", "Substitute", "Safeguard", "Focus Energy", "Purify", "Toxic"],
+		"moves": ["Air Cutter", "Facade", "Rock Tomb", "Headbutt", "Dragon Breath", "Mirror Coat", "Fire Blast", "Thunder", "Hurricane", "Flame Burst", "Light Screen", "Protect", "Reflect", "Rest", "Tail Whip", "Substitute", "Safeguard", "Focus Energy", "Purify", "Toxic"],
 	},
 	{
 		"species": "MegaKabuterimon",
@@ -429,7 +429,7 @@ export default [
 	{
 		"species": "Goburimon",
 		"universe": "Digimon",
-		"moves": ["Mega Kick", "Bulldoze", "Facade", "Submission", "Fury Attack", "Headbutt", "Dragon Breath", "Fire Punch", "Aura Sphere", "String Shot", "Laser Focus", "Growl", "Tail Whip", "Mirror Reflection", "Protect", "Rest", "Recover", "Substitute", "Toxic"],
+		"moves": ["Mega Kick", "Bulldoze", "Facade", "Submission", "Fury Attack", "Headbutt", "Dragon Breath", "Fire Punch", "Aura Sphere", "String Shot", "Laser Focus", "Growl", "Tail Whip", "Mirror Coat", "Protect", "Rest", "Recover", "Substitute", "Toxic"],
 	},
 	{
 		"species": "Gotsumon",
@@ -488,7 +488,7 @@ export default [
 		"species": "Ogremon",
 		"item": "X-Antibody",
 		"universe": "Digimon",
-		"moves": ["Fury Attack", "Facade", "Quick Attack", "Fire Punch", "Headbutt", "Submission", "Dragon Breath", "Poison Jab", "Metal Claw", "Flare Blitz", "Force Palm", "Mega Kick", "Flamethrower", "Agility", "Laser Focus", "Endure", "Tail Whip", "Mirror Reflection", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Howl", "Toxic"],
+		"moves": ["Fury Attack", "Facade", "Quick Attack", "Fire Punch", "Headbutt", "Submission", "Dragon Breath", "Poison Jab", "Metal Claw", "Flare Blitz", "Force Palm", "Mega Kick", "Flamethrower", "Agility", "Laser Focus", "Endure", "Tail Whip", "Mirror Coat", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Howl", "Toxic"],
 	},
 	{
 		"species": "Lillymon",
@@ -499,7 +499,7 @@ export default [
 	{
 		"species": "Meteormon",
 		"universe": "Digimon",
-		"moves": ["Mega Kick", "Fury Attack", "Facade", "Rock Slide", "Dazzling Gleam", "Headbutt", "Icicle Crash", "Thunder Punch", "Charm", "Disarming Voice", "Play Rough", "Aura Sphere", "Fairy Wind", "Moonblast", "Ice Beam", "Leaf Storm", "Thunder", "Thunderbolt", "Reflect", "Calm Mind", "Double Team", "Endure", "Light Screen", "Decorate", "Mirror Reflection", "Protect", "Rest", "Substitute", "Safeguard", "Focus Energy", "Purify", "Toxic"],
+		"moves": ["Mega Kick", "Fury Attack", "Facade", "Rock Slide", "Dazzling Gleam", "Headbutt", "Icicle Crash", "Thunder Punch", "Charm", "Disarming Voice", "Play Rough", "Aura Sphere", "Fairy Wind", "Moonblast", "Ice Beam", "Leaf Storm", "Thunder", "Thunderbolt", "Reflect", "Calm Mind", "Double Team", "Endure", "Light Screen", "Decorate", "Mirror Coat", "Protect", "Rest", "Substitute", "Safeguard", "Focus Energy", "Purify", "Toxic"],
 	},
 	{
 		"species": "Mikemon",
@@ -536,96 +536,96 @@ export default [
 	{
 		"species": "Nyaromon",
 		"universe": "Digimon",
-		"moves": ["Force Palm", "Rapid Spin", "Mega Kick", "Rock Tomb", "Fury Attack", "Facade", "Bite", "Headbutt", "X-Scissor", "Dazzling Gleam", "Thunder Punch", "Shadow Ball", "Disarming Voice", "Play Rough", "Fire Blast", "Energy Ball", "Ice Beam", "Dark Pulse", "Leaf Storm", "Thunder", "Thunderbolt", "Aura Sphere", "Defense Curl", "Safeguard", "Endure", "Light Screen", "Mirror Reflection", "Protect", "Reflect", "Rest", "Substitute", "Focus Energy", "Purify", "Toxic"],
+		"moves": ["Force Palm", "Rapid Spin", "Mega Kick", "Rock Tomb", "Fury Attack", "Facade", "Bite", "Headbutt", "X-Scissor", "Dazzling Gleam", "Thunder Punch", "Shadow Ball", "Disarming Voice", "Play Rough", "Fire Blast", "Energy Ball", "Ice Beam", "Dark Pulse", "Leaf Storm", "Thunder", "Thunderbolt", "Aura Sphere", "Defense Curl", "Safeguard", "Endure", "Light Screen", "Mirror Coat", "Protect", "Reflect", "Rest", "Substitute", "Focus Energy", "Purify", "Toxic"],
 	},
 	{
 		"species": "Salamon",
 		"item": "X-Antibody",
 		"universe": "Digimon",
-		"moves": ["Force Palm", "Rapid Spin", "Mega Kick", "Rock Tomb", "Poison Fang", "Facade", "Bite", "Headbutt", "X-Scissor", "Dazzling Gleam", "Thunder Punch", "Shadow Ball", "Disarming Voice", "Play Rough", "Fire Blast", "Energy Ball", "Ice Beam", "Dark Pulse", "Leaf Storm", "Thunder", "Thunderbolt", "Aura Sphere", "Defense Curl", "Safeguard", "Endure", "Light Screen", "Mirror Reflection", "Protect", "Reflect", "Rest", "Substitute", "Focus Energy", "Purify", "Toxic"],
+		"moves": ["Force Palm", "Rapid Spin", "Mega Kick", "Rock Tomb", "Poison Fang", "Facade", "Bite", "Headbutt", "X-Scissor", "Dazzling Gleam", "Thunder Punch", "Shadow Ball", "Disarming Voice", "Play Rough", "Fire Blast", "Energy Ball", "Ice Beam", "Dark Pulse", "Leaf Storm", "Thunder", "Thunderbolt", "Aura Sphere", "Defense Curl", "Safeguard", "Endure", "Light Screen", "Mirror Coat", "Protect", "Reflect", "Rest", "Substitute", "Focus Energy", "Purify", "Toxic"],
 	},
 	{
 		"species": "ClearAgumon",
 		"universe": "Digimon",
-		"moves": ["Force Palm", "Rapid Spin", "Mega Kick", "Rock Tomb", "Metal Claw", "Facade", "Fire Punch", "Headbutt", "Smart Strike", "Dazzling Gleam", "Thunder Punch", "Blizzard", "Disarming Voice", "Play Rough", "Fire Blast", "Flamethrower", "Flash Cannon", "Dark Pulse", "Leaf Storm", "Thunder", "Thunderbolt", "Aura Sphere", "Defense Curl", "Safeguard", "Endure", "Light Screen", "Mirror Reflection", "Protect", "Reflect", "Rest", "Substitute", "Focus Energy", "Purify", "Toxic"],
+		"moves": ["Force Palm", "Rapid Spin", "Mega Kick", "Rock Tomb", "Metal Claw", "Facade", "Fire Punch", "Headbutt", "Smart Strike", "Dazzling Gleam", "Thunder Punch", "Blizzard", "Disarming Voice", "Play Rough", "Fire Blast", "Flamethrower", "Flash Cannon", "Dark Pulse", "Leaf Storm", "Thunder", "Thunderbolt", "Aura Sphere", "Defense Curl", "Safeguard", "Endure", "Light Screen", "Mirror Coat", "Protect", "Reflect", "Rest", "Substitute", "Focus Energy", "Purify", "Toxic"],
 	},
 	{
 		"species": "Beastmon",
 		"universe": "Digimon",
-		"moves": ["Force Palm", "Rapid Spin", "Mega Kick", "Rock Tomb", "Force Palm", "Poison Fang", "Facade", "Fire Punch", "Headbutt", "Icicle Crash", "Dazzling Gleam", "Fury Attack", "Thunder Punch", "Blizzard", "Disarming Voice", "Play Rough", "Fire Blast", "Flamethrower", "Aura Sphere", "Mega Drain", "Dark Pulse", "Leaf Storm", "Thunder", "Thunderbolt", "Defense Curl", "Safeguard", "Endure", "Light Screen", "Mirror Reflection", "Double Team", "Protect", "Reflect", "Rest", "Purify", "Substitute", "Focus Energy", "Toxic"],
+		"moves": ["Force Palm", "Rapid Spin", "Mega Kick", "Rock Tomb", "Force Palm", "Poison Fang", "Facade", "Fire Punch", "Headbutt", "Icicle Crash", "Dazzling Gleam", "Fury Attack", "Thunder Punch", "Blizzard", "Disarming Voice", "Play Rough", "Fire Blast", "Flamethrower", "Aura Sphere", "Mega Drain", "Dark Pulse", "Leaf Storm", "Thunder", "Thunderbolt", "Defense Curl", "Safeguard", "Endure", "Light Screen", "Mirror Coat", "Double Team", "Protect", "Reflect", "Rest", "Purify", "Substitute", "Focus Energy", "Toxic"],
 	},
 	{
 		"species": "Meicrackmon",
 		"universe": "Digimon",
-		"moves": ["Force Palm", "Rapid Spin", "Mega Kick", "Rock Tomb", "Force Palm", "Poison Fang", "Facade", "Spark", "Headbutt", "Icicle Crash", "Dazzling Gleam", "Fury Attack", "Thunder Punch", "Blizzard", "Disarming Voice", "Play Rough", "Fire Blast", "Flamethrower", "Aura Sphere", "Thunder Shock", "Dark Pulse", "Leaf Storm", "Thunder", "Thunderbolt", "Defense Curl", "Safeguard", "Endure", "Light Screen", "Mirror Reflection", "Double Team", "Protect", "Reflect", "Rest", "Substitute", "Focus Energy", "Purify", "Toxic"],
+		"moves": ["Force Palm", "Rapid Spin", "Mega Kick", "Rock Tomb", "Force Palm", "Poison Fang", "Facade", "Spark", "Headbutt", "Icicle Crash", "Dazzling Gleam", "Fury Attack", "Thunder Punch", "Blizzard", "Disarming Voice", "Play Rough", "Fire Blast", "Flamethrower", "Aura Sphere", "Thunder Shock", "Dark Pulse", "Leaf Storm", "Thunder", "Thunderbolt", "Defense Curl", "Safeguard", "Endure", "Light Screen", "Mirror Coat", "Double Team", "Protect", "Reflect", "Rest", "Substitute", "Focus Energy", "Purify", "Toxic"],
 	},
 	{
 		"species": "Angewomon",
 		"item": "X-Antibody",
 		"universe": "Digimon",
-		"moves": ["Force Palm", "Rapid Spin", "Mega Kick", "Rock Tomb", "Force Palm", "Fury Attack", "Facade", "Fire Punch", "Headbutt", "Icicle Crash", "Dazzling Gleam", "Fury Attack", "Air Cutter", "Blizzard", "Disarming Voice", "Play Rough", "Fire Blast", "Flamethrower", "Aura Sphere", "Ice Beam", "Dark Pulse", "Leaf Storm", "Thunder", "Hurricane", "Defense Curl", "Safeguard", "Endure", "Light Screen", "Mirror Reflection", "Double Team", "Protect", "Reflect", "Rest", "Substitute", "Focus Energy", "Purify", "Toxic"],
+		"moves": ["Force Palm", "Rapid Spin", "Mega Kick", "Rock Tomb", "Force Palm", "Fury Attack", "Facade", "Fire Punch", "Headbutt", "Icicle Crash", "Dazzling Gleam", "Fury Attack", "Air Cutter", "Blizzard", "Disarming Voice", "Play Rough", "Fire Blast", "Flamethrower", "Aura Sphere", "Ice Beam", "Dark Pulse", "Leaf Storm", "Thunder", "Hurricane", "Defense Curl", "Safeguard", "Endure", "Light Screen", "Mirror Coat", "Double Team", "Protect", "Reflect", "Rest", "Substitute", "Focus Energy", "Purify", "Toxic"],
 	},
 	{
 		"species": "JungleMojyamon",
 		"universe": "Digimon",
-		"moves": ["Fury Attack", "Facade", "Quick Attack", "Aerial Ace", "Headbutt", "Iron Head", "Spark", "Poison Jab", "Poison Fang", "Spider Web", "Force Palm", "X-Scissor", "Energy Ball", "Agility", "Laser Focus", "Endure", "Tail Whip", "Mirror Reflection", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Howl", "Toxic"],
+		"moves": ["Fury Attack", "Facade", "Quick Attack", "Aerial Ace", "Headbutt", "Iron Head", "Spark", "Poison Jab", "Poison Fang", "Spider Web", "Force Palm", "X-Scissor", "Energy Ball", "Agility", "Laser Focus", "Endure", "Tail Whip", "Mirror Coat", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Howl", "Toxic"],
 	},
 	{
 		"species": "Fugamon",
 		"universe": "Digimon",
-		"moves": ["Fury Attack", "Facade", "Quick Attack", "Aerial Ace", "Headbutt", "Submission", "Spark", "Poison Jab", "Metal Claw", "Thunder Punch", "Force Palm", "Mega Kick", "Thunderbolt", "Agility", "Laser Focus", "Endure", "Tail Whip", "Mirror Reflection", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Howl", "Toxic"],
+		"moves": ["Fury Attack", "Facade", "Quick Attack", "Aerial Ace", "Headbutt", "Submission", "Spark", "Poison Jab", "Metal Claw", "Thunder Punch", "Force Palm", "Mega Kick", "Thunderbolt", "Agility", "Laser Focus", "Endure", "Tail Whip", "Mirror Coat", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Howl", "Toxic"],
 	},
 	{
 		"species": "Kabuterimon",
 		"universe": "Digimon",
-		"moves": ["Fury Attack", "Facade", "Quick Attack", "Aerial Ace", "Headbutt", "Iron Head", "Spark", "Poison Jab", "Poison Fang", "Air Cutter", "Spider Web", "X-Scissor", "Hurricane", "Agility", "Laser Focus", "Endure", "Tail Whip", "Mirror Reflection", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Howl", "Toxic"],
+		"moves": ["Fury Attack", "Facade", "Quick Attack", "Aerial Ace", "Headbutt", "Iron Head", "Spark", "Poison Jab", "Poison Fang", "Air Cutter", "Spider Web", "X-Scissor", "Hurricane", "Agility", "Laser Focus", "Endure", "Tail Whip", "Mirror Coat", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Howl", "Toxic"],
 	},
 	{
 		"species": "Tokomon",
 		"item": "X-Antibody",
 		"universe": "Digimon",
-		"moves": ["Facade", "Headbutt", "Quick Attack", "Fury Attack", "Aerial Ace", "Spark", "X-Scissor", "Hurricane", "Thunder Shock", "Aura Sphere", "Protect", "Substitute", "Focus Energy", "Agility", "Reflect", "Rest", "Double Team", "Toxic", "Mirror Reflection", "Recover"],
+		"moves": ["Facade", "Headbutt", "Quick Attack", "Fury Attack", "Aerial Ace", "Spark", "X-Scissor", "Hurricane", "Thunder Shock", "Aura Sphere", "Protect", "Substitute", "Focus Energy", "Agility", "Reflect", "Rest", "Double Team", "Toxic", "Mirror Coat", "Recover"],
 	},
 	{
 		"species": "Tsunomon",
 		"universe": "Digimon",
-		"moves": ["Facade", "Headbutt", "Quick Attack", "Fury Attack", "Icicle Crash", "Dragon Breath", "X-Scissor", "Hydro Pump", "Ember", "Aura Sphere", "Protect", "Substitute", "Focus Energy", "Agility", "Reflect", "Rest", "Double Team", "Toxic", "Mirror Reflection", "Recover"],
+		"moves": ["Facade", "Headbutt", "Quick Attack", "Fury Attack", "Icicle Crash", "Dragon Breath", "X-Scissor", "Hydro Pump", "Ember", "Aura Sphere", "Protect", "Substitute", "Focus Energy", "Agility", "Reflect", "Rest", "Double Team", "Toxic", "Mirror Coat", "Recover"],
 	},
 	{
 		"species": "Tentomon",
 		"universe": "Digimon",
-		"moves": ["Facade", "Headbutt", "Quick Attack", "Poison Fang", "Aerial Ace", "Spark", "X-Scissor", "Hurricane", "Thunder Shock", "Leaf Storm", "Protect", "Substitute", "Focus Energy", "Agility", "Reflect", "Rest", "Double Team", "Toxic", "Mirror Reflection", "Recover"],
+		"moves": ["Facade", "Headbutt", "Quick Attack", "Poison Fang", "Aerial Ace", "Spark", "X-Scissor", "Hurricane", "Thunder Shock", "Leaf Storm", "Protect", "Substitute", "Focus Energy", "Agility", "Reflect", "Rest", "Double Team", "Toxic", "Mirror Coat", "Recover"],
 	},
 	{
 		"species": "Leomon",
 		"item": "X-Antibody",
 		"universe": "Digimon",
-		"moves": ["Facade", "Flare Blitz", "Headbutt", "Quick Attack", "Dragon Breath", "Mega Kick", "Spark", "Flamethrower", "Thunder Shock", "Aura Sphere", "Agility", "Mirror Reflection", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Toxic", "Focus Energy"],
+		"moves": ["Facade", "Flare Blitz", "Headbutt", "Quick Attack", "Dragon Breath", "Mega Kick", "Spark", "Flamethrower", "Thunder Shock", "Aura Sphere", "Agility", "Mirror Coat", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Toxic", "Focus Energy"],
 	},
 	{
 		"species": "Mojyamon",
 		"universe": "Digimon",
-		"moves": ["Facade", "Waterfall", "Headbutt", "Quick Attack", "Icicle Crash", "X-Scissor", "Spark", "Ice Beam", "Bubble Beam", "Aura Sphere", "Agility", "Mirror Reflection", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Toxic", "Focus Energy"],
+		"moves": ["Facade", "Waterfall", "Headbutt", "Quick Attack", "Icicle Crash", "X-Scissor", "Spark", "Ice Beam", "Bubble Beam", "Aura Sphere", "Agility", "Mirror Coat", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Toxic", "Focus Energy"],
 	},
 	{
 		"species": "Saberdramon",
 		"universe": "Digimon",
-		"moves": ["Facade", "Air Cutter", "Headbutt", "Quick Attack", "Astonish", "X-Scissor", "Spark", "Hurricane", "Thunder Shock", "Shadow Ball", "Agility", "Mirror Reflection", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Toxic", "Focus Energy"],
+		"moves": ["Facade", "Air Cutter", "Headbutt", "Quick Attack", "Astonish", "X-Scissor", "Spark", "Hurricane", "Thunder Shock", "Shadow Ball", "Agility", "Mirror Coat", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Toxic", "Focus Energy"],
 	},
 	{
 		"species": "Airdramon",
 		"universe": "Digimon",
-		"moves": ["Facade", "Air Cutter", "Headbutt", "Quick Attack", "Dragon Breath", "X-Scissor", "Spark", "Hurricane", "Thunder Shock", "Fire Blast", "Agility", "Mirror Reflection", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Toxic", "Focus Energy"],
+		"moves": ["Facade", "Air Cutter", "Headbutt", "Quick Attack", "Dragon Breath", "X-Scissor", "Spark", "Hurricane", "Thunder Shock", "Fire Blast", "Agility", "Mirror Coat", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Toxic", "Focus Energy"],
 	},
 	{
 		"species": "Akatorimon",
 		"universe": "Digimon",
-		"moves": ["Facade", "Air Cutter", "Headbutt", "Quick Attack", "Dragon Breath", "Poison Jab", "Spark", "Hurricane", "Thunder Shock", "Fire Blast", "Agility", "Mirror Reflection", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Toxic", "Focus Energy"],
+		"moves": ["Facade", "Air Cutter", "Headbutt", "Quick Attack", "Dragon Breath", "Poison Jab", "Spark", "Hurricane", "Thunder Shock", "Fire Blast", "Agility", "Mirror Coat", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Toxic", "Focus Energy"],
 	},
 	{
 		"species": "SandYanmamon",
 		"universe": "Digimon",
-		"moves": ["Facade", "Air Cutter", "Headbutt", "Quick Attack", "Fury Attack", "X-Scissor", "Spark", "Energy Ball", "Thunder Shock", "Thunder", "Agility", "Mirror Reflection", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Toxic", "Focus Energy"],
+		"moves": ["Facade", "Air Cutter", "Headbutt", "Quick Attack", "Fury Attack", "X-Scissor", "Spark", "Energy Ball", "Thunder Shock", "Thunder", "Agility", "Mirror Coat", "Protect", "Reflect", "Rest", "Recover", "Double Team", "Substitute", "Toxic", "Focus Energy"],
 	},
 	{
 		"species": "IceLeomon",
@@ -697,12 +697,12 @@ export default [
 	{
 		"species": "Tekkamon",
 		"universe": "Digimon",
-		"moves": ["Icicle Spear", "Mega Kick", "Foul Play", "Facade", "Quick Attack", "Headbutt", "Bite", "Smart Strike", "Metal Claw", "Spark", "Force Palm", "Thunder Punch", "Thunder Shock", "Blizzard", "Aura Sphere", "Dark Pulse", "Mega Drain", "Thunderbolt", "Purify", "Defense Curl", "Tail Whip", "Protect", "Mirror Reflection", "Rest", "Double Team", "Tail Whip", "Endure", "Substitute", "Howl", "Toxic"],
+		"moves": ["Icicle Spear", "Mega Kick", "Foul Play", "Facade", "Quick Attack", "Headbutt", "Bite", "Smart Strike", "Metal Claw", "Spark", "Force Palm", "Thunder Punch", "Thunder Shock", "Blizzard", "Aura Sphere", "Dark Pulse", "Mega Drain", "Thunderbolt", "Purify", "Defense Curl", "Tail Whip", "Protect", "Mirror Coat", "Rest", "Double Team", "Tail Whip", "Endure", "Substitute", "Howl", "Toxic"],
 	},
 	{
 		"species": "DoruGreymon",
 		"universe": "Digimon",
-		"moves": ["Fire Punch", "Mega Kick", "Rock Tomb", "Facade", "Quick Attack", "Headbutt", "X-Scissor", "Smart Strike", "Metal Claw", "Dragon Breath", "Force Palm", "Dazzling Gleam", "Charm", "Fire Blast", "Aura Sphere", "Flash Cannon", "Fairy Wind", "Flamethrower", "Purify", "Defense Curl", "Tail Whip", "Protect", "Mirror Reflection", "Rest", "Double Team", "Tail Whip", "Endure", "Substitute", "Howl", "Toxic"],
+		"moves": ["Fire Punch", "Mega Kick", "Rock Tomb", "Facade", "Quick Attack", "Headbutt", "X-Scissor", "Smart Strike", "Metal Claw", "Dragon Breath", "Force Palm", "Dazzling Gleam", "Charm", "Fire Blast", "Aura Sphere", "Flash Cannon", "Fairy Wind", "Flamethrower", "Purify", "Defense Curl", "Tail Whip", "Protect", "Mirror Coat", "Rest", "Double Team", "Tail Whip", "Endure", "Substitute", "Howl", "Toxic"],
 	},
 	{
 		"species": "Dorugoramon",
@@ -712,12 +712,12 @@ export default [
 	{
 		"species": "Andromon",
 		"universe": "Digimon",
-		"moves": ["Force Palm", "Mega Kick", "Thunder Punch", "Air Cutter", "Facade", "Rock Slide", "Headbutt", "Icicle Crash", "Fire Punch", "Iron Head", "Aerial Ace", "Smart Strike", "Metal Claw", "X-Scissor", "Thunder", "Flash Cannon", "Mirror Reflection", "Aura Sphere", "Defense Curl", "Protect", "Rest", "Endure", "Substitute", "Howl", "Toxic"],
+		"moves": ["Force Palm", "Mega Kick", "Thunder Punch", "Air Cutter", "Facade", "Rock Slide", "Headbutt", "Icicle Crash", "Fire Punch", "Iron Head", "Aerial Ace", "Smart Strike", "Metal Claw", "X-Scissor", "Thunder", "Flash Cannon", "Mirror Coat", "Aura Sphere", "Defense Curl", "Protect", "Rest", "Endure", "Substitute", "Howl", "Toxic"],
 	},
 	{
 		"species": "Giromon",
 		"universe": "Digimon",
-		"moves": ["Dazzling Gleam", "Mega Kick", "Rock Tomb", "Flare Blitz", "Facade", "Rock Slide", "Headbutt", "Fire Punch", "Icicle Spear", "Iron Head", "Poison Jab", "Smart Strike", "Metal Claw", "X-Scissor", "Fire Blast", "Flash Cannon", "Mirror Reflection", "Play Rough", "Defense Curl", "Protect", "Rest", "Endure", "Substitute", "Howl", "Toxic"],
+		"moves": ["Dazzling Gleam", "Mega Kick", "Rock Tomb", "Flare Blitz", "Facade", "Rock Slide", "Headbutt", "Fire Punch", "Icicle Spear", "Iron Head", "Poison Jab", "Smart Strike", "Metal Claw", "X-Scissor", "Fire Blast", "Flash Cannon", "Mirror Coat", "Play Rough", "Defense Curl", "Protect", "Rest", "Endure", "Substitute", "Howl", "Toxic"],
 	},
 	{
 		"species": "Megadramon",
@@ -957,7 +957,7 @@ export default [
 	{
 		"species": "MetalSeadramon",
 		"universe": "Digimon",
-		"moves": ["Facade", "Thunder Punch", "Headbutt", "Icicle Spear", "Smart Strike", "Blizzard", "Thunder Shock", "Flash Cannon", "Ice Beam", "Mirror Reflection", "Agility", "Tail Whip", "Haze", "Protect", "Reflect", "Rest", "Recover", "Substitute", "Toxic"],
+		"moves": ["Facade", "Thunder Punch", "Headbutt", "Icicle Spear", "Smart Strike", "Blizzard", "Thunder Shock", "Flash Cannon", "Ice Beam", "Mirror Coat", "Agility", "Tail Whip", "Haze", "Protect", "Reflect", "Rest", "Recover", "Substitute", "Toxic"],
 	},
 	{
 		"species": "Bulbasaur",
